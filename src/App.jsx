@@ -1,11 +1,16 @@
-// src/App.jsx
 import React from 'react';
+import BasicTest from './pages/BasicTest';
 import HomePage from './pages/HomePage';
-import TailwindTest from './TailwindTest';
+import SimplePortfolio from './pages/SimplePortfolio';
 
 function App() {
-  return <HomePage />;
-  // <TailwindTest />
+  return (
+    <div className="App">
+      {/* <BasicTest /> */}
+      {/* {<HomePage />} */}
+      {<SimplePortfolio />}
+    </div>
+  );
 }
 
 export default App;

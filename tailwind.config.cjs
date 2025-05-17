@@ -4,6 +4,7 @@ module.exports = {
         "./index.html",
         "./src/**/*.{js,jsx,ts,tsx}",
     ],
+    darkMode: 'class', // This is important for manual dark mode toggling
     theme: {
         extend: {},
     },

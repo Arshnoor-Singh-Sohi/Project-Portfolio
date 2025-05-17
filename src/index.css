@@ -8,3 +8,17 @@ body {
     min-width: 320px;
     min-height: 100vh;
 }
+
+/* Hide scrollbar but keep functionality */
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+}
