@@ -1,0 +1,18 @@
+/* 3D Transform Utility Classes */
+.perspective-1000 {
+    perspective: 1000px !important; /* Added !important to override any conflicts */
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d !important;
+}
+/* Optional enhancements for smoother 3D transitions */
+.card-3d-container {
+    backface-visibility: hidden;
+    transition: transform 0.25s ease-out;
+    will-change: transform;
+}
+
+.card-3d-content {
+    transition: all 0.3s ease-out;
+}

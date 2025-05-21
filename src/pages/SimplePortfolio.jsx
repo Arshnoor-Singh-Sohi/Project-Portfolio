@@ -8,6 +8,8 @@ import { loadFull } from "tsparticles";
 import BubbleBackground from '../components/BubbleBackground';
 import WavesBackground from '../components/WavesBackground';
 import FloatingElements from '../components/FloatingElements';
+import ProjectCard from '../components/ProjectCard';
+import BackgroundMusic from '../components/BackgroundMusic';
 
 // Animated title component with letter animation
 const AnimatedTitle = ({ children, className }) => {
@@ -91,9 +93,9 @@ const ParticleBackground = ({ darkMode }) => {
                     },
                     // Other interaction options remain the same
                 }}
-                style={{ 
-                    position: 'absolute', 
-                    width: '100%', 
+                style={{
+                    position: 'absolute',
+                    width: '100%',
                     height: '100%',
                     top: 0,
                     left: 0,
@@ -110,6 +112,7 @@ const SimplePortfolio = () => {
     const [darkMode, setDarkMode] = useState(false);
     const [projects, setProjects] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState([]);
+    const [featuredProjects, setFeaturedProjects] = useState([]); // Add this state for featured projects
     const [selectedTechs, setSelectedTechs] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
@@ -125,29 +128,6 @@ const SimplePortfolio = () => {
     const titleRef = useRef(null);
     const projectsRef = useRef(null);
 
-    // Safe GSAP integration
-    useEffect(() => {
-        if (!isLoading && titleRef.current) {
-            // Create a timeline for sequential animations
-            const tl = gsap.timeline();
-
-            // Background elements animation
-            tl.to(".bg-gradient-blob", {
-                y: 30,
-                duration: 20,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut",
-                stagger: 0.5
-            }, 0);
-
-            return () => {
-                // Clean up animations to prevent memory leaks
-                tl.kill();
-            };
-        }
-    }, [isLoading]);
-
     // Toggle dark mode
     const toggleDarkMode = () => {
         const newMode = !darkMode;
@@ -159,8 +139,6 @@ const SimplePortfolio = () => {
             document.documentElement.classList.remove('dark');
         }
     };
-
-
 
     // Initialize dark mode based on system preference
     useEffect(() => {
@@ -211,13 +189,25 @@ const SimplePortfolio = () => {
         };
     };
 
-    // Load projects data
+    // Load projects data - updated to handle featured projects
     useEffect(() => {
         setTimeout(() => {
-            setProjects(PROJECTS);
-            setFilteredProjects(PROJECTS);
+            // Ensure all projects have the required fields to prevent errors
+            const updatedProjects = PROJECTS.map(project => ({
+                ...project,
+                isLive: project.isLive || false,
+                featured: project.featured || false,
+                liveUrl: project.liveUrl || ''
+            }));
 
-            const { allTechs, techsByLetter } = organizeSkillsData(PROJECTS);
+            setProjects(updatedProjects);
+            setFilteredProjects(updatedProjects);
+
+            // Filter out projects that are marked as featured
+            const featured = updatedProjects.filter(project => project.featured);
+            setFeaturedProjects(featured);
+
+            const { allTechs, techsByLetter } = organizeSkillsData(updatedProjects);
             setTechsByLetter(techsByLetter);
             setAllTechs(allTechs);
 
@@ -316,14 +306,9 @@ const SimplePortfolio = () => {
 
     // Reset all filters
     const resetFilters = () => {
-        console.log("Before reset:", { selectedTechs, activeLetter, searchTerm });
         setSelectedTechs([]);
         setActiveLetter(null);
         setSearchTerm('');
-        console.log("After reset - Note: state may not update immediately");
-
-        // Force re-render by using a callback pattern
-        setFilteredProjects(projects);
     };
 
     // Get all techs
@@ -332,7 +317,6 @@ const SimplePortfolio = () => {
         Object.values(techsByLetter).forEach(techs => allTechs.push(...techs));
         return allTechs;
     };
-
     // LOADING SCREEN
     if (isLoading) {
         return (
@@ -402,6 +386,8 @@ const SimplePortfolio = () => {
                     </motion.h1>
 
                     <div className="flex items-center space-x-4 mt-2 sm:mt-0">
+                        <BackgroundMusic darkMode={darkMode} />
+
                         <motion.a
                             href="mailto:sohi21@uwindsor.ca"
                             className="hidden md:flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-medium"
@@ -695,6 +681,83 @@ const SimplePortfolio = () => {
                     </motion.div>
                 </ScrollSection>
             </section>
+
+            {/* FEATURED PROJECTS SECTION */}
+            {!isLoading &&
+                featuredProjects.length > 0 &&
+                selectedTechs.length === 0 &&
+                activeLetter === null &&
+                searchTerm === '' && (
+                    <section className="container mx-auto px-4 mb-16 overflow-hidden">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="mb-8"
+                        >
+                            <h2 className="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-indigo-600 to-purple-500 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
+                                Featured Projects
+                            </h2>
+                            <p className="text-gray-600 dark:text-gray-400 text-center max-w-3xl mx-auto mb-12">
+                                Highlighted projects that showcase my skills and areas of expertise. These represent some of my best work or most significant contributions.
+                            </p>
+                        </motion.div>
+
+                        {/* Horizontal scrolling carousel */}
+                        <div className="relative w-full overflow-hidden py-8">
+                            <motion.div
+                                className="flex"
+                                animate={{
+                                    x: [`0%`, `-${featuredProjects.length * 100}%`]
+                                }}
+                                transition={{
+                                    x: {
+                                        duration: 20 * featuredProjects.length, // Speed based on number of projects
+                                        repeat: Infinity,
+                                        ease: "linear",
+                                        repeatType: "loop"
+                                    }
+                                }}
+                            >
+                                {/* Original featured projects */}
+                                {featuredProjects.map((project, index) => (
+                                    <div key={`original-${project.id}`} className="min-w-[320px] sm:min-w-[384px] md:min-w-[400px] px-4">
+                                        <ProjectCard
+                                            project={project}
+                                            index={index}
+                                            selectedTechs={selectedTechs}
+                                            handleTechSelect={handleTechSelect}
+                                        />
+                                    </div>
+                                ))}
+
+                                {/* Duplicated projects for seamless looping */}
+                                {featuredProjects.map((project, index) => (
+                                    <div key={`duplicate-${project.id}`} className="min-w-[320px] sm:min-w-[384px] md:min-w-[400px] px-4">
+                                        <ProjectCard
+                                            project={project}
+                                            index={index}
+                                            selectedTechs={selectedTechs}
+                                            handleTechSelect={handleTechSelect}
+                                        />
+                                    </div>
+                                ))}
+                            </motion.div>
+
+                            {/* Add gradient overlays to suggest more content */}
+                            <div className="absolute top-0 left-0 h-full w-32 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-10"></div>
+                            <div className="absolute top-0 right-0 h-full w-32 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-10"></div>
+                        </div>
+
+                        {/* Divider between Featured and All Projects */}
+                        <div className="relative flex items-center my-12">
+                            <div className="flex-grow border-t border-gray-300 dark:border-gray-700"></div>
+                            <span className="flex-shrink mx-4 text-gray-600 dark:text-gray-400">All Projects</span>
+                            <div className="flex-grow border-t border-gray-300 dark:border-gray-700"></div>
+                        </div>
+                    </section>
+                )}
+
             {/* PROJECTS GRID */}
             <section className="container mx-auto px-4 mb-16">
                 <AnimatePresence mode="wait">
@@ -719,94 +782,13 @@ const SimplePortfolio = () => {
                             exit={{ opacity: 0 }}
                         >
                             {filteredProjects.map((project, index) => (
-                                <motion.div
+                                <ProjectCard
                                     key={project.id}
-                                    className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 h-full flex flex-col group"
-                                    initial={{ opacity: 0, y: 50 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{
-                                        delay: 0.1 + index * 0.05,
-                                        duration: 0.5
-                                    }}
-                                    whileHover={{
-                                        y: -15,
-                                        scale: 1.02,
-                                        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)",
-                                        transition: { type: "spring", stiffness: 300, damping: 15 }
-                                    }}
-                                >
-                                    <div className="relative h-56 overflow-hidden">
-                                        <motion.img
-                                            src={project.image.replace('/public', '')}
-                                            alt={project.name}
-                                            className="w-full h-full object-cover"
-                                            whileHover={{ scale: 1.1 }}
-                                            transition={{ duration: 0.4 }}
-                                        />
-
-                                        {/* Overlay that animates in on hover */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                            <motion.a
-                                                href={project.repoUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="px-4 py-2 bg-white text-gray-900 rounded-lg font-medium flex items-center gap-2 transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
-                                                whileHover={{ scale: 1.05 }}
-                                                whileTap={{ scale: 0.95 }}
-                                            >
-                                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                                                </svg>
-                                                View Project
-                                            </motion.a>
-                                        </div>
-                                    </div>
-
-                                    <div className="p-6 flex flex-col flex-grow">
-                                        {/* Project title now placed below the image */}
-                                        <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3">
-                                            {project.name}
-                                        </h3>
-
-                                        <p className="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
-                                            {project.description}
-                                        </p>
-
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {project.techs.map((tech, idx) => (
-                                                <motion.span
-                                                    key={tech}
-                                                    className={`px-2 py-1 rounded-full text-xs font-medium cursor-pointer ${selectedTechs.includes(tech)
-                                                        ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300'
-                                                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
-                                                        }`}
-                                                    onClick={() => handleTechSelect(tech)}
-                                                    whileHover={{ y: -2, scale: 1.05 }}
-                                                    whileTap={{ scale: 0.95 }}
-                                                    initial={{ opacity: 0, scale: 0.8 }}
-                                                    animate={{ opacity: 1, scale: 1 }}
-                                                    transition={{ delay: 0.5 + idx * 0.03 }}
-                                                >
-                                                    {tech}
-                                                </motion.span>
-                                            ))}
-                                        </div>
-
-                                        <motion.a
-                                            href={project.repoUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="mt-auto flex items-center justify-center gap-2 py-2 px-4 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white rounded-lg font-medium"
-                                            whileHover={{ scale: 1.03 }}
-                                            whileTap={{ scale: 0.97 }}
-                                        >
-                                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                                            </svg>
-                                            <span>View on GitHub</span>
-                                        </motion.a>
-                                    </div>
-                                </motion.div>
+                                    project={project}
+                                    index={index}
+                                    selectedTechs={selectedTechs}
+                                    handleTechSelect={handleTechSelect}
+                                />
                             ))}
                         </motion.div>
                     ) : (
