@@ -473,7 +473,7 @@ const SimplePortfolio = ({ onBack }) => {
                             ref={titleRef}
                             className="text-6xl md:text-8xl font-bold text-center bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-400 bg-clip-text text-transparent mb-12 relative z-20"
                         >
-                            MY PROJECTS
+                            ꉣꋪꉻ꒻ꏂꏳ꓄ꑄ
                         </AnimatedTitle>
 
                         <motion.p

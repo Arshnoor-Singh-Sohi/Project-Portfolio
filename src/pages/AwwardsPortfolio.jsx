@@ -1,11 +1,236 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform, useSpring, useMotionValue, useAnimationFrame } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Sphere, MeshDistortMaterial, OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import SimplePortfolio from './SimplePortfolio';
 
-// 3D Animated Sphere Component
+// IconCloud Component - Pure JavaScript version
+// Icon object structure: { x, y, z, scale, opacity, id }
+// IconCloudProps: { icons?: ReactNode[], images?: string[] }
+
+function easeOutCubic(t) {
+  return 1 - Math.pow(1 - t, 3);
+}
+
+function IconCloud({ icons, images }) {
+  const canvasRef = useRef(null);
+  const [iconPositions, setIconPositions] = useState([]);
+  const [rotation, setRotation] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [lastMousePos, setLastMousePos] = useState({ x: 0, y: 0 });
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [targetRotation, setTargetRotation] = useState(null);
+  const animationFrameRef = useRef();
+  const rotationRef = useRef(rotation);
+  const iconCanvasesRef = useRef([]);
+  const imagesLoadedRef = useRef([]);
+
+  // Create icon canvases once when icons/images change
+  useEffect(() => {
+    if (!icons && !images) return;
+
+    const items = icons || images || [];
+    imagesLoadedRef.current = new Array(items.length).fill(false);
+
+    const newIconCanvases = items.map((item, index) => {
+      const offscreen = document.createElement("canvas");
+      offscreen.width = 40;
+      offscreen.height = 40;
+      const offCtx = offscreen.getContext("2d");
+
+      if (offCtx) {
+        if (images) {
+          // Handle image URLs directly
+          const img = new Image();
+          img.crossOrigin = "anonymous";
+          img.src = items[index];
+          img.onload = () => {
+            offCtx.clearRect(0, 0, offscreen.width, offscreen.height);
+            offCtx.beginPath();
+            offCtx.arc(20, 20, 20, 0, Math.PI * 2);
+            offCtx.closePath();
+            offCtx.clip();
+            offCtx.drawImage(img, 0, 0, 40, 40);
+            imagesLoadedRef.current[index] = true;
+          };
+        }
+      }
+      return offscreen;
+    });
+
+    iconCanvasesRef.current = newIconCanvases;
+  }, [icons, images]);
+
+  // Generate initial icon positions on a sphere
+  useEffect(() => {
+    const items = icons || images || [];
+    const newIcons = [];
+    const numIcons = items.length || 20;
+
+    const offset = 2 / numIcons;
+    const increment = Math.PI * (3 - Math.sqrt(5));
+
+    for (let i = 0; i < numIcons; i++) {
+      const y = i * offset - 1 + offset / 2;
+      const r = Math.sqrt(1 - y * y);
+      const phi = i * increment;
+
+      const x = Math.cos(phi) * r;
+      const z = Math.sin(phi) * r;
+
+      newIcons.push({
+        x: x * 100,
+        y: y * 100,
+        z: z * 100,
+        scale: 1,
+        opacity: 1,
+        id: i,
+      });
+    }
+    setIconPositions(newIcons);
+  }, [icons, images]);
+
+  // Handle mouse events
+  const handleMouseDown = (e) => {
+    const rect = canvasRef.current?.getBoundingClientRect();
+    if (!rect || !canvasRef.current) return;
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    setIsDragging(true);
+    setLastMousePos({ x: e.clientX, y: e.clientY });
+  };
+
+  const handleMouseMove = (e) => {
+    const rect = canvasRef.current?.getBoundingClientRect();
+    if (rect) {
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      setMousePos({ x, y });
+    }
+
+    if (isDragging) {
+      const deltaX = e.clientX - lastMousePos.x;
+      const deltaY = e.clientY - lastMousePos.y;
+
+      rotationRef.current = {
+        x: rotationRef.current.x + deltaY * 0.002,
+        y: rotationRef.current.y + deltaX * 0.002,
+      };
+
+      setLastMousePos({ x: e.clientX, y: e.clientY });
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  // Animation and rendering
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    if (!canvas || !ctx) return;
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
+      const dx = mousePos.x - centerX;
+      const dy = mousePos.y - centerY;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const speed = 0.003 + (distance / maxDistance) * 0.01;
+
+      if (targetRotation) {
+        const elapsed = performance.now() - targetRotation.startTime;
+        const progress = Math.min(1, elapsed / targetRotation.duration);
+        const easedProgress = easeOutCubic(progress);
+
+        rotationRef.current = {
+          x: targetRotation.startX + (targetRotation.x - targetRotation.startX) * easedProgress,
+          y: targetRotation.startY + (targetRotation.y - targetRotation.startY) * easedProgress,
+        };
+
+        if (progress >= 1) {
+          setTargetRotation(null);
+        }
+      } else if (!isDragging) {
+        rotationRef.current = {
+          x: rotationRef.current.x + (dy / canvas.height) * speed,
+          y: rotationRef.current.y + (dx / canvas.width) * speed,
+        };
+      }
+
+      iconPositions.forEach((icon, index) => {
+        const cosX = Math.cos(rotationRef.current.x);
+        const sinX = Math.sin(rotationRef.current.x);
+        const cosY = Math.cos(rotationRef.current.y);
+        const sinY = Math.sin(rotationRef.current.y);
+
+        const rotatedX = icon.x * cosY - icon.z * sinY;
+        const rotatedZ = icon.x * sinY + icon.z * cosY;
+        const rotatedY = icon.y * cosX + rotatedZ * sinX;
+
+        const scale = (rotatedZ + 200) / 300;
+        const opacity = Math.max(0.2, Math.min(1, (rotatedZ + 150) / 200));
+
+        ctx.save();
+        ctx.translate(canvas.width / 2 + rotatedX, canvas.height / 2 + rotatedY);
+        ctx.scale(scale, scale);
+        ctx.globalAlpha = opacity;
+
+        if (images && iconCanvasesRef.current[index] && imagesLoadedRef.current[index]) {
+          ctx.drawImage(iconCanvasesRef.current[index], -20, -20, 40, 40);
+        } else {
+          // Fallback circles with tech names
+          const techNames = ['React', 'Python', 'Java', 'TS', 'Node', 'TF', 'AWS', 'Docker', 'GQL'];
+          ctx.beginPath();
+          ctx.arc(0, 0, 20, 0, Math.PI * 2);
+          ctx.fillStyle = "#8352FD";
+          ctx.fill();
+          ctx.fillStyle = "white";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.font = "10px Arial";
+          ctx.fillText(techNames[icon.id] || `${icon.id + 1}`, 0, 0);
+        }
+
+        ctx.restore();
+      });
+      animationFrameRef.current = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
+  }, [icons, images, iconPositions, isDragging, mousePos, targetRotation]);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      width={300}
+      height={300}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
+      className="rounded-lg w-full max-w-sm mx-auto"
+      style={{ touchAction: 'none' }}
+      aria-label="Interactive 3D Tech Stack Cloud"
+      role="img"
+    />
+  );
+}
+
+// 3D Animated Sphere Component - Made responsive
 const AnimatedSphere = () => {
   const meshRef = useRef();
   
@@ -29,7 +254,7 @@ const AnimatedSphere = () => {
   );
 };
 
-// Magnetic Button Component
+// Magnetic Button Component - Enhanced for mobile
 const MagneticButton = ({ children, className, onClick }) => {
   const ref = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -61,40 +286,82 @@ const MagneticButton = ({ children, className, onClick }) => {
   );
 };
 
-// Floating Navigation Component
+// Mobile-friendly Navigation Component
 const FloatingNav = ({ activeSection }) => {
   const navItems = ['Home', 'About', 'Projects', 'Blog', 'Certifications', 'Contact'];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-8"
-    >
-      <motion.div
-        className="bg-black/10 backdrop-blur-xl rounded-full px-8 py-4 border border-white/10"
-        whileHover={{ scale: 1.02 }}
+    <>
+      {/* Desktop Navigation */}
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        className="fixed top-0 left-0 right-0 z-50 justify-center pt-4 px-4 hidden md:flex"
       >
-        <ul className="flex gap-8">
-          {navItems.map((item, index) => (
-            <motion.li key={item}>
-              <a
-                href={`#${item.toLowerCase()}`}
-                className={`text-sm font-medium transition-colors ${
-                  activeSection === item.toLowerCase() ? 'text-white' : 'text-white/60'
-                } hover:text-white`}
-              >
-                {item}
-              </a>
-            </motion.li>
-          ))}
-        </ul>
-      </motion.div>
-    </motion.nav>
+        <motion.div
+          className="bg-black/10 backdrop-blur-xl rounded-full px-6 py-3 border border-white/10"
+          whileHover={{ scale: 1.02 }}
+        >
+          <ul className="flex gap-6">
+            {navItems.map((item) => (
+              <motion.li key={item}>
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className={`text-sm font-medium transition-colors ${
+                    activeSection === item.toLowerCase() ? 'text-white' : 'text-white/60'
+                  } hover:text-white`}
+                >
+                  {item}
+                </a>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
+      </motion.nav>
+
+      {/* Mobile Navigation */}
+      <div className="md:hidden">
+        <motion.button
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          className="fixed top-4 right-4 z-50 bg-black/20 backdrop-blur-xl rounded-full p-3 border border-white/10"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </motion.button>
+
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="fixed top-16 right-4 z-40 bg-black/90 backdrop-blur-xl rounded-2xl p-4 border border-white/10"
+          >
+            <ul className="space-y-3">
+              {navItems.map((item) => (
+                <li key={item}>
+                  <a
+                    href={`#${item.toLowerCase()}`}
+                    className={`block text-base font-medium transition-colors py-2 px-3 rounded-lg ${
+                      activeSection === item.toLowerCase() ? 'text-white bg-white/10' : 'text-white/60'
+                    } hover:text-white hover:bg-white/5`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </div>
+    </>
   );
 };
 
-// Certification Card Component
+// Certification Card Component - Made responsive
 const CertificationCard = ({ cert, index }) => {
   return (
     <motion.div
@@ -105,25 +372,25 @@ const CertificationCard = ({ cert, index }) => {
       className="group relative"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-500" />
-      <div className="relative bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="relative bg-gray-900/90 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-white/10">
+        <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center flex-shrink-0">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
             </svg>
           </div>
-          <div>
-            <h3 className="text-white font-semibold">{cert.name}</h3>
-            <p className="text-white/60 text-sm">{cert.issuer}</p>
+          <div className="min-w-0 flex-1">
+            <h3 className="text-white font-semibold text-sm sm:text-base truncate">{cert.name}</h3>
+            <p className="text-white/60 text-xs sm:text-sm truncate">{cert.issuer}</p>
           </div>
         </div>
-        <p className="text-white/80 text-sm">{cert.date}</p>
+        <p className="text-white/80 text-xs sm:text-sm">{cert.date}</p>
       </div>
     </motion.div>
   );
 };
 
-// Main Portfolio Component
+// Main Portfolio Component - Fully Responsive
 const AwwardsPortfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -138,20 +405,23 @@ const AwwardsPortfolio = () => {
     restDelta: 0.001
   });
 
-  // Custom Cursor
+  // Custom Cursor (desktop only)
   useEffect(() => {
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
-    window.addEventListener('mousemove', handleMouseMove);
+    
+    // Only add cursor on desktop
+    if (window.innerWidth >= 768) {
+      window.addEventListener('mousemove', handleMouseMove);
+    }
+    
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   // Effect to handle browser back/forward and initial load based on URL hash
   useEffect(() => {
     const handlePopState = () => {
-      // When browser back/forward is used, location.hash will be updated
-      // *before* popstate fires.
       if (window.location.hash === '#projects') {
         setShowSimplePortfolio(true);
       } else {
@@ -163,20 +433,16 @@ const AwwardsPortfolio = () => {
     if (window.location.hash === '#projects') {
       setShowSimplePortfolio(true);
     } else {
-      // Ensure the main portfolio view is represented by the base URL (no hash or a different one)
-      // And replace the current history state to reflect this initial view.
-      // This removes any unwanted hash if the page is loaded directly, e.g., example.com/ instead of example.com/#
       window.history.replaceState({ view: 'mainPortfolio' }, 'Main Portfolio', window.location.pathname + window.location.search);
     }
 
     // Listen for popstate events (browser back/forward button clicks)
     window.addEventListener('popstate', handlePopState);
 
-    // Cleanup listener on component unmount
     return () => {
       window.removeEventListener('popstate', handlePopState);
     };
-  }, []); // Empty dependency array ensures this runs once on mount and cleans up on unmount
+  }, []);
 
   // Certifications data
   const certifications = [
@@ -209,25 +475,71 @@ const AwwardsPortfolio = () => {
     }
   ];
 
-  // 3. Handler to show SimplePortfolio
+  // Tech stack images for IconCloud - Comprehensive skill representation from resumes
+  const techImages = [
+    // Core Programming Languages
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg',
+    
+    // Web Technologies
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
+    
+    // Databases
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg',
+    
+    // AI/ML & Data Science
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg',
+    
+    // Frameworks & Tools
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg',
+    
+    // Cloud & DevOps
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+    
+    // Systems & OS
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg',
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg'
+  ];
+
+  // Handler to show SimplePortfolio
   const handleSeeMyProjectsClick = () => {
     setShowSimplePortfolio(true);
-    // Push a new state to history, changing the URL hash
     window.history.pushState({ view: 'simplePortfolio' }, 'Projects', '#projects');
   };
 
-  // 5. Handler to go back to the main portfolio (to be passed to SimplePortfolio)
+  // Handler to go back to the main portfolio
   const handleBackToMainPortfolio = () => {
     setShowSimplePortfolio(false);
-    // Optionally, reset scroll position or active section
-    // window.scrollTo(0, 0);
-    // setActiveSection('home'); 
     window.history.back();
   };
 
-  // 4. Conditional rendering
+  // Conditional rendering
   if (showSimplePortfolio) {
-    // Pass the handler to SimplePortfolio so it can navigate back
     return <SimplePortfolio onBack={handleBackToMainPortfolio} />;
   }
 
@@ -239,20 +551,23 @@ const AwwardsPortfolio = () => {
         style={{ scaleX }}
       />
 
-      {/* Custom Cursor */}
-      <motion.div
-        ref={cursorRef}
-        className="fixed w-6 h-6 bg-white rounded-full pointer-events-none z-50 mix-blend-difference"
-        animate={{ x: mousePosition.x - 12, y: mousePosition.y - 12 }}
-        transition={{ type: "spring", stiffness: 500, damping: 28 }}
-      />
+      {/* Custom Cursor - Desktop Only */}
+      {window.innerWidth >= 768 && (
+        <motion.div
+          ref={cursorRef}
+          className="fixed w-6 h-6 bg-white rounded-full pointer-events-none z-50 mix-blend-difference hidden md:block"
+          animate={{ x: mousePosition.x - 12, y: mousePosition.y - 12 }}
+          transition={{ type: "spring", stiffness: 500, damping: 28 }}
+        />
+      )}
 
-      {/* Floating Navigation */}
+      {/* Navigation */}
       <FloatingNav activeSection={activeSection} />
 
-      {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
+      {/* Hero Section - Fully Responsive */}
+      <section id="home" className="relative min-h-screen flex items-center justify-center px-4">
+        {/* 3D Background - Hidden on small screens for performance */}
+        <div className="absolute inset-0 z-0 hidden sm:block">
           <Canvas camera={{ position: [0, 0, 5] }}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
@@ -261,26 +576,12 @@ const AwwardsPortfolio = () => {
           </Canvas>
         </div>
 
-        <div className="relative z-10 text-center">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.8, type: "spring" }}
-            className="relative inline-block mb-8"
-          >
-            {/* <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur-2xl opacity-50" />
-            <img
-              src="/public/assets/images/profile.jpg"
-              alt="Arshnoor Singh Sohi"
-              className="relative w-48 h-48 rounded-full border-4 border-white/20"
-            /> */}
-          </motion.div>
-
+        <div className="relative z-10 text-center max-w-4xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-7xl md:text-9xl font-bold mb-4"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
               ʌɾƨɦɲооɾ
@@ -291,7 +592,7 @@ const AwwardsPortfolio = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-2xl md:text-3xl text-white/60 font-light mb-8"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/60 font-light mb-8 px-4"
           >
             Software Engineer • AI Enthusiast • Creative Developer
           </motion.p>
@@ -300,17 +601,17 @@ const AwwardsPortfolio = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center px-4"
           >
             <MagneticButton
-              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full font-medium hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full font-medium hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 text-sm sm:text-base"
               onClick={handleSeeMyProjectsClick}
             >
               See My Projects
             </MagneticButton>
             <MagneticButton
-              className="px-8 py-4 bg-white/10 backdrop-blur-xl rounded-full font-medium border border-white/20 hover:bg-white/20 transition-all duration-300"
-              onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-xl rounded-full font-medium border border-white/20 hover:bg-white/20 transition-all duration-300 text-sm sm:text-base"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Get In Touch
             </MagneticButton>
@@ -320,7 +621,7 @@ const AwwardsPortfolio = () => {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-4 sm:bottom-10 left-1/2 transform -translate-x-1/2"
         >
           <svg className="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -328,27 +629,27 @@ const AwwardsPortfolio = () => {
         </motion.div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-32 px-8">
+      {/* About Section - Responsive Grid and IconCloud */}
+      <section id="about" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="grid md:grid-cols-2 gap-16 items-center"
+            className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
           >
-            <div>
-              <h2 className="text-5xl font-bold mb-8">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
                   About Me
                 </span>
               </h2>
-              <p className="text-xl text-white/60 mb-6 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-white/60 mb-4 sm:mb-6 leading-relaxed">
                 Master's student in Applied Computing with AI Specialization at the University of Windsor. 
                 Passionate about building innovative solutions that merge cutting-edge technology with 
                 exceptional user experiences.
               </p>
-              <p className="text-xl text-white/60 mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-white/60 mb-6 sm:mb-8 leading-relaxed">
                 With expertise in full-stack development, machine learning, and distributed systems, 
                 I create software that pushes boundaries and solves real-world problems.
               </p>
@@ -373,24 +674,18 @@ const AwwardsPortfolio = () => {
                 </a>
               </div>
             </div>
-            <div className="relative">
+            
+            {/* IconCloud Section - Order 1 on mobile, 2 on desktop */}
+            <div className="relative order-1 lg:order-2 flex justify-center">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur-3xl opacity-20"
               />
-              <div className="relative bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
-                <h3 className="text-2xl font-bold mb-6">Tech Stack</h3>
-                <div className="grid grid-cols-3 gap-4">
-                  {['React', 'Python', 'Java', 'TypeScript', 'Node.js', 'TensorFlow', 'AWS', 'Docker', 'GraphQL'].map((tech) => (
-                    <motion.div
-                      key={tech}
-                      whileHover={{ scale: 1.1 }}
-                      className="bg-white/5 backdrop-blur-xl rounded-lg p-3 text-center border border-white/10"
-                    >
-                      <span className="text-sm">{tech}</span>
-                    </motion.div>
-                  ))}
+              <div className="relative bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-xl rounded-2xl p-6 sm:p-8 border border-white/10 w-full max-w-md">
+                <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Tech Stack</h3>
+                <div className="flex justify-center">
+                  <IconCloud images={techImages} />
                 </div>
               </div>
             </div>
@@ -398,13 +693,13 @@ const AwwardsPortfolio = () => {
         </div>
       </section>
 
-      {/* Projects Preview Section */}
-      <section id="projects" className="py-32 px-8">
+      {/* Projects Preview Section - Responsive */}
+      <section id="projects" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl font-bold mb-16"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-16"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
               Featured Projects
@@ -418,13 +713,13 @@ const AwwardsPortfolio = () => {
             className="relative group"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-500" />
-            <div className="relative bg-gray-900/90 backdrop-blur-xl rounded-2xl p-12 border border-white/10">
-              <p className="text-xl text-white/60 mb-8">
+            <div className="relative bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 sm:p-8 lg:p-12 border border-white/10">
+              <p className="text-base sm:text-lg lg:text-xl text-white/60 mb-6 sm:mb-8">
                 Explore my collection of 20+ projects showcasing expertise in AI, web development, 
                 distributed systems, and more.
               </p>
               <MagneticButton
-                className="px-12 py-6 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full font-medium text-lg hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300"
+                className="px-8 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full font-medium text-base sm:text-lg hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300"
                 onClick={handleSeeMyProjectsClick}
               >
                 View All Projects →
@@ -434,20 +729,20 @@ const AwwardsPortfolio = () => {
         </div>
       </section>
 
-      {/* Blog Section */}
-      <section id="blog" className="py-32 px-8">
+      {/* Blog Section - Responsive Cards */}
+      <section id="blog" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl font-bold mb-16 text-center"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-16 text-center"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
               Latest Articles
             </span>
           </motion.h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {articles.map((article, index) => (
               <motion.article
                 key={index}
@@ -460,16 +755,16 @@ const AwwardsPortfolio = () => {
               >
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition duration-500" />
-                  <div className="relative bg-gray-900/90 backdrop-blur-xl rounded-2xl p-8 border border-white/10 h-full">
+                  <div className="relative bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 sm:p-8 border border-white/10 h-full">
                     <div className="flex items-center gap-2 text-sm text-white/40 mb-4">
                       <span>{article.date}</span>
                       <span>•</span>
                       <span>{article.readTime}</span>
                     </div>
-                    <h3 className="text-xl font-bold mb-4 group-hover:text-purple-400 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold mb-4 group-hover:text-purple-400 transition-colors">
                       {article.title}
                     </h3>
-                    <p className="text-white/60 mb-6">{article.excerpt}</p>
+                    <p className="text-white/60 mb-6 text-sm sm:text-base">{article.excerpt}</p>
                     <div className="flex items-center text-purple-400 font-medium">
                       <span>Read More</span>
                       <svg className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -485,10 +780,10 @@ const AwwardsPortfolio = () => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-center mt-12"
+            className="text-center mt-8 sm:mt-12"
           >
             <MagneticButton
-              className="px-8 py-4 bg-white/10 backdrop-blur-xl rounded-full font-medium border border-white/20 hover:bg-white/20 transition-all duration-300"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-xl rounded-full font-medium border border-white/20 hover:bg-white/20 transition-all duration-300 text-sm sm:text-base"
               onClick={() => window.open('https://arshnoorsinghsohi.medium.com/', '_blank')}
             >
               View All Articles on Medium →
@@ -497,20 +792,20 @@ const AwwardsPortfolio = () => {
         </div>
       </section>
 
-      {/* Certifications Section */}
-      <section id="certifications" className="py-32 px-8">
+      {/* Certifications Section - Responsive Grid */}
+      <section id="certifications" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl font-bold mb-16 text-center"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-16 text-center"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
               Certifications & Achievements
             </span>
           </motion.h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {certifications.map((cert, index) => (
               <CertificationCard key={index} cert={cert} index={index} />
             ))}
@@ -518,13 +813,13 @@ const AwwardsPortfolio = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-32 px-8">
+      {/* Contact Section - Responsive */}
+      <section id="contact" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl font-bold mb-8"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
               Let's Connect
@@ -535,7 +830,7 @@ const AwwardsPortfolio = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-white/60 mb-12"
+            className="text-base sm:text-lg lg:text-xl text-white/60 mb-8 sm:mb-12"
           >
             Ready to collaborate on something amazing? I'm always open to discussing new opportunities,
             creative ideas, and exciting projects.
@@ -545,26 +840,27 @@ const AwwardsPortfolio = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center"
           >
             <MagneticButton
-              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full font-medium hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full font-medium hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 text-sm sm:text-base"
               onClick={() => window.location.href = 'mailto:sohi21@uwindsor.ca'}
             >
-              <span className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span className="flex items-center justify-center gap-2">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                sohi21@uwindsor.ca
+                <span className="hidden sm:inline">sohi21@uwindsor.ca</span>
+                <span className="sm:hidden">Email Me</span>
               </span>
             </MagneticButton>
             
             <MagneticButton
-              className="px-8 py-4 bg-white/10 backdrop-blur-xl rounded-full font-medium border border-white/20 hover:bg-white/20 transition-all duration-300"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-xl rounded-full font-medium border border-white/20 hover:bg-white/20 transition-all duration-300 text-sm sm:text-base"
               onClick={() => window.open('https://linktr.ee/arshnoorsinghsohi', '_blank')}
             >
-              <span className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span className="flex items-center justify-center gap-2">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
                 All Links
