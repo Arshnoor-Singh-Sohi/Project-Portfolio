@@ -566,8 +566,8 @@ const AwwardsPortfolio = () => {
 
       {/* Hero Section - Fully Responsive */}
       <section id="home" className="relative min-h-screen flex items-center justify-center px-4">
-        {/* 3D Background - Hidden on small screens for performance */}
-        <div className="absolute inset-0 z-0 hidden sm:block">
+        {/* 3D Background - Now visible on all devices */}
+        <div className="absolute inset-0 z-0">
           <Canvas camera={{ position: [0, 0, 5] }}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
@@ -675,8 +675,8 @@ const AwwardsPortfolio = () => {
               </div>
             </div>
             
-            {/* IconCloud Section - Order 1 on mobile, 2 on desktop */}
-            <div className="relative order-1 lg:order-2 flex justify-center">
+            {/* IconCloud Section - Now properly positioned below text on mobile */}
+            <div className="relative flex justify-center">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
