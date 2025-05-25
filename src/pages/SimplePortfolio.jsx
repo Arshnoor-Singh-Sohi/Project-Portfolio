@@ -107,7 +107,9 @@ const ParticleBackground = ({ darkMode }) => {
     );
 };
 
-const SimplePortfolio = () => {
+
+
+const SimplePortfolio = ({ onBack }) => {
     // State management
     const [darkMode, setDarkMode] = useState(false);
     const [projects, setProjects] = useState([]);
@@ -386,6 +388,14 @@ const SimplePortfolio = () => {
                     </motion.h1>
 
                     <div className="flex items-center space-x-4 mt-2 sm:mt-0">
+                        <motion.button
+                            onClick={onBack} // Call the onBack function passed from AwwardsPortfolio
+                            className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-full font-medium"
+                            whileHover={{ scale: 1.05, backgroundColor: darkMode ? '#4B5563' : '#E5E7EB' }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            &larr; Back to Main
+                        </motion.button>
                         <BackgroundMusic darkMode={darkMode} />
 
                         <motion.a
