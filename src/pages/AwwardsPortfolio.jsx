@@ -233,7 +233,7 @@ function IconCloud({ icons, images }) {
 // 3D Animated Sphere Component - Made responsive
 const AnimatedSphere = () => {
   const meshRef = useRef();
-  
+
   useFrame((state) => {
     if (meshRef.current) {
       meshRef.current.rotation.x = state.clock.getElapsedTime() * 0.2;
@@ -290,7 +290,7 @@ const MagneticButton = ({ children, className, onClick }) => {
 const FloatingNav = ({ activeSection }) => {
   const navItems = ['Home', 'About', 'Projects', 'Blog', 'Certifications', 'Contact'];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   return (
     <>
       {/* Desktop Navigation */}
@@ -308,9 +308,8 @@ const FloatingNav = ({ activeSection }) => {
               <motion.li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
-                  className={`text-sm font-medium transition-colors ${
-                    activeSection === item.toLowerCase() ? 'text-white' : 'text-white/60'
-                  } hover:text-white`}
+                  className={`text-sm font-medium transition-colors ${activeSection === item.toLowerCase() ? 'text-white' : 'text-white/60'
+                    } hover:text-white`}
                 >
                   {item}
                 </a>
@@ -344,9 +343,8 @@ const FloatingNav = ({ activeSection }) => {
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
-                    className={`block text-base font-medium transition-colors py-2 px-3 rounded-lg ${
-                      activeSection === item.toLowerCase() ? 'text-white bg-white/10' : 'text-white/60'
-                    } hover:text-white hover:bg-white/5`}
+                    className={`block text-base font-medium transition-colors py-2 px-3 rounded-lg ${activeSection === item.toLowerCase() ? 'text-white bg-white/10' : 'text-white/60'
+                      } hover:text-white hover:bg-white/5`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item}
@@ -398,7 +396,7 @@ const AwwardsPortfolio = () => {
   const { scrollYProgress } = useScroll();
 
   const [showSimplePortfolio, setShowSimplePortfolio] = useState(false);
-  
+
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -410,12 +408,12 @@ const AwwardsPortfolio = () => {
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
-    
+
     // Only add cursor on desktop
     if (window.innerWidth >= 768) {
       window.addEventListener('mousemove', handleMouseMove);
     }
-    
+
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
@@ -486,7 +484,7 @@ const AwwardsPortfolio = () => {
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg',
-    
+
     // Web Technologies
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
@@ -495,13 +493,13 @@ const AwwardsPortfolio = () => {
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
-    
+
     // Databases
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg',
-    
+
     // AI/ML & Data Science
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg',
@@ -509,18 +507,18 @@ const AwwardsPortfolio = () => {
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg',
-    
+
     // Frameworks & Tools
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg',
-    
+
     // Cloud & DevOps
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-    
+
     // Systems & OS
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg'
@@ -566,8 +564,8 @@ const AwwardsPortfolio = () => {
 
       {/* Hero Section - Fully Responsive */}
       <section id="home" className="relative min-h-screen flex items-center justify-center px-4">
-        {/* 3D Background - Now visible on all devices */}
-        <div className="absolute inset-0 z-0">
+        {/* 3D Background - Now visible on all devices with proper touch handling */}
+        <div className="absolute inset-0 z-0" style={{ touchAction: 'pan-y' }}>
           <Canvas camera={{ position: [0, 0, 5] }}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
@@ -587,7 +585,7 @@ const AwwardsPortfolio = () => {
               ʌɾƨɦɲооɾ
             </span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -616,17 +614,45 @@ const AwwardsPortfolio = () => {
               Get In Touch
             </MagneticButton>
           </motion.div>
-        </div>
 
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-4 sm:bottom-10 left-1/2 transform -translate-x-1/2"
-        >
-          <svg className="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </motion.div>
+          {/* Scroll arrow right below buttons */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2, duration: 1.5 }}
+            className="mt-12 flex justify-center cursor-pointer"
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            <motion.div
+              animate={{
+                y: [0, 6, 0],
+                opacity: [0.5, 1, 0.5]  // Increased from [0.3, 0.8, 0.3] for better visibility
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="relative group"
+            >
+              {/* Enhanced glow effect for better visibility */}
+              <div className="absolute inset-0 bg-purple-400/30 blur-xl rounded-full scale-150 group-hover:scale-200 transition-transform duration-700"></div>
+
+              {/* More visible background and border */}
+              <div className="relative bg-black/40 backdrop-blur-sm rounded-full p-3 border border-white/20 group-hover:border-white/50 transition-all duration-500">
+                <svg
+                  className="w-5 h-5 text-white/70 group-hover:text-white transition-colors duration-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
       </section>
 
       {/* About Section - Responsive Grid and IconCloud */}
@@ -645,36 +671,36 @@ const AwwardsPortfolio = () => {
                 </span>
               </h2>
               <p className="text-base sm:text-lg lg:text-xl text-white/60 mb-4 sm:mb-6 leading-relaxed">
-                Master's student in Applied Computing with AI Specialization at the University of Windsor. 
-                Passionate about building innovative solutions that merge cutting-edge technology with 
+                Master's student in Applied Computing with AI Specialization at the University of Windsor.
+                Passionate about building innovative solutions that merge cutting-edge technology with
                 exceptional user experiences.
               </p>
               <p className="text-base sm:text-lg lg:text-xl text-white/60 mb-6 sm:mb-8 leading-relaxed">
-                With expertise in full-stack development, machine learning, and distributed systems, 
+                With expertise in full-stack development, machine learning, and distributed systems,
                 I create software that pushes boundaries and solves real-world problems.
               </p>
               <div className="flex gap-4 flex-wrap">
                 <a href="https://github.com/Arshnoor-Singh-Sohi" target="_blank" rel="noopener noreferrer"
-                   className="text-white/60 hover:text-white transition-colors">
+                  className="text-white/60 hover:text-white transition-colors">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
                   </svg>
                 </a>
                 <a href="https://www.linkedin.com/in/arshnoorsinghsohi/" target="_blank" rel="noopener noreferrer"
-                   className="text-white/60 hover:text-white transition-colors">
+                  className="text-white/60 hover:text-white transition-colors">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                 </a>
                 <a href="https://arshnoorsinghsohi.medium.com/" target="_blank" rel="noopener noreferrer"
-                   className="text-white/60 hover:text-white transition-colors">
+                  className="text-white/60 hover:text-white transition-colors">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                    <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
                   </svg>
                 </a>
               </div>
             </div>
-            
+
             {/* IconCloud Section - Now properly positioned below text on mobile */}
             <div className="relative flex justify-center">
               <motion.div
@@ -705,7 +731,7 @@ const AwwardsPortfolio = () => {
               Featured Projects
             </span>
           </motion.h2>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -715,7 +741,7 @@ const AwwardsPortfolio = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-500" />
             <div className="relative bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 sm:p-8 lg:p-12 border border-white/10">
               <p className="text-base sm:text-lg lg:text-xl text-white/60 mb-6 sm:mb-8">
-                Explore my collection of 20+ projects showcasing expertise in AI, web development, 
+                Explore my collection of 20+ projects showcasing expertise in AI, web development,
                 distributed systems, and more.
               </p>
               <MagneticButton
@@ -741,7 +767,7 @@ const AwwardsPortfolio = () => {
               Latest Articles
             </span>
           </motion.h2>
-          
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {articles.map((article, index) => (
               <motion.article
@@ -776,7 +802,7 @@ const AwwardsPortfolio = () => {
               </motion.article>
             ))}
           </div>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -804,7 +830,7 @@ const AwwardsPortfolio = () => {
               Certifications & Achievements
             </span>
           </motion.h2>
-          
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {certifications.map((cert, index) => (
               <CertificationCard key={index} cert={cert} index={index} />
@@ -825,7 +851,7 @@ const AwwardsPortfolio = () => {
               Let's Connect
             </span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -835,7 +861,7 @@ const AwwardsPortfolio = () => {
             Ready to collaborate on something amazing? I'm always open to discussing new opportunities,
             creative ideas, and exciting projects.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -854,7 +880,7 @@ const AwwardsPortfolio = () => {
                 <span className="sm:hidden">Email Me</span>
               </span>
             </MagneticButton>
-            
+
             <MagneticButton
               className="px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-xl rounded-full font-medium border border-white/20 hover:bg-white/20 transition-all duration-300 text-sm sm:text-base"
               onClick={() => window.open('https://linktr.ee/arshnoorsinghsohi', '_blank')}
