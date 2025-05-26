@@ -360,29 +360,50 @@ const FloatingNav = ({ activeSection }) => {
 };
 
 // Certification Card Component - Made responsive
+// Enhanced Certification Card Component with clickable functionality
 const CertificationCard = ({ cert, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      whileHover={{ y: -10 }}
-      className="group relative"
+      whileHover={{ y: -10, scale: 1.02 }} // Enhanced hover effect for better clickable feedback
+      className="group relative cursor-pointer" // Added cursor-pointer for clear interactivity
+      onClick={() => window.open(cert.url, '_blank', 'noopener,noreferrer')} // Safe external link opening
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-500" />
-      <div className="relative bg-gray-900/90 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-white/10">
+      {/* Enhanced glow effect that responds to hover more dramatically */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
+
+      <div className="relative bg-gray-900/90 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-white/10 group-hover:border-white/30 transition-all duration-300">
         <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center flex-shrink-0">
+          {/* Certificate icon with enhanced hover state */}
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
             <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
             </svg>
           </div>
+
           <div className="min-w-0 flex-1">
-            <h3 className="text-white font-semibold text-sm sm:text-base truncate">{cert.name}</h3>
-            <p className="text-white/60 text-xs sm:text-sm truncate">{cert.issuer}</p>
+            <h3 className="text-white font-semibold text-sm sm:text-base truncate group-hover:text-purple-200 transition-colors duration-300">{cert.name}</h3>
+            <p className="text-white/60 text-xs sm:text-sm truncate group-hover:text-white/80 transition-colors duration-300">{cert.issuer}</p>
+          </div>
+
+          {/* Subtle external link indicator that appears on hover */}
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <svg className="w-4 h-4 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
           </div>
         </div>
-        <p className="text-white/80 text-xs sm:text-sm">{cert.date}</p>
+
+        <div className="flex items-center justify-between">
+          <p className="text-white/80 text-xs sm:text-sm">{cert.date}</p>
+
+          {/* "View Certificate" text that appears on hover */}
+          <span className="text-xs text-purple-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            View Certificate
+          </span>
+        </div>
       </div>
     </motion.div>
   );
@@ -443,12 +464,38 @@ const AwwardsPortfolio = () => {
   }, []);
 
   // Certifications data
+  // Updated certifications data with clickable links
   const certifications = [
-    { name: "Advanced Java Development", issuer: "Oracle", date: "December 2023" },
-    { name: "Full Stack Web Development", issuer: "Venus Multi Media", date: "December 2023" },
-    { name: "Machine Learning Certification", issuer: "Venus Multi Media", date: "August 2022" },
-    { name: "Cybersecurity Workshop", issuer: "EC-Council", date: "2025" },
-    { name: "NLP & LLM Workshop Winner", issuer: "University of Windsor", date: "Winter 2025" }
+    {
+      name: "Advanced Java Development",
+      issuer: "Oracle",
+      date: "December 2023",
+      url: "https://drive.google.com/file/d/1MM0BTzOPKK7tGCrweh-HjKYbqQzEjM6y/view?usp=sharing"
+    },
+    {
+      name: "Full Stack Web Development",
+      issuer: "Venus Multi Media",
+      date: "December 2023",
+      url: "https://drive.google.com/file/d/13D39rT6HaxW4JSRWNXxFmDPxW-zwbwgy/view"
+    },
+    {
+      name: "Machine Learning Certification",
+      issuer: "Venus Multi Media",
+      date: "August 2022",
+      url: "https://drive.google.com/file/d/1Yogi1FAutSs4jrDVZJO6vLfGheECsrnL/view?usp=sharing"
+    },
+    {
+      name: "Cybersecurity Workshop",
+      issuer: "EC-Council",
+      date: "2025",
+      url: "https://drive.google.com/file/d/1YOpDV58gkoxA_MW5JyWYKjy3RJzFuhA1/view?usp=sharing"
+    },
+    {
+      name: "NLP & LLM Workshop Winner",
+      issuer: "University of Windsor",
+      date: "Winter 2025",
+      url: "https://drive.google.com/file/d/1XSF_JgHjDvNGtM-t8V6a0GuBmMG0Ml01/view"
+    }
   ];
 
   // Medium articles data
