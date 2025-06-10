@@ -231,26 +231,679 @@ function IconCloud({ icons, images }) {
 }
 
 // 3D Animated Sphere Component - Made responsive
+// Just modify your existing AnimatedSphere - don't replace it, just add these two lines
+// Enhanced AnimatedSphere with pulsing effect
 const AnimatedSphere = () => {
   const meshRef = useRef();
+  const materialRef = useRef();
 
   useFrame((state) => {
     if (meshRef.current) {
+      // Original rotation
       meshRef.current.rotation.x = state.clock.getElapsedTime() * 0.2;
       meshRef.current.rotation.y = state.clock.getElapsedTime() * 0.3;
+      
+      // Add subtle pulsing scale
+      const pulse = 1 + Math.sin(state.clock.getElapsedTime() * 2) * 0.05;
+      meshRef.current.scale.setScalar(2.5 * pulse);
+    }
+
+    if (materialRef.current) {
+      // Animate distortion
+      materialRef.current.distort = 0.3 + Math.sin(state.clock.getElapsedTime() * 0.5) * 0.1;
+      // Pulse the emissive intensity
+      materialRef.current.emissiveIntensity = 0.1 + Math.sin(state.clock.getElapsedTime() * 3) * 0.05;
     }
   });
 
   return (
     <Sphere ref={meshRef} args={[1, 100, 200]} scale={2.5}>
       <MeshDistortMaterial
+        ref={materialRef}
         color="#8352FD"
         attach="material"
         distort={0.3}
         speed={1.5}
         roughness={0}
+        metalness={0.8}
+        emissive="#4338ca"
+        emissiveIntensity={0.1}
       />
     </Sphere>
+  );
+};
+
+// Add this new component
+const FloatingCubes = () => {
+  const cube1Ref = useRef();
+  const cube2Ref = useRef();
+  const cube3Ref = useRef();
+
+  useFrame((state) => {
+    if (cube1Ref.current) {
+      cube1Ref.current.rotation.x = state.clock.elapsedTime * 0.3;
+      cube1Ref.current.rotation.y = state.clock.elapsedTime * 0.2;
+      cube1Ref.current.position.y = 3 + Math.sin(state.clock.elapsedTime * 0.8) * 0.5;
+    }
+
+    if (cube2Ref.current) {
+      cube2Ref.current.rotation.x = state.clock.elapsedTime * -0.2;
+      cube2Ref.current.rotation.z = state.clock.elapsedTime * 0.4;
+      cube2Ref.current.position.y = -2 + Math.sin(state.clock.elapsedTime * 1.2 + 1) * 0.4;
+    }
+
+    if (cube3Ref.current) {
+      cube3Ref.current.rotation.y = state.clock.elapsedTime * 0.5;
+      cube3Ref.current.rotation.x = state.clock.elapsedTime * 0.1;
+      cube3Ref.current.position.y = 1 + Math.sin(state.clock.elapsedTime * 0.6 + 2) * 0.3;
+    }
+  });
+
+  return (
+    <group>
+      {/* Cube 1 */}
+      <mesh ref={cube1Ref} position={[5, 3, -1]} scale={0.4}>
+        <boxGeometry args={[1, 1, 1]} />
+        <meshStandardMaterial 
+          color="#10b981" 
+          transparent 
+          opacity={0.7}
+          metalness={0.8}
+          roughness={0.2}
+        />
+      </mesh>
+
+      {/* Cube 2 */}
+      <mesh ref={cube2Ref} position={[-4, -2, 2]} scale={0.35}>
+        <boxGeometry args={[1, 1, 1]} />
+        <meshStandardMaterial 
+          color="#ef4444" 
+          transparent 
+          opacity={0.8}
+          metalness={0.6}
+          roughness={0.3}
+        />
+      </mesh>
+
+      {/* Cube 3 */}
+      <mesh ref={cube3Ref} position={[2, 1, -4]} scale={0.3}>
+        <boxGeometry args={[1, 1, 1]} />
+        <meshStandardMaterial 
+          color="#8b5cf6" 
+          transparent 
+          opacity={0.75}
+          metalness={0.9}
+          roughness={0.1}
+        />
+      </mesh>
+    </group>
+  );
+};
+
+const SingleFloatingBox = () => {
+  const meshRef = useRef();
+
+  useFrame((state) => {
+    if (meshRef.current) {
+      meshRef.current.position.y = Math.sin(state.clock.elapsedTime) * 0.5;
+      meshRef.current.rotation.x += 0.01;
+      meshRef.current.rotation.y += 0.005;
+    }
+  });
+
+  return (
+    <mesh ref={meshRef} position={[3, 0, 0]} scale={0.3}>
+      <boxGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color="#8b5cf6" transparent opacity={0.7} />
+    </mesh>
+  );
+};
+
+// Add this component for better balance
+const FloatingPyramids = () => {
+  const pyramid1Ref = useRef();
+  const pyramid2Ref = useRef();
+  const pyramid3Ref = useRef();
+  const pyramid4Ref = useRef();
+
+  useFrame((state) => {
+    if (pyramid1Ref.current) {
+      pyramid1Ref.current.rotation.y = state.clock.elapsedTime * 0.4;
+      pyramid1Ref.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.3) * 0.2;
+      pyramid1Ref.current.position.y = 2 + Math.sin(state.clock.elapsedTime * 1.1) * 0.3;
+    }
+
+    if (pyramid2Ref.current) {
+      pyramid2Ref.current.rotation.x = state.clock.elapsedTime * 0.3;
+      pyramid2Ref.current.rotation.y = state.clock.elapsedTime * -0.2;
+      pyramid2Ref.current.position.y = 3.5 + Math.sin(state.clock.elapsedTime * 0.9 + 1) * 0.4;
+    }
+
+    if (pyramid3Ref.current) {
+      pyramid3Ref.current.rotation.z = state.clock.elapsedTime * 0.5;
+      pyramid3Ref.current.rotation.x = state.clock.elapsedTime * 0.2;
+      pyramid3Ref.current.position.y = 1.2 + Math.sin(state.clock.elapsedTime * 1.3 + 2) * 0.2;
+    }
+
+    if (pyramid4Ref.current) {
+      pyramid4Ref.current.rotation.y = state.clock.elapsedTime * -0.3;
+      pyramid4Ref.current.rotation.x = state.clock.elapsedTime * 0.4;
+      pyramid4Ref.current.position.y = 0.5 + Math.sin(state.clock.elapsedTime * 0.7 + 3) * 0.3;
+    }
+  });
+
+  return (
+    <group>
+      {/* Right-Upper Pyramids */}
+      <mesh ref={pyramid1Ref} position={[3.5, 2, 1]} scale={0.3}>
+        <tetrahedronGeometry args={[1]} />
+        <meshStandardMaterial 
+          color="#06b6d4" 
+          transparent 
+          opacity={0.8}
+          metalness={0.7}
+          roughness={0.2}
+          emissive="#0891b2"
+          emissiveIntensity={0.1}
+        />
+      </mesh>
+
+      <mesh ref={pyramid2Ref} position={[4.5, 3.5, -0.5]} scale={0.25}>
+        <tetrahedronGeometry args={[1]} />
+        <meshStandardMaterial 
+          color="#f97316" 
+          transparent 
+          opacity={0.7}
+          metalness={0.8}
+          roughness={0.1}
+          emissive="#ea580c"
+          emissiveIntensity={0.1}
+        />
+      </mesh>
+
+      {/* Right-Side Pyramids */}
+      <mesh ref={pyramid3Ref} position={[5, 1.2, 1.5]} scale={0.35}>
+        <tetrahedronGeometry args={[1]} />
+        <meshStandardMaterial 
+          color="#a855f7" 
+          transparent 
+          opacity={0.8}
+          metalness={0.6}
+          roughness={0.3}
+          emissive="#9333ea"
+          emissiveIntensity={0.1}
+        />
+      </mesh>
+
+      <mesh ref={pyramid4Ref} position={[4, 0.5, 3]} scale={0.28}>
+        <tetrahedronGeometry args={[1]} />
+        <meshStandardMaterial 
+          color="#22c55e" 
+          transparent 
+          opacity={0.75}
+          metalness={0.9}
+          roughness={0.1}
+          emissive="#16a34a"
+          emissiveIntensity={0.1}
+        />
+      </mesh>
+    </group>
+  );
+};
+
+// Futuristic wireframe geometries
+const WireframeHolograms = () => {
+  const wireframe1Ref = useRef();
+  const wireframe2Ref = useRef();
+  const wireframe3Ref = useRef();
+
+  useFrame((state) => {
+    if (wireframe1Ref.current) {
+      wireframe1Ref.current.rotation.x = state.clock.elapsedTime * 0.2;
+      wireframe1Ref.current.rotation.y = state.clock.elapsedTime * 0.3;
+      // Make it orbit around the main sphere
+      const radius = 6;
+      wireframe1Ref.current.position.x = Math.cos(state.clock.elapsedTime * 0.5) * radius;
+      wireframe1Ref.current.position.z = Math.sin(state.clock.elapsedTime * 0.5) * radius;
+    }
+
+    if (wireframe2Ref.current) {
+      wireframe2Ref.current.rotation.z = state.clock.elapsedTime * 0.4;
+      wireframe2Ref.current.rotation.y = state.clock.elapsedTime * -0.2;
+      // Different orbital pattern
+      const radius = 7;
+      wireframe2Ref.current.position.x = Math.sin(state.clock.elapsedTime * 0.3) * radius;
+      wireframe2Ref.current.position.y = Math.cos(state.clock.elapsedTime * 0.3) * 3;
+    }
+
+    if (wireframe3Ref.current) {
+      wireframe3Ref.current.rotation.x = state.clock.elapsedTime * -0.3;
+      wireframe3Ref.current.rotation.z = state.clock.elapsedTime * 0.2;
+      // Figure-8 pattern
+      const t = state.clock.elapsedTime * 0.4;
+      wireframe3Ref.current.position.x = Math.sin(t) * 5;
+      wireframe3Ref.current.position.y = Math.sin(t * 2) * 2;
+      wireframe3Ref.current.position.z = Math.cos(t) * 3;
+    }
+  });
+
+  return (
+    <group>
+      {/* Wireframe Dodecahedron - Orbiting */}
+      <mesh ref={wireframe1Ref} position={[6, 0, 0]} scale={0.8}>
+        <dodecahedronGeometry args={[1]} />
+        <meshBasicMaterial 
+          color="#00ffff" 
+          wireframe={true}
+          transparent
+          opacity={0.6}
+        />
+      </mesh>
+
+      {/* Wireframe Icosahedron - Vertical orbit */}
+      <mesh ref={wireframe2Ref} position={[0, 3, -7]} scale={0.6}>
+        <icosahedronGeometry args={[1]} />
+        <meshBasicMaterial 
+          color="#ff00ff" 
+          wireframe={true}
+          transparent
+          opacity={0.7}
+        />
+      </mesh>
+
+      {/* Wireframe Octahedron - Figure-8 pattern */}
+      <mesh ref={wireframe3Ref} position={[0, 0, 0]} scale={0.7}>
+        <octahedronGeometry args={[1]} />
+        <meshBasicMaterial 
+          color="#ffff00" 
+          wireframe={true}
+          transparent
+          opacity={0.8}
+        />
+      </mesh>
+    </group>
+  );
+};
+
+// Shapes that morph between different geometries
+const MorphingShapes = () => {
+  const shape1Ref = useRef();
+  const shape2Ref = useRef();
+
+  useFrame((state) => {
+    if (shape1Ref.current) {
+      // Morphing scale effect
+      const morph = Math.sin(state.clock.elapsedTime * 2);
+      shape1Ref.current.scale.x = 0.5 + morph * 0.3;
+      shape1Ref.current.scale.y = 0.5 - morph * 0.2;
+      shape1Ref.current.scale.z = 0.5 + morph * 0.25;
+      
+      shape1Ref.current.rotation.x = state.clock.elapsedTime * 0.3;
+      shape1Ref.current.rotation.y = state.clock.elapsedTime * 0.4;
+    }
+
+    if (shape2Ref.current) {
+      // Pulsating effect
+      const pulse = 1 + Math.sin(state.clock.elapsedTime * 3) * 0.5;
+      shape2Ref.current.scale.setScalar(pulse * 0.3);
+      
+      shape2Ref.current.rotation.z = state.clock.elapsedTime * 0.6;
+    }
+  });
+
+  return (
+    <group>
+      <mesh ref={shape1Ref} position={[-5, 2, 2]}>
+        <dodecahedronGeometry args={[1]} />
+        <meshStandardMaterial 
+          color="#ff6b6b" 
+          transparent 
+          opacity={0.7}
+          metalness={0.8}
+          roughness={0.2}
+        />
+      </mesh>
+
+      <mesh ref={shape2Ref} position={[3, -3, -2]}>
+        <icosahedronGeometry args={[1]} />
+        <meshStandardMaterial 
+          color="#4ecdc4" 
+          transparent 
+          opacity={0.8}
+          metalness={0.6}
+          roughness={0.3}
+        />
+      </mesh>
+    </group>
+  );
+};
+
+// Glowing energy trails that connect your floating elements
+const EnergyTrails = () => {
+  const trailsRef = useRef();
+  const connectorsRef = useRef();
+
+  useFrame((state) => {
+    if (trailsRef.current) {
+      trailsRef.current.rotation.y = state.clock.elapsedTime * 0.1;
+      
+      // Animate individual trail particles
+      trailsRef.current.children.forEach((trail, i) => {
+        trail.material.opacity = 0.3 + Math.sin(state.clock.elapsedTime * 3 + i) * 0.2;
+        trail.position.y += Math.sin(state.clock.elapsedTime * 2 + i) * 0.005;
+      });
+    }
+
+    if (connectorsRef.current) {
+      // Pulsing connection lines
+      connectorsRef.current.children.forEach((connector, i) => {
+        const pulse = 0.5 + Math.sin(state.clock.elapsedTime * 4 + i * 0.5) * 0.3;
+        connector.material.opacity = pulse;
+        connector.scale.x = pulse;
+      });
+    }
+  });
+
+  return (
+    <group>
+      {/* Energy Trail Particles */}
+      <group ref={trailsRef}>
+        {[...Array(15)].map((_, i) => {
+          const angle = (i / 15) * Math.PI * 2;
+          const radius = 8 + Math.sin(i) * 2;
+          return (
+            <mesh
+              key={`trail-${i}`}
+              position={[
+                Math.cos(angle) * radius,
+                Math.sin(i * 2) * 3,
+                Math.sin(angle) * radius
+              ]}
+              scale={0.08}
+            >
+              <sphereGeometry args={[1, 8, 8]} />
+              <meshBasicMaterial
+                color="#00ffaa"
+                transparent
+                opacity={0.4}
+              />
+            </mesh>
+          );
+        })}
+      </group>
+
+      {/* Connection Lines */}
+      <group ref={connectorsRef}>
+        {/* Line from sphere to right elements */}
+        <mesh position={[2.5, 0, 0]} rotation={[0, 0, Math.PI / 4]} scale={[0.02, 5, 0.02]}>
+          <cylinderGeometry args={[1, 1, 1]} />
+          <meshBasicMaterial
+            color="#ff00aa"
+            transparent
+            opacity={0.4}
+          />
+        </mesh>
+
+        {/* Line from sphere to left elements */}
+        <mesh position={[-2.5, 0, 0]} rotation={[0, 0, -Math.PI / 4]} scale={[0.02, 5, 0.02]}>
+          <cylinderGeometry args={[1, 1, 1]} />
+          <meshBasicMaterial
+            color="#00aaff"
+            transparent
+            opacity={0.4}
+          />
+        </mesh>
+
+        {/* Vertical connection */}
+        <mesh position={[0, 2.5, 0]} scale={[0.02, 5, 0.02]}>
+          <cylinderGeometry args={[1, 1, 1]} />
+          <meshBasicMaterial
+            color="#aa00ff"
+            transparent
+            opacity={0.4}
+          />
+        </mesh>
+      </group>
+    </group>
+  );
+};
+
+// Double helix made of geometric shapes
+const GeometricDNAHelix = () => {
+  const helixRef = useRef();
+
+  useFrame((state) => {
+    if (helixRef.current) {
+      helixRef.current.rotation.y = state.clock.elapsedTime * 0.3;
+      helixRef.current.position.x = Math.sin(state.clock.elapsedTime * 0.5) * 2;
+    }
+  });
+
+  return (
+    <group ref={helixRef} position={[8, 0, -3]}>
+      {[...Array(20)].map((_, i) => {
+        const t = i * 0.3;
+        const radius = 1.5;
+        return (
+          <group key={`dna-${i}`}>
+            {/* First helix strand */}
+            <mesh
+              position={[
+                Math.cos(t) * radius,
+                i * 0.4 - 4,
+                Math.sin(t) * radius
+              ]}
+              scale={0.15}
+            >
+              <octahedronGeometry args={[1]} />
+              <meshStandardMaterial
+                color="#ff3366"
+                transparent
+                opacity={0.8}
+                emissive="#ff1144"
+                emissiveIntensity={0.2}
+              />
+            </mesh>
+
+            {/* Second helix strand */}
+            <mesh
+              position={[
+                Math.cos(t + Math.PI) * radius,
+                i * 0.4 - 4,
+                Math.sin(t + Math.PI) * radius
+              ]}
+              scale={0.15}
+            >
+              <tetrahedronGeometry args={[1]} />
+              <meshStandardMaterial
+                color="#33ff66"
+                transparent
+                opacity={0.8}
+                emissive="#11ff44"
+                emissiveIntensity={0.2}
+              />
+            </mesh>
+
+            {/* Connection between strands */}
+            <mesh
+              position={[0, i * 0.4 - 4, 0]}
+              rotation={[0, t, 0]}
+              scale={[0.03, 0.03, 3]}
+            >
+              <cylinderGeometry args={[1, 1, 1]} />
+              <meshBasicMaterial
+                color="#ffaa00"
+                transparent
+                opacity={0.6}
+              />
+            </mesh>
+          </group>
+        );
+      })}
+    </group>
+  );
+};
+
+// Add this component - 3 different geometric shapes
+const FloatingElements = () => {
+  const groupRef = useRef();
+
+  useFrame((state) => {
+    if (groupRef.current) {
+      // Rotate the entire group slowly
+      groupRef.current.rotation.y = state.clock.elapsedTime * 0.1;
+    }
+  });
+
+  return (
+    <group ref={groupRef}>
+      {/* Floating Octahedron */}
+      <mesh position={[4, 1.5, -2]} scale={0.25}>
+        <octahedronGeometry args={[1]} />
+        <meshStandardMaterial 
+          color="#06b6d4" 
+          transparent 
+          opacity={0.8}
+          metalness={0.7}
+          roughness={0.2}
+        />
+      </mesh>
+
+      {/* Floating Tetrahedron */}
+      <mesh position={[-3.5, -1, 1]} scale={0.3}>
+        <tetrahedronGeometry args={[1]} />
+        <meshStandardMaterial 
+          color="#f59e0b" 
+          transparent 
+          opacity={0.7}
+          metalness={0.6}
+          roughness={0.3}
+        />
+      </mesh>
+
+      {/* Floating Icosahedron */}
+      <mesh position={[-1, 2.5, -3]} scale={0.2}>
+        <icosahedronGeometry args={[1]} />
+        <meshStandardMaterial 
+          color="#ec4899" 
+          transparent 
+          opacity={0.8}
+          metalness={0.8}
+          roughness={0.1}
+        />
+      </mesh>
+    </group>
+  );
+};
+
+// Enhanced version with individual animations
+const AnimatedFloatingElements = () => {
+  const octahedronRef = useRef();
+  const tetrahedronRef = useRef();
+  const icosahedronRef = useRef();
+
+  useFrame((state) => {
+    // Each element has its own animation pattern
+    if (octahedronRef.current) {
+      octahedronRef.current.position.y = 1.5 + Math.sin(state.clock.elapsedTime * 1.2) * 0.3;
+      octahedronRef.current.rotation.x += 0.015;
+      octahedronRef.current.rotation.z += 0.01;
+    }
+
+    if (tetrahedronRef.current) {
+      tetrahedronRef.current.position.y = -1 + Math.sin(state.clock.elapsedTime * 0.8 + 1) * 0.4;
+      tetrahedronRef.current.rotation.y += 0.02;
+      tetrahedronRef.current.rotation.x += 0.008;
+    }
+
+    if (icosahedronRef.current) {
+      icosahedronRef.current.position.y = 2.5 + Math.sin(state.clock.elapsedTime * 1.5 + 2) * 0.25;
+      icosahedronRef.current.rotation.z += 0.018;
+      icosahedronRef.current.rotation.y += 0.012;
+    }
+  });
+
+  return (
+    <group>
+      {/* Animated Octahedron */}
+      <mesh ref={octahedronRef} position={[4, 1.5, -2]} scale={0.25}>
+        <octahedronGeometry args={[1]} />
+        <meshStandardMaterial 
+          color="#06b6d4" 
+          transparent 
+          opacity={0.8}
+          metalness={0.7}
+          roughness={0.2}
+          emissive="#0891b2"
+          emissiveIntensity={0.1}
+        />
+      </mesh>
+
+      {/* Animated Tetrahedron */}
+      <mesh ref={tetrahedronRef} position={[-3.5, -1, 1]} scale={0.3}>
+        <tetrahedronGeometry args={[1]} />
+        <meshStandardMaterial 
+          color="#f59e0b" 
+          transparent 
+          opacity={0.7}
+          metalness={0.6}
+          roughness={0.3}
+          emissive="#d97706"
+          emissiveIntensity={0.1}
+        />
+      </mesh>
+
+      {/* Animated Icosahedron */}
+      <mesh ref={icosahedronRef} position={[-1, 2.5, -3]} scale={0.2}>
+        <icosahedronGeometry args={[1]} />
+        <meshStandardMaterial 
+          color="#ec4899" 
+          transparent 
+          opacity={0.8}
+          metalness={0.8}
+          roughness={0.1}
+          emissive="#be185d"
+          emissiveIntensity={0.1}
+        />
+      </mesh>
+    </group>
+  );
+};
+
+// Small particle trail that follows the floating elements
+const ParticleTrail = () => {
+  const particlesRef = useRef();
+
+  useFrame((state) => {
+    if (particlesRef.current) {
+      particlesRef.current.children.forEach((particle, i) => {
+        particle.position.y += Math.sin(state.clock.elapsedTime * 2 + i) * 0.005;
+        particle.material.opacity = 0.3 + Math.sin(state.clock.elapsedTime * 4 + i) * 0.2;
+      });
+    }
+  });
+
+  return (
+    <group ref={particlesRef}>
+      {[...Array(5)].map((_, i) => (
+        <mesh
+          key={i}
+          position={[
+            2 + Math.sin(i) * 3,
+            Math.cos(i) * 2,
+            -1 + i * 0.5
+          ]}
+          scale={0.05}
+        >
+          <sphereGeometry args={[1, 6, 6]} />
+          <meshBasicMaterial
+            color="#ffffff"
+            transparent
+            opacity={0.3}
+          />
+        </mesh>
+      ))}
+    </group>
   );
 };
 
@@ -359,6 +1012,242 @@ const FloatingNav = ({ activeSection }) => {
   );
 };
 
+// Add to your existing Canvas in AwwardsPortfolio.jsx
+// Add dynamic lighting that changes based on time and mouse position
+const DynamicLighting = ({ mousePosition = { x: 0, y: 0 } }) => {
+  const spotLightRef = useRef();
+  const pointLightRef = useRef();
+
+  useFrame((state) => {
+    if (spotLightRef.current) {
+      // Subtle light following mouse (very gentle)
+      spotLightRef.current.position.x = mousePosition.x * 2;
+      spotLightRef.current.position.y = 5 + mousePosition.y * 1;
+      
+      // Color transition over time
+      const hue = (state.clock.elapsedTime * 10) % 360;
+      spotLightRef.current.color.setHSL(hue / 360, 0.6, 0.5);
+    }
+
+    if (pointLightRef.current) {
+      // Orbiting point light
+      const radius = 8;
+      pointLightRef.current.position.x = Math.cos(state.clock.elapsedTime * 0.5) * radius;
+      pointLightRef.current.position.z = Math.sin(state.clock.elapsedTime * 0.5) * radius;
+      
+      // Intensity pulsing
+      pointLightRef.current.intensity = 0.5 + Math.sin(state.clock.elapsedTime * 2) * 0.2;
+    }
+  });
+
+  return (
+    <>
+      {/* Base lighting */}
+      <ambientLight intensity={0.3} color="#1e1b4b" />
+      <directionalLight position={[10, 10, 5]} intensity={0.6} color="#ffffff" />
+      
+      {/* Dynamic spot light */}
+      <spotLight
+        ref={spotLightRef}
+        position={[0, 5, 5]}
+        angle={0.4}
+        penumbra={1}
+        intensity={0.8}
+        color="#8b5cf6"
+      />
+      
+      {/* Orbiting point light */}
+      <pointLight
+        ref={pointLightRef}
+        position={[5, 0, 0]}
+        intensity={0.5}
+        color="#06b6d4"
+        distance={15}
+        decay={2}
+      />
+      
+      {/* Fill light */}
+      <pointLight
+        position={[-8, -5, -5]}
+        intensity={0.3}
+        color="#f59e0b"
+        distance={12}
+      />
+    </>
+  );
+};
+
+// Add this hook to track mouse position in your main component
+const useMousePosition = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      // Normalize mouse position to -1 to 1 range
+      setMousePosition({
+        x: (e.clientX / window.innerWidth) * 2 - 1,
+        y: -(e.clientY / window.innerHeight) * 2 + 1
+      });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  return mousePosition;
+};
+
+// Create floating rings that orbit around the main sphere
+const FloatingRings = () => {
+  const ring1Ref = useRef();
+  const ring2Ref = useRef();
+  const ring3Ref = useRef();
+
+  useFrame((state) => {
+    if (ring1Ref.current) {
+      ring1Ref.current.rotation.y = state.clock.elapsedTime * 0.5;
+      ring1Ref.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.3) * 0.2;
+    }
+
+    if (ring2Ref.current) {
+      ring2Ref.current.rotation.x = state.clock.elapsedTime * 0.3;
+      ring2Ref.current.rotation.y = state.clock.elapsedTime * -0.4;
+    }
+
+    if (ring3Ref.current) {
+      ring3Ref.current.rotation.z = state.clock.elapsedTime * 0.7;
+      ring3Ref.current.rotation.x = Math.cos(state.clock.elapsedTime * 0.2) * 0.3;
+    }
+  });
+
+  return (
+    <group>
+      {/* Large outer ring */}
+      <mesh ref={ring1Ref} scale={4}>
+        <torusGeometry args={[1, 0.02, 16, 100]} />
+        <meshStandardMaterial 
+          color="#8b5cf6" 
+          transparent 
+          opacity={0.4}
+          emissive="#7c3aed"
+          emissiveIntensity={0.2}
+        />
+      </mesh>
+
+      {/* Medium ring */}
+      <mesh ref={ring2Ref} scale={3.2}>
+        <torusGeometry args={[1, 0.015, 16, 100]} />
+        <meshStandardMaterial 
+          color="#06b6d4" 
+          transparent 
+          opacity={0.5}
+          emissive="#0891b2"
+          emissiveIntensity={0.15}
+        />
+      </mesh>
+
+      {/* Inner ring */}
+      <mesh ref={ring3Ref} scale={2.8}>
+        <torusGeometry args={[1, 0.01, 16, 100]} />
+        <meshStandardMaterial 
+          color="#f59e0b" 
+          transparent 
+          opacity={0.6}
+          emissive="#d97706"
+          emissiveIntensity={0.1}
+        />
+      </mesh>
+    </group>
+  );
+};
+
+// Enhanced version of your existing AnimatedSphere
+const EnhancedAnimatedSphere = () => {
+  const meshRef = useRef();
+  const materialRef = useRef();
+
+  useFrame((state) => {
+    if (meshRef.current) {
+      // Your existing rotation (preserved)
+      meshRef.current.rotation.x = state.clock.getElapsedTime() * 0.2;
+      meshRef.current.rotation.y = state.clock.getElapsedTime() * 0.3;
+      
+      // Add gentle scaling animation
+      const scale = 1 + Math.sin(state.clock.getElapsedTime() * 0.5) * 0.1;
+      meshRef.current.scale.setScalar(scale);
+    }
+    
+    if (materialRef.current) {
+      // Animate the distortion over time
+      materialRef.current.distort = 0.3 + Math.sin(state.clock.getElapsedTime()) * 0.2;
+      materialRef.current.speed = 1.5 + Math.cos(state.clock.getElapsedTime() * 0.5) * 0.5;
+    }
+  });
+
+  return (
+    <Sphere ref={meshRef} args={[1, 100, 200]} scale={2.5}>
+      <MeshDistortMaterial
+        ref={materialRef}
+        color="#8352FD"
+        attach="material"
+        distort={0.3}
+        speed={1.5}
+        roughness={0.1}
+        metalness={0.8}
+        // Add emissive glow for more visual impact
+        emissive="#4338ca"
+        emissiveIntensity={0.2}
+      />
+    </Sphere>
+  );
+};
+
+// Add this component - creates materials that shift colors like oil on water
+const IridescentSphere = () => {
+  const meshRef = useRef();
+  const materialRef = useRef();
+
+  useFrame((state) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.x = state.clock.getElapsedTime() * 0.2;
+      meshRef.current.rotation.y = state.clock.getElapsedTime() * 0.3;
+      
+      const pulse = 1 + Math.sin(state.clock.getElapsedTime() * 2) * 0.05;
+      meshRef.current.scale.setScalar(2.5 * pulse);
+    }
+
+    if (materialRef.current) {
+      materialRef.current.distort = 0.3 + Math.sin(state.clock.getElapsedTime() * 0.5) * 0.1;
+      
+      // Color shifting effect
+      const time = state.clock.getElapsedTime();
+      const hue = (time * 20) % 360;
+      materialRef.current.color.setHSL(hue / 360, 0.8, 0.6);
+      materialRef.current.emissiveIntensity = 0.1 + Math.sin(time * 3) * 0.05;
+    }
+  });
+
+  return (
+    <Sphere ref={meshRef} args={[1, 100, 200]} scale={2.5}>
+      <MeshDistortMaterial
+        ref={materialRef}
+        color="#8352FD"
+        attach="material"
+        distort={0.3}
+        speed={1.5}
+        roughness={0}
+        metalness={1}
+        emissive="#4338ca"
+        emissiveIntensity={0.1}
+        // Add these for iridescent effect
+        clearcoat={1}
+        clearcoatRoughness={0}
+      />
+    </Sphere>
+  );
+};
+
+
 // Certification Card Component - Made responsive
 // Enhanced Certification Card Component with clickable functionality
 const CertificationCard = ({ cert, index }) => {
@@ -409,14 +1298,97 @@ const CertificationCard = ({ cert, index }) => {
   );
 };
 
+// Add this component to your AwwardsPortfolio file
+// Swirling galaxy of thousands of particles
+const ParticleGalaxy = () => {
+  const galaxyRef = useRef();
+  const particlesRef = useRef();
+  
+  // Generate particle positions in spiral galaxy pattern
+  const particles = useMemo(() => {
+    const temp = [];
+    const count = 1000;
+    
+    for (let i = 0; i < count; i++) {
+      // Create spiral arms
+      const radius = Math.random() * 15 + 3;
+      const spinAngle = radius * 0.3;
+      const branchAngle = (i % 3) * ((2 * Math.PI) / 3);
+      
+      const angle = branchAngle + spinAngle;
+      
+      const x = Math.cos(angle) * radius + (Math.random() - 0.5) * 2;
+      const z = Math.sin(angle) * radius + (Math.random() - 0.5) * 2;
+      const y = (Math.random() - 0.5) * 2;
+      
+      temp.push({
+        position: [x, y, z],
+        scale: Math.random() * 0.1 + 0.05,
+        color: i < 300 ? '#ff6b9d' : i < 600 ? '#4ecdc4' : '#ffe66d',
+        speed: Math.random() * 0.02 + 0.01
+      });
+    }
+    return temp;
+  }, []);
+
+  useFrame((state) => {
+    if (galaxyRef.current) {
+      // Slow galaxy rotation
+      galaxyRef.current.rotation.y = state.clock.elapsedTime * 0.1;
+      galaxyRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.05) * 0.1;
+    }
+    
+    if (particlesRef.current) {
+      // Individual particle movement
+      particlesRef.current.children.forEach((particle, i) => {
+        particle.position.y += Math.sin(state.clock.elapsedTime * particles[i].speed + i) * 0.01;
+        particle.material.opacity = 0.3 + Math.sin(state.clock.elapsedTime * 2 + i) * 0.2;
+      });
+    }
+  });
+
+  return (
+    <group ref={galaxyRef}>
+      <group ref={particlesRef}>
+        {particles.map((particle, i) => (
+          <mesh
+            key={i}
+            position={particle.position}
+            scale={particle.scale}
+          >
+            <sphereGeometry args={[1, 6, 6]} />
+            <meshBasicMaterial
+              color={particle.color}
+              transparent
+              opacity={0.4}
+            />
+          </mesh>
+        ))}
+      </group>
+      
+      {/* Galaxy center glow */}
+      <mesh position={[0, 0, 0]} scale={2}>
+        <sphereGeometry args={[1, 16, 16]} />
+        <meshBasicMaterial
+          color="#ffffff"
+          transparent
+          opacity={0.1}
+        />
+      </mesh>
+    </group>
+  );
+};
+
 // Main Portfolio Component - Fully Responsive
 const AwwardsPortfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const cursorRef = useRef(null);
   const { scrollYProgress } = useScroll();
 
   const [showSimplePortfolio, setShowSimplePortfolio] = useState(false);
+
+  const mousePosition = useMousePosition();
 
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -613,11 +1585,31 @@ const AwwardsPortfolio = () => {
       <section id="home" className="relative min-h-screen flex items-center justify-center px-4">
         {/* 3D Background - Now visible on all devices with proper touch handling */}
         <div className="absolute inset-0 z-0" style={{ touchAction: 'pan-y' }}>
-          <Canvas camera={{ position: [0, 0, 5] }}>
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[10, 10, 5]} intensity={1} />
+          <Canvas 
+            camera={{ position: [0, 0, 5], fov: 75 }}
+            gl={{ alpha: true, antialias: true }}
+            onCreated={({ gl }) => {
+              gl.setClearColor(0x000000, 0); // Transparent background
+            }}
+          >
+            {/* {/* <ambientLight intensity={0.4} /> */}
+            <directionalLight position={[10, 10, 5]} intensity={0.8} />
+            <directionalLight position={[-10, -10, -5]} intensity={0.3} color="#8b5cf6" /> */}
+            <DynamicLighting mousePosition={mousePosition} />
+            
             <AnimatedSphere />
+            <AnimatedFloatingElements />
+            <ParticleTrail />
+            <FloatingRings />
+            <FloatingCubes />
+            <FloatingPyramids />
+            <WireframeHolograms />
+            <MorphingShapes />
+            {/* <EnergyTrails /> */}
+            {/* <GeometricDNAHelix /> */}
+            <fog attach="fog" args={['#000000', 8, 25]} />
             <OrbitControls enableZoom={false} enablePan={false} />
+            {/* <fog attach="fog" args={[darkMode ? '#1f2937' : '#f3f4f6', 15, 50]} /> */}
           </Canvas>
         </div>
 
@@ -717,6 +1709,7 @@ const AwwardsPortfolio = () => {
                   About Me
                 </span>
               </h2>
+              
               <p className="text-base sm:text-lg lg:text-xl text-white/60 mb-4 sm:mb-6 leading-relaxed">
                 Master's student in Applied Computing with AI Specialization at the University of Windsor.
                 Passionate about building innovative solutions that merge cutting-edge technology with
@@ -750,6 +1743,7 @@ const AwwardsPortfolio = () => {
 
             {/* IconCloud Section - Now properly positioned below text on mobile */}
             <div className="relative flex justify-center">
+              
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -765,6 +1759,15 @@ const AwwardsPortfolio = () => {
           </motion.div>
         </div>
       </section>
+      
+      {/* <section className="py-16 relative overflow-hidden bg-black">
+  <div className="h-96 w-full">
+    <Canvas camera={{ position: [0, 5, 8] }}>
+      <ParticleGalaxy />
+      <fog attach="fog" args={['#000000', 10, 30]} />
+    </Canvas>
+  </div>
+</section> */}
 
       {/* Projects Preview Section - Responsive */}
       <section id="projects" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8">
