@@ -1,0 +1,236 @@
+/* ============================================================
+   COMIC.CSS — "DATA STORM #001"
+   Self-contained design system. No Tailwind conflicts.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+/* ---------- TOKENS ---------- */
+:root {
+  --ink:       #100D12;
+  --cream:     #F4E9D4;
+  --paper:     #FBF4E4;
+  --crimson:   #E0312B;
+  --gold:      #FFC51E;
+  --ink-blue:  #1E3A8A;
+  --blueprint: #12275E;
+  --cyan:      #38E1FF;
+  --line:      3px;
+  --shadow-pop:     8px 8px 0 var(--ink);
+  --shadow-pop-sm:  5px 5px 0 var(--ink);
+  --font-display: 'Bangers', cursive;
+  --font-heavy:   'Archivo Black', sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+  --font-body:    'Inter', system-ui, sans-serif;
+}
+
+/* ---------- RESET only inside comic-root ---------- */
+.comic-root *, .comic-root *::before, .comic-root *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- ROOT WRAPPER ---------- */
+.comic-root {
+  /* Override App.css #root constraints */
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  line-height: 1.6;
+}
+
+/* Grid-paper texture */
+.comic-root > .comic-grid-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(16,13,18,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16,13,18,0.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ---------- HALFTONE ---------- */
+.halftone {
+  background-image: radial-gradient(circle, rgba(16,13,18,0.16) 1px, transparent 1.5px);
+  background-size: 9px 9px;
+}
+
+/* ---------- PANELS ---------- */
+.c-panel {
+  border: var(--line) solid var(--ink);
+  box-shadow: var(--shadow-pop);
+  background: var(--paper);
+  position: relative;
+}
+.c-panel-sm {
+  border: var(--line) solid var(--ink);
+  box-shadow: var(--shadow-pop-sm);
+  position: relative;
+}
+
+/* Sticky tape decoration */
+.c-taped::after {
+  content: '';
+  position: absolute;
+  top: -10px; left: 24px;
+  width: 70px; height: 18px;
+  background: rgba(255,197,30,0.65);
+  border: 1px solid rgba(16,13,18,0.25);
+  transform: rotate(-4deg);
+}
+
+/* ---------- CAPTION / BADGE ---------- */
+.c-caption {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--gold);
+  border: 2px solid var(--ink);
+  padding: 0.28rem 0.6rem;
+  display: inline-block;
+  box-shadow: 3px 3px 0 var(--ink);
+  line-height: 1.3;
+}
+
+/* ---------- TYPE HELPERS ---------- */
+.c-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+  line-height: 0.92;
+  text-shadow: 5px 5px 0 var(--ink);
+}
+.c-heavy { font-family: var(--font-heavy); letter-spacing: -0.01em; }
+.c-mono  { font-family: var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem; }
+
+/* ---------- KEYFRAMES ---------- */
+@keyframes dash-flow  { to { stroke-dashoffset: -28; } }
+@keyframes node-pulse {
+  0%,100% { filter: drop-shadow(0 0 2px var(--cyan)); }
+  50%     { filter: drop-shadow(0 0 9px var(--cyan)); }
+}
+@keyframes stamp-flicker {
+  0%,92%,100% { opacity:1; }
+  94%         { opacity:0.55; }
+  96%         { opacity:0.9; }
+}
+@keyframes impact-pulse {
+  0%,100% { transform:translate(0,0);     box-shadow: var(--shadow-pop); }
+  50%     { transform:translate(-2px,-2px);box-shadow:10px 10px 0 var(--ink); }
+}
+@keyframes spark-spin { to { transform: rotate(360deg) scale(1.12); } }
+
+/* ---------- COMPONENT CLASSES ---------- */
+.c-flow-line  { stroke-dasharray:7 7; animation:dash-flow 1.1s linear infinite; }
+.c-node-pulse { animation:node-pulse 2.2s ease-in-out infinite; }
+
+.c-stamp {
+  font-family: var(--font-heavy);
+  color: var(--cyan);
+  border: 3px double var(--cyan);
+  padding: 0.25rem 0.9rem;
+  transform: rotate(-7deg);
+  text-shadow: 0 0 10px rgba(56,225,255,0.8);
+  box-shadow: 0 0 14px rgba(56,225,255,0.35), inset 0 0 10px rgba(56,225,255,0.25);
+  animation: stamp-flicker 4s linear infinite;
+  display: inline-block;
+}
+
+.c-cta {
+  animation: impact-pulse 2.4s ease-in-out infinite;
+  cursor: pointer;
+  font-family: var(--font-heavy);
+  border-style: solid;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.1s, transform 0.1s;
+}
+.c-cta:hover {
+  animation: none;
+  transform: translate(-3px,-3px);
+  box-shadow: 11px 11px 0 var(--ink);
+}
+.c-cta:active {
+  animation: none;
+  transform: translate(4px,4px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+/* ---------- FLIP CARDS ---------- */
+.c-flip-scene  { perspective: 1400px; }
+.c-flip-inner  {
+  position: relative;
+  width: 100%; height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.34,1.3,0.5,1);
+}
+.c-flip-inner.is-flipped { transform: rotateY(180deg); }
+.c-flip-face {
+  position: absolute; inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.c-flip-back { transform: rotateY(180deg); }
+
+/* ---------- SKILL BADGES ---------- */
+.c-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  padding: 0.45rem 0.8rem;
+  box-shadow: 4px 4px 0 var(--ink);
+  position: relative;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  cursor: default;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.c-badge:hover, .c-badge:focus-visible {
+  transform: translate(-2px,-2px) rotate(-1.5deg);
+  box-shadow: 6px 6px 0 var(--ink), 0 0 16px rgba(255,197,30,0.55);
+  background: var(--gold);
+  outline: none;
+}
+.c-badge::before {
+  content: '';
+  position: absolute; inset: -7px;
+  background: conic-gradient(from 0deg,
+    transparent 0 18%, var(--crimson) 18% 19%,
+    transparent 19% 43%, var(--gold) 43% 44%,
+    transparent 44% 68%, var(--cyan) 68% 69%,
+    transparent 69% 100%);
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  z-index: -1;
+}
+.c-badge:hover::before { opacity:1; animation:spark-spin 0.9s linear infinite; }
+
+/* ---------- SECTION SPACING ---------- */
+.c-section { padding: 80px 16px; position: relative; z-index: 1; }
+@media (min-width: 640px) { .c-section { padding: 112px 24px; } }
+
+/* ---------- A11Y ---------- */
+.comic-root :focus-visible { outline: 3px solid var(--crimson); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .c-flow-line, .c-node-pulse, .c-stamp, .c-cta,
+  .c-badge:hover::before { animation: none !important; }
+  .c-flip-inner { transition: none !important; }
+}
