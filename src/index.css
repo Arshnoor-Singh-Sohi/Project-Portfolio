@@ -9,6 +9,14 @@ body {
     min-height: 100vh;
 }
 
+/* Smooth-scroll for in-page anchors (e.g. table-of-contents links on
+   blog posts) — skipped for anyone with prefers-reduced-motion set. */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 /* Hide scrollbar but keep functionality */
 @layer utilities {
     .no-scrollbar::-webkit-scrollbar {

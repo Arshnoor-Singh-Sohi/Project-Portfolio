@@ -6,7 +6,9 @@
 // ============================================================
 import React, { useState, useCallback } from 'react';
 import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from 'framer-motion';
+import { Link, useNavigate } from 'react-router-dom';
 import { ISSUES, PROJECTS, VAULTS, CONTACT } from '../data/comicData';
+import { getAllPosts, formatIssue } from '../lib/posts';
 import '../styles/comic.css';
 import CursorTrail from '../components/CursorTrail';
 
@@ -528,80 +530,79 @@ const TechArsenal = () => (
    6. BLOG — comic newspaper clippings grid
    To add more articles: push to the ARTICLES array below.
    ============================================================ */
-const ARTICLES = [
-  {
-    title: 'Building Scalable RAG Systems',
-    excerpt: 'Exploring advanced retrieval strategies, chunking trade-offs, and hybrid dense+sparse pipelines for production RAG.',
-    date: 'March 2024',
-    readTime: '8 min read',
-    url: 'https://arshnoorsinghsohi.medium.com/',
-  },
-  {
-    title: 'The Future of AI in Software Development',
-    excerpt: 'How LLMs are reshaping engineering workflows — from code generation to autonomous debugging pipelines.',
-    date: 'February 2024',
-    readTime: '6 min read',
-    url: 'https://arshnoorsinghsohi.medium.com/',
-  },
-  {
-    title: 'Distributed Systems: A Practical Guide',
-    excerpt: 'Understanding consistency, partitioning, and the real trade-offs engineers face when scaling across nodes.',
-    date: 'January 2024',
-    readTime: '12 min read',
-    url: 'https://arshnoorsinghsohi.medium.com/',
-  },
-];
+const BlogSection = () => {
+  const navigate = useNavigate();
+  // Pulls the 3 newest posts from src/content/blog/*.md — the full
+  // archive lives at /blog. Add a new .md file there to publish.
+  const posts = getAllPosts().slice(0, 3);
 
-const BlogSection = () => (
-  <section id="blog" className="c-section" style={{ maxWidth: 'none', background: 'var(--cream)' }}>
-    <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-      <SectionHeader kicker="THE PRESS ROOM" title="Latest Articles"/>
-      {/* Grid grows automatically as you add more entries to ARTICLES */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
-        gap: '2rem',
-        marginTop: '1rem',
-      }}>
-        {ARTICLES.map((a, i) => (
-          <motion.article
-            key={i} {...slam}
-            onClick={() => window.open(a.url, '_blank', 'noopener,noreferrer')}
-            className="c-panel"
-            style={{ padding: '1.5rem', cursor: 'pointer', display: 'flex', flexDirection: 'column' }}
-            whileHover={{ y: -6 }}
+  return (
+    <section id="blog" className="c-section" style={{ maxWidth: 'none', background: 'var(--cream)' }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+        <SectionHeader kicker="THE PRESS ROOM" title="Latest Articles"/>
+
+        {posts.length === 0 ? (
+          <p className="c-mono" style={{ textAlign: 'center', opacity: 0.6 }}>
+            FIRST ISSUE DROPPING SOON — CHECK BACK
+          </p>
+        ) : (
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
+            gap: '2rem',
+            marginTop: '1rem',
+          }}>
+            {posts.map((post) => (
+              <motion.article
+                key={post.slug} {...slam}
+                onClick={() => navigate(`/blog/${post.slug}`)}
+                className="c-panel"
+                style={{ padding: 0, cursor: 'pointer', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
+                whileHover={{ y: -6 }}
+              >
+                {post.coverImage && (
+                  <img
+                    src={post.coverImage}
+                    alt=""
+                    loading="lazy"
+                    style={{ width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderBottom: '3px solid var(--ink)', display: 'block' }}
+                  />
+                )}
+                <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem', flexWrap: 'wrap', gap: '0.3rem' }}>
+                    <span className="c-mono" style={{ fontSize: '0.6rem', color: 'var(--crimson)' }}>{formatIssue(post.issue)}</span>
+                    <span className="c-mono" style={{ fontSize: '0.6rem', opacity: 0.55 }}>{post.readTime}</span>
+                  </div>
+                  <h3 className="c-heavy" style={{ fontSize: '1.05rem', marginBottom: '0.6rem', lineHeight: 1.3 }}>{post.title}</h3>
+                  <p style={{ fontSize: '0.85rem', lineHeight: 1.7, flexGrow: 1, opacity: 0.8 }}>{post.excerpt}</p>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginTop: '1rem' }}>
+                    <span className="c-heavy" style={{ fontSize: '0.78rem', color: 'var(--crimson)' }}>READ MORE</span>
+                    <span style={{ color: 'var(--crimson)', fontSize: '1rem' }}>→</span>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        )}
+
+        <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+          <Link
+            to="/blog"
+            className="c-cta c-heavy"
+            style={{
+              background: 'var(--ink)', color: 'var(--gold)',
+              border: '3px solid var(--ink)', padding: '0.9rem 2rem',
+              boxShadow: 'var(--shadow-pop)', fontSize: '0.9rem',
+              textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+            }}
           >
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem', flexWrap: 'wrap', gap: '0.3rem' }}>
-              <span className="c-mono" style={{ fontSize: '0.6rem', color: 'var(--crimson)' }}>{a.date}</span>
-              <span className="c-mono" style={{ fontSize: '0.6rem', opacity: 0.55 }}>{a.readTime}</span>
-            </div>
-            <h3 className="c-heavy" style={{ fontSize: '1.05rem', marginBottom: '0.6rem', lineHeight: 1.3 }}>{a.title}</h3>
-            <p style={{ fontSize: '0.85rem', lineHeight: 1.7, flexGrow: 1, opacity: 0.8 }}>{a.excerpt}</p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginTop: '1rem' }}>
-              <span className="c-heavy" style={{ fontSize: '0.78rem', color: 'var(--crimson)' }}>READ MORE</span>
-              <span style={{ color: 'var(--crimson)', fontSize: '1rem' }}>→</span>
-            </div>
-          </motion.article>
-        ))}
+            ALL ARTICLES →
+          </Link>
+        </div>
       </div>
-      <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-        <a
-          href="https://arshnoorsinghsohi.medium.com/"
-          target="_blank" rel="noopener noreferrer"
-          className="c-cta c-heavy"
-          style={{
-            background: 'var(--ink)', color: 'var(--gold)',
-            border: '3px solid var(--ink)', padding: '0.9rem 2rem',
-            boxShadow: 'var(--shadow-pop)', fontSize: '0.9rem',
-            textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-          }}
-        >
-          ALL ARTICLES ON MEDIUM ↗
-        </a>
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 /* ============================================================
    7. CERTIFICATIONS — badge wall

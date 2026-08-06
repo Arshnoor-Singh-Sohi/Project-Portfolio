@@ -226,8 +226,20 @@
 .c-section { padding: 80px 16px; position: relative; z-index: 1; }
 @media (min-width: 640px) { .c-section { padding: 112px 24px; } }
 
+/* ---------- QUICK NAV (floating Home/Blog badge) ---------- */
+/* Not scoped to .comic-root — it's site-wide chrome that renders on
+   every route regardless of which page's markup it's nested in. */
+.quick-nav-badge {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.quick-nav-badge:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--ink);
+}
+
 /* ---------- A11Y ---------- */
 .comic-root :focus-visible { outline: 3px solid var(--crimson); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--crimson); outline-offset: 3px; }
 
 @media (prefers-reduced-motion: reduce) {
   .c-flow-line, .c-node-pulse, .c-stamp, .c-cta,
