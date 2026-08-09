@@ -72,6 +72,55 @@ Write LaTeX-style math right in a post and it renders as proper typeset equation
 
 Multi-line equations (matrices, aligned systems, etc.) work too — see the "Math equations" section of the demo post for a bigger example. Obsidian renders the same `$...$` / `$$...$$` syntax natively in preview mode, so what you see while writing matches what goes live.
 
+## New: function graphs (trig, calculus, any 2D plot)
+
+Math equations (above) render the *symbols* — this renders the *picture*. A fenced ` ```plot ` block draws an actual graph: sine waves, parabolas, exponentials, a function next to its derivative, anything expressible as `y = f(x)`. It's a separate thing from the mermaid diagrams above (those are flowcharts, not graphs) and from KaTeX (that typesets equations, it doesn't plot them).
+
+Under the hood it's [`function-plot`](https://mauriciopoppe.github.io/function-plot/) (a small D3-based plotting library), lazy-loaded the same way Mermaid is, so it costs nothing on posts that don't use it. The block's content is plain JSON — write the function(s) you want, get a graph:
+
+```plot
+{
+  "xAxis": { "domain": [-6.5, 6.5] },
+  "yAxis": { "domain": [-2, 2] },
+  "grid": true,
+  "data": [
+    { "fn": "sin(x)" },
+    { "fn": "cos(x)" }
+  ]
+}
+```
+
+The header shows "FUNCTION GRAPH" and the copy button copies this JSON spec (not an image) — same behavior as every other code block.
+
+**The fields you'll actually use:**
+
+- `data` — an array, one entry per curve. Each needs `fn` (a string in terms of `x`, e.g. `"x^2"`, `"sin(x)"`, `"2*x + 1"`, `"e^x"`, `"log(x)"`). Add `"color": "#c81d25"` to force a specific color; otherwise each curve automatically cycles through the site's palette (crimson, blueprint, gold, ink, purple, in that order).
+- `xAxis.domain` / `yAxis.domain` — `[min, max]` for each axis. Without these, function-plot picks its own range, which is usually too wide or too narrow — set these explicitly for anything you want to look intentional.
+- `grid` — `true`/`false`, background gridlines. Defaults to `true` here.
+- `title` — an optional caption drawn on the chart itself.
+- `disableZoom` — set `true` to lock the graph in place. By default graphs are draggable and scroll-to-zoom (function-plot's own "infinite graphs" feature) — nice for exploration, but set this if you want a strictly static picture.
+
+**For calculus specifically** — pair a function with its derivative, and readers can hover to see the tangent line move along the curve:
+
+```plot
+{
+  "xAxis": { "domain": [-4, 4] },
+  "yAxis": { "domain": [-2, 8] },
+  "data": [
+    {
+      "fn": "x^2",
+      "derivative": { "fn": "2x", "updateOnMouseMove": true }
+    }
+  ]
+}
+```
+
+Both examples above are live in the demo post's "Function graphs" section if you want to see them working before writing your own.
+
+If the JSON is invalid, or a function can't be evaluated (typo in the expression, mismatched brackets, etc.), the block shows an error message plus the raw text instead of breaking the page — same fallback behavior as a broken mermaid diagram.
+
+Beyond plain functions, `function-plot` also supports parametric curves (`fnType: "parametric"`), polar curves (`fnType: "polar"`), scatter points, vectors, and annotated lines — the full option list is in [function-plot's own docs](https://mauriciopoppe.github.io/function-plot/docs/functions/default-1.html) if you want to go further than trig/calculus basics; anything valid there can go straight into a ` ```plot ` block here.
+
 ## New: images — cover images + inline images
 
 Two ways to add images, for two different purposes:

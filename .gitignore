@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Sample/demo blog posts — these ship with the blog feature purely to
+# demonstrate its formatting capabilities (mermaid diagrams, KaTeX math,
+# function-plot graphs, code blocks, etc). They're not real posts, so
+# they're kept out of what gets pushed. _template.md is NOT listed here
+# on purpose — the blog loader always skips files starting with "_",
+# so it's safe to keep tracked as a starting point for new posts.
+src/content/blog/how-this-blog-works.md
+src/content/blog/markdown-formatting-demo.md

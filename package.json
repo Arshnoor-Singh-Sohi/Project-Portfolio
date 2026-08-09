@@ -17,6 +17,7 @@
     "@upstash/redis": "^1.38.2",
     "aceternity-ui": "^0.2.2",
     "framer-motion": "^12.12.1",
+    "function-plot": "^1.25.4",
     "gsap": "^3.13.0",
     "katex": "^0.18.1",
     "mermaid": "^11.16.1",

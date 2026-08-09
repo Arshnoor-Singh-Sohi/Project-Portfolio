@@ -19,6 +19,7 @@ import { copyToClipboard } from '../lib/clipboard';
 import { getTextContent, extractHeadings, createHeadingIdAssigner } from '../lib/markdown-utils';
 import { SITE_URL } from '../lib/site';
 import MermaidDiagram from '../components/MermaidDiagram';
+import FunctionPlot from '../components/FunctionPlot';
 import SubscribeForm from '../components/SubscribeForm';
 import '../styles/comic.css';
 import '../styles/blog.css';
@@ -42,10 +43,11 @@ const LANGUAGE_LABELS = {
 // languages per post automatically — the label comes from whatever
 // the fence was tagged with (```python, ```js, ```bash, etc.).
 //
-// ```mermaid blocks are a special case: instead of showing the raw
-// text, the body renders as an actual diagram (like Notion/Obsidian's
-// preview mode) via MermaidDiagram — the header and copy button stay
-// exactly the same, copying the mermaid source rather than an image.
+// ```mermaid and ```plot blocks are special cases: instead of showing
+// the raw text, the body renders as an actual diagram/graph (like
+// Notion/Obsidian's preview mode) via MermaidDiagram or FunctionPlot —
+// the header and copy button stay exactly the same either way, copying
+// the source (mermaid syntax / plot spec) rather than an image.
 function CodeBlock({ children }) {
   const [copied, setCopied] = useState(false);
   const codeElement = Array.isArray(children) ? children[0] : children;
@@ -53,7 +55,14 @@ function CodeBlock({ children }) {
   const match = /language-(\w+)/.exec(className);
   const langKey = match ? match[1].toLowerCase() : null;
   const isMermaid = langKey === 'mermaid';
-  const label = isMermaid ? 'MERMAID DIAGRAM' : langKey ? (LANGUAGE_LABELS[langKey] || langKey.toUpperCase()) : 'TEXT';
+  const isPlot = langKey === 'plot';
+  const label = isMermaid
+    ? 'MERMAID DIAGRAM'
+    : isPlot
+    ? 'FUNCTION GRAPH'
+    : langKey
+    ? (LANGUAGE_LABELS[langKey] || langKey.toUpperCase())
+    : 'TEXT';
   const codeText = getTextContent(children);
 
   const handleCopy = () => {
@@ -64,14 +73,20 @@ function CodeBlock({ children }) {
   };
 
   return (
-    <div className={isMermaid ? 'code-block mermaid-block' : 'code-block'}>
+    <div className={isMermaid || isPlot ? 'code-block mermaid-block' : 'code-block'}>
       <div className="code-block-header">
         <span className="code-block-lang">{label}</span>
         <button type="button" className="code-block-copy" onClick={handleCopy}>
           {copied ? 'COPIED ✓' : 'COPY'}
         </button>
       </div>
-      {isMermaid ? <MermaidDiagram code={codeText} /> : <pre>{children}</pre>}
+      {isMermaid ? (
+        <MermaidDiagram code={codeText} />
+      ) : isPlot ? (
+        <FunctionPlot code={codeText} />
+      ) : (
+        <pre>{children}</pre>
+      )}
     </div>
   );
 }

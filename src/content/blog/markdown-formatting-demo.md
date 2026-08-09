@@ -90,6 +90,42 @@ $$
 \end{aligned}
 $$
 
+## Function graphs
+
+Equations show the symbols; sometimes you want the actual picture.
+A fenced ` ```plot ` block renders as a real graph instead of text —
+here's sine and cosine over one full period:
+
+```plot
+{
+  "xAxis": { "domain": [-6.5, 6.5] },
+  "yAxis": { "domain": [-2, 2] },
+  "grid": true,
+  "data": [
+    { "fn": "sin(x)" },
+    { "fn": "cos(x)" }
+  ]
+}
+```
+
+It's not just for plotting curves — `function-plot` can compute and
+draw a derivative too. Move your mouse over this graph and watch the
+tangent line track the curve at $f(x) = x^2$:
+
+```plot
+{
+  "xAxis": { "domain": [-4, 4] },
+  "yAxis": { "domain": [-2, 8] },
+  "grid": true,
+  "data": [
+    {
+      "fn": "x^2",
+      "derivative": { "fn": "2x", "updateOnMouseMove": true }
+    }
+  ]
+}
+```
+
 ## A blockquote
 
 > Good writing is clear thinking made visible.
