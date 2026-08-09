@@ -20,7 +20,11 @@ import { getTextContent, extractHeadings, createHeadingIdAssigner } from '../lib
 import { SITE_URL } from '../lib/site';
 import MermaidDiagram from '../components/MermaidDiagram';
 import FunctionPlot from '../components/FunctionPlot';
-import SubscribeForm from '../components/SubscribeForm';
+// Email subscriptions are temporarily disabled (see BlogList.jsx for the
+// matching change) — the backend (Resend/Upstash) isn't fully set up yet,
+// so the form would just show a "not set up" error. Re-enable by
+// restoring this import and the <SubscribeForm /> panel below.
+// import SubscribeForm from '../components/SubscribeForm';
 import '../styles/comic.css';
 import '../styles/blog.css';
 import 'highlight.js/styles/github-dark.css';
@@ -344,12 +348,15 @@ export default function BlogPost() {
 
         <ShareButtons url={canonicalUrl} title={post.title} />
 
+        {/* Email subscriptions temporarily disabled — see the import
+            comment above. Restore this block to bring the form back:
         <div
           className="c-panel"
           style={{ padding: '1.5rem', margin: '0 0 2.5rem', maxWidth: 420 }}
         >
           <SubscribeForm heading="LIKED THIS? GET NEW POSTS BY EMAIL" />
         </div>
+        */}
 
         <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', paddingTop: '2rem', borderTop: '3px solid var(--ink)' }}>
           <AdjacentPostCard post={older} label="← OLDER ISSUE" align="left" />

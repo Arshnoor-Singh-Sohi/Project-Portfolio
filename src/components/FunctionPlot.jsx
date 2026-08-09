@@ -61,7 +61,13 @@ export default function FunctionPlot({ code }) {
             width,
             height: spec.height || 320,
             grid: spec.grid !== undefined ? spec.grid : true,
-            title: spec.title,
+            // `title` is intentionally NOT passed to function-plot here.
+            // function-plot draws it as a single fixed-size SVG <text>
+            // element with no line-wrapping, so anything longer than a
+            // couple of words clips off the edge of the chart at normal
+            // post widths. We render it as a normal HTML caption above
+            // the graph instead (see the JSX below) — that wraps exactly
+            // like any other text on the page, at any screen width.
             xAxis: spec.xAxis,
             yAxis: spec.yAxis,
             disableZoom: spec.disableZoom,
@@ -109,6 +115,7 @@ export default function FunctionPlot({ code }) {
 
   return (
     <div ref={wrapperRef} className="function-plot-diagram" style={{ minHeight: ready ? undefined : 100 }}>
+      {spec && spec.title && <p className="function-plot-title">{spec.title}</p>}
       {!ready && <div className="plot-loading">Rendering graph…</div>}
       <div id={id} ref={containerRef} />
     </div>

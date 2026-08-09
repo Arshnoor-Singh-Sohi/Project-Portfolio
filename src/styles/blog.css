@@ -198,7 +198,19 @@
   padding: 1.5rem;
   overflow-x: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+/* Caption rendered as normal HTML (see FunctionPlot.jsx) instead of
+   function-plot's own SVG title text, which doesn't wrap and clips off
+   the edge of the chart for anything longer than a couple of words. */
+.function-plot-title {
+  font-family: var(--font-heavy);
+  font-size: 0.95rem;
+  color: var(--ink);
+  text-align: center;
+  max-width: 100%;
+  margin: 0 0 1rem;
 }
 .function-plot-diagram svg {
   max-width: 100%;
@@ -212,10 +224,6 @@
   fill: var(--ink);
   font-family: var(--font-mono);
   font-size: 0.65rem;
-}
-.function-plot-diagram .title {
-  fill: var(--ink);
-  font-family: var(--font-heavy);
 }
 .function-plot-diagram .top.main.axis .tick line,
 .function-plot-diagram .bottom.main.axis .tick line {

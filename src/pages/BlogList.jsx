@@ -6,7 +6,11 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { getAllPosts, formatIssue } from '../lib/posts';
-import SubscribeForm from '../components/SubscribeForm';
+// Email subscriptions are temporarily disabled (see BlogPost.jsx for the
+// matching change) — the backend (Resend/Upstash) isn't fully set up yet,
+// so the form would just show a "not set up" error. Re-enable by
+// restoring this import and the <SubscribeForm /> block below.
+// import SubscribeForm from '../components/SubscribeForm';
 import '../styles/comic.css';
 import '../styles/blog.css';
 
@@ -77,18 +81,14 @@ export default function BlogList() {
           >
             The Blog
           </h1>
-          <a
-            href="/rss.xml"
-            className="c-mono"
-            style={{ color: 'var(--ink)', opacity: 0.55, textDecoration: 'none', display: 'inline-block', marginTop: '0.75rem' }}
-          >
-            SUBSCRIBE VIA RSS
-          </a>
         </div>
 
+        {/* Email subscriptions temporarily disabled — see the import
+            comment above. Restore this block to bring the form back:
         <div style={{ maxWidth: 420, margin: '0 auto 2.5rem', textAlign: 'left' }}>
           <SubscribeForm />
         </div>
+        */}
 
         {posts.length > 0 && (
           <div style={{ maxWidth: 640, margin: '0 auto 2.5rem' }}>
