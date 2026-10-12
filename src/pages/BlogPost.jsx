@@ -16,10 +16,12 @@ import {
   formatIssue,
 } from '../lib/posts';
 import { copyToClipboard } from '../lib/clipboard';
-import { getTextContent, extractHeadings, createHeadingIdAssigner } from '../lib/markdown-utils';
+import { extractHeadings, createHeadingIdAssigner } from '../lib/markdown-utils';
 import { SITE_URL } from '../lib/site';
-import MermaidDiagram from '../components/MermaidDiagram';
-import FunctionPlot from '../components/FunctionPlot';
+import CodeBlock from '../components/markdown/CodeBlock';
+import MarkdownImage from '../components/markdown/MarkdownImage';
+import TableOfContents from '../components/markdown/TableOfContents';
+import { makeHeadingRenderer } from '../components/markdown/headings';
 // Email subscriptions are temporarily disabled (see BlogList.jsx for the
 // matching change) — the backend (Resend/Upstash) isn't fully set up yet,
 // so the form would just show a "not set up" error. Re-enable by
@@ -30,121 +32,10 @@ import '../styles/blog.css';
 import 'highlight.js/styles/github-dark.css';
 import 'katex/dist/katex.min.css';
 
-// Friendly display names for the language badge on code blocks.
-// Falls back to the raw (uppercased) language tag if not listed here.
-const LANGUAGE_LABELS = {
-  js: 'JavaScript', jsx: 'JSX', ts: 'TypeScript', tsx: 'TSX',
-  py: 'Python', python: 'Python', sh: 'Shell', bash: 'Bash', shell: 'Shell',
-  json: 'JSON', css: 'CSS', html: 'HTML', xml: 'XML', sql: 'SQL',
-  yaml: 'YAML', yml: 'YAML', md: 'Markdown', java: 'Java', go: 'Go',
-  rust: 'Rust', c: 'C', cpp: 'C++', csharp: 'C#', php: 'PHP',
-  ruby: 'Ruby', kotlin: 'Kotlin', swift: 'Swift', docker: 'Dockerfile',
-  txt: 'Text', text: 'Text', plaintext: 'Text',
-};
-
-// Overrides the default <pre> so every fenced code block gets a
-// header showing the language plus a "copy" button. Handles multiple
-// languages per post automatically — the label comes from whatever
-// the fence was tagged with (```python, ```js, ```bash, etc.).
-//
-// ```mermaid and ```plot blocks are special cases: instead of showing
-// the raw text, the body renders as an actual diagram/graph (like
-// Notion/Obsidian's preview mode) via MermaidDiagram or FunctionPlot —
-// the header and copy button stay exactly the same either way, copying
-// the source (mermaid syntax / plot spec) rather than an image.
-function CodeBlock({ children }) {
-  const [copied, setCopied] = useState(false);
-  const codeElement = Array.isArray(children) ? children[0] : children;
-  const className = (codeElement && codeElement.props && codeElement.props.className) || '';
-  const match = /language-(\w+)/.exec(className);
-  const langKey = match ? match[1].toLowerCase() : null;
-  const isMermaid = langKey === 'mermaid';
-  const isPlot = langKey === 'plot';
-  const label = isMermaid
-    ? 'MERMAID DIAGRAM'
-    : isPlot
-    ? 'FUNCTION GRAPH'
-    : langKey
-    ? (LANGUAGE_LABELS[langKey] || langKey.toUpperCase())
-    : 'TEXT';
-  const codeText = getTextContent(children);
-
-  const handleCopy = () => {
-    copyToClipboard(codeText).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1600);
-    });
-  };
-
-  return (
-    <div className={isMermaid || isPlot ? 'code-block mermaid-block' : 'code-block'}>
-      <div className="code-block-header">
-        <span className="code-block-lang">{label}</span>
-        <button type="button" className="code-block-copy" onClick={handleCopy}>
-          {copied ? 'COPIED ✓' : 'COPY'}
-        </button>
-      </div>
-      {isMermaid ? (
-        <MermaidDiagram code={codeText} />
-      ) : isPlot ? (
-        <FunctionPlot code={codeText} />
-      ) : (
-        <pre>{children}</pre>
-      )}
-    </div>
-  );
-}
-
-// Resolves markdown image references the same way cover images are
-// resolved — relative paths (e.g. images/foo.png, an Obsidian
-// attachment) get mapped to their real built URL automatically.
-function MarkdownImage({ src, alt }) {
-  return <img src={resolvePostImage(src)} alt={alt || ''} loading="lazy" />;
-}
-
-// Assigns the SAME anchor id an h2/h3 gets in the live render to a ToC
-// entry precomputed from the raw markdown. `assigner` must be a fresh
-// createHeadingIdAssigner() instance created once per render (see
-// below) so ids line up exactly with the ones extractHeadings() built.
-function makeHeadingRenderer(Tag, assigner) {
-  return function Heading({ children }) {
-    const id = assigner(getTextContent(children));
-    return <Tag id={id}>{children}</Tag>;
-  };
-}
-
-function TableOfContents({ headings }) {
-  if (headings.length < 2) return null;
-  return (
-    <nav
-      className="c-panel"
-      aria-label="Table of contents"
-      style={{ padding: '1.25rem 1.5rem', marginBottom: '2.5rem' }}
-    >
-      <p className="c-mono" style={{ color: 'var(--crimson)', marginBottom: '0.75rem' }}>
-        — TABLE OF CONTENTS —
-      </p>
-      <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-        {headings.map((h) => (
-          <li key={h.id} style={{ paddingLeft: h.depth === 3 ? '1.25rem' : 0 }}>
-            <a
-              href={`#${h.id}`}
-              className="c-mono"
-              style={{
-                color: 'var(--ink)',
-                opacity: 0.75,
-                textDecoration: 'none',
-                fontSize: h.depth === 3 ? '0.65rem' : '0.72rem',
-              }}
-            >
-              {h.depth === 3 ? '· ' : ''}
-              {h.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
+// Shared markdown renderers (also used by /notes). Blog posts pass no
+// extra fence types to CodeBlock, so they render exactly as before.
+function BlogImage(props) {
+  return <MarkdownImage {...props} resolve={resolvePostImage} />;
 }
 
 // Fixed bar at the very top of the viewport that fills as the reader
@@ -340,7 +231,7 @@ export default function BlogPost() {
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath]}
             rehypePlugins={[rehypeKatex, rehypeHighlight]}
-            components={{ pre: CodeBlock, img: MarkdownImage, h2: HeadingH2, h3: HeadingH3 }}
+            components={{ pre: CodeBlock, img: BlogImage, h2: HeadingH2, h3: HeadingH3 }}
           >
             {post.content}
           </ReactMarkdown>

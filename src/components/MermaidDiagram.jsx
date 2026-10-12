@@ -42,7 +42,14 @@ export default function MermaidDiagram({ code }) {
   useEffect(() => {
     let cancelled = false;
 
-    import('mermaid').then(({ default: mermaid }) => {
+    // Load mermaid's self-contained build, not the bare 'mermaid' entry.
+    // The bare entry shares d3 with function-plot in Vite's dev
+    // pre-bundle. function-plot is CommonJS, so esbuild wraps d3 in lazy
+    // init functions, and mermaid can call d3's select() before d3 has
+    // set up its prototype. Result: "parentRoot.append is not a
+    // function". The self-contained build carries its own d3, so it
+    // never touches that shared chunk.
+    import('mermaid/dist/mermaid.esm.min.mjs').then(({ default: mermaid }) => {
       if (cancelled) return;
       mermaid.initialize({
         startOnLoad: false,
