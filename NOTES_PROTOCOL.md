@@ -5,6 +5,7 @@ This file is for Claude. It tells Claude how to teach a subject and how to keep 
 - Read this file at the start of every study session.
 - Read `NOTES_GUIDE.md` for the exact file format. If `NOTES_GUIDE.md` is missing, use section 9 of this file.
 - Subject-specific rules (color legend, conventions, source folders) live in `src/content/notes/<subject>/_folder.md`.
+- Research papers have their own rules in section 10.
 
 ## 1. Purpose
 
@@ -23,6 +24,8 @@ The notes have two jobs:
 | Notes | `src/content/notes/<area>/<subject>/`, for example `maths/fft-signal-processing/`. Each area (for example `maths` or `ai`) is a top-level folder. |
 | Notes home page | `src/content/notes/_index.md` |
 | Media (videos, images) | `public/notes/media/<subject>/` |
+| Paper notes | `src/content/notes/papers/<topic>/<year>-<short-name>/` |
+| Paper media | `public/notes/media/papers/<year>-<short-name>/`, with the sub-folders `figures/` and `manim/` |
 | File format | `NOTES_GUIDE.md` (repository root) |
 | Site URL | `/notes` (unlisted: no links from other pages, noindex) |
 
@@ -33,11 +36,13 @@ The notes have two jobs:
 3. `write_file` replaces the whole file. Read the file first. Keep every old line that must stay.
 4. The bash sandbox cannot see the Windows disk.
 5. Do not run npm or git from chat. The learner commits and pushes.
-6. Write notes only inside `src/content/notes/`. Edit site code from chat only for a small fix that you first reproduce and test in the sandbox. Tell the learner every site file that changed.
+6. Write notes only inside `src/content/notes/`, and media only inside `public/notes/media/`. Edit site code from chat only for a small fix that you first reproduce and test in the sandbox. Tell the learner every site file that changed.
 7. Use Claude Code only for Manim videos, and for site-code tasks that need a shell (build, file deletion). Do all other file work from chat. Write a prompt for Claude Code. The learner runs it in the background and keeps studying.
 8. Tell the learner to run only one Claude Code session on this repository at a time. Two sessions that edit the same files can erase each other's changes.
 9. The bash sandbox runs `/bin/sh`. Brace expansion (`{a,b}`) and process substitution (`<(...)`) do not work.
 10. `copy_file_user_to_claude` puts every file in `/mnt/user-data/uploads/` under its own name. Files with the same name (for example `_folder.md`) overwrite each other. Copy one, rename it, then copy the next.
+11. If the session has the device file tools (stage and commit) and the repository folder is connected, write new files in the sandbox first. Run the check there. Then copy the files from `/mnt/user-data/outputs/` to the repository with the commit tool. This writes each file once, not twice.
+12. Chat makes every figure as SVG. Write the SVG in the sandbox, render it to PNG with Chromium, and look at the PNG before you save the SVG. Fix every overlap of text.
 
 ## 4. Language
 
@@ -201,7 +206,7 @@ Write a Claude Code prompt that states:
 1. The exact misunderstanding that the animation fixes.
 2. The scenes in order. One idea per scene. Show the input, the operation and the output.
 3. The color legend of the subject (from its `_folder.md`).
-4. The output path: `public/notes/media/<subject>/manim/<name>.mp4`.
+4. The output path: `public/notes/media/<subject>/manim/<name>.mp4`. For a paper: `public/notes/media/papers/<paper folder>/manim/<name>.mp4`.
 5. The checks: render, watch, fix visual problems, then report the duration.
 
 Then add a `video` block to the lesson.
@@ -219,3 +224,66 @@ Blocks:
 - ```` ```check ```` JSON: `{"question": "...", "hint": "...", "answer": "..."}`
 - Callouts: `> [!key]`, `[!trap]`, `[!mistake]`, `[!analogy]`, `[!example]`, `[!note]`
 - Task lists: `- [ ]` and `- [x]`
+
+## 10. Papers
+
+The area `papers/` explains research papers from first principles. The teaching rules of sections 4, 6 and 7 apply. This section adds the rules for papers.
+
+### Layout
+
+```text
+src/content/notes/papers/
+├── _folder.md            area page: rules, topics, catalog, reading queue        (order 2)
+├── 00-progress/          ONE session log, mistakes page, weak-areas page for ALL papers (order 0)
+├── reading-method.md     the method and the page set of every paper folder       (order 1)
+├── glossary.md           ONE glossary for ALL papers, alphabetical, with links   (order 2)
+└── <topic>/              one folder for each topic, for example long-context     (order 10)
+    ├── _folder.md        the main question of the topic, and its papers table
+    └── <year>-<short-name>/          one folder for each paper              (order = year)
+        ├── _folder.md                paper card: citation, result in 3 sentences, reading order, colors, media
+        ├── 00-paper-on-one-page.md   revision and teaching page
+        ├── 01-..., 02-...            background pages
+        └── NN-<slug>.md              question, design, results, why, engineering, limits, reproduce
+
+public/notes/media/papers/<year>-<short-name>/
+├── figures/        SVG figures made in chat
+└── manim/          videos from Claude Code
+```
+
+The media path has no topic. So a paper can move to another topic without broken media.
+
+### Start a new paper
+
+1. Read the full PDF, page by page. List every figure and every table.
+2. Search for the official venue, the code repository and the later work. Check each claim at the source.
+3. Pick the topic of the main question of the paper. If the topic folder does not exist, create it with a `_folder.md`.
+4. Create the paper folder and its `_folder.md`. Use the paper card of `papers/long-context/2023-lost-in-the-middle/_folder.md` as the model.
+5. Write the pages in the order of `papers/reading-method.md`, section 5. Omit a page that the paper does not need. Write a background page only for ideas that no other note covers. Link to the other notes for the rest.
+6. Add every new term to `papers/glossary.md`, in alphabetical order, with a "First seen" link.
+7. Add the paper to the catalog in `papers/_folder.md` and to the table of its topic. Add its important later work to the reading queue.
+8. Add a session to `papers/00-progress/session-log.md`.
+9. Make the figures in chat (see below). Give the learner the Claude Code prompt for Manim videos.
+10. Run the check of section 7 on every new and changed file.
+11. Start a short diagnostic on the background pages. Ask one question at a time.
+
+### Rules for paper pages
+
+1. **Three kinds of statements.** Keep them apart, and label them: what the paper measured, what later work found, and the interpretation of these notes.
+2. **Exact and approximate numbers.** Take numbers from the tables and the text of the paper. A value read by eye from a figure is approximate. Say "approximate" in the plot title.
+3. **No copies of the paper's figures.** Rebuild each plot from the numbers with a `plot` block. Draw new diagrams as SVG or Mermaid.
+4. **No PDF in `public/`.** The site is public. Link to the paper instead.
+5. **Status.** Every page starts as `not-started`. Set `learned`, `confidence` and `reviewDue` only after the learner studies the page and passes its gate.
+6. **Status table.** Update the status column of the reading-order table in the paper `_folder.md`, and the status in the catalog, when a page starts or ends.
+
+### Figures
+
+Chat makes every figure. Do not use AI image generators (for example PaperBanana). They can misspell labels and change numbers.
+
+1. Write the SVG with a script in the sandbox. Use the color legend of the paper `_folder.md`.
+2. Use a viewBox about 1280 px wide, and text of 19 px or more. The page shows a figure at about 760 px wide.
+3. Take every label and every number from the notes.
+4. Render the SVG to PNG with Chromium. Look at the PNG. Fix every overlap, every cut-off text and every wrong number.
+5. Save the SVG in `public/notes/media/papers/<paper folder>/figures/`.
+6. Give each paper at least two figures: an overview for its `_folder.md`, and a method figure for its experiment-design page.
+
+A note can link to a Manim video before the video exists. Tell the learner which videos are missing until the prompt runs.

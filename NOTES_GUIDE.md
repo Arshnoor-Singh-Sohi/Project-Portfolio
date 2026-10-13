@@ -183,3 +183,16 @@ node scripts/check-notes.mjs
 ```
 
 It checks every note file: frontmatter, math, the JSON in `video`, `check` and `plot` blocks, callout types, table cell counts and `/notes/` links. It also checks Mermaid syntax when the `jsdom` package is installed. It ends with "All files pass." or with a list of errors.
+
+The check does not test that a media file exists. A missing image shows its alt text. A missing video shows an empty player.
+
+## 12. Images
+
+```text
+![Alt text: what the figure shows, in one sentence](/notes/media/papers/2023-lost-in-the-middle/figures/u-curve.svg)
+```
+
+1. Use an absolute path that starts with `/notes/media/`. The file lives in `public/notes/media/`.
+2. Always write alt text. It shows when the file is missing, and screen readers read it.
+3. Use SVG for diagrams, and PNG for raster images. An image is never wider than the text column.
+4. A paper keeps its images in `public/notes/media/papers/<paper folder>/figures/`.
