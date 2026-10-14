@@ -282,6 +282,6 @@ Some changes to an agent's context affect only one model call. They make a view 
 
 - Previous: [L1: Three copies of a conversation](/notes/ai/conversation-state/01-where-state-lives/l1-three-copies-of-a-conversation)
 - Next in the priority path: [PostgreSQL L1: Tables, keys and constraints](/notes/databases/postgres/01-relational-basics/l1-tables-keys-and-constraints)
-- LangChain details: [Context management](/notes/ai/langchain-langgraph/03-context-management) (planned lessons)
+- LangChain details: [Context management](/notes/ai/langchain-langgraph/03-context-management) (lessons 3.1 to 3.3)
 - Compression in theory: [Context engineering Part 7](/notes/ai/context-engineering/07-compress-and-isolate)
 - [Glossary](/notes/ai/conversation-state/glossary)

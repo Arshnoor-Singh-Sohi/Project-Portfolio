@@ -109,7 +109,7 @@ Each option becomes a flag. For example `max_turns=8` becomes `--max-turns 8`, a
 | CLI → SDK | `result` message: final text, cost, usage, session id | At the end of each answer |
 | CLI → SDK → CLI | Control requests and responses: hook callbacks, `can_use_tool` permission checks, calls to in-process MCP tools | Whenever the loop needs them |
 
-The SDK reads stdout line by line. It skips lines that are not JSON. It turns each JSON object into a Python class: `SystemMessage`, `AssistantMessage`, `UserMessage`, `ResultMessage`, `StreamEvent` and others ([planned lesson 2.2](/notes/ai/claude-agent-sdk/02-options-and-messages)). The parser skips message types that it does not know, so new CLI versions do not break old SDK versions.
+The SDK reads stdout line by line. It skips lines that are not JSON. It turns each JSON object into a Python class: `SystemMessage`, `AssistantMessage`, `UserMessage`, `ResultMessage`, `StreamEvent` and others ([lesson 2.2](/notes/ai/claude-agent-sdk/02-options-and-messages/l2-message-and-block-types)). The parser skips message types that it does not know, so new CLI versions do not break old SDK versions.
 
 ### 4.4 Who does what
 
@@ -146,7 +146,7 @@ When the subprocess cannot start, the SDK raises an error from the `CLIConnectio
 | Any other exception, for example `PermissionError` | `CLIConnectionError("Failed to start Claude Code: ...")` |
 
 > [!trap] "Not found" does not always mean "not installed"
-> `FileNotFoundError` from the operating system can have other causes than a missing CLI binary. The SDK reports all of them as `CLINotFoundError` when `cwd` exists. Read the chained exception (`raise ... from e`) to see the real operating system error. [Planned lesson 7.1](/notes/ai/claude-agent-sdk/07-errors-and-cost) covers this in detail.
+> `FileNotFoundError` from the operating system can have other causes than a missing CLI binary. The SDK reports all of them as `CLINotFoundError` when `cwd` exists. Read the chained exception (`raise ... from e`) to see the real operating system error. [Lesson 7.1](/notes/ai/claude-agent-sdk/07-errors-and-cost/l1-sdk-errors) covers this in detail.
 
 ### 4.7 Production view
 

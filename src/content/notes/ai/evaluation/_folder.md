@@ -22,7 +22,7 @@ I master the subject when all 5 items are true, with no notes and no AI.
 
 | Folder | Content |
 |---|---|
-| [00 Progress](/notes/ai/evaluation/00-progress) | Session log, mistakes, weak areas |
+| [00 Progress](/notes/ai/evaluation/00-progress) | Session log, mistakes, weak areas, media queue |
 | [Course plan](/notes/ai/evaluation/course-plan) | The map of all parts and the study order |
 | [Glossary](/notes/ai/evaluation/glossary) | Every term, with a plain meaning |
 | [01 Test design](/notes/ai/evaluation/01-test-design) | Fake vs real model, random data, controls, strict scoring, audits |
@@ -31,7 +31,9 @@ I master the subject when all 5 items are true, with no notes and no AI.
 ## Sources
 
 - Statistics texts on the binomial confidence interval (Wilson and Clopper-Pearson intervals).
-- The lessons name further sources when they are written.
+- scipy 1.18.1 and statsmodels 0.15.0: every interval and power number in Part 2 was computed with them (checked on 2026-10-13).
+- Anthropic Python SDK 1.13.0 and Claude Code CLI 2.1.296, run against a local fake server for Part 1 (checked on 2026-10-13).
+- Each lesson names its other sources. A source that a lesson names but that was not checked is marked in the lesson.
 
 ## Conventions
 
@@ -74,3 +76,14 @@ Each lesson row has a stage code. The codes come from the project plan that this
 1. I write all the exercise code myself. The lab folder is `C:\Users\ASohi\Downloads\AI\agent-harness-lab`, with one notebook folder for each subject.
 2. Hints come in three levels, in chat only: idea, pseudocode, partial code.
 3. The lessons never show a full solution to an exercise before I try it.
+
+### Media
+
+All media for this subject is in `/notes/media/evaluation/`.
+
+| Folder | What it holds | Made by |
+|---|---|---|
+| `figures/` | SVG diagrams | Claude in chat. Each SVG is rendered to PNG and checked before it is saved. |
+| `manim/` | Videos | Claude Code (Manim), from a prompt that Claude writes |
+
+The [media queue](/notes/ai/evaluation/00-progress/media-queue) tracks every file.

@@ -20,8 +20,8 @@ flowchart TD
 | Part | Folder | Lessons | Pages written | Content |
 |---|---|---|---|---|
 | 1 | [01 Where state lives](/notes/ai/conversation-state/01-where-state-lives) | 2 | 2 | Three copies of a conversation, transient vs persistent context |
-| 2 | [02 Chat history model](/notes/ai/conversation-state/02-chat-history-model) | 2 | 1 | The chats + messages model with parts, rebuilding model input |
-| 3 | [03 Lifecycle](/notes/ai/conversation-state/03-lifecycle) | 3 | 0 | Ownership, retention, deletion, moving old chats |
+| 2 | [02 Chat history model](/notes/ai/conversation-state/02-chat-history-model) | 2 | 2 | The chats + messages model with parts, rebuilding model input |
+| 3 | [03 Lifecycle](/notes/ai/conversation-state/03-lifecycle) | 3 | 3 | Ownership, retention, deletion, moving old chats |
 
 A **lesson** is one idea. A **session** is one sitting. A lesson page can exist before I study it. Its status stays `not-started` until I pass its gate.
 

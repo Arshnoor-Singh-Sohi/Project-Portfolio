@@ -17,8 +17,8 @@ flowchart TD
 
 | Part | Folder | Lessons | Pages written | Content |
 |---|---|---|---|---|
-| 1 | [01 Test design](/notes/ai/evaluation/01-test-design) | 3 | 0 | Fake vs real model, random data, controls, strict scoring, audits |
-| 2 | [02 Statistics](/notes/ai/evaluation/02-statistics) | 2 | 0 | Pass rates, confidence intervals, power |
+| 1 | [01 Test design](/notes/ai/evaluation/01-test-design) | 3 | 3 | Fake vs real model, random data, controls, strict scoring, audits |
+| 2 | [02 Statistics](/notes/ai/evaluation/02-statistics) | 2 | 2 | Pass rates, confidence intervals, power |
 
 A **lesson** is one idea. A **session** is one sitting. A lesson page can exist before I study it. Its status stays `not-started` until I pass its gate.
 

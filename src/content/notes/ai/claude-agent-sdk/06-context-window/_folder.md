@@ -8,5 +8,5 @@ This part covers the window of the current models and the compaction that Claude
 
 | Code | Lesson | Core idea | Stage | Status |
 |---|---|---|---|---|
-| L1 | Window size and auto-compaction | 1M tokens. Compaction at about 967K tokens by default. | Now | planned |
-| L2 | Compaction controls | CLAUDE_CODE_AUTO_COMPACT_WINDOW (100K minimum) and related settings. | Later | planned |
+| L1 | [Window size and auto-compaction](/notes/ai/claude-agent-sdk/06-context-window/l1-window-size-and-auto-compaction) | 1M tokens. Compaction at about 967K tokens by default. | Now | not started |
+| L2 | [Compaction controls](/notes/ai/claude-agent-sdk/06-context-window/l2-compaction-controls) | CLAUDE_CODE_AUTO_COMPACT_WINDOW (100K minimum) and related settings. | Later | not started |

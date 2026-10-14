@@ -23,11 +23,11 @@ flowchart TD
 
 | Part | Folder | Lessons | Pages written | Content |
 |---|---|---|---|---|
-| 1 | [01 Apps](/notes/platforms/databricks/01-apps) | 3 | 0 | Databricks Apps, resources, secrets, instances |
-| 2 | [02 Identity and auth](/notes/platforms/databricks/02-identity-and-auth) | 3 | 0 | CLI profiles, service credentials, user identity |
-| 3 | [03 SQL and Delta](/notes/platforms/databricks/03-sql-and-delta) | 1 | 0 | Statement Execution API and Delta tables |
-| 4 | [04 MCP and Genie](/notes/platforms/databricks/04-mcp-and-genie) | 2 | 0 | Databricks MCP servers, DatabricksMCPClient, Genie One |
-| 5 | [05 Lakebase](/notes/platforms/databricks/05-lakebase) | 4 | 0 | Lakebase projects, App resources, LakebasePool, Lakebase vs Delta |
+| 1 | [01 Apps](/notes/platforms/databricks/01-apps) | 3 | 3 | Databricks Apps, resources, secrets, instances |
+| 2 | [02 Identity and auth](/notes/platforms/databricks/02-identity-and-auth) | 3 | 3 | CLI profiles, service credentials, user identity |
+| 3 | [03 SQL and Delta](/notes/platforms/databricks/03-sql-and-delta) | 1 | 1 | Statement Execution API and Delta tables |
+| 4 | [04 MCP and Genie](/notes/platforms/databricks/04-mcp-and-genie) | 2 | 2 | Databricks MCP servers, DatabricksMCPClient, Genie One |
+| 5 | [05 Lakebase](/notes/platforms/databricks/05-lakebase) | 4 | 4 | Lakebase projects, App resources, LakebasePool, Lakebase vs Delta |
 
 A **lesson** is one idea. A **session** is one sitting. A lesson page can exist before I study it. Its status stays `not-started` until I pass its gate.
 

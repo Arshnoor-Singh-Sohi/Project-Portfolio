@@ -17,8 +17,8 @@ flowchart TD
 
 | Part | Folder | Lessons | Pages written | Content |
 |---|---|---|---|---|
-| 1 | [01 Access control](/notes/software-engineering/security-and-operations/01-access-control) | 2 | 0 | Self-asserted identity, owner checks, identity headers |
-| 2 | [02 Observability](/notes/software-engineering/security-and-operations/02-observability) | 1 | 0 | Tracing agents |
+| 1 | [01 Access control](/notes/software-engineering/security-and-operations/01-access-control) | 2 | 2 | Self-asserted identity, owner checks, identity headers |
+| 2 | [02 Observability](/notes/software-engineering/security-and-operations/02-observability) | 1 | 1 | Tracing agents |
 
 A **lesson** is one idea. A **session** is one sitting. A lesson page can exist before I study it. Its status stays `not-started` until I pass its gate.
 

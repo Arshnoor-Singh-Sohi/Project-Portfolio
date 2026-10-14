@@ -8,4 +8,4 @@ This part covers custom tools that run inside my own Python process.
 
 | Code | Lesson | Core idea | Stage | Status |
 |---|---|---|---|---|
-| L1 | In-process MCP tools | @tool, create_sdk_mcp_server and the mcp__server__tool names. | Now | planned |
+| L1 | [In-process MCP tools](/notes/ai/claude-agent-sdk/03-custom-tools/l1-in-process-mcp-tools) | @tool, create_sdk_mcp_server and the mcp__server__tool names. | Now | not started |

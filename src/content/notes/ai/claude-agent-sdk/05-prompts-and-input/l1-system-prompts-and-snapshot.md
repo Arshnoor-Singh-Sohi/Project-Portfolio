@@ -265,6 +265,7 @@ The `system_prompt` option takes a string, the `claude_code` preset with optiona
 ## 10. Links
 
 - Previous in the priority path: [Sessions L3: Session files on temporary disks](/notes/ai/claude-agent-sdk/04-sessions/l3-session-files-on-temporary-disks)
+- Next in the part: [L2: Streaming input mode](/notes/ai/claude-agent-sdk/05-prompts-and-input/l2-streaming-input-mode)
 - Next in the priority path: [Three copies of a conversation](/notes/ai/conversation-state/01-where-state-lives/l1-three-copies-of-a-conversation)
 - Background: [Context engineering L7: Prompt caching](/notes/ai/context-engineering/01-foundations/l7-prompt-caching)
 - [Glossary](/notes/ai/claude-agent-sdk/glossary)

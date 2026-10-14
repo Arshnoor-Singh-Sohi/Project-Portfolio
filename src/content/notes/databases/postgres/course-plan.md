@@ -13,21 +13,26 @@ flowchart TD
     P3[Part 3: Python driver]
     P4[Part 4: Schema changes]
     P5[Part 5: Local setup]
+    P6[Part 6: Indexes and query plans]
     P1 --> P2
     P2 --> P3
     P3 --> P4
     P4 --> P5
+    P1 --> P6
 ```
 
 ## Parts
 
+Part 6 deepens lesson 1.3. Study it after part 1, or after part 2 if you want transactions first.
+
 | Part | Folder | Lessons | Pages written | Content |
 |---|---|---|---|---|
 | 1 | [01 Relational basics](/notes/databases/postgres/01-relational-basics) | 3 | 3 | Tables, keys, constraints, column types, indexes |
-| 2 | [02 Transactions](/notes/databases/postgres/02-transactions) | 2 | 1 | Atomic writes, isolation, upserts |
-| 3 | [03 Python driver](/notes/databases/postgres/03-python-driver) | 2 | 0 | psycopg 3 and connection pools |
-| 4 | [04 Schema changes](/notes/databases/postgres/04-schema-changes) | 2 | 0 | ALTER TABLE and migrations |
-| 5 | [05 Local setup](/notes/databases/postgres/05-local-setup) | 1 | 0 | A local PostgreSQL server |
+| 2 | [02 Transactions](/notes/databases/postgres/02-transactions) | 2 | 2 | Atomic writes, isolation, upserts |
+| 3 | [03 Python driver](/notes/databases/postgres/03-python-driver) | 2 | 2 | psycopg 3 and connection pools |
+| 4 | [04 Schema changes](/notes/databases/postgres/04-schema-changes) | 2 | 2 | ALTER TABLE and migrations |
+| 5 | [05 Local setup](/notes/databases/postgres/05-local-setup) | 1 | 1 | A local PostgreSQL server |
+| 6 | [06 Indexes and query plans](/notes/databases/postgres/06-indexes-and-query-plans) | 5 | 5 | B-tree pages, multicolumn indexes, index scan vs sequential scan, EXPLAIN ANALYZE, foreign keys and cascades |
 
 A **lesson** is one idea. A **session** is one sitting. A lesson page can exist before I study it. Its status stays `not-started` until I pass its gate.
 

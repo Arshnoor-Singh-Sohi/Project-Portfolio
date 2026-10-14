@@ -8,4 +8,4 @@ This part covers a local server for the exercises.
 
 | Code | Lesson | Core idea | Stage | Status |
 |---|---|---|---|---|
-| L1 | Local PostgreSQL with Docker | One command starts a server for tests. | A | planned |
+| L1 | [Local PostgreSQL with Docker](/notes/databases/postgres/05-local-setup/l1-local-postgres-with-docker) | One command starts a server for tests. | A | not started |

@@ -25,12 +25,12 @@ flowchart TD
 
 | Part | Folder | Lessons | Pages written | Content |
 |---|---|---|---|---|
-| 1 | [01 Foundations](/notes/ai/langchain-langgraph/01-foundations) | 3 | 0 | LangChain messages, create_agent, ChatDatabricks |
-| 2 | [02 Middleware](/notes/ai/langchain-langgraph/02-middleware) | 2 | 0 | The seven hooks and the built-in middleware |
-| 3 | [03 Context management](/notes/ai/langchain-langgraph/03-context-management) | 3 | 0 | Summarization, context editing, trimming and removal |
-| 4 | [04 Persistence](/notes/ai/langchain-langgraph/04-persistence) | 2 | 0 | State, reducers, checkpointers and threads |
-| 5 | [05 Streaming](/notes/ai/langchain-langgraph/05-streaming) | 1 | 0 | Stream modes and get_stream_writer |
-| 6 | [06 Legacy API](/notes/ai/langchain-langgraph/06-legacy-api) | 1 | 0 | create_react_agent, pre_model_hook, SummarizationNode |
+| 1 | [01 Foundations](/notes/ai/langchain-langgraph/01-foundations) | 3 | 3 | LangChain messages, create_agent, ChatDatabricks |
+| 2 | [02 Middleware](/notes/ai/langchain-langgraph/02-middleware) | 2 | 2 | The seven hooks and the built-in middleware |
+| 3 | [03 Context management](/notes/ai/langchain-langgraph/03-context-management) | 3 | 3 | Summarization, context editing, trimming and removal |
+| 4 | [04 Persistence](/notes/ai/langchain-langgraph/04-persistence) | 2 | 2 | State, reducers, checkpointers and threads |
+| 5 | [05 Streaming](/notes/ai/langchain-langgraph/05-streaming) | 1 | 1 | Stream modes and get_stream_writer |
+| 6 | [06 Legacy API](/notes/ai/langchain-langgraph/06-legacy-api) | 1 | 1 | create_react_agent, pre_model_hook, SummarizationNode |
 
 A **lesson** is one idea. A **session** is one sitting. A lesson page can exist before I study it. Its status stays `not-started` until I pass its gate.
 

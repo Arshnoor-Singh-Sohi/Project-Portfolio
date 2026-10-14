@@ -8,5 +8,5 @@ This part covers safe changes to a live schema.
 
 | Code | Lesson | Core idea | Stage | Status |
 |---|---|---|---|---|
-| L1 | ALTER TABLE ADD COLUMN | No table rewrite with a constant default, since PostgreSQL 11. | A | planned |
-| L2 | Migrations as code | Each change is a numbered file that runs once. | Later | planned |
+| L1 | [ALTER TABLE ADD COLUMN](/notes/databases/postgres/04-schema-changes/l1-alter-table-add-column) | No table rewrite with a constant default, since PostgreSQL 11. | A | not started |
+| L2 | [Migrations as code](/notes/databases/postgres/04-schema-changes/l2-migrations-as-code) | Each change is a numbered file that runs once. | Later | not started |

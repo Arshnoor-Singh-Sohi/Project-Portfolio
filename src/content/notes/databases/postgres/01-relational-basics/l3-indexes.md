@@ -170,8 +170,8 @@ So test with realistic data. A test with 3 rows proves nothing about indexes.
 |---|---|
 | Read speed | One composite index per main access path, with equality columns first. |
 | Write speed | Each index slows every write. Chat stores write on every turn, so keep the list short. |
-| Proof | `EXPLAIN ANALYZE` on production-like data. Look for "Index Scan" and the absence of "Sort". |
-| Large tables | `CREATE INDEX` blocks writes while it runs. `CREATE INDEX CONCURRENTLY` does not, but it takes longer ([planned part 4](/notes/databases/postgres/04-schema-changes)). |
+| Proof | `EXPLAIN ANALYZE` on production-like data. Look for your index in the plan. For a top-N query with `LIMIT`, also look for the absence of "Sort". |
+| Large tables | `CREATE INDEX` blocks writes while it runs. `CREATE INDEX CONCURRENTLY` does not, but it takes longer ([lesson 4.1](/notes/databases/postgres/04-schema-changes/l1-alter-table-add-column)). |
 | Maintenance | Run `ANALYZE` after big loads. Watch for unused indexes. |
 
 ## 5. Code
@@ -192,7 +192,10 @@ Acceptance test: record the plan, and explain in two sentences why this index se
 
 **Exercise 3.3: a chat query.** Create a `messages` table with `chat_id uuid`, `seq integer` and `content text`. Load 100 chats with 2,000 messages each. Design the index for "messages of one chat in order" and prove it with `EXPLAIN ANALYZE`.
 
-Acceptance test: the plan uses your index, has no "Sort", and runs in under 1 ms on your machine.
+Acceptance tests:
+
+- The plan uses your index (an Index Scan or a Bitmap Index Scan) and runs in under 1 ms on your machine.
+- If the plan has a "Sort" node, add `LIMIT 50` and show that the Sort disappears. Explain the change in two sentences ([lesson 6.3](/notes/databases/postgres/06-indexes-and-query-plans/l3-index-scan-vs-sequential-scan) explains the choice).
 
 ## 6. Common mistakes
 
@@ -212,7 +215,7 @@ An index is a sorted copy of some columns with a pointer to each row, like the i
 ```check
 {
   "question": "The main query of a chat store is SELECT * FROM messages WHERE chat_id = $1 ORDER BY seq. Which index do you create, and what should EXPLAIN show?",
-  "answer": "A composite B-tree index on (chat_id, seq). EXPLAIN should show an Index Scan on that index with the condition chat_id = $1, and no Sort node, because the index already holds the rows of one chat in seq order."
+  "answer": "A composite B-tree index on (chat_id, seq). EXPLAIN should show that index with the condition chat_id = $1. With a LIMIT, it is an Index Scan with no Sort node, because the index already holds the rows of one chat in seq order. Without a LIMIT, for a chat of a few dozen rows, the planner can choose a Bitmap Index Scan on the same index plus a small in-memory Sort. A test with 40 rows on PostgreSQL 16 and 18 did that and read 8 pages. Both plans use the index."
 }
 ```
 
@@ -243,4 +246,5 @@ An index is a sorted copy of some columns with a pointer to each row, like the i
 - Previous: [L2: Column types](/notes/databases/postgres/01-relational-basics/l2-column-types)
 - Next: [Transactions](/notes/databases/postgres/02-transactions/l1-transactions)
 - Applied: [Chats, messages and parts](/notes/ai/conversation-state/02-chat-history-model/l1-chats-messages-and-parts)
+- In depth: [Part 6: Indexes and query plans](/notes/databases/postgres/06-indexes-and-query-plans), from [B-tree pages](/notes/databases/postgres/06-indexes-and-query-plans/l1-b-tree-indexes) to [EXPLAIN ANALYZE](/notes/databases/postgres/06-indexes-and-query-plans/l4-explain-and-explain-analyze)
 - [Glossary](/notes/databases/postgres/glossary)

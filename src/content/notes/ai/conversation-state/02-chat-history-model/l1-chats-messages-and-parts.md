@@ -110,7 +110,7 @@ erDiagram
 | Column | Type and constraints | Reason |
 |---|---|---|
 | `chats.id` | `uuid PRIMARY KEY` | The client or the server makes it before the first save. It can also be the agent's session id for a new session ([resume and fork, 4.5](/notes/ai/claude-agent-sdk/04-sessions/l2-resume-continue-fork)). |
-| `chats.owner_id` | `text NOT NULL` | Every read checks it ([planned ownership lesson](/notes/ai/conversation-state/03-lifecycle)). |
+| `chats.owner_id` | `text NOT NULL` | Every read checks it ([ownership lesson](/notes/ai/conversation-state/03-lifecycle/l1-ownership-checks)). |
 | `chats.last_seq` | `integer NOT NULL DEFAULT 0` | The counter for the next `seq`. The save updates it, which also locks the chat row (section 4.5). |
 | `chats.session_id` | `uuid`, nullable | The session of the last answer, for Flow 1. A pointer to a cache, never the truth. |
 | `chats.updated_at` | `timestamptz NOT NULL` | The order of the chat list. One instant, in any time zone ([column types, 4.3](/notes/databases/postgres/01-relational-basics/l2-column-types)). |
@@ -237,7 +237,7 @@ SELECT id, title, updated_at
 The index `chats_owner_updated_idx (owner_id, updated_at DESC)` serves it: equality first, then the sort column.
 
 > [!trap] The chat id is not a password
-> Every query that reads a chat must also filter by the owner, for example `JOIN chats ... WHERE chats.owner_id = $owner_id`. A query by `chat_id` alone lets anyone who knows or guesses an id read the chat. The owner value must come from the verified identity of the request, never from the request body ([planned security lesson](/notes/software-engineering/security-and-operations/01-access-control)).
+> Every query that reads a chat must also filter by the owner, for example `JOIN chats ... WHERE chats.owner_id = $owner_id`. A query by `chat_id` alone lets anyone who knows or guesses an id read the chat. The owner value must come from the verified identity of the request, never from the request body ([security lesson 1.1](/notes/software-engineering/security-and-operations/01-access-control/l1-self-asserted-identity)).
 
 ### 4.8 Adding a field later
 
@@ -246,7 +246,7 @@ New needs appear: a thumbs-up value, a cost per answer, a language. Two paths ex
 1. **A key in `metadata`.** No schema change at all.
 2. **A real column**, when the database must enforce it or queries filter on it. The test ran `ALTER TABLE messages ADD COLUMN feedback text NOT NULL DEFAULT 'none';` on a table with rows. The old rows read `none` at once.
 
-The PostgreSQL 16 docs explain why step 2 is fast: "From PostgreSQL 11, adding a column with a constant default value no longer means that each row of the table needs to be updated when the `ALTER TABLE` statement is executed." A volatile default, such as `clock_timestamp()`, still rewrites every row. [Planned lesson](/notes/databases/postgres/04-schema-changes) covers locks and migrations.
+The PostgreSQL 16 docs explain why step 2 is fast: "From PostgreSQL 11, adding a column with a constant default value no longer means that each row of the table needs to be updated when the `ALTER TABLE` statement is executed." A volatile default, such as `clock_timestamp()`, still rewrites every row. [Lesson 4.1](/notes/databases/postgres/04-schema-changes/l1-alter-table-add-column) covers locks, and [lesson 4.2](/notes/databases/postgres/04-schema-changes/l2-migrations-as-code) covers migrations.
 
 ### 4.9 Two alternative designs
 
@@ -269,7 +269,7 @@ Three details of the Vercel schema differ from this design, on purpose:
 |---|---|
 | Flow 1: resume | Only the new user message. The session file has the rest. |
 | Flow 2: rebuild, Claude SDK | The earlier turns as text in the new prompt: text parts as text, tool parts as short lines such as "Tool count_orders(date=2026-10-11) returned 412". |
-| LangChain | The earlier turns as LangChain messages, converted from the parts ([planned lesson 2.2](/notes/ai/conversation-state/02-chat-history-model)). |
+| LangChain | The earlier turns as LangChain messages, converted from the parts ([lesson 2.2](/notes/ai/conversation-state/02-chat-history-model/l2-from-stored-parts-to-model-input)). |
 
 The conversion runs at the last step, for each harness. The store stays the same for all of them.
 
@@ -283,7 +283,7 @@ The conversion runs at the last step, for each harness. The store stays the same
 | Speed | `(chat_id, seq)` and `(owner_id, updated_at DESC)` serve the two main reads. |
 | Change | New fields go to `metadata` or to a new column with a constant default. |
 | Security | Every read filters by the owner from the verified identity. |
-| Growth | The table grows with every turn. Retention is a planned lesson ([lifecycle](/notes/ai/conversation-state/03-lifecycle)). |
+| Growth | The table grows with every turn. Lesson 3.2 covers retention ([Retention and deletion](/notes/ai/conversation-state/03-lifecycle/l2-retention-and-deletion)). |
 
 ## 5. Video
 
@@ -369,6 +369,7 @@ The chat store has two tables. `chats` has one row per conversation: owner, titl
 ## 10. Links
 
 - Previous in the priority path: [PostgreSQL transactions](/notes/databases/postgres/02-transactions/l1-transactions)
+- Next in the part: [L2: From stored parts to model input](/notes/ai/conversation-state/02-chat-history-model/l2-from-stored-parts-to-model-input)
 - Why copy 1: [Three copies of a conversation](/notes/ai/conversation-state/01-where-state-lives/l1-three-copies-of-a-conversation)
 - Flow 1 and Flow 2: [Session files on temporary disks](/notes/ai/claude-agent-sdk/04-sessions/l3-session-files-on-temporary-disks)
 - Tool pairing: [tool_use and tool_result](/notes/ai/llm-apis/01-messages-api/l2-tool-use-and-tool-result)

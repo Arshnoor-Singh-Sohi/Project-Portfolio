@@ -122,7 +122,7 @@ flowchart TD
 | Prompt cache | The old prefix can match the cache | A new prefix, so a cache miss on the first call |
 | Session id afterwards | Unchanged | A new id. Save it with the chat. |
 
-Why must the earlier turns go into the prompt text in Flow 2? Because the SDK input accepts only user messages. Every documented input example is a message with `"type": "user"`. The SDK has no documented way to insert old assistant turns into a new session. [Planned lesson 5.2](/notes/ai/claude-agent-sdk/05-prompts-and-input) covers the input modes.
+Why must the earlier turns go into the prompt text in Flow 2? Because the SDK input accepts only user messages. Every documented input example is a message with `"type": "user"`. The SDK has no documented way to insert old assistant turns into a new session. [Lesson 5.2](/notes/ai/claude-agent-sdk/05-prompts-and-input/l2-streaming-input-mode) covers the input modes.
 
 > [!key] The database is the source of truth, the session file is a cache
 > Your database holds the conversation that the user saw. It survives restarts and serves every instance. The session file is a cache of the model's context: fast and exact when it exists, gone when the disk is replaced. Flow 1 is a cache hit. Flow 2 is a cache miss. A design must be correct with no cache hits at all.
@@ -239,6 +239,7 @@ A session file exists only on the disk where the CLI wrote it. On a container pl
 ## 9. Links
 
 - Previous: [L2: resume, continue and fork](/notes/ai/claude-agent-sdk/04-sessions/l2-resume-continue-fork)
+- Next in the part: [L4: SessionStore and mirror errors](/notes/ai/claude-agent-sdk/04-sessions/l4-session-store-and-mirror-errors)
 - Next in the priority path: [L5.1: System prompts and snapshot](/notes/ai/claude-agent-sdk/05-prompts-and-input/l1-system-prompts-and-snapshot)
 - The `options.env` rule: [Foundations L1: What the SDK is](/notes/ai/claude-agent-sdk/01-foundations/l1-what-the-sdk-is)
 - The database side: [Chats, messages and parts](/notes/ai/conversation-state/02-chat-history-model/l1-chats-messages-and-parts)

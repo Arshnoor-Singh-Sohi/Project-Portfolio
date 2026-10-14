@@ -229,11 +229,11 @@ A good name appears in the error message and helps the person who reads the log.
 | Debugging | Each error names the constraint and the failing row. |
 | Performance | Primary and unique keys come with indexes. Foreign keys need an index that you add yourself. |
 | Deletes | `ON DELETE` decides whether a delete fails, cascades or sets nulls. Choose it on purpose. |
-| Changes | Adding a constraint later checks all old rows. Plan it as a migration ([planned part 4](/notes/databases/postgres/04-schema-changes)). |
+| Changes | Adding a constraint later checks all old rows. Plan it as a migration ([part 4](/notes/databases/postgres/04-schema-changes/l1-alter-table-add-column)). |
 
 ## 5. Code
 
-These exercises use a local PostgreSQL 16 server. One command starts one with Docker (planned lesson [5.1](/notes/databases/postgres/05-local-setup)):
+These exercises use a local PostgreSQL 16 server. One command starts one with Docker (lesson [5.1](/notes/databases/postgres/05-local-setup/l1-local-postgres-with-docker)):
 
 ```bash
 docker run --name pg16 -e POSTGRES_PASSWORD=dev -p 5432:5432 -d postgres:16

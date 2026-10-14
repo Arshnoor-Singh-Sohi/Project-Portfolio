@@ -39,6 +39,9 @@ I master the subject when all 7 items are true, with no notes and no AI.
 - Vercel chatbot message parts: https://chatbot.ai-sdk.dev/docs/migration-guides/message-parts (checked on 2026-10-12)
 - AI SDK UIMessage and message persistence: https://ai-sdk.dev/docs/reference/ai-sdk-core/ui-message and https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-message-persistence (checked on 2026-10-12)
 - Chat persistence recipe: https://fullstackrecipes.com/recipes/ai-chat-persistence (checked on 2026-10-12)
+- OWASP Top 10 for LLM Applications 2025, LLM01 (prompt injection), for the ownership lesson.
+- PostgreSQL 16 documentation: routine maintenance (VACUUM) and row security policies.
+- Databricks documentation: Delta `VACUUM` and Lakebase restore.
 - The sources of the linked subjects.
 
 ## Conventions

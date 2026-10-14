@@ -190,7 +190,7 @@ Designs A and C can be combined: try A, and use C when the session file is missi
 
 ### 4.9 Calling async code from a sync server
 
-Both entry points are `async`. A sync web framework, or sync code in a worker thread, must run them in an event loop. A common pattern is `asyncio.run(...)` inside a worker thread. `asyncio.run` fails if the thread already runs an event loop. The Python subject covers this ([planned lesson](/notes/software-engineering/python/01-asyncio)).
+Both entry points are `async`. A sync web framework, or sync code in a worker thread, must run them in an event loop. A common pattern is `asyncio.run(...)` inside a worker thread. `asyncio.run` fails if the thread already runs an event loop. The Python subject covers this ([Sync code calling async code](/notes/software-engineering/python/01-asyncio/l3-sync-code-calling-async-code)).
 
 ### 4.10 Production view
 
@@ -266,6 +266,7 @@ Acceptance test: the last answer that you print is the answer to "Say OK.", not 
 ## 9. Links
 
 - Previous: [L2: The agent loop](/notes/ai/claude-agent-sdk/01-foundations/l2-the-agent-loop)
+- Next in the subject: [Options and messages L1: ClaudeAgentOptions](/notes/ai/claude-agent-sdk/02-options-and-messages/l1-claude-agent-options)
 - Next in the priority path: [Sessions L1: What a session is](/notes/ai/claude-agent-sdk/04-sessions/l1-what-a-session-is)
 - [Sessions L3: Session files on temporary disks](/notes/ai/claude-agent-sdk/04-sessions/l3-session-files-on-temporary-disks) (Flow 1 and Flow 2)
 - [Glossary](/notes/ai/claude-agent-sdk/glossary)

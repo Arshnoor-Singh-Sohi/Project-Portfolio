@@ -8,4 +8,4 @@ Know these names so that old examples do not confuse you.
 
 | Code | Lesson | Core idea | Stage | Status |
 |---|---|---|---|---|
-| L1 | The old agent API | create_react_agent, pre_model_hook and SummarizationNode, and what replaced them. | Know only | planned |
+| L1 | [The old agent API](/notes/ai/langchain-langgraph/06-legacy-api/l1-old-agent-api) | create_react_agent, pre_model_hook and SummarizationNode, and what replaced them. | Know only | not started |

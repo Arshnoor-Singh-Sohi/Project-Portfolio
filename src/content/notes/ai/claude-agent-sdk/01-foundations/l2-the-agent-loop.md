@@ -157,7 +157,7 @@ The model API is stateless. So on every turn, the CLI sends the full conversatio
 >
 > Total input for one answer: 6,050 + 7,010 + 7,970 = 21,030 tokens. Most of it is the same prefix, sent three times. Prompt caching makes the repeated part cheap ([context engineering L7](/notes/ai/context-engineering/01-foundations/l7-prompt-caching)).
 
-When the conversation reaches the compaction point, the CLI summarizes it and yields a `SystemMessage` with subtype `compact_boundary`. The docs say: "Compaction replaces older messages with a summary". [Planned lesson 6.1](/notes/ai/claude-agent-sdk/06-context-window) covers the details.
+When the conversation reaches the compaction point, the CLI summarizes it and yields a `SystemMessage` with subtype `compact_boundary`. The docs say: "Compaction replaces older messages with a summary". [Lesson 6.1](/notes/ai/claude-agent-sdk/06-context-window/l1-window-size-and-auto-compaction) covers the details.
 
 ### 4.7 Where your code can act
 

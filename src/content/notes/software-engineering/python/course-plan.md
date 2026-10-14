@@ -19,9 +19,9 @@ flowchart TD
 
 | Part | Folder | Lessons | Pages written | Content |
 |---|---|---|---|---|
-| 1 | [01 asyncio](/notes/software-engineering/python/01-asyncio) | 3 | 0 | Event loop, coroutines, async generators, sync and async bridges |
-| 2 | [02 Web streaming](/notes/software-engineering/python/02-web-streaming) | 1 | 0 | FastAPI StreamingResponse and server-sent events |
-| 3 | [03 Tooling](/notes/software-engineering/python/03-tooling) | 2 | 0 | uv, pyproject.toml, pytest |
+| 1 | [01 asyncio](/notes/software-engineering/python/01-asyncio) | 3 | 3 | Event loop, coroutines, async generators, sync and async bridges |
+| 2 | [02 Web streaming](/notes/software-engineering/python/02-web-streaming) | 1 | 1 | FastAPI StreamingResponse and server-sent events |
+| 3 | [03 Tooling](/notes/software-engineering/python/03-tooling) | 2 | 2 | uv, pyproject.toml, pytest |
 
 A **lesson** is one idea. A **session** is one sitting. A lesson page can exist before I study it. Its status stays `not-started` until I pass its gate.
 

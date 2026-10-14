@@ -58,7 +58,7 @@ A request needs three fields: `model`, `max_tokens` and `messages`.
 
 | Field | Job |
 |---|---|
-| `model` | The model ID. On some providers, for example Microsoft Foundry, it is the name of a deployment (planned lesson [4.1](/notes/ai/llm-apis/04-providers-and-caching)). |
+| `model` | The model ID. On some providers, for example Microsoft Foundry, it is the name of a deployment (lesson [4.1](/notes/ai/llm-apis/04-providers-and-caching/l1-claude-on-microsoft-foundry)). |
 | `max_tokens` | The largest number of output tokens for this call. The API reference says: "Set to `0` to populate the prompt cache without generating a response." |
 | `messages` | The conversation, oldest first. The API reference sets a limit of 100,000 messages in one request. |
 
@@ -101,7 +101,7 @@ Each block has a `type`. The type decides the other fields. Some blocks are writ
 | `document` | application | `user` | `source` | A PDF or a text document. |
 | `tool_use` | model | `assistant` | `id`, `name`, `input` | The model asks the application to run a tool. |
 | `tool_result` | application | `user` | `tool_use_id`, `content`, `is_error` | The application returns the output of a tool. |
-| `thinking` | model | `assistant` | `thinking`, `signature` | The reasoning of the model before its answer ([planned lesson 2.2](/notes/ai/llm-apis/02-streaming-and-thinking)). |
+| `thinking` | model | `assistant` | `thinking`, `signature` | The reasoning of the model before its answer ([lesson 2.2](/notes/ai/llm-apis/02-streaming-and-thinking/l2-thinking-blocks-and-signatures)). |
 | `redacted_thinking` | model | `assistant` | `data` | Reasoning that the safety system encrypted. Send it again unchanged. |
 | `server_tool_use` and the matching result blocks | the API | `assistant` | varies | Tools that run on Anthropic's servers, for example web search. |
 
@@ -236,7 +236,7 @@ sequenceDiagram
 Three facts come from this example:
 
 1. **The assistant message in call 2 is a copy.** The application does not rewrite it. It copies the `content` list of the call 1 response.
-2. **The thinking block returns with its signature.** During a tool-use turn this is required. A changed thinking block returns a 400 error ([planned lesson 2.2](/notes/ai/llm-apis/02-streaming-and-thinking)).
+2. **The thinking block returns with its signature.** During a tool-use turn this is required. A changed thinking block returns a 400 error ([lesson 2.2](/notes/ai/llm-apis/02-streaming-and-thinking/l2-thinking-blocks-and-signatures)).
 3. **The tool result is a block in a `user` message.** It names the call by its `id`. [L2](/notes/ai/llm-apis/01-messages-api/l2-tool-use-and-tool-result) covers all the rules.
 
 ### 4.7 What this means for a chat store
@@ -258,7 +258,7 @@ So a store needs a **list of typed parts** for each message, not one text column
 | Reliability | Read `content` as a list every time. Handle unknown block types without a crash. New types appear often. |
 | Correctness | Copy assistant content back unchanged. Never rebuild it from the displayed text. |
 | Cost | Read all three input fields of `usage`. The cache field is often most of the input. |
-| Portability | Store a neutral list of parts. Convert to each API format at the last step ([planned lesson 3.2](/notes/ai/llm-apis/03-openai-format)). |
+| Portability | Store a neutral list of parts. Convert to each API format at the last step ([lesson 3.2](/notes/ai/llm-apis/03-openai-format/l2-converting-between-formats)). |
 | Debugging | Log the full request body and the full response body for each call, with the response `id`. |
 
 ## 5. Code

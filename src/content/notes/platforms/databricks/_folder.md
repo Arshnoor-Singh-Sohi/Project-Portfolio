@@ -23,7 +23,7 @@ I master the subject when all 6 items are true, with no notes and no AI.
 
 | Folder | Content |
 |---|---|
-| [00 Progress](/notes/platforms/databricks/00-progress) | Session log, mistakes, weak areas |
+| [00 Progress](/notes/platforms/databricks/00-progress) | Session log, mistakes, weak areas, media queue |
 | [Course plan](/notes/platforms/databricks/course-plan) | The map of all parts and the study order |
 | [Glossary](/notes/platforms/databricks/glossary) | Every term, with a plain meaning |
 | [01 Apps](/notes/platforms/databricks/01-apps) | Databricks Apps, resources, secrets, instances |
@@ -37,7 +37,8 @@ I master the subject when all 6 items are true, with no notes and no AI.
 - Databricks Apps: https://docs.databricks.com/aws/en/dev-tools/databricks-apps/resources (checked on 2026-10-12)
 - Lakebase: https://docs.databricks.com/aws/oltp (checked on 2026-10-12)
 - Lakebase with Apps: https://docs.databricks.com/aws/en/oltp/projects/databricks-apps (checked on 2026-10-12)
-- The lessons name further sources when they are written.
+- Each lesson names its other sources, with the date of the check. Facts that the documentation does not state are marked "not documented" or "not confirmed" in the lesson.
+- Names in the current documentation (checked on 2026-10-13): "Genie Agent" (formerly Genie space), "Declarative Automation Bundles" (older pages say Databricks Asset Bundles) and "AI Search index" (the App resource key is still `vector-search-index`).
 
 ## Conventions
 
@@ -80,3 +81,14 @@ Each lesson row has a stage code. The codes come from the project plan that this
 1. I write all the exercise code myself. The lab folder is `C:\Users\ASohi\Downloads\AI\agent-harness-lab`, with one notebook folder for each subject.
 2. Hints come in three levels, in chat only: idea, pseudocode, partial code.
 3. The lessons never show a full solution to an exercise before I try it.
+
+### Media
+
+All media for this subject is in `/notes/media/databricks/`.
+
+| Folder | What it holds | Made by |
+|---|---|---|
+| `figures/` | SVG diagrams | Claude in chat. Each SVG is rendered to PNG and checked before it is saved. |
+| `manim/` | Videos | Claude Code (Manim), from a prompt that Claude writes |
+
+The [media queue](/notes/platforms/databricks/00-progress/media-queue) tracks every file.

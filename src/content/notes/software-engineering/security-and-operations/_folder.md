@@ -21,7 +21,7 @@ I master the subject when all 4 items are true, with no notes and no AI.
 
 | Folder | Content |
 |---|---|
-| [00 Progress](/notes/software-engineering/security-and-operations/00-progress) | Session log, mistakes, weak areas |
+| [00 Progress](/notes/software-engineering/security-and-operations/00-progress) | Session log, mistakes, weak areas, media queue |
 | [Course plan](/notes/software-engineering/security-and-operations/course-plan) | The map of all parts and the study order |
 | [Glossary](/notes/software-engineering/security-and-operations/glossary) | Every term, with a plain meaning |
 | [01 Access control](/notes/software-engineering/security-and-operations/01-access-control) | Self-asserted identity, owner checks, identity headers |
@@ -29,7 +29,11 @@ I master the subject when all 4 items are true, with no notes and no AI.
 
 ## Sources
 
-- The lessons name their sources when they are written.
+- OWASP API Security Top 10 (2023) and the OWASP Authorization Cheat Sheet.
+- RFC 9110 (HTTP semantics), for the rules of header fields.
+- Databricks Apps documentation: https://docs.databricks.com/aws/en/dev-tools/databricks-apps/http-headers and https://docs.databricks.com/aws/en/dev-tools/databricks-apps/auth (checked on 2026-10-13)
+- Claude Code monitoring and Agent SDK observability pages, LangSmith (langsmith 0.14.8 source), OpenTelemetry, and the MLflow tracing pages on Databricks.
+- Each lesson names its exact sources, with the date of the check.
 
 ## Conventions
 
@@ -72,3 +76,14 @@ Each lesson row has a stage code. The codes come from the project plan that this
 1. I write all the exercise code myself. The lab folder is `C:\Users\ASohi\Downloads\AI\agent-harness-lab`, with one notebook folder for each subject.
 2. Hints come in three levels, in chat only: idea, pseudocode, partial code.
 3. The lessons never show a full solution to an exercise before I try it.
+
+### Media
+
+All media for this subject is in `/notes/media/security-and-operations/`.
+
+| Folder | What it holds | Made by |
+|---|---|---|
+| `figures/` | SVG diagrams | Claude in chat. Each SVG is rendered to PNG and checked before it is saved. |
+| `manim/` | Videos | Claude Code (Manim), from a prompt that Claude writes |
+
+The [media queue](/notes/software-engineering/security-and-operations/00-progress/media-queue) tracks every file.

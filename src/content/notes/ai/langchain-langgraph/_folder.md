@@ -26,7 +26,7 @@ I master the subject when all 7 items are true, with no notes and no AI.
 
 | Folder | Content |
 |---|---|
-| [00 Progress](/notes/ai/langchain-langgraph/00-progress) | Session log, mistakes, weak areas |
+| [00 Progress](/notes/ai/langchain-langgraph/00-progress) | Session log, mistakes, weak areas, media queue |
 | [Course plan](/notes/ai/langchain-langgraph/course-plan) | The map of all parts and the study order |
 | [Glossary](/notes/ai/langchain-langgraph/glossary) | Every term, with a plain meaning |
 | [01 Foundations](/notes/ai/langchain-langgraph/01-foundations) | LangChain messages, create_agent, ChatDatabricks |
@@ -42,7 +42,9 @@ I master the subject when all 7 items are true, with no notes and no AI.
 - Short-term memory: https://docs.langchain.com/oss/python/langchain/short-term-memory (checked on 2026-10-12)
 - Middleware: https://docs.langchain.com/oss/python/langchain/middleware/overview and https://docs.langchain.com/oss/python/langchain/middleware/built-in (checked on 2026-10-12)
 - Checkpointers: https://docs.langchain.com/oss/python/langgraph/checkpointers (checked on 2026-10-12)
-- Source code: langchain 1.4.5, langchain-core 1.6.10, langgraph 1.2.14, databricks-langchain 0.21.0.
+- Streaming: https://docs.langchain.com/oss/python/langgraph/streaming (checked on 2026-10-13)
+- Source code: langchain 1.4.5, langchain-core 1.6.10, langgraph 1.2.14, databricks-langchain 0.21.0, langgraph-checkpoint 4.3.0, langgraph-checkpoint-postgres 3.1.3 (checked on 2026-10-13).
+- When the documentation and the source code disagree (for example the default recursion limit), the lesson shows both and follows the code.
 
 ## Conventions
 
@@ -85,3 +87,14 @@ Each lesson row has a stage code. The codes come from the project plan that this
 1. I write all the exercise code myself. The lab folder is `C:\Users\ASohi\Downloads\AI\agent-harness-lab`, with one notebook folder for each subject.
 2. Hints come in three levels, in chat only: idea, pseudocode, partial code.
 3. The lessons never show a full solution to an exercise before I try it.
+
+### Media
+
+All media for this subject is in `/notes/media/langchain-langgraph/`.
+
+| Folder | What it holds | Made by |
+|---|---|---|
+| `figures/` | SVG diagrams | Claude in chat. Each SVG is rendered to PNG and checked before it is saved. |
+| `manim/` | Videos | Claude Code (Manim), from a prompt that Claude writes |
+
+The [media queue](/notes/ai/langchain-langgraph/00-progress/media-queue) tracks every file.

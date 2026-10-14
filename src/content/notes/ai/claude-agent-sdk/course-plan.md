@@ -30,13 +30,13 @@ flowchart TD
 | Part | Folder | Lessons | Pages written | Content |
 |---|---|---|---|---|
 | 1 | [01 Foundations](/notes/ai/claude-agent-sdk/01-foundations) | 3 | 3 | What the SDK is, the agent loop, query() vs ClaudeSDKClient |
-| 2 | [02 Options and messages](/notes/ai/claude-agent-sdk/02-options-and-messages) | 2 | 0 | ClaudeAgentOptions, message and block types, partial messages |
-| 3 | [03 Custom tools](/notes/ai/claude-agent-sdk/03-custom-tools) | 1 | 0 | In-process MCP tools |
-| 4 | [04 Sessions](/notes/ai/claude-agent-sdk/04-sessions) | 4 | 3 | Session files, resume, continue, fork, temporary disks, SessionStore |
-| 5 | [05 Prompts and input](/notes/ai/claude-agent-sdk/05-prompts-and-input) | 2 | 1 | System prompt types and snapshot, streaming input mode |
-| 6 | [06 Context window](/notes/ai/claude-agent-sdk/06-context-window) | 2 | 0 | Window size and auto-compaction |
-| 7 | [07 Errors and cost](/notes/ai/claude-agent-sdk/07-errors-and-cost) | 2 | 0 | SDK errors, usage and cost fields |
-| 8 | [08 Hooks and subagents](/notes/ai/claude-agent-sdk/08-hooks-and-subagents) | 2 | 0 | Hooks and subagents |
+| 2 | [02 Options and messages](/notes/ai/claude-agent-sdk/02-options-and-messages) | 2 | 2 | ClaudeAgentOptions, message and block types, partial messages |
+| 3 | [03 Custom tools](/notes/ai/claude-agent-sdk/03-custom-tools) | 1 | 1 | In-process MCP tools |
+| 4 | [04 Sessions](/notes/ai/claude-agent-sdk/04-sessions) | 4 | 4 | Session files, resume, continue, fork, temporary disks, SessionStore |
+| 5 | [05 Prompts and input](/notes/ai/claude-agent-sdk/05-prompts-and-input) | 2 | 2 | System prompt types and snapshot, streaming input mode |
+| 6 | [06 Context window](/notes/ai/claude-agent-sdk/06-context-window) | 2 | 2 | Window size and auto-compaction |
+| 7 | [07 Errors and cost](/notes/ai/claude-agent-sdk/07-errors-and-cost) | 2 | 2 | SDK errors, usage and cost fields |
+| 8 | [08 Hooks and subagents](/notes/ai/claude-agent-sdk/08-hooks-and-subagents) | 2 | 2 | Hooks and subagents |
 
 A **lesson** is one idea. A **session** is one sitting. A lesson page can exist before I study it. Its status stays `not-started` until I pass its gate.
 

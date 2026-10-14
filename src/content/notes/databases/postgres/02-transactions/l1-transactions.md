@@ -129,7 +129,7 @@ The test ran two sessions at the same time. Session A ran `BEGIN`, inserted one 
 | While A's transaction is open | 0 rows |
 | After A's `COMMIT` | 1 row |
 
-This is isolation. The docs (§13.2): "Read Committed is the default isolation level in PostgreSQL." Under it, "a SELECT query ... sees only data committed before the query began". The docs also warn that "two successive SELECT commands can see different data, even though they are within a single transaction", because another transaction can commit between them. Stricter levels exist (Repeatable Read and Serializable). With them, an application "must be prepared to retry transactions due to serialization failures". [Planned lesson 2.2](/notes/databases/postgres/02-transactions) covers isolation in detail.
+This is isolation. The docs (§13.2): "Read Committed is the default isolation level in PostgreSQL." Under it, "a SELECT query ... sees only data committed before the query began". The docs also warn that "two successive SELECT commands can see different data, even though they are within a single transaction", because another transaction can commit between them. Stricter levels exist (Repeatable Read and Serializable). With them, an application "must be prepared to retry transactions due to serialization failures". [Lesson 2.2](/notes/databases/postgres/02-transactions/l2-isolation-and-upserts) covers isolation in detail.
 
 ### 4.5 A crash before COMMIT
 
@@ -192,7 +192,7 @@ The docs add that transaction blocks "can be also nested (internal transaction b
 > The test opened a connection with the default settings, inserted a row and called `conn.close()` with no commit and no `with` block. The row was gone. The docs describe the same case: "No COMMIT was sent: the INSERT was discarded." Use a `with` block every time.
 
 > [!note] Parameters, never string formatting
-> The examples pass values as a second argument: `conn.execute("... %s", (value,))`. The psycopg docs mark string formatting of SQL as wrong, because the values must be sent separately from the query. [Planned lesson 3.1](/notes/databases/postgres/03-python-driver) covers this.
+> The examples pass values as a second argument: `conn.execute("... %s", (value,))`. The psycopg docs mark string formatting of SQL as wrong, because the values must be sent separately from the query. [Lesson 3.1](/notes/databases/postgres/03-python-driver/l1-psycopg-basics) covers this.
 
 ### 4.8 What a transaction cannot protect
 
@@ -219,7 +219,7 @@ A transaction covers writes to **one database**. It does not cover anything outs
 
 ### 4.9 Retries need idempotent writes
 
-A client can send `COMMIT` and lose the connection before the answer arrives. It does not know if the commit happened. If it retries, it can save the turn twice. The fix is an id that the client chooses before the first attempt, a `UNIQUE` constraint on it, and `INSERT ... ON CONFLICT DO NOTHING`. The docs: "`ON CONFLICT DO NOTHING` simply avoids inserting a row as its alternative action." [Planned lesson 2.2](/notes/databases/postgres/02-transactions) covers it.
+A client can send `COMMIT` and lose the connection before the answer arrives. It does not know if the commit happened. If it retries, it can save the turn twice. The fix is an id that the client chooses before the first attempt, a `UNIQUE` constraint on it, and `INSERT ... ON CONFLICT DO NOTHING`. The docs: "`ON CONFLICT DO NOTHING` simply avoids inserting a row as its alternative action." [Lesson 2.2](/notes/databases/postgres/02-transactions/l2-isolation-and-upserts) covers it.
 
 ### 4.10 Production view
 
@@ -305,5 +305,6 @@ A transaction groups several writes into one all-or-nothing unit. You start it w
 ## 10. Links
 
 - Previous: [L3: Indexes](/notes/databases/postgres/01-relational-basics/l3-indexes)
+- Next in the part: [L2: Isolation and upserts](/notes/databases/postgres/02-transactions/l2-isolation-and-upserts)
 - Next in the priority path: [Chats, messages and parts](/notes/ai/conversation-state/02-chat-history-model/l1-chats-messages-and-parts)
 - [Glossary](/notes/databases/postgres/glossary)

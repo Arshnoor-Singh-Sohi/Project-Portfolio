@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL"
 order: 1
-summary: "Tables, keys, column types, indexes, transactions, the psycopg 3 driver, connection pools and safe schema changes."
+summary: "Tables, keys, column types, indexes, transactions, the psycopg 3 driver, connection pools, safe schema changes, and how PostgreSQL finds rows: B-trees, scans, EXPLAIN and foreign-key cascades."
 ---
 
 ## Goal
@@ -10,7 +10,7 @@ Design, create, query and change PostgreSQL tables from Python, safely. Choose k
 
 ## Finish line
 
-I master the subject when all 8 items are true, with no notes and no AI.
+I master the subject when all 11 items are true, with no notes and no AI.
 
 - [ ] Write CREATE TABLE statements for two related tables with primary keys, a foreign key, NOT NULL, DEFAULT and CHECK constraints. Justify each one.
 - [ ] Choose between identity, bigserial and uuid keys, between json and jsonb, and between timestamp and timestamptz, with reasons.
@@ -20,6 +20,9 @@ I master the subject when all 8 items are true, with no notes and no AI.
 - [ ] Use psycopg 3 with parameters, a transaction block and a connection pool. Explain why string formatting of SQL is wrong.
 - [ ] Add a column to a large table without a table rewrite, and explain the lock.
 - [ ] Run a local PostgreSQL 16 server and run my table tests against it.
+- [ ] Draw the B-tree of a real index from `pageinspect` output, and compute its height from the fan-out.
+- [ ] Predict which conditions of a query bound the scanned range of a multicolumn index, and confirm it with buffer counts.
+- [ ] Read an `EXPLAIN (ANALYZE, BUFFERS)` plan line by line, and prove with it why a cascade delete needs an index on the referencing column.
 
 ## Folders
 
@@ -33,11 +36,14 @@ I master the subject when all 8 items are true, with no notes and no AI.
 | [03 Python driver](/notes/databases/postgres/03-python-driver) | psycopg 3 and connection pools |
 | [04 Schema changes](/notes/databases/postgres/04-schema-changes) | ALTER TABLE and migrations |
 | [05 Local setup](/notes/databases/postgres/05-local-setup) | A local PostgreSQL server |
+| [06 Indexes and query plans](/notes/databases/postgres/06-indexes-and-query-plans) | B-trees, multicolumn indexes, scans, EXPLAIN, foreign keys and cascades |
 
 ## Sources
 
 - PostgreSQL 16 documentation: https://www.postgresql.org/docs/16/ (checked on 2026-10-12)
 - psycopg 3 documentation: https://www.psycopg.org/psycopg3/docs/ (checked on 2026-10-12)
+- PostgreSQL 18 documentation, for part 6: https://www.postgresql.org/docs/18/ (Chapter 11 Indexes, §14.1 Using EXPLAIN, §5.5.5 Foreign Keys, the B-Tree Indexes chapter, and the release notes of 13 to 18) (checked on 2026-10-14)
+- PostgreSQL 18.6 source code, for part 6: `src/backend/access/nbtree/README`, `src/backend/optimizer/path/costsize.c`, `src/backend/utils/adt/ri_triggers.c` (checked on 2026-10-14)
 - Every SQL example in these notes was run on PostgreSQL 16 before it was saved.
 
 ## Conventions

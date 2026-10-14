@@ -23,7 +23,7 @@ I master the subject when all 6 items are true, with no notes and no AI.
 
 | Folder | Content |
 |---|---|
-| [00 Progress](/notes/software-engineering/python/00-progress) | Session log, mistakes, weak areas |
+| [00 Progress](/notes/software-engineering/python/00-progress) | Session log, mistakes, weak areas, media queue |
 | [Course plan](/notes/software-engineering/python/course-plan) | The map of all parts and the study order |
 | [Glossary](/notes/software-engineering/python/glossary) | Every term, with a plain meaning |
 | [01 asyncio](/notes/software-engineering/python/01-asyncio) | Event loop, coroutines, async generators, sync and async bridges |
@@ -78,3 +78,14 @@ Each lesson row has a stage code. The codes come from the project plan that this
 1. I write all the exercise code myself. The lab folder is `C:\Users\ASohi\Downloads\AI\agent-harness-lab`, with one notebook folder for each subject.
 2. Hints come in three levels, in chat only: idea, pseudocode, partial code.
 3. The lessons never show a full solution to an exercise before I try it.
+
+### Media
+
+All media for this subject is in `/notes/media/python/`.
+
+| Folder | What it holds | Made by |
+|---|---|---|
+| `figures/` | SVG diagrams | Claude in chat. Each SVG is rendered to PNG and checked before it is saved. |
+| `manim/` | Videos | Claude Code (Manim), from a prompt that Claude writes |
+
+The [media queue](/notes/software-engineering/python/00-progress/media-queue) tracks every file.

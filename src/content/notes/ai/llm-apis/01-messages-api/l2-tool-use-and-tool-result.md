@@ -169,7 +169,7 @@ Many components cut the history: a trimming function, a summarizer, a sliding wi
 > [!key] The safe-cut rule
 > Cut the history only at the start of a user message that holds a real user question. Never cut between an assistant message with `tool_use` blocks and the user message with their results.
 
-Here is the reason in the language of this lesson. A cut can remove the assistant message with the calls and keep the results: that is broken list 4. Or it can keep the calls and remove the results: that breaks R1. The LangChain summarization middleware has code that searches backward to keep the AI message and its tool messages together ([planned lesson](/notes/ai/langchain-langgraph/03-context-management)). Your own code must do the same.
+Here is the reason in the language of this lesson. A cut can remove the assistant message with the calls and keep the results: that is broken list 4. Or it can keep the calls and remove the results: that breaks R1. The LangChain summarization middleware has code that searches backward to keep the AI message and its tool messages together ([SummarizationMiddleware](/notes/ai/langchain-langgraph/03-context-management/l1-summarization-middleware)). Your own code must do the same.
 
 ### 4.7 tool_choice and parallel calls
 
@@ -293,6 +293,7 @@ The model cannot run code. When it needs data, it writes a `tool_use` block with
 ## 10. Links
 
 - Previous: [L1: Messages and content blocks](/notes/ai/llm-apis/01-messages-api/l1-messages-and-content-blocks)
+- Next in the part: [L3: The API sets the format, not the model](/notes/ai/llm-apis/01-messages-api/l3-the-api-sets-the-format)
 - Next in the priority path: [Claude Agent SDK L1: What the SDK is](/notes/ai/claude-agent-sdk/01-foundations/l1-what-the-sdk-is)
 - The loop inside the SDK: [The agent loop](/notes/ai/claude-agent-sdk/01-foundations/l2-the-agent-loop)
 - Cuts and summaries: [Transient vs persistent context](/notes/ai/conversation-state/01-where-state-lives/l2-transient-vs-persistent-context)

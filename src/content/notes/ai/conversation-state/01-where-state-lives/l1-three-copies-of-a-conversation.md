@@ -135,7 +135,7 @@ Copy 1 is the record of what happened. It needs enough to show the chat again an
 | Ids and order | Correct order in display and rebuild |
 | Time stamps | Display, retention, debugging |
 | The harness and the session id that produced the answer | Flow 1 resume, and debugging |
-| The owner of the chat | Access checks ([planned lesson](/notes/ai/conversation-state/03-lifecycle)) |
+| The owner of the chat | Access checks ([lesson 3.1](/notes/ai/conversation-state/03-lifecycle/l1-ownership-checks)) |
 
 [Lesson 2.1](/notes/ai/conversation-state/02-chat-history-model/l1-chats-messages-and-parts) turns this list into tables.
 

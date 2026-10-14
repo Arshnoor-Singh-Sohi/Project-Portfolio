@@ -21,10 +21,10 @@ flowchart TD
 
 | Part | Folder | Lessons | Pages written | Content |
 |---|---|---|---|---|
-| 1 | [01 Messages API](/notes/ai/llm-apis/01-messages-api) | 3 | 2 | Request and response, content blocks, roles, tool_use and tool_result |
-| 2 | [02 Streaming and thinking](/notes/ai/llm-apis/02-streaming-and-thinking) | 2 | 0 | Server-sent events, deltas, thinking blocks and signatures |
-| 3 | [03 OpenAI format](/notes/ai/llm-apis/03-openai-format) | 2 | 0 | The OpenAI chat shape and conversion |
-| 4 | [04 Providers and caching](/notes/ai/llm-apis/04-providers-and-caching) | 2 | 0 | Claude on Microsoft Foundry, prompt caching in agent loops |
+| 1 | [01 Messages API](/notes/ai/llm-apis/01-messages-api) | 3 | 3 | Request and response, content blocks, roles, tool_use and tool_result |
+| 2 | [02 Streaming and thinking](/notes/ai/llm-apis/02-streaming-and-thinking) | 2 | 2 | Server-sent events, deltas, thinking blocks and signatures |
+| 3 | [03 OpenAI format](/notes/ai/llm-apis/03-openai-format) | 2 | 2 | The OpenAI chat shape and conversion |
+| 4 | [04 Providers and caching](/notes/ai/llm-apis/04-providers-and-caching) | 2 | 2 | Claude on Microsoft Foundry, prompt caching in agent loops |
 
 A **lesson** is one idea. A **session** is one sitting. A lesson page can exist before I study it. Its status stays `not-started` until I pass its gate.
 

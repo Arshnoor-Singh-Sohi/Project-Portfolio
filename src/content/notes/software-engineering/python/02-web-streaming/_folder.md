@@ -8,4 +8,4 @@ This part covers streaming HTTP responses.
 
 | Code | Lesson | Core idea | Stage | Status |
 |---|---|---|---|---|
-| L1 | FastAPI StreamingResponse and SSE | One HTTP response, many events. | Now | planned |
+| L1 | [FastAPI StreamingResponse and SSE](/notes/software-engineering/python/02-web-streaming/l1-fastapi-streaming-response-and-sse) | One HTTP response, many events. | Now | not started |
