@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arrr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrgr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker></defs>
+<rect x="0" y="0" width="1280" height="640" fill="#FFFFFF"/>
+<text x="640" y="44" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#100D12" text-anchor="middle" font-weight="bold">Cold start of one Llama-3.1-8B replica (computed estimate)</text>
+<text x="136" y="152" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="end" font-weight="bold">Cold</text>
+<rect x="150" y="110" width="336.0" height="64" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="318.0" y="140" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">pull image</text>
+<text x="318.0" y="164" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">60 s</text>
+<rect x="486.0" y="110" width="179.2" height="64" rx="0" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="575.6" y="140" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">download weights</text>
+<text x="575.6" y="164" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">32 s</text>
+<rect x="665.2" y="110" width="28.0" height="64" rx="0" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="2"/>
+<rect x="693.2" y="110" width="89.6" height="64" rx="0" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<rect x="782.8000000000001" y="110" width="296.79999999999995" height="64" rx="0" fill="#F7D9DB" stroke="#C81D25" stroke-width="2"/>
+<text x="931.2" y="140" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">torch.compile</text>
+<text x="931.2" y="164" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">53 s</text>
+<rect x="1079.6" y="110" width="5.6" height="64" rx="0" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<rect x="1085.1999999999998" y="110" width="11.2" height="64" rx="0" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1108.3999999999999" y="152" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">about 169 s</text>
+<line x1="679.1999999999999" y1="178" x2="679.1999999999999" y2="210" stroke="#100D12" stroke-width="1.5"/>
+<text x="679.1999999999999" y="230" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">engine 5 s</text>
+<line x1="737.9999999999999" y1="178" x2="737.9999999999999" y2="250" stroke="#100D12" stroke-width="1.5"/>
+<text x="737.9999999999999" y="270" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">load to GPU 16 s</text>
+<line x1="1088.0" y1="178" x2="1088.0" y2="210" stroke="#100D12" stroke-width="1.5"/>
+<text x="1088.0" y="230" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">profile 1 s, graphs 2 s</text>
+<text x="136" y="372" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="end" font-weight="bold">Warm</text>
+<rect x="150" y="330" width="28.0" height="64" rx="0" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="2"/>
+<rect x="178.0" y="330" width="5.6" height="64" rx="0" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<rect x="183.6" y="330" width="33.599999999999994" height="64" rx="0" fill="#F7D9DB" stroke="#C81D25" stroke-width="2"/>
+<rect x="217.2" y="330" width="5.6" height="64" rx="0" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<rect x="222.79999999999998" y="330" width="11.2" height="64" rx="0" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="245.99999999999997" y="372" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">about 15 s</text>
+<text x="150" y="425" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">warm: engine 5 s, load 1 s, compile from cache 6 s, profile 1 s, graphs 2 s</text>
+<line x1="150" y1="470" x2="1102.0" y2="470" stroke="#100D12" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="150.0" y1="464" x2="150.0" y2="476" stroke="#100D12" stroke-width="2"/>
+<text x="150.0" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">0 s</text>
+<line x1="318.0" y1="464" x2="318.0" y2="476" stroke="#100D12" stroke-width="2"/>
+<text x="318.0" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">30 s</text>
+<line x1="486.0" y1="464" x2="486.0" y2="476" stroke="#100D12" stroke-width="2"/>
+<text x="486.0" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">60 s</text>
+<line x1="654.0" y1="464" x2="654.0" y2="476" stroke="#100D12" stroke-width="2"/>
+<text x="654.0" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">90 s</text>
+<line x1="822.0" y1="464" x2="822.0" y2="476" stroke="#100D12" stroke-width="2"/>
+<text x="822.0" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">120 s</text>
+<line x1="990.0" y1="464" x2="990.0" y2="476" stroke="#100D12" stroke-width="2"/>
+<text x="990.0" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">150 s</text>
+<text x="150" y="545" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">Assumed: image 9.04 GB at 150 MB/s, weights 16.06 GB from object storage at 500 MB/s, root disk at 1 GB/s.</text>
+<text x="150" y="572" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">Compile 53 s cold and 6 s cached: AWS EKS guide. Engine, profiling and graph steps: MLSys 2026 paper ranges.</text>
+<text x="150" y="599" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">Not shown: creating a new GPU node, and adding the ready replica to the load balancer.</text>
+</svg>

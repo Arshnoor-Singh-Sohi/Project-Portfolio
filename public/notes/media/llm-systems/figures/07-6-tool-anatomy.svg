@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+<defs><marker id="a100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="a1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="a6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker></defs>
+<rect x="0" y="0" width="1280" height="800" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Anatomy of an MCP tool: the definition and one call</text>
+<rect x="30" y="80" width="650" height="690" rx="10" fill="none" stroke="#6A4C93" stroke-width="3"/>
+<rect x="30" y="80" width="650" height="50" rx="10" fill="#6A4C93" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="355" y="113" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Tool object in tools/list (from the server)</text>
+<text x="597" y="158" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="italic">read by</text>
+<text x="50" y="200" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">name</text>
+<text x="215" y="200" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">"search_orders" (required)</text>
+<rect x="530" y="179" width="135" height="28" rx="14.0" fill="#B8860B" stroke="#B8860B" stroke-width="1"/>
+<text x="597.5" y="199.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle">model+host</text>
+<text x="50" y="252" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">title</text>
+<text x="215" y="252" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">"Search orders" (display)</text>
+<rect x="530" y="231" width="135" height="28" rx="14.0" fill="#1E6091" stroke="#1E6091" stroke-width="1"/>
+<text x="597.5" y="251.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle">host UI</text>
+<text x="50" y="304" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">description</text>
+<text x="215" y="304" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">what it does, returns, when</text>
+<rect x="530" y="283" width="135" height="28" rx="14.0" fill="#B8860B" stroke="#B8860B" stroke-width="1"/>
+<text x="597.5" y="303.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle">model</text>
+<text x="50" y="356" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">inputSchema</text>
+<text x="215" y="356" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">{ type: "object", properties,</text>
+<rect x="530" y="335" width="135" height="28" rx="14.0" fill="#B8860B" stroke="#B8860B" stroke-width="1"/>
+<text x="597.5" y="355.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle">model+host</text>
+<text x="215" y="408" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">  required, additionalProperties }</text>
+<text x="50" y="460" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">outputSchema</text>
+<text x="215" y="460" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">shape of structuredContent</text>
+<rect x="530" y="439" width="135" height="28" rx="14.0" fill="#1E6091" stroke="#1E6091" stroke-width="1"/>
+<text x="597.5" y="459.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle">host</text>
+<text x="50" y="512" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">annotations</text>
+<text x="215" y="512" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">readOnlyHint, destructiveHint,</text>
+<rect x="530" y="491" width="135" height="28" rx="14.0" fill="#1E6091" stroke="#1E6091" stroke-width="1"/>
+<text x="597.5" y="511.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle">host</text>
+<text x="215" y="564" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">idempotentHint, openWorldHint, title</text>
+<text x="50" y="616" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">icons</text>
+<text x="215" y="616" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">src, mimeType, sizes, theme</text>
+<rect x="530" y="595" width="135" height="28" rx="14.0" fill="#1E6091" stroke="#1E6091" stroke-width="1"/>
+<text x="597.5" y="615.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle">host UI</text>
+<text x="50" y="668" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">_meta</text>
+<text x="215" y="668" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">"com.example/owner": ...</text>
+<rect x="530" y="647" width="135" height="28" rx="14.0" fill="#1E6091" stroke="#1E6091" stroke-width="1"/>
+<text x="597.5" y="667.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle">host</text>
+<text x="50" y="735" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="italic">Gold: the model reads it. Blue: only the host reads it.</text>
+<text x="50" y="760" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start" font-style="italic">Annotations are hints. Untrusted unless the server is trusted.</text>
+<rect x="800" y="80" width="450" height="310" rx="10" fill="none" stroke="#1E6091" stroke-width="3"/>
+<rect x="800" y="80" width="450" height="50" rx="10" fill="#1E6091" stroke="#1E6091" stroke-width="2.5"/>
+<text x="1025" y="113" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#FFFFFF" font-weight="bold" text-anchor="middle">tools/call request (client to server)</text>
+<text x="820" y="168" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">method: "tools/call"</text>
+<text x="820" y="208" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="start">params.name: "search_orders"</text>
+<text x="820" y="248" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="start">params.arguments:</text>
+<text x="835" y="276" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">{"customer_id": "CUS-0042",</text>
+<text x="835" y="304" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start"> "status": "shipped", "limit": 2}</text>
+<text x="820" y="344" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">params._meta: protocolVersion,</text>
+<text x="835" y="370" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">clientCapabilities, clientInfo</text>
+<rect x="800" y="440" width="450" height="330" rx="10" fill="none" stroke="#6A4C93" stroke-width="3"/>
+<rect x="800" y="440" width="450" height="50" rx="10" fill="#6A4C93" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1025" y="473" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#FFFFFF" font-weight="bold" text-anchor="middle">CallToolResult (server to client)</text>
+<text x="820" y="526" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">resultType: "complete"</text>
+<text x="820" y="566" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="start">content: [ {type: "text", ...} ]</text>
+<rect x="820" y="578" width="160" height="28" rx="14.0" fill="#B8860B" stroke="#B8860B" stroke-width="1"/>
+<text x="900.0" y="598.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle">to the model</text>
+<text x="820" y="646" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="start">structuredContent: {orders, ...}</text>
+<rect x="820" y="658" width="160" height="28" rx="14.0" fill="#1E6091" stroke="#1E6091" stroke-width="1"/>
+<text x="900.0" y="678.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle">to the host</text>
+<text x="820" y="726" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">isError: false</text>
+<text x="820" y="752" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">(true = tool execution error)</text>
+<path d="M 682 193 C 740 193, 740 201, 796 201" fill="none" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<text x="740" y="182" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="italic">same name</text>
+<path d="M 682 349 C 740 349, 740 270, 796 270" fill="none" stroke="#1E6091" stroke-width="2.5" marker-end="url(#a1E6091)"/>
+<text x="740" y="330" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle" font-style="italic">must</text>
+<text x="740" y="352" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle" font-style="italic">validate</text>
+<path d="M 682 453 C 740 453, 740 640, 796 640" fill="none" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#a6A4C93)"/>
+<text x="740" y="680" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="normal" text-anchor="middle" font-style="italic">must</text>
+<text x="740" y="702" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="normal" text-anchor="middle" font-style="italic">conform</text>
+<line x1="1025" y1="392" x2="1025" y2="436" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+</svg>

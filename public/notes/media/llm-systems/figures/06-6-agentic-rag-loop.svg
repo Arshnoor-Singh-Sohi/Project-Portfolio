@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 770" width="1280" height="770">
+<rect x="0" y="0" width="1280" height="770" fill="#FFFFFF"/>
+<defs><marker id="ahink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ahblue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahgold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ahpurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ahgreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahred" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ahgray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Agentic RAG: retrieval as a tool inside a loop</text>
+<rect x="40" y="100" width="250" height="120" rx="10" fill="#1E6091" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="165.0" y="130.65" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#FFFFFF" font-weight="bold" text-anchor="middle">User question</text>
+<text x="165.0" y="154.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">Who approves budgets</text>
+<text x="165.0" y="178.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">for the team that</text>
+<text x="165.0" y="202.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">owns the payments API?</text>
+<rect x="400" y="100" width="300" height="130" rx="10" fill="#B8860B" fill-opacity="1.0" stroke="#B8860B" stroke-width="2.5"/>
+<text x="550.0" y="146.0" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Model (LLM)</text>
+<text x="550.0" y="172.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#FFFFFF" font-weight="normal" text-anchor="middle">chooses the next action:</text>
+<text x="550.0" y="198.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#FFFFFF" font-weight="normal" text-anchor="middle">search again, or finish</text>
+<line x1="290" y1="160" x2="396" y2="160" stroke="#1E6091" stroke-width="2.5" marker-end="url(#ahblue)"/>
+<text x="1020" y="88" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">1. tool call (JSON arguments)</text>
+<rect x="820" y="100" width="400" height="90" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="1020.0" y="139.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="middle">search_docs(query="owner of</text>
+<text x="1020.0" y="165.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="middle">payments API", k=5)</text>
+<line x1="700" y1="145" x2="816" y2="145" stroke="#1E6091" stroke-width="2.5" marker-end="url(#ahblue)"/>
+<path d="M920,246 A100.0,14 0 0,1 1120,246 L1120,338 A100.0,14 0 0,1 920,338 Z" fill="#2D6A4F" stroke="#2D6A4F" stroke-width="2"/>
+<ellipse cx="1020.0" cy="246" rx="100.0" ry="14" fill="#3F8A68" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1020.0" y="280.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Index</text>
+<text x="1020.0" y="304.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">vectors + BM25</text>
+<text x="1020.0" y="328.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">+ ACL filter</text>
+<line x1="1020" y1="190" x2="1020" y2="228" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<rect x="820" y="392" width="400" height="100" rx="10" fill="#6A4C93" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1020.0" y="424.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#FFFFFF" font-weight="bold" text-anchor="middle">2. Results with source IDs</text>
+<text x="1020.0" y="448.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">S1: Team Ledger owns the payments API.</text>
+<text x="1020.0" y="472.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">S4: ... (score 0.41)</text>
+<line x1="1020" y1="352" x2="1020" y2="388" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#ahpurple)"/>
+<rect x="470" y="402" width="270" height="80" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#B8860B" stroke-width="2.5"/>
+<text x="605.0" y="424.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">3. Relevance check</text>
+<text x="605.0" y="448.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">keep relevant chunks,</text>
+<text x="605.0" y="472.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">drop the rest</text>
+<line x1="818" y1="442" x2="744" y2="442" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#ahpurple)"/>
+<line x1="605" y1="400" x2="605" y2="234" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<text x="620" y="290" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">4. evidence joins</text>
+<text x="620" y="314" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">the history</text>
+<text x="620" y="346" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">call i sends</text>
+<text x="620" y="370" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">1,340 + 1,560 i tokens</text>
+<rect x="40" y="250" width="330" height="90" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="205.0" y="277.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Exit A: answer with citations</text>
+<text x="205.0" y="301.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Dana Ruiz approves the budgets</text>
+<text x="205.0" y="325.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">[S7] for Team Ledger [S1]</text>
+<rect x="40" y="360" width="330" height="90" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#C81D25" stroke-width="2.5"/>
+<text x="205.0" y="387.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="bold" text-anchor="middle">Exit B: step budget reached</text>
+<text x="205.0" y="411.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="middle">a partial answer that says</text>
+<text x="205.0" y="435.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="middle">what is missing</text>
+<rect x="40" y="470" width="330" height="90" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#C81D25" stroke-width="2.5"/>
+<text x="205.0" y="497.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="bold" text-anchor="middle">Exit C: repeated call</text>
+<text x="205.0" y="521.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="middle">same tool, same arguments</text>
+<text x="205.0" y="545.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="middle">twice: stop and report</text>
+<path d="M420,232 L420,295 L374,295" stroke="#100D12" stroke-width="2.5" fill="none" marker-end="url(#ahink)"/>
+<path d="M440,232 L440,405 L374,405" stroke="#C81D25" stroke-width="2.5" fill="none" stroke-dasharray="8 6" marker-end="url(#ahred)"/>
+<path d="M460,232 L460,515 L374,515" stroke="#C81D25" stroke-width="2.5" fill="none" stroke-dasharray="8 6" marker-end="url(#ahred)"/>
+<rect x="40" y="590" width="1180" height="120" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="60" y="624" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Guards enforced in code, whatever the model writes</text>
+<text x="60" y="658" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">- step budget: at most 5 tool calls</text>
+<text x="60" y="684" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">- token budget per task</text>
+<text x="460" y="658" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">- repeat detection on (tool, arguments)</text>
+<text x="460" y="684" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">- citations checked against source IDs</text>
+<text x="860" y="658" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">- ACL filter from the session,</text>
+<text x="860" y="684" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">  never from tool arguments</text>
+<text x="640" y="748" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">Blue: query side. Gold: model and grading. Green: index. Purple: retrieved documents. Red: stop conditions.</text>
+</svg>

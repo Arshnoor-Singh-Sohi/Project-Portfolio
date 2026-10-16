@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" width="1280" height="760">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#100D12"/></marker></defs>
+<rect x="0" y="0" width="1280" height="760" fill="#FFFFFF"/>
+<text x="640" y="50" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">Decode step 4 of the toy example: recompute or reuse</text>
+<text x="330" y="105" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#C81D25" text-anchor="middle" font-weight="bold">Without a cache</text>
+<text x="60" y="150" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="bold">token</text>
+<text x="230" y="150" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="start" font-weight="bold">key k = x W_K</text>
+<text x="430" y="150" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="start" font-weight="bold">value v = x W_V</text>
+<rect x="40" y="165" width="580" height="56" rx="6" fill="#C81D25" fill-opacity="0.1" stroke="#C81D25" stroke-width="2"/>
+<text x="60" y="201" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="normal">the</text>
+<text x="230" y="201" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="start" font-weight="bold">[1, 0]</text>
+<text x="430" y="201" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="start" font-weight="bold">[2, 3]</text>
+<rect x="40" y="229" width="580" height="56" rx="6" fill="#C81D25" fill-opacity="0.1" stroke="#C81D25" stroke-width="2"/>
+<text x="60" y="265" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="normal">cat</text>
+<text x="230" y="265" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="start" font-weight="bold">[0, 2]</text>
+<text x="430" y="265" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="start" font-weight="bold">[2, 2]</text>
+<rect x="40" y="293" width="580" height="56" rx="6" fill="#C81D25" fill-opacity="0.1" stroke="#C81D25" stroke-width="2"/>
+<text x="60" y="329" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="normal">sat</text>
+<text x="230" y="329" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="start" font-weight="bold">[0, 1]</text>
+<text x="430" y="329" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="start" font-weight="bold">[1, 2]</text>
+<rect x="40" y="357" width="580" height="56" rx="6" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="60" y="393" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="normal">down</text>
+<text x="230" y="393" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="start" font-weight="bold">[1, 1]</text>
+<text x="430" y="393" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="start" font-weight="bold">[1, 3]</text>
+<text x="950" y="105" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#2D6A4F" text-anchor="middle" font-weight="bold">With a KV cache</text>
+<text x="680" y="150" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="bold">token</text>
+<text x="850" y="150" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="start" font-weight="bold">key k = x W_K</text>
+<text x="1050" y="150" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="start" font-weight="bold">value v = x W_V</text>
+<rect x="660" y="165" width="580" height="56" rx="6" fill="#2D6A4F" fill-opacity="0.12" stroke="#2D6A4F" stroke-width="2"/>
+<text x="680" y="201" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="normal">the</text>
+<text x="850" y="201" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="start" font-weight="bold">[1, 0]</text>
+<text x="1050" y="201" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="start" font-weight="bold">[2, 3]</text>
+<rect x="660" y="229" width="580" height="56" rx="6" fill="#2D6A4F" fill-opacity="0.12" stroke="#2D6A4F" stroke-width="2"/>
+<text x="680" y="265" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="normal">cat</text>
+<text x="850" y="265" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="start" font-weight="bold">[0, 2]</text>
+<text x="1050" y="265" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="start" font-weight="bold">[2, 2]</text>
+<rect x="660" y="293" width="580" height="56" rx="6" fill="#2D6A4F" fill-opacity="0.12" stroke="#2D6A4F" stroke-width="2"/>
+<text x="680" y="329" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="normal">sat</text>
+<text x="850" y="329" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="start" font-weight="bold">[0, 1]</text>
+<text x="1050" y="329" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="start" font-weight="bold">[1, 2]</text>
+<rect x="660" y="357" width="580" height="56" rx="6" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="680" y="393" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="normal">down</text>
+<text x="850" y="393" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="start" font-weight="bold">[1, 1]</text>
+<text x="1050" y="393" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="start" font-weight="bold">[1, 3]</text>
+<text x="60" y="445" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="start" font-weight="normal">Rows the, cat, sat: computed again,</text>
+<text x="60" y="472" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="start" font-weight="normal">identical to step 3 (wasted work)</text>
+<text x="60" y="510" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">Also recomputed: their queries and outputs</text>
+<text x="60" y="548" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="bold">12 row projections, only 3 are new</text>
+<text x="680" y="445" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" text-anchor="start" font-weight="normal">Rows the, cat, sat: read from the cache</text>
+<text x="680" y="472" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" text-anchor="start" font-weight="normal">(stored at step 3, never changed)</text>
+<text x="680" y="510" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">Row down: the only new key and value</text>
+<text x="680" y="548" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="bold">3 row projections: q4, k4 and v4</text>
+<line x1="640" y1="90" x2="640" y2="570" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="140" y="590" width="1000" height="140" rx="6" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="640" y="628" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="middle" font-weight="bold">Both ways give the same output for down</text>
+<text x="640" y="664" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#1E6091" text-anchor="middle" font-weight="normal">q4 = [1, 2]; scores [1, 4, 2, 3]; weights [0.0646, 0.5388, 0.1310, 0.2657]</text>
+<text x="640" y="702" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="middle" font-weight="bold">o4 = [1.6034, 2.3302]</text>
+</svg>

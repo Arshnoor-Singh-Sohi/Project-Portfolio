@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<defs><marker id="a100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="aC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker></defs>
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Four places where tool arguments are checked</text>
+<rect x="30" y="90" width="275" height="330" rx="10" fill="none" stroke="#B8860B" stroke-width="3"/>
+<rect x="30" y="90" width="275" height="50" rx="10" fill="#B8860B" stroke="#B8860B" stroke-width="2.5"/>
+<text x="167" y="123" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#FFFFFF" font-weight="bold" text-anchor="middle">1. Model</text>
+<text x="48" y="182" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">writes the arguments</text>
+<text x="48" y="228" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">strict mode: shape</text>
+<text x="48" y="274" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">is guaranteed for the</text>
+<text x="48" y="320" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">provider's subset</text>
+<text x="48" y="366" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">no strict: anything</text>
+<rect x="345" y="90" width="275" height="330" rx="10" fill="none" stroke="#1E6091" stroke-width="3"/>
+<rect x="345" y="90" width="275" height="50" rx="10" fill="#1E6091" stroke="#1E6091" stroke-width="2.5"/>
+<text x="482" y="123" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#FFFFFF" font-weight="bold" text-anchor="middle">2. Host</text>
+<text x="363" y="182" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">validates with JSON</text>
+<text x="363" y="228" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Schema (jsonschema)</text>
+<text x="363" y="274" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">catches: type, pattern,</text>
+<text x="363" y="320" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">enum, range, extra keys</text>
+<text x="363" y="366" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">misses: meaning</text>
+<rect x="660" y="90" width="275" height="330" rx="10" fill="none" stroke="#6A4C93" stroke-width="3"/>
+<rect x="660" y="90" width="275" height="50" rx="10" fill="#6A4C93" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="797" y="123" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#FFFFFF" font-weight="bold" text-anchor="middle">3. Server SDK</text>
+<text x="678" y="182" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Pydantic model from</text>
+<text x="678" y="228" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">the type hints</text>
+<text x="678" y="274" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">lax: "2" becomes 2,</text>
+<text x="678" y="320" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">true becomes 1</text>
+<text x="678" y="366" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">extra keys ignored</text>
+<rect x="975" y="90" width="275" height="330" rx="10" fill="none" stroke="#6A4C93" stroke-width="3"/>
+<rect x="975" y="90" width="275" height="50" rx="10" fill="#6A4C93" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1112" y="123" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#FFFFFF" font-weight="bold" text-anchor="middle">4. Tool code</text>
+<text x="993" y="182" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">business rules</text>
+<text x="993" y="228" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">order belongs to the</text>
+<text x="993" y="274" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">caller, date is in</text>
+<text x="993" y="320" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">the future, stock</text>
+<text x="993" y="366" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">exists</text>
+<line x1="305" y1="255" x2="341" y2="255" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<line x1="620" y1="255" x2="656" y2="255" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<line x1="935" y1="255" x2="971" y2="255" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<rect x="250" y="500" width="780" height="90" rx="10" fill="none" stroke="#C81D25" stroke-width="3"/>
+<text x="640" y="536" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#C81D25" font-weight="bold" text-anchor="middle">Any failure goes back to the model as a tool error</text>
+<text x="640" y="568" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">(isError: true from the server): field, rule, value, example</text>
+<line x1="482" y1="422" x2="482" y2="496" stroke="#C81D25" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#aC81D25)"/>
+<line x1="797" y1="422" x2="797" y2="496" stroke="#C81D25" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#aC81D25)"/>
+<line x1="1112" y1="422" x2="1000" y2="496" stroke="#C81D25" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#aC81D25)"/>
+<path d="M 250 545 L 120 545 L 120 426" fill="none" stroke="#C81D25" stroke-width="2.5" marker-end="url(#aC81D25)"/>
+<text x="130" y="640" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="italic">The model reads the text and calls again.</text>
+<text x="130" y="672" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="italic">Measured: the SDK accepted "2" and true for an int parameter. jsonschema rejected both.</text>
+</svg>

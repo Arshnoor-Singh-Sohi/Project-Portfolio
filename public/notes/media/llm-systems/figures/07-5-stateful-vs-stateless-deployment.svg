@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800"><defs><marker id="a1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="s1E6091" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="aB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="sB8860B" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="a6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="s6A4C93" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="a2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="s2D6A4F" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="aC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="sC81D25" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="a8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="s8A8A8A" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="a100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="s100D12" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs><rect x="0" y="0" width="1280" height="800" fill="#FFFFFF"/>
+<text x="640.0" y="44.0" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#100D12" text-anchor="middle">Behind a load balancer: sticky sessions against plain round robin</text>
+<rect x="30" y="70" width="600" height="710" rx="12" fill="none" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="9 6"/>
+<text x="330" y="104.0" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="bold" fill="#100D12" text-anchor="middle">2025-11-25: sticky sessions</text>
+<rect x="70" y="125" width="150" height="70" rx="12" fill="#1E6091" fill-opacity="0.08" stroke="#1E6091" stroke-width="2.5"/>
+<text x="145" y="155.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E6091" text-anchor="middle">Client X</text>
+<text x="145" y="182.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="middle">session s1</text>
+<rect x="255" y="125" width="150" height="70" rx="12" fill="#1E6091" fill-opacity="0.08" stroke="#1E6091" stroke-width="2.5"/>
+<text x="330" y="155.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E6091" text-anchor="middle">Client Y</text>
+<text x="330" y="182.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="middle">session s2</text>
+<rect x="440" y="125" width="150" height="70" rx="12" fill="#1E6091" fill-opacity="0.08" stroke="#1E6091" stroke-width="2.5"/>
+<text x="515" y="155.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E6091" text-anchor="middle">Client Z</text>
+<text x="515" y="182.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="middle">session s3</text>
+<rect x="90" y="250" width="480" height="80" rx="12" fill="#F4F4F4" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="330" y="283.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#100D12" text-anchor="middle">L7 load balancer</text>
+<text x="330" y="312.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#100D12" text-anchor="middle">routes by the Mcp-Session-Id header</text>
+<line x1="145" y1="197" x2="256.0" y2="247" stroke="#1E6091" stroke-width="2.5" marker-end="url(#a1E6091)"/>
+<line x1="330" y1="197" x2="330" y2="247" stroke="#1E6091" stroke-width="2.5" marker-end="url(#a1E6091)"/>
+<line x1="515" y1="197" x2="404.0" y2="247" stroke="#1E6091" stroke-width="2.5" marker-end="url(#a1E6091)"/>
+<rect x="70" y="400" width="150" height="190" rx="12" fill="#6A4C93" fill-opacity="0.06" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="145" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#6A4C93" text-anchor="middle">Replica A</text>
+<rect x="85" y="450" width="120" height="120" rx="12" fill="#2D6A4F" fill-opacity="0.14" stroke="#2D6A4F" stroke-width="2.5"/>
+<text x="145" y="480.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#2D6A4F" text-anchor="middle">session s1</text>
+<text x="145" y="503.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#2D6A4F" text-anchor="middle">session s3</text>
+<line x1="208" y1="384" x2="236" y2="412" stroke="#C81D25" stroke-width="5"/>
+<line x1="208" y1="412" x2="236" y2="384" stroke="#C81D25" stroke-width="5"/>
+<rect x="255" y="400" width="150" height="190" rx="12" fill="#6A4C93" fill-opacity="0.06" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="330" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#6A4C93" text-anchor="middle">Replica B</text>
+<rect x="270" y="450" width="120" height="120" rx="12" fill="#2D6A4F" fill-opacity="0.14" stroke="#2D6A4F" stroke-width="2.5"/>
+<text x="330" y="480.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#2D6A4F" text-anchor="middle">session s2</text>
+<rect x="440" y="400" width="150" height="190" rx="12" fill="#6A4C93" fill-opacity="0.06" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="515" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#6A4C93" text-anchor="middle">Replica C</text>
+<rect x="455" y="450" width="120" height="120" rx="12" fill="#8A8A8A" fill-opacity="0.14" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="9 6"/>
+<text x="515" y="480.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#8A8A8A" text-anchor="middle">idle</text>
+<line x1="250" y1="332" x2="145" y2="397" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<line x1="290" y1="332" x2="165" y2="397" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<line x1="330" y1="332" x2="330" y2="397" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<text x="330" y="630.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#C81D25" text-anchor="middle">Replica A crashes: sessions s1 and s3 are lost.</text>
+<text x="330" y="660.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#C81D25" text-anchor="middle">Their clients get 404 and must call initialize.</text>
+<text x="330" y="700.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#100D12" text-anchor="middle">Load is uneven: replica C has no sessions.</text>
+<text x="330" y="740.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#100D12" text-anchor="middle">A waiting elicitation needs the same replica.</text>
+<rect x="660" y="70" width="600" height="710" rx="12" fill="none" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="9 6"/>
+<text x="960" y="104.0" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="bold" fill="#100D12" text-anchor="middle">2026-07-28: plain round robin</text>
+<rect x="700" y="125" width="150" height="70" rx="12" fill="#1E6091" fill-opacity="0.08" stroke="#1E6091" stroke-width="2.5"/>
+<text x="775" y="155.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E6091" text-anchor="middle">Client X</text>
+<text x="775" y="182.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="middle">no session</text>
+<rect x="885" y="125" width="150" height="70" rx="12" fill="#1E6091" fill-opacity="0.08" stroke="#1E6091" stroke-width="2.5"/>
+<text x="960" y="155.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E6091" text-anchor="middle">Client Y</text>
+<text x="960" y="182.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="middle">no session</text>
+<rect x="1070" y="125" width="150" height="70" rx="12" fill="#1E6091" fill-opacity="0.08" stroke="#1E6091" stroke-width="2.5"/>
+<text x="1145" y="155.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E6091" text-anchor="middle">Client Z</text>
+<text x="1145" y="182.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="middle">no session</text>
+<rect x="720" y="250" width="480" height="80" rx="12" fill="#F4F4F4" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="960" y="283.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#100D12" text-anchor="middle">Any load balancer</text>
+<text x="960" y="312.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#100D12" text-anchor="middle">round robin, no affinity</text>
+<line x1="775" y1="197" x2="886.0" y2="247" stroke="#1E6091" stroke-width="2.5" marker-end="url(#a1E6091)"/>
+<line x1="960" y1="197" x2="960.0" y2="247" stroke="#1E6091" stroke-width="2.5" marker-end="url(#a1E6091)"/>
+<line x1="1145" y1="197" x2="1034.0" y2="247" stroke="#1E6091" stroke-width="2.5" marker-end="url(#a1E6091)"/>
+<rect x="700" y="400" width="150" height="190" rx="12" fill="#6A4C93" fill-opacity="0.06" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="775" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#6A4C93" text-anchor="middle">Replica A</text>
+<line x1="838" y1="384" x2="866" y2="412" stroke="#C81D25" stroke-width="5"/>
+<line x1="838" y1="412" x2="866" y2="384" stroke="#C81D25" stroke-width="5"/>
+<rect x="885" y="400" width="150" height="190" rx="12" fill="#6A4C93" fill-opacity="0.06" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="960" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#6A4C93" text-anchor="middle">Replica B</text>
+<rect x="1070" y="400" width="150" height="190" rx="12" fill="#6A4C93" fill-opacity="0.06" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1145" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#6A4C93" text-anchor="middle">Replica C</text>
+<line x1="904.5" y1="332" x2="775" y2="397" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<line x1="960.0" y1="332" x2="960" y2="397" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<line x1="1015.5" y1="332" x2="1145" y2="397" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<text x="775" y="480.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#8A8A8A" text-anchor="middle">no protocol</text>
+<text x="775" y="506.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#8A8A8A" text-anchor="middle">state</text>
+<text x="960" y="480.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#8A8A8A" text-anchor="middle">no protocol</text>
+<text x="960" y="506.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#8A8A8A" text-anchor="middle">state</text>
+<text x="1145" y="480.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#8A8A8A" text-anchor="middle">no protocol</text>
+<text x="1145" y="506.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#8A8A8A" text-anchor="middle">state</text>
+<rect x="720" y="620" width="480" height="80" rx="12" fill="#2D6A4F" fill-opacity="0.14" stroke="#2D6A4F" stroke-width="2.5"/>
+<text x="960" y="652.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#2D6A4F" text-anchor="middle">Shared store for application state</text>
+<text x="960" y="682.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#2D6A4F" text-anchor="middle">keyed by user and handle, e.g. user-42:bsk_a1b2</text>
+<line x1="775" y1="592" x2="867.5" y2="617" stroke="#2D6A4F" stroke-width="2" marker-end="url(#a2D6A4F)" marker-start="url(#s2D6A4F)"/>
+<line x1="960" y1="592" x2="960.0" y2="617" stroke="#2D6A4F" stroke-width="2" marker-end="url(#a2D6A4F)" marker-start="url(#s2D6A4F)"/>
+<line x1="1145" y1="592" x2="1052.5" y2="617" stroke="#2D6A4F" stroke-width="2" marker-end="url(#a2D6A4F)" marker-start="url(#s2D6A4F)"/>
+<text x="960" y="740.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#100D12" text-anchor="middle">Replica A crashes: retries go to B or C. Nothing else is lost.</text></svg>

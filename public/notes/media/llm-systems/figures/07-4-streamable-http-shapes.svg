@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" width="1280" height="820"><defs><marker id="a1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="s1E6091" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="aB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="sB8860B" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="a6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="s6A4C93" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="a2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="s2D6A4F" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="aC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="sC81D25" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="a8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="s8A8A8A" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="a100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="s100D12" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs><rect x="0" y="0" width="1280" height="820" fill="#FFFFFF"/>
+<text x="640.0" y="44.0" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#100D12" text-anchor="middle">One MCP endpoint, two revisions of Streamable HTTP</text>
+<text x="330" y="92.0" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" fill="#100D12" text-anchor="middle">2025-11-25: a session</text>
+<rect x="30" y="115" width="345" height="74" rx="8" fill="#1E6091" fill-opacity="0.07" stroke="#1E6091" stroke-width="2.5"/>
+<text x="44" y="145.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">POST initialize</text>
+<line x1="378" y1="152.0" x2="412" y2="152.0" stroke="#100D12" stroke-width="2" marker-end="url(#a100D12)"/>
+<rect x="416" y="115" width="214" height="74" rx="8" fill="#6A4C93" fill-opacity="0.07" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="428" y="145.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">200 and header</text>
+<text x="428" y="168.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">Mcp-Session-Id</text>
+<rect x="30" y="203" width="345" height="74" rx="8" fill="#1E6091" fill-opacity="0.07" stroke="#1E6091" stroke-width="2.5"/>
+<text x="44" y="233.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">POST notifications/initialized</text>
+<text x="44" y="256.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">+ Mcp-Session-Id</text>
+<line x1="378" y1="240.0" x2="412" y2="240.0" stroke="#100D12" stroke-width="2" marker-end="url(#a100D12)"/>
+<rect x="416" y="203" width="214" height="74" rx="8" fill="#6A4C93" fill-opacity="0.07" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="428" y="233.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">202, no body</text>
+<rect x="30" y="291" width="345" height="74" rx="8" fill="#1E6091" fill-opacity="0.07" stroke="#1E6091" stroke-width="2.5"/>
+<text x="44" y="321.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">GET, Accept: text/event-stream</text>
+<text x="44" y="344.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">+ Mcp-Session-Id</text>
+<line x1="378" y1="328.0" x2="412" y2="328.0" stroke="#100D12" stroke-width="2" marker-end="url(#a100D12)"/>
+<rect x="416" y="291" width="214" height="74" rx="8" fill="#6A4C93" fill-opacity="0.07" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="428" y="321.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">200 SSE, stays open:</text>
+<text x="428" y="344.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">list_changed, ping</text>
+<rect x="30" y="379" width="345" height="98" rx="8" fill="#1E6091" fill-opacity="0.07" stroke="#1E6091" stroke-width="2.5"/>
+<text x="44" y="409.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">POST tools/call (id 3)</text>
+<text x="44" y="432.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">+ Mcp-Session-Id</text>
+<text x="44" y="456.5" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">+ MCP-Protocol-Version</text>
+<line x1="378" y1="428.0" x2="412" y2="428.0" stroke="#100D12" stroke-width="2" marker-end="url(#a100D12)"/>
+<rect x="416" y="379" width="214" height="98" rx="8" fill="#6A4C93" fill-opacity="0.07" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="428" y="409.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">200 SSE:</text>
+<text x="428" y="432.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">elicitation/create (id 1)</text>
+<text x="428" y="456.5" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">... then result (id 3)</text>
+<rect x="30" y="491" width="345" height="74" rx="8" fill="#1E6091" fill-opacity="0.07" stroke="#1E6091" stroke-width="2.5"/>
+<text x="44" y="521.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">POST the response to id 1</text>
+<text x="44" y="544.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">+ Mcp-Session-Id</text>
+<line x1="378" y1="528.0" x2="412" y2="528.0" stroke="#100D12" stroke-width="2" marker-end="url(#a100D12)"/>
+<rect x="416" y="491" width="214" height="74" rx="8" fill="#6A4C93" fill-opacity="0.07" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="428" y="521.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">202, no body</text>
+<rect x="30" y="579" width="345" height="74" rx="8" fill="#1E6091" fill-opacity="0.07" stroke="#1E6091" stroke-width="2.5"/>
+<text x="44" y="609.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">Last-Event-ID on a GET</text>
+<text x="44" y="632.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">after a broken stream</text>
+<line x1="378" y1="616.0" x2="412" y2="616.0" stroke="#100D12" stroke-width="2" marker-end="url(#a100D12)"/>
+<rect x="416" y="579" width="214" height="74" rx="8" fill="#6A4C93" fill-opacity="0.07" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="428" y="609.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">replay of missed</text>
+<text x="428" y="632.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">events, if stored</text>
+<rect x="30" y="667" width="345" height="50" rx="8" fill="#1E6091" fill-opacity="0.07" stroke="#1E6091" stroke-width="2.5"/>
+<text x="44" y="697.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">DELETE + Mcp-Session-Id</text>
+<line x1="378" y1="692.0" x2="412" y2="692.0" stroke="#100D12" stroke-width="2" marker-end="url(#a100D12)"/>
+<rect x="416" y="667" width="214" height="50" rx="8" fill="#6A4C93" fill-opacity="0.07" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="428" y="697.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">200, or 405</text>
+<rect x="30" y="735" width="600" height="62" rx="8" fill="#2D6A4F" fill-opacity="0.12" stroke="#2D6A4F" stroke-width="2.5"/>
+<text x="330" y="774.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#2D6A4F" text-anchor="middle">Every request must reach the replica with the session</text>
+<text x="950" y="92.0" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" fill="#100D12" text-anchor="middle">2026-07-28: self-contained POSTs</text>
+<rect x="650" y="115" width="345" height="122" rx="8" fill="#1E6091" fill-opacity="0.07" stroke="#1E6091" stroke-width="2.5"/>
+<text x="664" y="145.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">POST tools/call (id 1)</text>
+<text x="664" y="168.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">MCP-Protocol-Version: 2026-07-28</text>
+<text x="664" y="192.5" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">Mcp-Method: tools/call</text>
+<text x="664" y="216.2" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">Mcp-Name: count_orders</text>
+<line x1="998" y1="176.0" x2="1032" y2="176.0" stroke="#100D12" stroke-width="2" marker-end="url(#a100D12)"/>
+<rect x="1036" y="115" width="214" height="122" rx="8" fill="#6A4C93" fill-opacity="0.07" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1048" y="145.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">200 JSON, or SSE:</text>
+<text x="1048" y="168.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">progress, then the</text>
+<text x="1048" y="192.5" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">result with resultType</text>
+<rect x="650" y="251" width="345" height="98" rx="8" fill="#1E6091" fill-opacity="0.07" stroke="#1E6091" stroke-width="2.5"/>
+<text x="664" y="281.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">POST tools/call (id 2), the same</text>
+<text x="664" y="304.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">params + inputResponses</text>
+<text x="664" y="328.5" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">+ requestState</text>
+<line x1="998" y1="300.0" x2="1032" y2="300.0" stroke="#100D12" stroke-width="2" marker-end="url(#a100D12)"/>
+<rect x="1036" y="251" width="214" height="98" rx="8" fill="#6A4C93" fill-opacity="0.07" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1048" y="281.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">200: the result</text>
+<text x="1048" y="304.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">after an earlier</text>
+<text x="1048" y="328.5" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">input_required</text>
+<rect x="650" y="363" width="345" height="98" rx="8" fill="#1E6091" fill-opacity="0.07" stroke="#1E6091" stroke-width="2.5"/>
+<text x="664" y="393.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">POST subscriptions/listen</text>
+<line x1="998" y1="412.0" x2="1032" y2="412.0" stroke="#100D12" stroke-width="2" marker-end="url(#a100D12)"/>
+<rect x="1036" y="363" width="214" height="98" rx="8" fill="#6A4C93" fill-opacity="0.07" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1048" y="393.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">200 SSE, stays open:</text>
+<text x="1048" y="416.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">acknowledged,</text>
+<text x="1048" y="440.5" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="start">list_changed</text>
+<rect x="650" y="475" width="345" height="74" rx="8" fill="#1E6091" fill-opacity="0.07" stroke="#1E6091" stroke-width="2.5"/>
+<text x="664" y="505.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">GET or DELETE</text>
+<line x1="998" y1="512.0" x2="1032" y2="512.0" stroke="#100D12" stroke-width="2" marker-end="url(#a100D12)"/>
+<rect x="1036" y="475" width="214" height="74" rx="8" fill="#C81D25" fill-opacity="0.07" stroke="#C81D25" stroke-width="2.5"/>
+<text x="1048" y="505.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#C81D25" text-anchor="start">405 Method</text>
+<text x="1048" y="528.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#C81D25" text-anchor="start">Not Allowed</text>
+<rect x="650" y="563" width="345" height="74" rx="8" fill="#1E6091" fill-opacity="0.07" stroke="#1E6091" stroke-width="2.5"/>
+<text x="664" y="593.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">a header that differs</text>
+<text x="664" y="616.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#1E6091" text-anchor="start">from the body</text>
+<line x1="998" y1="600.0" x2="1032" y2="600.0" stroke="#100D12" stroke-width="2" marker-end="url(#a100D12)"/>
+<rect x="1036" y="563" width="214" height="74" rx="8" fill="#C81D25" fill-opacity="0.07" stroke="#C81D25" stroke-width="2.5"/>
+<text x="1048" y="593.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#C81D25" text-anchor="start">400, error -32020</text>
+<text x="1048" y="616.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#C81D25" text-anchor="start">HeaderMismatch</text>
+<rect x="650" y="655" width="600" height="62" rx="8" fill="#1E6091" fill-opacity="0.12" stroke="#1E6091" stroke-width="2.5"/>
+<text x="950" y="694.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E6091" text-anchor="middle">Any replica can answer any request</text>
+<line x1="640" y1="75" x2="640" y2="800" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="9 6"/></svg>

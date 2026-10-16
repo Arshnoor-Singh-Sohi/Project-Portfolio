@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 730" width="1280" height="730">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arrr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrgr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker></defs>
+<rect x="0" y="0" width="1280" height="730" fill="#FFFFFF"/>
+<text x="640" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">From 80 GiB to KV cache blocks: Llama-3.1-8B in BF16 on one H100</text>
+<text x="404" y="124" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="end" font-weight="normal">1. Total GPU memory</text>
+<rect x="420.0" y="90" width="768.0" height="50" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="804.0" y="123" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">80 GiB</text>
+<text x="404" y="200" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="end" font-weight="normal">2. x 0.92 requested</text>
+<rect x="420.0" y="166" width="706.56" height="50" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<rect x="1126.56" y="166" width="61.44" height="50" rx="0" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="1157.28" y="244" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" text-anchor="middle" font-weight="normal">6.40 not</text>
+<text x="1157.28" y="266" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" text-anchor="middle" font-weight="normal">requested</text>
+<text x="773.28" y="199" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">73.60 GiB</text>
+<text x="404" y="276" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="end" font-weight="normal">3. minus weights</text>
+<rect x="420.0" y="242" width="143.616" height="50" rx="0" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="491.808" y="275" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">14.96 GiB</text>
+<text x="404" y="352" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="end" font-weight="normal">4. minus overhead (assumed)</text>
+<rect x="563.616" y="318" width="28.799999999999997" height="50" rx="0" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<text x="604.4159999999999" y="351" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="bold">3.00 GiB</text>
+<text x="404" y="428" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="end" font-weight="normal">5. KV cache pool</text>
+<rect x="592.4159999999999" y="394" width="534.144" height="50" rx="0" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="859.488" y="427" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">55.64 GiB</text>
+<line x1="420" y1="90" x2="420" y2="444" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="4,4"/>
+<rect x="55" y="520" width="240" height="110" rx="8" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="175.0" y="566" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#100D12" text-anchor="middle" font-weight="bold">55.64 GiB</text>
+<text x="175.0" y="600" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">KV cache</text>
+<line x1="301" y1="575" x2="359" y2="575" stroke="#100D12" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="330.0" y="506" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">/ 131,072 B</text>
+<rect x="365" y="520" width="240" height="110" rx="8" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="485.0" y="566" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#100D12" text-anchor="middle" font-weight="bold">455,823 tokens</text>
+<text x="485.0" y="600" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">at 131,072 B each</text>
+<line x1="611" y1="575" x2="669" y2="575" stroke="#100D12" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="640.0" y="506" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">/ 16</text>
+<rect x="675" y="520" width="240" height="110" rx="8" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="795.0" y="566" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#100D12" text-anchor="middle" font-weight="bold">28,488 blocks</text>
+<text x="795.0" y="600" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">of 16 tokens</text>
+<line x1="921" y1="575" x2="979" y2="575" stroke="#100D12" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="950.0" y="506" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">/ 256 blocks</text>
+<rect x="985" y="520" width="240" height="110" rx="8" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1105.0" y="566" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#100D12" text-anchor="middle" font-weight="bold">111 requests</text>
+<text x="1105.0" y="600" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">of 4,096 tokens</text>
+<text x="640" y="700" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal" font-style="italic">vLLM measures the real overhead in a profiling run. Read it in the log line 'Available KV cache memory'.</text>
+</svg>

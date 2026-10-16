@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" width="1280" height="780">
+<defs><marker id="ah100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ah1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ah6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ah2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ah8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="0" y="0" width="1280" height="780" fill="white"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">One block manager, many GPU workers (§4.6)</text>
+<text x="640" y="82" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">Example: OPT-175B (96 heads, 96 layers) with tensor parallelism on 8 GPUs, 12 heads per GPU.</text>
+<rect x="330" y="110" width="620" height="150" rx="10" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="640" y="145" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" fill="#100D12">Centralized scheduler</text>
+<text x="640" y="177" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">one KV cache manager, one block table per sequence</text>
+<rect x="420" y="195" width="440" height="46" rx="6" fill="white" stroke="#1E6091" stroke-width="2"/>
+<text x="640" y="226" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">seq 17: blocks [42, 7, 130]</text>
+<line x1="640" y1="262" x2="165" y2="372" stroke="#1E6091" stroke-width="2.5" marker-end="url(#ah1E6091)"/>
+<line x1="640" y1="262" x2="470" y2="372" stroke="#1E6091" stroke-width="2.5" marker-end="url(#ah1E6091)"/>
+<line x1="640" y1="262" x2="775" y2="372" stroke="#1E6091" stroke-width="2.5" marker-end="url(#ah1E6091)"/>
+<line x1="640" y1="262" x2="1110" y2="372" stroke="#1E6091" stroke-width="2.5" marker-end="url(#ah1E6091)"/>
+<text x="30" y="300" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#1E6091">control message per step:</text>
+<text x="30" y="327" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#1E6091">token IDs + block tables</text>
+<rect x="40" y="380" width="250" height="250" rx="10" fill="white" stroke="#B8860B" stroke-width="2"/>
+<text x="165" y="412" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#B8860B">Worker 0</text>
+<text x="165" y="442" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">model shard: heads 0-11</text>
+<text x="165" y="476" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">cache engine: KV of</text>
+<text x="165" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">heads 0-11 only</text>
+<rect x="62" y="520" width="64" height="44" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="94" y="549" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">42</text>
+<rect x="134" y="520" width="64" height="44" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="166" y="549" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">7</text>
+<rect x="206" y="520" width="64" height="44" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="238" y="549" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">130</text>
+<text x="165" y="600" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#2D6A4F">same block IDs</text>
+<rect x="345" y="380" width="250" height="250" rx="10" fill="white" stroke="#B8860B" stroke-width="2"/>
+<text x="470" y="412" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#B8860B">Worker 1</text>
+<text x="470" y="442" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">model shard: heads 12-23</text>
+<text x="470" y="476" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">cache engine: KV of</text>
+<text x="470" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">heads 12-23 only</text>
+<rect x="367" y="520" width="64" height="44" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="399" y="549" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">42</text>
+<rect x="439" y="520" width="64" height="44" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="471" y="549" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">7</text>
+<rect x="511" y="520" width="64" height="44" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="543" y="549" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">130</text>
+<text x="470" y="600" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#2D6A4F">same block IDs</text>
+<rect x="650" y="380" width="250" height="250" rx="10" fill="white" stroke="#B8860B" stroke-width="2"/>
+<text x="775" y="412" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#B8860B">Worker 2</text>
+<text x="775" y="442" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">model shard: heads 24-35</text>
+<text x="775" y="476" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">cache engine: KV of</text>
+<text x="775" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">heads 24-35 only</text>
+<rect x="672" y="520" width="64" height="44" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="704" y="549" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">42</text>
+<rect x="744" y="520" width="64" height="44" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="776" y="549" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">7</text>
+<rect x="816" y="520" width="64" height="44" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="848" y="549" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">130</text>
+<text x="775" y="600" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#2D6A4F">same block IDs</text>
+<rect x="985" y="380" width="250" height="250" rx="10" fill="white" stroke="#B8860B" stroke-width="2"/>
+<text x="1110" y="412" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#B8860B">Worker 7</text>
+<text x="1110" y="442" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">model shard: heads 84-95</text>
+<text x="1110" y="476" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">cache engine: KV of</text>
+<text x="1110" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">heads 84-95 only</text>
+<rect x="1007" y="520" width="64" height="44" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1039" y="549" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">42</text>
+<rect x="1079" y="520" width="64" height="44" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1111" y="549" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">7</text>
+<rect x="1151" y="520" width="64" height="44" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1183" y="549" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">130</text>
+<text x="1110" y="600" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#2D6A4F">same block IDs</text>
+<text x="930" y="510" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#100D12">...</text>
+<path d="M 165 632 C 165 672, 1110 672, 1110 632" fill="none" stroke="#B8860B" stroke-width="3"/>
+<text x="640" y="705" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#B8860B">all-reduce between workers during the forward pass (no scheduler involved)</text>
+<text x="640" y="750" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Per token: 4.5 MiB of KV in total, 576 KiB on each GPU. Every GPU holds the same number of token slots.</text>
+<path d="M 1235 380 C 1235 300, 1050 200, 955 200" fill="none" stroke="#100D12" stroke-width="2.5" marker-end="url(#ah100D12)"/>
+<text x="1150" y="280" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">sampled</text>
+<text x="1150" y="303" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">tokens</text>
+</svg>

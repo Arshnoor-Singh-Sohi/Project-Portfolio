@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" width="1280" height="820"><defs><marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#100D12"/></marker><marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1E6091"/></marker><marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#B8860B"/></marker><marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6A4C93"/></marker><marker id="arr2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2D6A4F"/></marker><marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#C81D25"/></marker><marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A8A"/></marker></defs><rect x="0" y="0" width="1280" height="820" fill="#FFFFFF"/>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Tensor parallelism: one Llama-3.1-70B layer split over 2 GPUs</text>
+<rect x="390" y="70" width="500" height="46" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="640.0" y="100.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">input x: [T, 8192], a full copy on each GPU</text>
+<rect x="40" y="140" width="580" height="600" rx="12" fill="none" fill-opacity="1.0" stroke="#B8860B" stroke-width="3"/>
+<text x="60" y="172" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#B8860B" font-weight="bold" text-anchor="start">GPU 0</text>
+<rect x="60" y="190" width="540" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="330.0" y="222.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">W_Q columns: query heads 0-31  [8192 × 4096]</text>
+<rect x="60" y="250" width="540" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="330.0" y="282.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">W_K, W_V columns: KV heads 0-3  [8192 × 512] each</text>
+<rect x="60" y="310" width="540" height="44" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="330.0" y="339.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">KV cache shard: KV heads 0-3 only (160 KiB per token)</text>
+<rect x="60" y="364" width="540" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="330.0" y="396.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">W_O rows 0-4095  [4096 × 8192] → partial sum</text>
+<rect x="60" y="520" width="540" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="330.0" y="551.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">W_gate, W_up columns 0-14335  [8192 × 14336]</text>
+<rect x="60" y="580" width="540" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="330.0" y="611.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">W_down rows 0-14335  [14336 × 8192] → partial sum</text>
+<line x1="330" y1="116" x2="330" y2="188" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="660" y="140" width="580" height="600" rx="12" fill="none" fill-opacity="1.0" stroke="#B8860B" stroke-width="3"/>
+<text x="680" y="172" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#B8860B" font-weight="bold" text-anchor="start">GPU 1</text>
+<rect x="680" y="190" width="540" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="950.0" y="222.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">W_Q columns: query heads 32-63  [8192 × 4096]</text>
+<rect x="680" y="250" width="540" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="950.0" y="282.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">W_K, W_V columns: KV heads 4-7  [8192 × 512] each</text>
+<rect x="680" y="310" width="540" height="44" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="950.0" y="339.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">KV cache shard: KV heads 4-7 only (160 KiB per token)</text>
+<rect x="680" y="364" width="540" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="950.0" y="396.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">W_O rows 4096-8191  [4096 × 8192] → partial sum</text>
+<rect x="680" y="520" width="540" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="950.0" y="551.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">W_gate, W_up columns 14336-28671  [8192 × 14336]</text>
+<rect x="680" y="580" width="540" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="950.0" y="611.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">W_down rows 14336-28671  [14336 × 8192] → partial sum</text>
+<line x1="950" y1="116" x2="950" y2="188" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="140" y="438" width="1000" height="56" rx="8" fill="#FFFFFF" fill-opacity="1.0" stroke="#6A4C93" stroke-width="3"/>
+<text x="640.0" y="473.35" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="normal" text-anchor="middle">all-reduce 1: sum the two partial outputs  (16 KiB per token = 8192 × 2 bytes)</text>
+<rect x="140" y="650" width="1000" height="56" rx="8" fill="#FFFFFF" fill-opacity="1.0" stroke="#6A4C93" stroke-width="3"/>
+<text x="640.0" y="685.35" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="normal" text-anchor="middle">all-reduce 2: sum the two partial outputs  (16 KiB per token)</text>
+<text x="40" y="776" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">No communication inside the attention or MLP blocks: each GPU works on its own heads and its own MLP columns.</text>
+<text x="40" y="806" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Shown with TP = 2. With TP = 4 each GPU holds 16 query heads, 2 KV heads and 80 KiB of KV cache per token.</text></svg>

@@ -14,6 +14,7 @@ Each subject in this area has its own folder.
 | [LangChain and LangGraph](/notes/ai/langchain-langgraph) | Use create_agent, middleware, summarization, context editing and checkpointers without losing stored messages. |
 | [Conversation State and Chat History](/notes/ai/conversation-state) | Decide where conversation state lives, and store chat history so that nothing is lost. |
 | [Evaluating AI Systems](/notes/ai/evaluation) | Design tests that prove a claim about an AI system and cannot pass by accident. |
+| [LLM Systems Deep Dive](/notes/ai/llm-systems) | Explain, derive and defend attention, the KV cache, PagedAttention, inference, cloud hosting, RAG and MCP at whiteboard depth. |
 
 ## Priority path: agent harness foundations
 
@@ -71,3 +72,17 @@ Every lesson of the nine subjects is now written. These 23 lessons have the stag
 | 39 | [Independent audit](/notes/ai/evaluation/01-test-design/l3-independent-audit) | Evaluation |
 
 Steps 22 to 24 come before step 25 because an in-process tool shares the event loop of your Python process.
+
+## Interview track: LLM systems
+
+[LLM Systems Deep Dive](/notes/ai/llm-systems) prepares a deep-dive technical interview in 1 to 2 weeks. It has its own order, separate from the priority path above: the 12-day plan in its [course plan](/notes/ai/llm-systems/course-plan). Days 1 to 5 cover the core interview chain: attention, the KV cache, the PagedAttention paper and the changes in MCP.
+
+Start with these 5 lessons. They open day 1 of the plan.
+
+| Step | Lesson | Part |
+|---|---|---|
+| 1 | [Vectors and dot products](/notes/ai/llm-systems/01-math-and-hardware/l1-vectors-and-dot-products) | 01 Math and hardware |
+| 2 | [Matrices and matrix multiplication](/notes/ai/llm-systems/01-math-and-hardware/l2-matrices-and-matrix-multiplication) | 01 Math and hardware |
+| 3 | [Tensors, shapes and batches](/notes/ai/llm-systems/01-math-and-hardware/l3-tensors-shapes-and-batches) | 01 Math and hardware |
+| 4 | [Numbers in memory: FP32, BF16, FP8, INT4](/notes/ai/llm-systems/01-math-and-hardware/l4-numbers-in-memory) | 01 Math and hardware |
+| 5 | [GPUs, memory and bandwidth](/notes/ai/llm-systems/01-math-and-hardware/l5-gpus-memory-and-bandwidth) | 01 Math and hardware |

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arrr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrgr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker></defs>
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+<text x="640" y="44" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#100D12" text-anchor="middle" font-weight="bold">The driver is on the host, CUDA is in the image</text>
+<rect x="260" y="80" width="760" height="330" rx="8" fill="#FFFFFF" stroke="#6A4C93" stroke-width="3"/>
+<text x="640" y="116" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#6A4C93" text-anchor="middle" font-weight="bold">Container: vllm/vllm-openai:v0.31.0</text>
+<rect x="300" y="140" width="680" height="52" rx="6" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<text x="640" y="174" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="normal">vLLM 0.31.0: engine, OpenAI-compatible server</text>
+<rect x="300" y="204" width="680" height="52" rx="6" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<text x="640" y="238" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="normal">PyTorch 2.13.0, attention kernels</text>
+<rect x="300" y="268" width="680" height="52" rx="6" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<text x="640" y="302" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="normal">CUDA 13.0 runtime libraries (user space)</text>
+<rect x="300" y="332" width="680" height="52" rx="6" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="640" y="366" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="normal">Ubuntu 24.04 files, Python 3.12</text>
+<rect x="260" y="432" width="760" height="70" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="640" y="463" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">NVIDIA Container Toolkit</text>
+<text x="640" y="490" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">makes GPU devices and driver libraries visible in the container</text>
+<rect x="260" y="525" width="760" height="160" rx="8" fill="#F5E9C8" stroke="#B8860B" stroke-width="3"/>
+<text x="640" y="560" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#7A5A06" text-anchor="middle" font-weight="bold">Host (VM or node)</text>
+<rect x="300" y="580" width="330" height="84" rx="6" fill="#FFFFFF" stroke="#B8860B" stroke-width="2"/>
+<text x="465" y="614" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">NVIDIA kernel driver</text>
+<text x="465" y="640" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">580 or newer for CUDA 13</text>
+<rect x="650" y="580" width="330" height="84" rx="6" fill="#FFFFFF" stroke="#B8860B" stroke-width="2"/>
+<text x="815" y="614" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">GPU hardware</text>
+<text x="815" y="640" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">for example H100 = sm_90</text>
+<text x="130" y="220" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="middle" font-weight="normal">you change</text>
+<text x="130" y="246" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="middle" font-weight="normal">with each</text>
+<text x="130" y="272" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="middle" font-weight="normal">image tag</text>
+<text x="130" y="590" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="normal">changes only</text>
+<text x="130" y="616" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="normal">with the node</text>
+<text x="130" y="642" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="normal">image or OS</text>
+<text x="1150" y="190" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">CUDA 13.x</text>
+<text x="1150" y="216" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">needs driver</text>
+<text x="1150" y="242" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">580 or newer</text>
+<text x="1150" y="330" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">CUDA 12.x</text>
+<text x="1150" y="356" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">needs driver</text>
+<text x="1150" y="382" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">525 to below 580</text>
+<text x="1150" y="470" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="middle" font-weight="normal">Older driver:</text>
+<text x="1150" y="496" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="middle" font-weight="normal">compatibility</text>
+<text x="1150" y="522" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="middle" font-weight="normal">mode or a</text>
+<text x="1150" y="548" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="middle" font-weight="normal">-cu129 tag</text>
+</svg>

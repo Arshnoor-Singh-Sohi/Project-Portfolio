@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 700" width="1280" height="700">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arrr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrgr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker></defs>
+<rect x="0" y="0" width="1280" height="700" fill="#FFFFFF"/>
+<text x="640" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">GPU memory budget per GPU (vLLM default gpu_memory_utilization 0.92)</text>
+<text x="1175" y="100" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">KV tokens</text>
+<text x="274" y="148" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="end" font-weight="bold">8B BF16, 1 x L4</text>
+<text x="274" y="174" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">22 GiB</text>
+<rect x="290" y="120" width="537.1999999999999" height="66" rx="0" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="558.5999999999999" y="161" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">weights 14.96</text>
+<rect x="827.1999999999999" y="120" width="53.86363636363635" height="66" rx="0" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<text x="854.1318181818181" y="161" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">1.5</text>
+<rect x="881.0636363636363" y="120" width="135.73636363636362" height="66" rx="0" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="948.9318181818181" y="161" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">KV 3.78</text>
+<rect x="1016.8" y="120" width="63.199999999999996" height="66" rx="0" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="1175" y="161" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#2D6A4F" text-anchor="middle" font-weight="bold">30,986</text>
+<text x="274" y="244" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="end" font-weight="bold">8B BF16, 1 x H100</text>
+<text x="274" y="270" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">80 GiB</text>
+<rect x="290" y="216" width="147.73000000000002" height="66" rx="0" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="363.865" y="257" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">weights 14.96</text>
+<rect x="437.73" y="216" width="29.625" height="66" rx="0" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<text x="452.5425" y="257" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">3.0</text>
+<rect x="467.355" y="216" width="549.4449999999999" height="66" rx="0" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="742.0775" y="257" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">KV 55.64</text>
+<rect x="1016.8" y="216" width="63.2" height="66" rx="0" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="1175" y="257" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#2D6A4F" text-anchor="middle" font-weight="bold">455,823</text>
+<text x="274" y="340" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="end" font-weight="bold">70B BF16, TP=2</text>
+<text x="274" y="366" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">per H100, 80 GiB</text>
+<rect x="290" y="312" width="648.8862499999999" height="66" rx="0" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="614.443125" y="353" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">weights 65.71</text>
+<rect x="938.8862499999999" y="312" width="29.625" height="66" rx="0" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<text x="953.6987499999999" y="353" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">3.0</text>
+<rect x="968.5112499999999" y="312" width="48.28875" height="66" rx="0" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="1016.8" y="312" width="63.2" height="66" rx="0" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="1175" y="353" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#2D6A4F" text-anchor="middle" font-weight="bold">32,058</text>
+<text x="274" y="436" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="end" font-weight="bold">70B BF16, TP=4</text>
+<text x="274" y="462" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">per H100, 80 GiB</text>
+<rect x="290" y="408" width="324.39375" height="66" rx="0" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="452.196875" y="449" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">weights 32.85</text>
+<rect x="614.39375" y="408" width="29.625" height="66" rx="0" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<text x="629.20625" y="449" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">3.0</text>
+<rect x="644.01875" y="408" width="372.78125" height="66" rx="0" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="830.409375" y="449" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">KV 37.75</text>
+<rect x="1016.8" y="408" width="63.2" height="66" rx="0" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="1175" y="449" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#2D6A4F" text-anchor="middle" font-weight="bold">494,742</text>
+<text x="274" y="532" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="end" font-weight="bold">70B FP8, 1 x H200</text>
+<text x="274" y="558" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">141 GiB</text>
+<rect x="290" y="504" width="379.1439716312057" height="66" rx="0" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="479.57198581560283" y="545" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">weights 67.67</text>
+<rect x="669.1439716312057" y="504" width="22.411347517730498" height="66" rx="0" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<rect x="691.5553191489362" y="504" width="325.24468085106383" height="66" rx="0" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="854.1776595744681" y="545" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">KV 58.05</text>
+<rect x="1016.8" y="504" width="63.199999999999996" height="66" rx="0" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="1175" y="545" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#2D6A4F" text-anchor="middle" font-weight="bold">190,229</text>
+<text x="680.3496453900709" y="496" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" text-anchor="middle" font-weight="normal">4.0</text>
+<text x="992.6556249999999" y="304" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" text-anchor="middle" font-weight="normal">KV 4.89</text>
+<rect x="70" y="610" width="34" height="26" rx="3" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="114" y="630" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">weights</text>
+<rect x="223.5" y="610" width="34" height="26" rx="3" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<text x="267.5" y="630" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">activations, CUDA graphs, other (assumed)</text>
+<rect x="734.0" y="610" width="34" height="26" rx="3" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="778.0" y="630" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">KV cache</text>
+<rect x="898.0" y="610" width="34" height="26" rx="3" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="942.0" y="630" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">8% not requested</text>
+<text x="640" y="680" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal" font-style="italic">All values in GiB. Bars are scaled to each GPU's total memory.</text>
+</svg>

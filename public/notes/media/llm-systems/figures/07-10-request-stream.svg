@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800" font-family="Helvetica, Arial, sans-serif">
+<defs>
+<marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1E6091"/></marker>
+<marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6A4C93"/></marker>
+<marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#C81D25"/></marker>
+</defs>
+<rect x="0" y="0" width="1280" height="800" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">One request: progress, result and cancellation</text>
+<text x="320" y="100" font-size="23" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">Streamable HTTP: one stream per request</text>
+<rect x="80" y="120" width="200" height="60" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="180.0" y="152" font-size="22" fill="#1E6091" font-weight="bold" text-anchor="middle" font-style="normal">Client</text>
+<rect x="400" y="120" width="200" height="60" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="500.0" y="152" font-size="22" fill="#6A4C93" font-weight="bold" text-anchor="middle" font-style="normal">Server</text>
+<line x1="180" y1="180" x2="180" y2="760" stroke="#1E6091" stroke-width="2.5" stroke-dasharray="8 6"/>
+<line x1="500" y1="180" x2="500" y2="760" stroke="#6A4C93" stroke-width="2.5" stroke-dasharray="8 6"/>
+<line x1="180" y1="230" x2="498" y2="230" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<text x="190" y="220" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">POST tools/call (token t1)</text>
+<line x1="500" y1="300" x2="182" y2="300" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#arr6A4C93)"/>
+<text x="212" y="290" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">SSE: notifications/progress 1/2</text>
+<line x1="500" y1="370" x2="182" y2="370" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#arr6A4C93)"/>
+<text x="212" y="360" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">SSE: notifications/progress 2/2</text>
+<line x1="500" y1="440" x2="182" y2="440" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#arr6A4C93)"/>
+<text x="212" y="430" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">SSE: result (stream ends)</text>
+<text x="320" y="500" font-size="20" fill="#C81D25" font-weight="bold" text-anchor="middle" font-style="normal">To cancel instead:</text>
+<line x1="180" y1="560" x2="498" y2="560" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<text x="190" y="550" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">POST tools/call (long job)</text>
+<line x1="300" y1="600" x2="380" y2="680" stroke="#C81D25" stroke-width="5"/>
+<line x1="380" y1="600" x2="300" y2="680" stroke="#C81D25" stroke-width="5"/>
+<rect x="70" y="692" width="540" height="80" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#C81D25" stroke-width="2.5"/>
+<text x="86" y="724" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start" font-style="normal">client closes the response stream:</text>
+<text x="86" y="748" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start" font-style="normal">that is the cancellation, no message</text>
+<line x1="640" y1="90" x2="640" y2="780" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="960" y="100" font-size="23" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">stdio: all messages share one pipe</text>
+<rect x="720" y="120" width="200" height="60" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="820.0" y="152" font-size="22" fill="#1E6091" font-weight="bold" text-anchor="middle" font-style="normal">Client</text>
+<rect x="1040" y="120" width="200" height="60" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1140.0" y="152" font-size="22" fill="#6A4C93" font-weight="bold" text-anchor="middle" font-style="normal">Server</text>
+<line x1="820" y1="180" x2="820" y2="760" stroke="#1E6091" stroke-width="2.5" stroke-dasharray="8 6"/>
+<line x1="1140" y1="180" x2="1140" y2="760" stroke="#6A4C93" stroke-width="2.5" stroke-dasharray="8 6"/>
+<line x1="820" y1="230" x2="1138" y2="230" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<text x="830" y="220" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">request id 7 (token t2)</text>
+<line x1="1140" y1="300" x2="822" y2="300" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#arr6A4C93)"/>
+<text x="852" y="290" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">notifications/progress t2</text>
+<line x1="820" y1="392" x2="1138" y2="392" stroke="#C81D25" stroke-width="2.5" marker-end="url(#arrC81D25)"/>
+<text x="830" y="356" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start" font-style="normal">notifications/cancelled</text>
+<text x="830" y="382" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start" font-style="normal">requestId 7, reason</text>
+<rect x="860" y="440" width="380" height="110" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="876" y="474" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">server stops work, frees resources</text>
+<text x="876" y="498" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">and sends no response.</text>
+<text x="876" y="522" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">A late response is ignored.</text>
+<rect x="700" y="590" width="560" height="150" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="716" y="626" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">Race: the result can cross the cancel.</text>
+<text x="716" y="650" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">Both sides must accept that.</text>
+<text x="716" y="674" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">Before 2026-07-28, an HTTP disconnect was</text>
+<text x="716" y="698" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">NOT a cancel: a message was needed.</text>
+</svg>

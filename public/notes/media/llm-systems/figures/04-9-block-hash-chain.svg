@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800"><defs><marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#100D12"/></marker><marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1E6091"/></marker><marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#B8860B"/></marker><marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6A4C93"/></marker><marker id="arr2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2D6A4F"/></marker><marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#C81D25"/></marker><marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A8A"/></marker></defs><rect x="0" y="0" width="1280" height="800" fill="#FFFFFF"/>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Prefix caching: a hash chain over full 16-token blocks</text>
+<text x="30" y="116" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Request A</text>
+<rect x="190" y="80" width="200" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="3"/>
+<text x="290.0" y="115.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">tokens 0-15</text>
+<rect x="402" y="80" width="200" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="3"/>
+<text x="502.0" y="115.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">tokens 16-31</text>
+<rect x="614" y="80" width="200" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="3"/>
+<text x="714.0" y="115.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">tokens 32-47</text>
+<rect x="826" y="80" width="200" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="3"/>
+<text x="926.0" y="115.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">tokens 48-63</text>
+<rect x="1038" y="80" width="200" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="1138.0" y="115.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">64-69 (partial)</text>
+<text x="290.0" y="166" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">h1 = H(seed, t0..15)</text>
+<text x="502.0" y="166" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">h2 = H(h1, t16..31)</text>
+<text x="714.0" y="166" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">h3 = H(h2, t32..47)</text>
+<text x="926.0" y="166" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">h4 = H(h3, t48..63)</text>
+<text x="1138.0" y="166" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">no hash yet</text>
+<line x1="390" y1="108" x2="402" y2="108" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<line x1="602" y1="108" x2="614" y2="108" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<line x1="814" y1="108" x2="826" y2="108" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<text x="30" y="296" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Request B</text>
+<rect x="190" y="260" width="200" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="290.0" y="295.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">tokens 0-15</text>
+<rect x="402" y="260" width="200" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="502.0" y="295.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">tokens 16-31</text>
+<rect x="614" y="260" width="200" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#C81D25" stroke-width="3"/>
+<text x="714.0" y="295.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="middle">tokens 32-47</text>
+<rect x="826" y="260" width="200" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="926.0" y="295.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">tokens 48-63</text>
+<rect x="1038" y="260" width="200" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="1138.0" y="295.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">64 (partial)</text>
+<text x="290.0" y="346" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">h1: same hash</text>
+<text x="290.0" y="372" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">HIT</text>
+<text x="502.0" y="346" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">h2: same hash</text>
+<text x="502.0" y="372" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">HIT</text>
+<text x="714.0" y="346" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="middle">h3' ≠ h3</text>
+<text x="714.0" y="372" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="middle">MISS: tokens 40-47 differ</text>
+<text x="926.0" y="346" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">h4' never looked up</text>
+<text x="926.0" y="372" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">lookup stopped</text>
+<text x="1138.0" y="346" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle"></text>
+<text x="30" y="440" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">System prompt = tokens 0-39 (40 tokens). Block 3 mixes system tokens 32-39 with user tokens 40-47,</text>
+<text x="30" y="470" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">so only 2 full blocks = 32 tokens are reused. The first miss ends the lookup, because every later hash includes h3'.</text>
+<text x="30" y="530" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Physical KV blocks in GPU memory (block IDs are arbitrary, partial blocks not shown)</text>
+<rect x="30" y="555" width="192" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="126.0" y="590.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">#7 h1 ref 2</text>
+<rect x="235" y="555" width="192" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="331.0" y="590.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">#12 h2 ref 2</text>
+<rect x="440" y="555" width="192" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="3"/>
+<text x="536.0" y="590.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">#3 h3 (A) ref 1</text>
+<rect x="645" y="555" width="192" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="3"/>
+<text x="741.0" y="590.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">#9 h4 (A) ref 1</text>
+<rect x="850" y="555" width="192" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="3"/>
+<text x="946.0" y="590.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">#4 h3' (B) ref 1</text>
+<rect x="1055" y="555" width="192" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="3"/>
+<text x="1151.0" y="590.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">#5 h4' (B) ref 1</text>
+<text x="30" y="650" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Green: one physical copy shared by A and B (reference count 2). A block returns to the free queue at ref 0,</text>
+<text x="30" y="680" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">but it keeps its hash, so a later request can still hit it until the LRU queue evicts it.</text>
+<text x="30" y="730" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">H = SHA-256 over (parent hash, token IDs of the block, extra keys such as a LoRA name or a cache salt).</text></svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" width="1280" height="760" font-family="Helvetica, Arial, sans-serif">
+<defs>
+</defs>
+<rect x="0" y="0" width="1280" height="760" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">MCP specification revisions, 2024-11-05 to 2026-07-28</text>
+<line x1="70" y1="300" x2="1210" y2="300" stroke="#100D12" stroke-width="4"/>
+<line x1="90.0" y1="313" x2="136.0" y2="440" stroke="#100D12" stroke-width="2.5" stroke-dasharray="8 6"/>
+<circle cx="90.0" cy="300" r="13" fill="#100D12"/>
+<rect x="20" y="440" width="232" height="174" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="136.0" y="472" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">2024-11-05</text>
+<text x="34" y="504" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">first revision</text>
+<text x="34" y="534" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">stdio, HTTP+SSE</text>
+<text x="34" y="564" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">initialize handshake</text>
+<text x="34" y="594" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">no authorization</text>
+<line x1="336.1904761904762" y1="313" x2="388.0" y2="440" stroke="#100D12" stroke-width="2.5" stroke-dasharray="8 6"/>
+<circle cx="336.1904761904762" cy="300" r="13" fill="#100D12"/>
+<rect x="272" y="440" width="232" height="174" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="388.0" y="472" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">2025-03-26</text>
+<text x="286" y="504" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">OAuth 2.1 framework</text>
+<text x="286" y="534" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">Streamable HTTP</text>
+<text x="286" y="564" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">tool annotations</text>
+<text x="286" y="594" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">JSON-RPC batching</text>
+<line x1="482.85714285714283" y1="313" x2="640.0" y2="440" stroke="#100D12" stroke-width="2.5" stroke-dasharray="8 6"/>
+<circle cx="482.85714285714283" cy="300" r="13" fill="#100D12"/>
+<rect x="524" y="440" width="232" height="174" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="640.0" y="472" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">2025-06-18</text>
+<text x="538" y="504" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">batching removed</text>
+<text x="538" y="534" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">structured output</text>
+<text x="538" y="564" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">resource server</text>
+<text x="538" y="594" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">elicitation</text>
+<line x1="762.2222222222222" y1="313" x2="892.0" y2="440" stroke="#100D12" stroke-width="2.5" stroke-dasharray="8 6"/>
+<circle cx="762.2222222222222" cy="300" r="13" fill="#100D12"/>
+<rect x="776" y="440" width="232" height="174" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="892.0" y="472" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">2025-11-25</text>
+<text x="790" y="504" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">experimental tasks</text>
+<text x="790" y="534" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">URL elicitation</text>
+<text x="790" y="564" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">CIMD, icons</text>
+<text x="790" y="594" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">JSON Schema 2020-12</text>
+<line x1="1190.0" y1="313" x2="1144.0" y2="440" stroke="#6A4C93" stroke-width="2.5" stroke-dasharray="8 6"/>
+<circle cx="1190.0" cy="300" r="13" fill="#6A4C93"/>
+<rect x="1028" y="440" width="232" height="174" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1144.0" y="472" font-size="22" fill="#6A4C93" font-weight="bold" text-anchor="middle" font-style="normal">2026-07-28</text>
+<text x="1042" y="504" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">stateless core</text>
+<text x="1042" y="534" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">server/discover</text>
+<text x="1042" y="564" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">MRTR, extensions</text>
+<text x="1042" y="594" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">deprecations</text>
+<text x="213.0952380952381" y="340" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle" font-style="normal">141 days</text>
+<text x="409.5238095238095" y="340" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle" font-style="normal">84 days</text>
+<text x="622.5396825396825" y="340" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle" font-style="normal">160 days</text>
+<text x="976.1111111111111" y="340" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle" font-style="normal">245 days</text>
+<line x1="124.92063492063491" y1="244" x2="124.92063492063491" y2="296" stroke="#B8860B" stroke-width="3"/>
+<text x="124.92063492063491" y="236" font-size="19" fill="#B8860B" font-weight="normal" text-anchor="middle" font-style="normal">open-sourced</text>
+<line x1="626.031746031746" y1="244" x2="626.031746031746" y2="296" stroke="#B8860B" stroke-width="3"/>
+<text x="626.031746031746" y="236" font-size="19" fill="#B8860B" font-weight="normal" text-anchor="middle" font-style="normal">registry preview</text>
+<line x1="786.6666666666666" y1="194" x2="786.6666666666666" y2="296" stroke="#B8860B" stroke-width="3"/>
+<text x="786.6666666666666" y="186" font-size="19" fill="#B8860B" font-weight="normal" text-anchor="middle" font-style="normal">joins AAIF</text>
+<line x1="1071.2698412698414" y1="244" x2="1071.2698412698414" y2="296" stroke="#B8860B" stroke-width="3"/>
+<text x="1071.2698412698414" y="236" font-size="19" fill="#B8860B" font-weight="normal" text-anchor="middle" font-style="normal">release candidate</text>
+<text x="640" y="720" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle" font-style="normal">Gold: events, not revisions. Gaps in days are computed from the revision dates.</text>
+</svg>

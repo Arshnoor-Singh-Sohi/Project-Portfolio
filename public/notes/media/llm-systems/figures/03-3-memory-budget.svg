@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#100D12"/></marker></defs>
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+<text x="640" y="48" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">Where GPU memory goes: weights, other memory, KV cache</text>
+<text x="60" y="124" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">H100, Llama-3.1-8B (worked example, assumed values)</text>
+<text x="60" y="152" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">80 GiB exposed, gpu_memory_utilization 0.90 = 72 GiB, other memory assumed 4 GiB</text>
+<rect x="60" y="170" width="216.92000000000002" height="70" rx="2" fill="#100D12" fill-opacity="0.22" stroke="#100D12" stroke-width="2"/>
+<text x="168.46" y="200" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">weights</text>
+<text x="168.46" y="226" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">14.96 GiB</text>
+<rect x="276.92" y="170" width="58.0" height="70" rx="2" fill="#8A8A8A" fill-opacity="0.25" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="305.92" y="270" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">other</text>
+<text x="305.92" y="294" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">4 GiB</text>
+<rect x="334.92" y="170" width="769.08" height="70" rx="2" fill="#2D6A4F" fill-opacity="0.3" stroke="#2D6A4F" stroke-width="2"/>
+<text x="719.46" y="200" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">KV cache: 434,523 tokens = 53 requests of 8,192 tokens</text>
+<text x="719.46" y="226" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">53.04 GiB</text>
+<rect x="1104.0" y="170" width="116.0" height="70" rx="2" fill="#8A8A8A" fill-opacity="0.08" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="1162.0" y="270" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">reserve</text>
+<text x="1162.0" y="294" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">8 GiB</text>
+<text x="60" y="384" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">A100 40 GB, Meta-Llama-3-8B (real vLLM startup log)</text>
+<text x="60" y="412" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">39.50 GiB exposed × 0.90 = 35.55 GiB, activation peak 9.37 + non-torch 0.10 GiB</text>
+<rect x="60" y="430" width="216.92000000000002" height="70" rx="2" fill="#100D12" fill-opacity="0.22" stroke="#100D12" stroke-width="2"/>
+<text x="168.46" y="460" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">weights</text>
+<text x="168.46" y="486" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">14.96 GiB</text>
+<rect x="276.92" y="430" width="137.315" height="70" rx="2" fill="#8A8A8A" fill-opacity="0.25" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="345.5775" y="460" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">other</text>
+<text x="345.5775" y="486" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">9.47 GiB</text>
+<rect x="414.235" y="430" width="161.23999999999998" height="70" rx="2" fill="#2D6A4F" fill-opacity="0.3" stroke="#2D6A4F" stroke-width="2"/>
+<text x="494.855" y="460" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">KV cache</text>
+<text x="494.855" y="486" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">11.12 GiB</text>
+<rect x="575.475" y="430" width="57.275000000000006" height="70" rx="2" fill="#8A8A8A" fill-opacity="0.08" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="604.1125000000001" y="530" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">reserve</text>
+<text x="604.1125000000001" y="554" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">3.95 GiB</text>
+<text x="652.75" y="462" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" text-anchor="start" font-weight="bold">5,691 blocks × 16 = 91,056 tokens</text>
+<text x="652.75" y="490" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" text-anchor="start" font-weight="normal">= 11.12 requests of 8,192 tokens</text>
+<line x1="60" y1="620" x2="1220.0" y2="620" stroke="#100D12" stroke-width="2"/>
+<line x1="60.0" y1="612" x2="60.0" y2="628" stroke="#100D12" stroke-width="2"/>
+<text x="60.0" y="652" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">0</text>
+<line x1="205.0" y1="612" x2="205.0" y2="628" stroke="#100D12" stroke-width="2"/>
+<text x="205.0" y="652" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">10</text>
+<line x1="350.0" y1="612" x2="350.0" y2="628" stroke="#100D12" stroke-width="2"/>
+<text x="350.0" y="652" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">20</text>
+<line x1="495.0" y1="612" x2="495.0" y2="628" stroke="#100D12" stroke-width="2"/>
+<text x="495.0" y="652" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">30</text>
+<line x1="640.0" y1="612" x2="640.0" y2="628" stroke="#100D12" stroke-width="2"/>
+<text x="640.0" y="652" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">40</text>
+<line x1="785.0" y1="612" x2="785.0" y2="628" stroke="#100D12" stroke-width="2"/>
+<text x="785.0" y="652" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">50</text>
+<line x1="930.0" y1="612" x2="930.0" y2="628" stroke="#100D12" stroke-width="2"/>
+<text x="930.0" y="652" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">60</text>
+<line x1="1075.0" y1="612" x2="1075.0" y2="628" stroke="#100D12" stroke-width="2"/>
+<text x="1075.0" y="652" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">70</text>
+<line x1="1220.0" y1="612" x2="1220.0" y2="628" stroke="#100D12" stroke-width="2"/>
+<text x="1220.0" y="652" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">80</text>
+<text x="640.0" y="686" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">GiB (same scale for both bars)</text>
+</svg>

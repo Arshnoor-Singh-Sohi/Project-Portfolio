@@ -24,6 +24,7 @@ These notes follow the order of study.
 | [AI](/notes/ai) | [LangChain and LangGraph](/notes/ai/langchain-langgraph) |
 | [AI](/notes/ai) | [Conversation State and Chat History](/notes/ai/conversation-state) |
 | [AI](/notes/ai) | [Evaluating AI Systems](/notes/ai/evaluation) |
+| [AI](/notes/ai) | [LLM Systems Deep Dive](/notes/ai/llm-systems) |
 | [Papers](/notes/papers) | [Lost in the Middle (2023)](/notes/papers/long-context/2023-lost-in-the-middle) |
 | [Databases](/notes/databases) | [PostgreSQL](/notes/databases/postgres) |
 | [Platforms](/notes/platforms) | [Databricks Platform](/notes/platforms/databricks) |
@@ -33,6 +34,8 @@ These notes follow the order of study.
 ## Current study path
 
 The agent harness subjects share one ordered path of 16 lessons across four subjects. It starts with the raw message format and ends with the design of a chat history store. The list is on the [AI area page](/notes/ai).
+
+The [LLM Systems Deep Dive](/notes/ai/llm-systems) has its own 12-day interview plan in its [course plan](/notes/ai/llm-systems/course-plan).
 
 ## Papers
 

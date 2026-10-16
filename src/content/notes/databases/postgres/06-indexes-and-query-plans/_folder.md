@@ -103,7 +103,3 @@ VACUUM ANALYZE chats, messages, message_feedback;
 ```
 
 The script creates the indexes before it loads the rows. So the indexes grow by inserts, and they are larger than a fresh build ([L1, section 4.6](/notes/databases/postgres/06-indexes-and-query-plans/l1-b-tree-indexes)).
-
-## Media
-
-The five videos of this part (M03 to M07 in the [media queue](/notes/databases/postgres/00-progress/media-queue)) have their Claude Code prompts in the repository file `Claude outputs/postgres-indexes-manim-prompts.md`. To make them, paste one line into Claude Code: `Read "Claude outputs/postgres-indexes-manim-prompts.md" and follow its run rules.`

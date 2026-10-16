@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" width="1280" height="760"><defs><marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#100D12"/></marker><marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1E6091"/></marker><marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#B8860B"/></marker><marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6A4C93"/></marker><marker id="arr2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2D6A4F"/></marker><marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#C81D25"/></marker><marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A8A"/></marker></defs><rect x="0" y="0" width="1280" height="760" fill="#FFFFFF"/>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Speculative decoding: draft 4 tokens, verify them in one target pass</text>
+<text x="40" y="100" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Step 1. The draft model proposes γ = 4 tokens (4 cheap forward passes)</text>
+<rect x="40" y="120" width="92" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="86.0" y="152.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">the</text>
+<rect x="140" y="120" width="92" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="186.0" y="152.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">cat</text>
+<rect x="240" y="120" width="92" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="286.0" y="152.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">sat</text>
+<rect x="340" y="120" width="92" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="386.0" y="152.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">on</text>
+<rect x="440" y="120" width="92" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="2"/>
+<text x="486.0" y="152.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">the</text>
+<text x="544" y="152" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#100D12" font-weight="normal" text-anchor="start">→</text>
+<rect x="576" y="120" width="120" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#1E6091" stroke-width="3"/>
+<text x="636.0" y="152.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="middle">d1: mat</text>
+<rect x="706" y="120" width="120" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#1E6091" stroke-width="3"/>
+<text x="766.0" y="152.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="middle">d2: .</text>
+<rect x="836" y="120" width="120" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#1E6091" stroke-width="3"/>
+<text x="896.0" y="152.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="middle">d3: It</text>
+<rect x="966" y="120" width="120" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#1E6091" stroke-width="3"/>
+<text x="1026.0" y="152.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="middle">d4: slept</text>
+<text x="1106" y="152" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="start">from q</text>
+<text x="40" y="230" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Step 2. The target model runs ONE forward pass on prefix + 4 drafts → 5 distributions</text>
+<rect x="40" y="250" width="1200" height="56" rx="8" fill="none" fill-opacity="1.0" stroke="#B8860B" stroke-width="3"/>
+<text x="640.0" y="285.35" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="middle">target forward pass: reads all weights once, scores 5 positions in parallel → p1, p2, p3, p4, p5</text>
+<text x="40" y="370" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Step 3. Test the drafts left to right: accept dᵢ if r &lt; p(dᵢ) / q(dᵢ), with r uniform in [0, 1)</text>
+<rect x="40" y="392" width="285" height="104" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="182.5" y="427.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">d1 mat</text>
+<text x="182.5" y="451.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">p/q = 0.40/0.20 = 2</text>
+<text x="182.5" y="475.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">accepted (always)</text>
+<rect x="345" y="392" width="285" height="104" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="487.5" y="427.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">d2 .</text>
+<text x="487.5" y="451.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">p/q = 0.90, r = 0.35</text>
+<text x="487.5" y="475.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">accepted</text>
+<rect x="650" y="392" width="285" height="104" rx="8" fill="none" fill-opacity="1.0" stroke="#C81D25" stroke-width="3"/>
+<text x="792.5" y="427.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="middle">d3 It</text>
+<text x="792.5" y="451.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="middle">p/q = 0.30, r = 0.62</text>
+<text x="792.5" y="475.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="middle">rejected</text>
+<rect x="955" y="392" width="285" height="104" rx="8" fill="none" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="1097.5" y="427.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">d4 slept</text>
+<text x="1097.5" y="451.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">never tested</text>
+<text x="1097.5" y="475.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">discarded</text>
+<text x="40" y="562" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Step 4. Keep the accepted drafts, then add ONE token sampled by the target</text>
+<rect x="40" y="584" width="110" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="95.0" y="616.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">mat</text>
+<rect x="160" y="584" width="110" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="215.0" y="616.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">.</text>
+<rect x="280" y="584" width="150" height="50" rx="8" fill="none" fill-opacity="1.0" stroke="#6A4C93" stroke-width="3"/>
+<text x="355.0" y="616.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="middle">The</text>
+<text x="450" y="606" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="start">← correction token from norm(max(0, p3 − q3))</text>
+<text x="450" y="632" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="start">(if all 4 drafts pass: a bonus token from p5 instead)</text>
+<text x="40" y="690" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">Result of this step: 3 new tokens for 1 target pass. Best case: γ + 1 = 5 tokens. Worst case: 1 token.</text>
+<text x="40" y="724" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start" font-style="italic">The p/q and r values of d2 and d3 are illustrative.</text></svg>

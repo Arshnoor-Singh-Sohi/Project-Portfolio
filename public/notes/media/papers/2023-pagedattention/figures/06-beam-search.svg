@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<defs><marker id="ah100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ah1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ah6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ah2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ah8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="0" y="0" width="1280" height="720" fill="white"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">Beam search with k = 4: blocks shared along the beam tree</text>
+<text x="640" y="82" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" fill="#100D12">Example of §4.4 (Figure 9). Every block is full. Numbers in boxes are physical block numbers.</text>
+<rect x="15" y="105" width="615" height="520" rx="10" fill="white" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="325" y="140" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" fill="#100D12">Before the step</text>
+<rect x="35" y="400.0" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="70" y="433.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">0</text>
+<text x="70" y="474.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 4</text>
+<rect x="163" y="290.0" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="198" y="323.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">1</text>
+<text x="198" y="364.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 3</text>
+<rect x="291" y="290.0" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="326" y="323.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">3</text>
+<text x="326" y="364.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 3</text>
+<rect x="419" y="190" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="454" y="223" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">5</text>
+<text x="454" y="264" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 1</text>
+<rect x="419" y="290" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="454" y="323" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">6</text>
+<text x="454" y="364" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 1</text>
+<rect x="419" y="390" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="454" y="423" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">7</text>
+<text x="454" y="464" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 1</text>
+<rect x="163" y="510" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="198" y="543" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">2</text>
+<text x="198" y="584" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 1</text>
+<rect x="291" y="510" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="326" y="543" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">4</text>
+<text x="326" y="584" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 1</text>
+<rect x="419" y="510" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="454" y="543" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">8</text>
+<text x="454" y="584" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 1</text>
+<path d="M 105 425.0 C 135 425.0, 133 315.0, 163 315.0" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 105 425.0 C 135 425.0, 133 535, 163 535" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 233 315.0 C 263 315.0, 261 315.0, 291 315.0" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 361 315.0 C 391 315.0, 389 215, 419 215" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 361 315.0 C 391 315.0, 389 315, 419 315" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 361 315.0 C 391 315.0, 389 415, 419 415" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 233 535 C 263 535, 261 535, 291 535" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 361 535 C 391 535, 389 535, 419 535" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="509" y="223" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#1E6091">candidate 0</text>
+<text x="509" y="323" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#1E6091">candidate 1</text>
+<text x="509" y="423" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#1E6091">candidate 2</text>
+<text x="509" y="543" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#1E6091">candidate 3</text>
+<rect x="655" y="105" width="615" height="520" rx="10" fill="white" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="965" y="140" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" fill="#100D12">After the step</text>
+<rect x="665" y="325.0" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="700" y="358.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">0</text>
+<text x="700" y="399.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 4</text>
+<rect x="773" y="325.0" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="808" y="358.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">1</text>
+<text x="808" y="399.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 4</text>
+<rect x="881" y="325.0" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="916" y="358.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">3</text>
+<text x="916" y="399.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 4</text>
+<rect x="989" y="225.0" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1024" y="258.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">6</text>
+<text x="1024" y="299.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 2</text>
+<rect x="989" y="425.0" width="70" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1024" y="458.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">7</text>
+<text x="1024" y="499.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 2</text>
+<rect x="1097" y="180" width="70" height="50" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="1132" y="213" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">9</text>
+<text x="1132" y="254" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 1</text>
+<rect x="1097" y="270" width="70" height="50" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="1132" y="303" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">10</text>
+<text x="1132" y="344" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 1</text>
+<rect x="1097" y="380" width="70" height="50" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="1132" y="413" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">11</text>
+<text x="1132" y="454" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 1</text>
+<rect x="1097" y="470" width="70" height="50" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="1132" y="503" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">12</text>
+<text x="1132" y="544" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ref 1</text>
+<path d="M 735 350.0 C 765 350.0, 743 350.0, 773 350.0" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 843 350.0 C 873 350.0, 851 350.0, 881 350.0" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 951 350.0 C 981 350.0, 959 250.0, 989 250.0" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 951 350.0 C 981 350.0, 959 450.0, 989 450.0" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 1059 250.0 C 1089 250.0, 1067 205, 1097 205" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 1059 250.0 C 1089 250.0, 1067 295, 1097 295" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 1059 450.0 C 1089 450.0, 1067 405, 1097 405" fill="none" stroke="#100D12" stroke-width="2"/>
+<path d="M 1059 450.0 C 1089 450.0, 1067 495, 1097 495" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="1177" y="213" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#1E6091">new 0</text>
+<text x="1177" y="303" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#1E6091">new 1</text>
+<text x="1177" y="413" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#1E6091">new 2</text>
+<text x="1177" y="503" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#1E6091">new 3</text>
+<text x="675" y="585" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#C81D25">Freed (ref reached 0):</text>
+<rect x="890" y="556" width="52" height="40" rx="4" fill="#F8DDDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="916" y="583" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="middle" fill="#C81D25">2</text>
+<rect x="952" y="556" width="52" height="40" rx="4" fill="#F8DDDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="978" y="583" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="middle" fill="#C81D25">4</text>
+<rect x="1014" y="556" width="52" height="40" rx="4" fill="#F8DDDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1040" y="583" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="middle" fill="#C81D25">5</text>
+<rect x="1076" y="556" width="52" height="40" rx="4" fill="#F8DDDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1102" y="583" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="middle" fill="#C81D25">8</text>
+<text x="640" y="655" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Candidates 0 and 3 left the top 4. The new top 4 descend from old candidates 1 and 2.</text>
+<text x="640" y="683" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Physical blocks in use: 9 before (for 16 logical blocks) and 9 after (for 20 logical blocks).</text>
+<text x="640" y="711" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Blue: one new block per new candidate (blocks 9 to 12). Which candidate gets which number is not stated.</text>
+</svg>

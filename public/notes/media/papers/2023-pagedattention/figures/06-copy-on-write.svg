@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 700" width="1280" height="700">
+<defs><marker id="ah100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ah1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ah6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ah2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ah8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="0" y="0" width="1280" height="700" fill="white"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">Copy-on-write for parallel sampling (two samples, B = 4)</text>
+<text x="640" y="82" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" fill="#100D12">Prompt "Four score and seven years ago our" (7 tokens). Example of §4.4 (Figure 8).</text>
+<rect x="17" y="108" width="410" height="470" rx="10" fill="white" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="222" y="140" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">1. After the prompt: one copy</text>
+<rect x="35" y="158" width="180" height="46" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="125" y="189" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">A1 table: [7, 1]</text>
+<rect x="230" y="158" width="180" height="46" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="320" y="189" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">A2 table: [7, 1]</text>
+<text x="47" y="270" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">1</text>
+<text x="47" y="300" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#C81D25">ref 2</text>
+<rect x="73" y="240" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="112" y="283" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">years</text>
+<rect x="153" y="240" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="192" y="283" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ago</text>
+<rect x="233" y="240" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="272" y="283" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">our</text>
+<rect x="313" y="240" width="78" height="72" rx="3" fill="white" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="352" y="283" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#8A8A8A">free</text>
+<text x="47" y="392" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="normal" text-anchor="middle" fill="#8A8A8A">3</text>
+<rect x="73" y="350" width="78" height="72" rx="3" fill="white" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="153" y="350" width="78" height="72" rx="3" fill="white" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="233" y="350" width="78" height="72" rx="3" fill="white" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="313" y="350" width="78" height="72" rx="3" fill="white" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="233" y="393" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#8A8A8A">free block</text>
+<text x="47" y="490" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">7</text>
+<text x="47" y="520" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#C81D25">ref 2</text>
+<rect x="73" y="460" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="112" y="503" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Four</text>
+<rect x="153" y="460" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="192" y="503" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">score</text>
+<rect x="233" y="460" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="272" y="503" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">and</text>
+<rect x="313" y="460" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="352" y="503" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">seven</text>
+<rect x="437" y="108" width="410" height="470" rx="10" fill="white" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="642" y="140" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">2. A1 writes "fathers"</text>
+<rect x="455" y="158" width="180" height="46" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="545" y="189" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">A1 table: [7, 3]</text>
+<rect x="650" y="158" width="180" height="46" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="740" y="189" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">A2 table: [7, 1]</text>
+<text x="467" y="270" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">1</text>
+<text x="467" y="300" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#2D6A4F">ref 1</text>
+<rect x="493" y="240" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="532" y="283" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">years</text>
+<rect x="573" y="240" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="612" y="283" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ago</text>
+<rect x="653" y="240" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="692" y="283" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">our</text>
+<rect x="733" y="240" width="78" height="72" rx="3" fill="white" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="772" y="283" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#8A8A8A">free</text>
+<text x="467" y="380" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">3</text>
+<text x="467" y="410" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#2D6A4F">ref 1</text>
+<rect x="493" y="350" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="532" y="393" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">years</text>
+<rect x="573" y="350" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="612" y="393" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ago</text>
+<rect x="653" y="350" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="692" y="393" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">our</text>
+<rect x="733" y="350" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#1E6091" stroke-width="4"/>
+<text x="772" y="393" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">fathers</text>
+<text x="467" y="490" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">7</text>
+<text x="467" y="520" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#C81D25">ref 2</text>
+<rect x="493" y="460" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="532" y="503" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Four</text>
+<rect x="573" y="460" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="612" y="503" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">score</text>
+<rect x="653" y="460" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="692" y="503" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">and</text>
+<rect x="733" y="460" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="772" y="503" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">seven</text>
+<path d="M 813 290 C 845 300, 845 372, 817 372" fill="none" stroke="#C81D25" stroke-width="3" marker-end="url(#ahC81D25)"/>
+<text x="770" y="338" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#C81D25">copy</text>
+<rect x="857" y="108" width="410" height="470" rx="10" fill="white" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="1062" y="140" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">3. A2 writes "mothers"</text>
+<rect x="875" y="158" width="180" height="46" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="965" y="189" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">A1 table: [7, 3]</text>
+<rect x="1070" y="158" width="180" height="46" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="1160" y="189" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">A2 table: [7, 1]</text>
+<text x="887" y="270" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">1</text>
+<text x="887" y="300" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#2D6A4F">ref 1</text>
+<rect x="913" y="240" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="952" y="283" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">years</text>
+<rect x="993" y="240" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1032" y="283" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ago</text>
+<rect x="1073" y="240" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1112" y="283" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">our</text>
+<rect x="1153" y="240" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#1E6091" stroke-width="4"/>
+<text x="1192" y="283" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">mothers</text>
+<text x="887" y="380" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">3</text>
+<text x="887" y="410" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#2D6A4F">ref 1</text>
+<rect x="913" y="350" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="952" y="393" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">years</text>
+<rect x="993" y="350" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1032" y="393" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">ago</text>
+<rect x="1073" y="350" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1112" y="393" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">our</text>
+<rect x="1153" y="350" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1192" y="393" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">fathers</text>
+<text x="887" y="490" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">7</text>
+<text x="887" y="520" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#C81D25">ref 2</text>
+<rect x="913" y="460" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="952" y="503" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Four</text>
+<rect x="993" y="460" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1032" y="503" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">score</text>
+<rect x="1073" y="460" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1112" y="503" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">and</text>
+<rect x="1153" y="460" width="78" height="72" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1192" y="503" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">seven</text>
+<text x="640" y="615" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">ref = how many logical blocks map to the physical block.</text>
+<text x="640" y="645" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">Step 2: block 1 has ref 2, so vLLM copies it to a new block 3 first. Step 3: ref 1, so A2 writes in place.</text>
+<text x="640" y="668" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">Thick blue outline: the slot written in that step. Red arrow: the one block copied.</text>
+</svg>

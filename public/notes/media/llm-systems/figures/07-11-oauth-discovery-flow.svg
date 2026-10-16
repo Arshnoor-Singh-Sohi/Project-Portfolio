@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1150" width="1280" height="1150" font-family="Helvetica, Arial, sans-serif">
+<defs>
+<marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1E6091"/></marker>
+<marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6A4C93"/></marker>
+<marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#B8860B"/></marker>
+<marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#100D12"/></marker>
+</defs>
+<rect x="0" y="0" width="1280" height="1150" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">MCP authorization: discovery, PKCE and the token (2026-07-28)</text>
+<rect x="20.0" y="80" width="260" height="56" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="150.0" y="112" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="middle" font-style="normal">MCP client</text>
+<line x1="150" y1="136" x2="150" y2="1130" stroke="#1E6091" stroke-width="2.5" stroke-dasharray="8 6"/>
+<rect x="290.0" y="80" width="260" height="56" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="420.0" y="112" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">Browser and user</text>
+<line x1="420" y1="136" x2="420" y2="1130" stroke="#100D12" stroke-width="2.5" stroke-dasharray="8 6"/>
+<rect x="610.0" y="80" width="300" height="56" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="760.0" y="112" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle" font-style="normal">MCP server (resource server)</text>
+<line x1="760" y1="136" x2="760" y2="1130" stroke="#6A4C93" stroke-width="2.5" stroke-dasharray="8 6"/>
+<rect x="970.0" y="80" width="260" height="56" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#B8860B" stroke-width="2.5"/>
+<text x="1100.0" y="112" font-size="20" fill="#B8860B" font-weight="bold" text-anchor="middle" font-style="normal">Authorization server</text>
+<line x1="1100" y1="136" x2="1100" y2="1130" stroke="#B8860B" stroke-width="2.5" stroke-dasharray="8 6"/>
+<line x1="150" y1="190" x2="756" y2="190" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<circle cx="170" cy="166" r="17" fill="#1E6091"/>
+<text x="170" y="173" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">1</text>
+<rect x="190" y="155" width="199.33" height="24.7" fill="#FFFFFF"/>
+<text x="194" y="174" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">POST /mcp, no token</text>
+<line x1="760" y1="250" x2="154" y2="250" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#arr6A4C93)"/>
+<circle cx="170" cy="226" r="17" fill="#6A4C93"/>
+<text x="170" y="233" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">2</text>
+<rect x="190" y="215" width="491.36" height="24.7" fill="#FFFFFF"/>
+<text x="194" y="234" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">401 + WWW-Authenticate: resource_metadata, scope</text>
+<line x1="150" y1="320" x2="756" y2="320" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<circle cx="170" cy="296" r="17" fill="#1E6091"/>
+<text x="170" y="303" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">3</text>
+<rect x="190" y="285" width="461.15000000000003" height="24.7" fill="#FFFFFF"/>
+<text x="194" y="304" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">GET /.well-known/oauth-protected-resource/mcp</text>
+<line x1="760" y1="380" x2="154" y2="380" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#arr6A4C93)"/>
+<circle cx="170" cy="356" r="17" fill="#6A4C93"/>
+<text x="170" y="363" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">4</text>
+<rect x="190" y="345" width="430.94" height="24.7" fill="#FFFFFF"/>
+<text x="194" y="364" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">resource, authorization_servers (RFC 9728)</text>
+<line x1="150" y1="450" x2="1096" y2="450" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<circle cx="170" cy="426" r="17" fill="#1E6091"/>
+<text x="170" y="433" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">5</text>
+<rect x="190" y="415" width="551.78" height="24.7" fill="#FFFFFF"/>
+<text x="194" y="434" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">GET /.well-known/oauth-authorization-server (RFC 8414)</text>
+<line x1="1100" y1="510" x2="154" y2="510" stroke="#B8860B" stroke-width="2.5" marker-end="url(#arrB8860B)"/>
+<circle cx="170" cy="486" r="17" fill="#B8860B"/>
+<text x="170" y="493" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">6</text>
+<rect x="190" y="475" width="521.57" height="24.7" fill="#FFFFFF"/>
+<text x="194" y="494" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">issuer, endpoints, code_challenge_methods_supported</text>
+<rect x="30" y="540" width="360" height="74" rx="10" fill="#EEF4F8" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="44" y="570" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start" font-style="normal">make code_verifier + challenge,</text>
+<text x="44" y="594" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start" font-style="normal">state, record the issuer</text>
+<line x1="150" y1="660" x2="416" y2="660" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<circle cx="170" cy="636" r="17" fill="#1E6091"/>
+<text x="170" y="643" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">7</text>
+<rect x="190" y="625" width="199.33" height="24.7" fill="#FFFFFF"/>
+<text x="194" y="644" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">open /authorize URL</text>
+<line x1="420" y1="720" x2="1096" y2="720" stroke="#100D12" stroke-width="2.5" marker-end="url(#arr100D12)"/>
+<circle cx="440" cy="696" r="17" fill="#100D12"/>
+<text x="440" y="703" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">8</text>
+<rect x="460" y="685" width="561.85" height="24.7" fill="#FFFFFF"/>
+<text x="464" y="704" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">client_id, code_challenge, S256, resource, scope, state</text>
+<line x1="1100" y1="780" x2="424" y2="780" stroke="#B8860B" stroke-width="2.5" marker-end="url(#arrB8860B)"/>
+<circle cx="440" cy="756" r="17" fill="#B8860B"/>
+<text x="440" y="763" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">9</text>
+<rect x="460" y="745" width="461.15000000000003" height="24.7" fill="#FFFFFF"/>
+<text x="464" y="764" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">user approves: redirect with code, state, iss</text>
+<line x1="420" y1="840" x2="154" y2="840" stroke="#100D12" stroke-width="2.5" marker-end="url(#arr100D12)"/>
+<circle cx="170" cy="816" r="17" fill="#100D12"/>
+<text x="170" y="823" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">10</text>
+<rect x="190" y="805" width="370.52000000000004" height="24.7" fill="#FFFFFF"/>
+<text x="194" y="824" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">code, state, iss to the redirect URI</text>
+<rect x="30" y="864" width="360" height="46" rx="10" fill="#EEF4F8" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="44" y="894" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start" font-style="normal">check state and iss (RFC 9207)</text>
+<line x1="150" y1="950" x2="1096" y2="950" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<circle cx="170" cy="926" r="17" fill="#1E6091"/>
+<text x="170" y="933" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">11</text>
+<rect x="190" y="915" width="430.94" height="24.7" fill="#FFFFFF"/>
+<text x="194" y="934" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">POST /token: code, code_verifier, resource</text>
+<line x1="1100" y1="1000" x2="154" y2="1000" stroke="#B8860B" stroke-width="2.5" marker-end="url(#arrB8860B)"/>
+<circle cx="170" cy="976" r="17" fill="#B8860B"/>
+<text x="170" y="983" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">12</text>
+<rect x="190" y="965" width="420.87" height="24.7" fill="#FFFFFF"/>
+<text x="194" y="984" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">access_token (audience = this MCP server)</text>
+<line x1="150" y1="1070" x2="756" y2="1070" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<circle cx="170" cy="1046" r="17" fill="#1E6091"/>
+<text x="170" y="1053" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">13</text>
+<rect x="190" y="1035" width="420.87" height="24.7" fill="#FFFFFF"/>
+<text x="194" y="1054" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">POST /mcp + Authorization: Bearer &lt;token&gt;</text>
+<line x1="760" y1="1120" x2="154" y2="1120" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#arr6A4C93)"/>
+<circle cx="170" cy="1096" r="17" fill="#6A4C93"/>
+<text x="170" y="1103" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle" font-style="normal">14</text>
+<rect x="190" y="1085" width="430.94" height="24.7" fill="#FFFFFF"/>
+<text x="194" y="1104" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">200 OK after the audience and scope checks</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800"><defs><marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#100D12"/></marker><marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1E6091"/></marker><marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#B8860B"/></marker><marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6A4C93"/></marker><marker id="arr2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2D6A4F"/></marker><marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#C81D25"/></marker><marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A8A"/></marker></defs><rect x="0" y="0" width="1280" height="800" fill="#FFFFFF"/>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">vLLM V1 processes for vllm serve with TP = 4 (6 processes)</text>
+<rect x="40" y="90" width="230" height="90" rx="8" fill="none" fill-opacity="1.0" stroke="#1E6091" stroke-width="3"/>
+<text x="155.0" y="129.75" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#1E6091" font-weight="normal" text-anchor="middle">clients</text>
+<text x="155.0" y="154.95" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#1E6091" font-weight="normal" text-anchor="middle">HTTP + SSE</text>
+<line x1="270" y1="135" x2="340" y2="135" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="340" y="75" width="900" height="150" rx="12" fill="none" fill-opacity="1.0" stroke="#6A4C93" stroke-width="3"/>
+<text x="360" y="108" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#6A4C93" font-weight="bold" text-anchor="start">API server process (port 8000 by default)</text>
+<text x="360" y="142" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">OpenAI-compatible routes: /v1/chat/completions, /v1/completions, /v1/models, ...</text>
+<text x="360" y="172" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">also /v1/messages, /health, /metrics. Tokenization, multimodal input,</text>
+<text x="360" y="202" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">detokenization and streaming of output tokens.</text>
+<line x1="790" y1="225" x2="790" y2="290" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<line x1="830" y1="290" x2="830" y2="225" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<text x="850" y="265" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">ZMQ sockets: requests down, outputs up</text>
+<rect x="340" y="290" width="900" height="170" rx="12" fill="none" fill-opacity="1.0" stroke="#B8860B" stroke-width="3"/>
+<text x="360" y="323" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#B8860B" font-weight="bold" text-anchor="start">Engine core process (one per data-parallel rank)</text>
+<text x="360" y="357" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Scheduler loop: token budget per step, continuous batching, chunked prefill,</text>
+<text x="360" y="387" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">preemption, speculative tokens.</text>
+<rect x="360" y="400" width="860" height="46" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="790.0" y="430.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">KV cache manager: block pool, prefix cache (hash → block), free queue</text>
+<line x1="790" y1="460" x2="790" y2="520" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<text x="810" y="497" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">one step = one forward pass on all GPUs</text>
+<rect x="40" y="520" width="285" height="200" rx="12" fill="none" fill-opacity="1.0" stroke="#B8860B" stroke-width="3"/>
+<text x="56" y="553" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#B8860B" font-weight="bold" text-anchor="start">GPU worker 0</text>
+<text x="56" y="587" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">model runner, kernels,</text>
+<text x="56" y="615" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">CUDA graphs</text>
+<rect x="56" y="635" width="253" height="66" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="182.5" y="663.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">weights shard 0</text>
+<text x="182.5" y="687.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">KV cache shard 0</text>
+<rect x="345" y="520" width="285" height="200" rx="12" fill="none" fill-opacity="1.0" stroke="#B8860B" stroke-width="3"/>
+<text x="361" y="553" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#B8860B" font-weight="bold" text-anchor="start">GPU worker 1</text>
+<text x="361" y="587" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">model runner, kernels,</text>
+<text x="361" y="615" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">CUDA graphs</text>
+<rect x="361" y="635" width="253" height="66" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="487.5" y="663.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">weights shard 1</text>
+<text x="487.5" y="687.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">KV cache shard 1</text>
+<rect x="650" y="520" width="285" height="200" rx="12" fill="none" fill-opacity="1.0" stroke="#B8860B" stroke-width="3"/>
+<text x="666" y="553" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#B8860B" font-weight="bold" text-anchor="start">GPU worker 2</text>
+<text x="666" y="587" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">model runner, kernels,</text>
+<text x="666" y="615" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">CUDA graphs</text>
+<rect x="666" y="635" width="253" height="66" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="792.5" y="663.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">weights shard 2</text>
+<text x="792.5" y="687.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">KV cache shard 2</text>
+<rect x="955" y="520" width="285" height="200" rx="12" fill="none" fill-opacity="1.0" stroke="#B8860B" stroke-width="3"/>
+<text x="971" y="553" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#B8860B" font-weight="bold" text-anchor="start">GPU worker 3</text>
+<text x="971" y="587" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">model runner, kernels,</text>
+<text x="971" y="615" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">CUDA graphs</text>
+<rect x="971" y="635" width="253" height="66" rx="8" fill="none" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="3"/>
+<text x="1097.5" y="663.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">weights shard 3</text>
+<text x="1097.5" y="687.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">KV cache shard 3</text>
+<text x="40" y="760" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Process count = A + DP + N (+1 coordinator if DP &gt; 1), with A API servers and N = DP × PP × TP workers.</text>
+<text x="40" y="790" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Here: 1 API server + 1 engine core + 4 workers = 6 processes (vLLM architecture overview).</text></svg>

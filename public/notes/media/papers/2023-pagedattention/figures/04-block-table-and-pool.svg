@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" width="1280" height="760" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1280" height="760" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker></defs>
+<text x="640.0" y="44" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">A block table maps logical blocks to scattered physical blocks</text>
+<text x="60" y="100" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">1. The request's logical view</text>
+<rect x="60" y="120" width="96" height="56" rx="6" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="108" y="156" font-size="21" fill="#1E6091" font-weight="bold" text-anchor="middle">the</text>
+<text x="108" y="212" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">t = 0</text>
+<rect x="160" y="120" width="96" height="56" rx="6" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="208" y="156" font-size="21" fill="#1E6091" font-weight="bold" text-anchor="middle">cat</text>
+<text x="208" y="212" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">t = 1</text>
+<rect x="260" y="120" width="96" height="56" rx="6" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="308" y="156" font-size="21" fill="#1E6091" font-weight="bold" text-anchor="middle">sat</text>
+<text x="308" y="212" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">t = 2</text>
+<rect x="360" y="120" width="96" height="56" rx="6" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="408" y="156" font-size="21" fill="#1E6091" font-weight="bold" text-anchor="middle">down</text>
+<text x="408" y="212" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">t = 3</text>
+<rect x="56" y="112" width="200" height="72" rx="6" fill="none" stroke="#100D12" stroke-width="2" stroke-dasharray="8,6"/>
+<rect x="256" y="112" width="200" height="72" rx="6" fill="none" stroke="#100D12" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="156" y="246" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">logical block 0</text>
+<text x="356" y="246" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">logical block 1</text>
+<text x="60" y="300" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">2. Block table</text>
+<rect x="60" y="320" width="400" height="44" rx="0" fill="#E6E6E6" stroke="#100D12" stroke-width="2"/>
+<text x="140" y="350" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">logical</text>
+<text x="270" y="350" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">physical</text>
+<text x="395" y="350" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">filled</text>
+<rect x="60" y="364" width="400" height="48" rx="0" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="140" y="396" font-size="21" fill="#100D12" font-weight="normal" text-anchor="middle">0</text>
+<text x="270" y="396" font-size="21" fill="#2D6A4F" font-weight="bold" text-anchor="middle">4</text>
+<text x="395" y="396" font-size="21" fill="#100D12" font-weight="normal" text-anchor="middle">2</text>
+<rect x="60" y="412" width="400" height="48" rx="0" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="140" y="444" font-size="21" fill="#100D12" font-weight="normal" text-anchor="middle">1</text>
+<text x="270" y="444" font-size="21" fill="#2D6A4F" font-weight="bold" text-anchor="middle">1</text>
+<text x="395" y="444" font-size="21" fill="#100D12" font-weight="normal" text-anchor="middle">2</text>
+<text x="60" y="500" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">position t: logical block = t // 2,</text>
+<text x="60" y="528" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">offset = t % 2</text>
+<text x="60" y="572" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">“down”: t = 3, logical 1, offset 1,</text>
+<text x="60" y="600" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">physical block 1, slot 1</text>
+<text x="760" y="100" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">3. Physical pool of one layer</text>
+<text x="1180" y="170" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">block 0</text>
+<rect x="860" y="124" width="146" height="76" rx="4" fill="#E6E6E6" stroke="#100D12" stroke-width="2"/>
+<text x="933" y="170" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">other</text>
+<rect x="1010" y="124" width="146" height="76" rx="4" fill="#E6E6E6" stroke="#100D12" stroke-width="2"/>
+<text x="1083" y="170" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">other</text>
+<text x="1180" y="262" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">block 1</text>
+<rect x="860" y="216" width="146" height="76" rx="4" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="3"/>
+<text x="933" y="250" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="middle">sat</text>
+<text x="933" y="276" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">k, v</text>
+<rect x="1010" y="216" width="146" height="76" rx="4" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="3"/>
+<text x="1083" y="250" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="middle">down</text>
+<text x="1083" y="276" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">k, v</text>
+<text x="1180" y="354" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">block 2</text>
+<rect x="860" y="308" width="146" height="76" rx="4" fill="#E6E6E6" stroke="#100D12" stroke-width="2"/>
+<text x="933" y="354" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">other</text>
+<rect x="1010" y="308" width="146" height="76" rx="4" fill="#E6E6E6" stroke="#100D12" stroke-width="2"/>
+<text x="1083" y="354" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">other</text>
+<text x="1180" y="446" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">block 3</text>
+<rect x="860" y="400" width="146" height="76" rx="4" fill="#ffffff" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="933" y="446" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">free</text>
+<rect x="1010" y="400" width="146" height="76" rx="4" fill="#ffffff" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="1083" y="446" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">free</text>
+<text x="1180" y="538" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">block 4</text>
+<rect x="860" y="492" width="146" height="76" rx="4" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="3"/>
+<text x="933" y="526" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="middle">the</text>
+<text x="933" y="552" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">k, v</text>
+<rect x="1010" y="492" width="146" height="76" rx="4" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="3"/>
+<text x="1083" y="526" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="middle">cat</text>
+<text x="1083" y="552" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">k, v</text>
+<text x="1180" y="630" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">block 5</text>
+<rect x="860" y="584" width="146" height="76" rx="4" fill="#ffffff" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="933" y="630" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">free</text>
+<rect x="1010" y="584" width="146" height="76" rx="4" fill="#ffffff" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="1083" y="630" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">free</text>
+<path d="M460,388 C620,388 700,530 854,530" stroke="#2D6A4F" stroke-width="3" fill="none" marker-end="url(#ahg)"/>
+<path d="M460,436 C620,436 700,254 854,254" stroke="#2D6A4F" stroke-width="3" fill="none" marker-end="url(#ahg)"/>
+<text x="60" y="720" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">The kernel reads physical block 4, then physical block 1. Each block is contiguous inside.</text>
+</svg>

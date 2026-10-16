@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" width="1280" height="780" font-family="Helvetica, Arial, sans-serif">
+<defs>
+<marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1E6091"/></marker>
+<marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#100D12"/></marker>
+</defs>
+<rect x="0" y="0" width="1280" height="780" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">Two replicas behind a round-robin balancer (measured)</text>
+<rect x="40" y="300" width="220" height="110" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="150.0" y="332" font-size="22" fill="#1E6091" font-weight="bold" text-anchor="middle" font-style="normal">MCP client</text>
+<text x="150.0" y="359" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">Python SDK 2.3.0</text>
+<rect x="420" y="300" width="240" height="110" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="540.0" y="332" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">Load balancer</text>
+<text x="540.0" y="359" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">round robin,</text>
+<text x="540.0" y="386" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">no sticky sessions</text>
+<rect x="900" y="140" width="300" height="110" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1050.0" y="172" font-size="22" fill="#6A4C93" font-weight="bold" text-anchor="middle" font-style="normal">Replica A :8801</text>
+<text x="1050.0" y="199" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">same server code</text>
+<rect x="900" y="460" width="300" height="110" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1050.0" y="492" font-size="22" fill="#6A4C93" font-weight="bold" text-anchor="middle" font-style="normal">Replica B :8802</text>
+<text x="1050.0" y="519" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">same server code</text>
+<line x1="260" y1="355" x2="416" y2="355" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<line x1="660" y1="340" x2="896" y2="200" stroke="#100D12" stroke-width="2.5" marker-end="url(#arr100D12)"/>
+<line x1="660" y1="370" x2="896" y2="510" stroke="#100D12" stroke-width="2.5" marker-end="url(#arr100D12)"/>
+<rect x="40" y="600" width="580" height="150" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="56" y="634" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start" font-style="normal">2026-07-28 (modern): every request</text>
+<text x="56" y="664" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">carries _meta, so A or B can answer it.</text>
+<text x="56" y="688" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">Result: call 1, 2, 3 all succeed.</text>
+<rect x="660" y="600" width="580" height="150" rx="10" fill="#FBEEEF" fill-opacity="1.0" stroke="#C81D25" stroke-width="2.5"/>
+<text x="676" y="634" font-size="20" fill="#C81D25" font-weight="bold" text-anchor="start" font-style="normal">2025-11-25 (legacy): session on A</text>
+<text x="676" y="664" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start" font-style="normal">next request lands on B: 404,</text>
+<text x="676" y="688" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start" font-style="normal">"Session not found". stateless_http=True</text>
+<text x="676" y="712" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start" font-style="normal">makes legacy clients work too.</text>
+<rect x="40" y="90" width="560" height="150" rx="10" fill="#EEF6F1" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="2.5"/>
+<text x="56" y="124" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="start" font-style="normal">State that must span replicas</text>
+<text x="56" y="154" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="start" font-style="normal">MRTR requestState: same signing key and name</text>
+<text x="56" y="178" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="start" font-style="normal">subscriptions/listen: one shared SubscriptionBus</text>
+<text x="56" y="202" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="start" font-style="normal">app state: handles in a shared database</text>
+</svg>

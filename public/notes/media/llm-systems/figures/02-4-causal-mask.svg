@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 580" width="1280" height="580" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ar100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ar1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ar6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ar2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ar8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="0" y="0" width="1280" height="580" fill="#FFFFFF"/>
+<text x="640.0" y="46.0" font-size="28" text-anchor="middle" font-weight="bold" fill="#100D12">The causal mask: add minus infinity above the diagonal, then softmax</text>
+<rect x="130.0" y="160.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="178.0" y="198.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0</text>
+<rect x="226.0" y="160.0" width="96" height="62" fill="#F9E0E1" stroke="#100D12" stroke-width="1.5"/>
+<text x="274.0" y="198.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">-∞</text>
+<rect x="322.0" y="160.0" width="96" height="62" fill="#F9E0E1" stroke="#100D12" stroke-width="1.5"/>
+<text x="370.0" y="198.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">-∞</text>
+<rect x="418.0" y="160.0" width="96" height="62" fill="#F9E0E1" stroke="#100D12" stroke-width="1.5"/>
+<text x="466.0" y="198.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">-∞</text>
+<rect x="130.0" y="222.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="178.0" y="260.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0</text>
+<rect x="226.0" y="222.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="274.0" y="260.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0</text>
+<rect x="322.0" y="222.0" width="96" height="62" fill="#F9E0E1" stroke="#100D12" stroke-width="1.5"/>
+<text x="370.0" y="260.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">-∞</text>
+<rect x="418.0" y="222.0" width="96" height="62" fill="#F9E0E1" stroke="#100D12" stroke-width="1.5"/>
+<text x="466.0" y="260.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">-∞</text>
+<rect x="130.0" y="284.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="178.0" y="322.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0</text>
+<rect x="226.0" y="284.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="274.0" y="322.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0</text>
+<rect x="322.0" y="284.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="370.0" y="322.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0</text>
+<rect x="418.0" y="284.0" width="96" height="62" fill="#F9E0E1" stroke="#100D12" stroke-width="1.5"/>
+<text x="466.0" y="322.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">-∞</text>
+<rect x="130.0" y="346.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="178.0" y="384.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0</text>
+<rect x="226.0" y="346.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="274.0" y="384.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0</text>
+<rect x="322.0" y="346.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="370.0" y="384.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0</text>
+<rect x="418.0" y="346.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="466.0" y="384.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0</text>
+<text x="178.0" y="146.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#B8860B">the</text>
+<text x="274.0" y="146.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#B8860B">cat</text>
+<text x="370.0" y="146.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#B8860B">sat</text>
+<text x="466.0" y="146.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#B8860B">down</text>
+<text x="118.0" y="198.0" font-size="20" text-anchor="end" font-weight="bold" fill="#1E6091">the</text>
+<text x="118.0" y="260.0" font-size="20" text-anchor="end" font-weight="bold" fill="#1E6091">cat</text>
+<text x="118.0" y="322.0" font-size="20" text-anchor="end" font-weight="bold" fill="#1E6091">sat</text>
+<text x="118.0" y="384.0" font-size="20" text-anchor="end" font-weight="bold" fill="#1E6091">down</text>
+<text x="322.0" y="444.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">mask M</text>
+<text x="322.0" y="472.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#8A8A8A">0 = may read, -∞ = blocked</text>
+<rect x="770.0" y="160.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="818.0" y="198.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">1</text>
+<rect x="866.0" y="160.0" width="96" height="62" fill="#F9E0E1" stroke="#100D12" stroke-width="1.5"/>
+<text x="914.0" y="198.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">0</text>
+<rect x="962.0" y="160.0" width="96" height="62" fill="#F9E0E1" stroke="#100D12" stroke-width="1.5"/>
+<text x="1010.0" y="198.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">0</text>
+<rect x="1058.0" y="160.0" width="96" height="62" fill="#F9E0E1" stroke="#100D12" stroke-width="1.5"/>
+<text x="1106.0" y="198.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">0</text>
+<rect x="770.0" y="222.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="818.0" y="260.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0.1956</text>
+<rect x="866.0" y="222.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="914.0" y="260.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0.8044</text>
+<rect x="962.0" y="222.0" width="96" height="62" fill="#F9E0E1" stroke="#100D12" stroke-width="1.5"/>
+<text x="1010.0" y="260.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">0</text>
+<rect x="1058.0" y="222.0" width="96" height="62" fill="#F9E0E1" stroke="#100D12" stroke-width="1.5"/>
+<text x="1106.0" y="260.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">0</text>
+<rect x="770.0" y="284.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="818.0" y="322.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0.1400</text>
+<rect x="866.0" y="284.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="914.0" y="322.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0.5760</text>
+<rect x="962.0" y="284.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="1010.0" y="322.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0.2840</text>
+<rect x="1058.0" y="284.0" width="96" height="62" fill="#F9E0E1" stroke="#100D12" stroke-width="1.5"/>
+<text x="1106.0" y="322.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">0</text>
+<rect x="770.0" y="346.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="818.0" y="384.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0.0646</text>
+<rect x="866.0" y="346.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="914.0" y="384.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0.5388</text>
+<rect x="962.0" y="346.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="1010.0" y="384.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0.1310</text>
+<rect x="1058.0" y="346.0" width="96" height="62" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="1106.0" y="384.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0.2657</text>
+<text x="818.0" y="146.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#B8860B">the</text>
+<text x="914.0" y="146.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#B8860B">cat</text>
+<text x="1010.0" y="146.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#B8860B">sat</text>
+<text x="1106.0" y="146.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#B8860B">down</text>
+<text x="758.0" y="198.0" font-size="20" text-anchor="end" font-weight="bold" fill="#1E6091">the</text>
+<text x="758.0" y="260.0" font-size="20" text-anchor="end" font-weight="bold" fill="#1E6091">cat</text>
+<text x="758.0" y="322.0" font-size="20" text-anchor="end" font-weight="bold" fill="#1E6091">sat</text>
+<text x="758.0" y="384.0" font-size="20" text-anchor="end" font-weight="bold" fill="#1E6091">down</text>
+<text x="962.0" y="444.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">causal weights P</text>
+<text x="962.0" y="472.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#8A8A8A">each row sums to 1</text>
+<line x1="544.0" y1="284.0" x2="680.0" y2="284.0" stroke="#100D12" stroke-width="3" marker-end="url(#ar100D12)"/>
+<text x="612.0" y="240.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">softmax of</text>
+<text x="612.0" y="268.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#100D12">S / sqrt(2) + M</text>
+<text x="612.0" y="318.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">exp(-∞) = 0</text>
+<text x="70.0" y="112.0" font-size="20" text-anchor="start" font-weight="normal" fill="#1E6091">queries (rows)</text>
+<text x="514.0" y="112.0" font-size="20" text-anchor="end" font-weight="normal" fill="#B8860B">keys (columns)</text>
+<text x="710.0" y="112.0" font-size="20" text-anchor="start" font-weight="normal" fill="#1E6091">queries (rows)</text>
+<text x="1154.0" y="112.0" font-size="20" text-anchor="end" font-weight="normal" fill="#B8860B">keys (columns)</text>
+<text x="640.0" y="548.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#100D12">Row &quot;down&quot; is the next decode step: it reads every key, so its mask row is all zeros.</text>
+</svg>

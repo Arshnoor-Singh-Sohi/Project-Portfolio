@@ -138,6 +138,8 @@ function buildTree() {
       tags: Array.isArray(data.tags) ? data.tags : [],
       private: data.private === true,
       content,
+      // Same text twice: lower case for matching, original case for snippets.
+      searchPlain: `${data.title || ''} ${data.summary || ''} ${plainText(content)}`,
       searchText: `${data.title || ''} ${data.summary || ''} ${plainText(content)}`.toLowerCase(),
       parent,
     });
@@ -233,8 +235,8 @@ export function searchNotes(query, limit = 30) {
     const start = Math.max(0, at - 40);
     const snippet =
       (start > 0 ? '…' : '') +
-      note.searchText.slice(start, at + 80).trim() +
-      (at + 80 < note.searchText.length ? '…' : '');
+      note.searchPlain.slice(start, at + 80).trim() +
+      (at + 80 < note.searchPlain.length ? '…' : '');
     results.push({ note, snippet, titleMatch: terms.every((t) => note.title.toLowerCase().includes(t)) });
   }
   results.sort((a, b) => Number(b.titleMatch) - Number(a.titleMatch));

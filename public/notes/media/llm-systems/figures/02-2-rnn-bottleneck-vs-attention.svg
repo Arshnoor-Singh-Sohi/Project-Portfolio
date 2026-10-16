@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ar100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ar1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ar6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ar2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ar8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+<text x="640.0" y="46.0" font-size="28" text-anchor="middle" font-weight="bold" fill="#100D12">One fixed vector versus attention over every encoder state</text>
+<text x="40.0" y="98.0" font-size="23" text-anchor="start" font-weight="bold" fill="#100D12">Without attention (seq2seq, 2014)</text>
+<rect x="60.0" y="130.0" width="120.0" height="60.0" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="120.0" y="168.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">h1</text>
+<text x="120.0" y="220.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#8A8A8A">token 1</text>
+<line x1="120.0" y1="200.0" x2="120.0" y2="192.0" stroke="#8A8A8A" stroke-width="2"/>
+<rect x="240.0" y="130.0" width="120.0" height="60.0" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="300.0" y="168.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">h2</text>
+<text x="300.0" y="220.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#8A8A8A">token 2</text>
+<line x1="300.0" y1="200.0" x2="300.0" y2="192.0" stroke="#8A8A8A" stroke-width="2"/>
+<rect x="420.0" y="130.0" width="120.0" height="60.0" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="480.0" y="168.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">h3</text>
+<text x="480.0" y="220.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#8A8A8A">token 3</text>
+<line x1="480.0" y1="200.0" x2="480.0" y2="192.0" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="182.0" y1="160.0" x2="236.0" y2="160.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ar100D12)"/>
+<line x1="362.0" y1="160.0" x2="416.0" y2="160.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ar100D12)"/>
+<line x1="542.0" y1="160.0" x2="616.0" y2="160.0" stroke="#C81D25" stroke-width="2.5" marker-end="url(#arC81D25)"/>
+<rect x="620.0" y="120.0" width="150.0" height="80.0" rx="8" fill="#F9E0E1" stroke="#C81D25" stroke-width="3"/>
+<text x="695.0" y="155.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#C81D25">v = h3</text>
+<text x="695.0" y="182.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">fixed size</text>
+<text x="695.0" y="238.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#C81D25">same size for 5 or 50 words</text>
+<line x1="772.0" y1="160.0" x2="856.0" y2="160.0" stroke="#C81D25" stroke-width="2.5" marker-end="url(#arC81D25)"/>
+<rect x="860.0" y="130.0" width="100.0" height="60.0" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="910.0" y="168.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">s1</text>
+<text x="910.0" y="220.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#8A8A8A">out 1</text>
+<rect x="1000.0" y="130.0" width="100.0" height="60.0" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="1050.0" y="168.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">s2</text>
+<text x="1050.0" y="220.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#8A8A8A">out 2</text>
+<rect x="1140.0" y="130.0" width="100.0" height="60.0" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="1190.0" y="168.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">s3</text>
+<text x="1190.0" y="220.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#8A8A8A">out 3</text>
+<line x1="962.0" y1="160.0" x2="996.0" y2="160.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ar100D12)"/>
+<line x1="1102.0" y1="160.0" x2="1136.0" y2="160.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ar100D12)"/>
+<line x1="30.0" y1="290.0" x2="1250.0" y2="290.0" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="6 6"/>
+<text x="40.0" y="332.0" font-size="23" text-anchor="start" font-weight="bold" fill="#100D12">With attention (Bahdanau et al., 2015): the numbers of section 6.1</text>
+<rect x="80.0" y="560.0" width="170.0" height="76.0" rx="8" fill="#EDE8F4" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="165.0" y="592.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#6A4C93">h1</text>
+<text x="165.0" y="620.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#100D12">[1, 0]</text>
+<rect x="330.0" y="560.0" width="170.0" height="76.0" rx="8" fill="#EDE8F4" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="415.0" y="592.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#6A4C93">h2</text>
+<text x="415.0" y="620.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#100D12">[0, 1]</text>
+<rect x="580.0" y="560.0" width="170.0" height="76.0" rx="8" fill="#EDE8F4" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="665.0" y="592.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#6A4C93">h3</text>
+<text x="665.0" y="620.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#100D12">[1, 1]</text>
+<text x="415.0" y="682.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#6A4C93">every encoder state is kept: keys and values</text>
+<rect x="330.0" y="370.0" width="170.0" height="76.0" rx="8" fill="#E4EEF5" stroke="#1E6091" stroke-width="2.5"/>
+<text x="415.0" y="402.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#1E6091">decoder s</text>
+<text x="415.0" y="430.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#100D12">[1, 0]</text>
+<text x="530.0" y="416.0" font-size="21" text-anchor="start" font-weight="bold" fill="#1E6091">query</text>
+<line x1="415.0" y1="448.0" x2="165.0" y2="556.0" stroke="#1E6091" stroke-width="2.5" marker-end="url(#ar1E6091)"/>
+<rect x="238.0" y="484.0" width="104.0" height="32.0" rx="6" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="290.0" y="508.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#100D12">0.2045</text>
+<line x1="415.0" y1="448.0" x2="415.0" y2="556.0" stroke="#1E6091" stroke-width="2.5" marker-end="url(#ar1E6091)"/>
+<rect x="363.0" y="484.0" width="104.0" height="32.0" rx="6" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="415.0" y="508.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#100D12">0.3576</text>
+<line x1="415.0" y1="448.0" x2="665.0" y2="556.0" stroke="#1E6091" stroke-width="2.5" marker-end="url(#ar1E6091)"/>
+<rect x="488.0" y="484.0" width="104.0" height="32.0" rx="6" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="540.0" y="508.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#100D12">0.4379</text>
+<rect x="900.0" y="470.0" width="330.0" height="120.0" rx="8" fill="#EDE8F4" stroke="#6A4C93" stroke-width="3"/>
+<text x="1065.0" y="506.0" font-size="21" text-anchor="middle" font-weight="bold" fill="#6A4C93">context c = sum of weight x h</text>
+<text x="1065.0" y="540.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0.2045 [1, 0] + 0.3576 [0, 1]</text>
+<text x="1065.0" y="568.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">+ 0.4379 [1, 1] = [0.6424, 0.7955]</text>
+<rect x="62.0" y="546.0" width="706.0" height="104.0" rx="12" fill="none" stroke="#6A4C93" stroke-width="2" stroke-dasharray="8 6"/>
+<path d="M 770 598 L 896 550" fill="none" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#ar6A4C93)"/>
+<text x="1065.0" y="622.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#100D12">a new mix at every output step</text>
+<text x="1065.0" y="420.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#100D12">weights from a softmax</text>
+<text x="1065.0" y="448.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#100D12">of the scores, sum = 1</text>
+</svg>

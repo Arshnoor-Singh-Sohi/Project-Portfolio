@@ -11,7 +11,7 @@ status: in-progress
 
 - New lessons: 6.1 B-tree indexes, 6.2 Multicolumn indexes, 6.3 Index scan vs sequential scan, 6.4 EXPLAIN and EXPLAIN ANALYZE, 6.5 Foreign keys and ON DELETE CASCADE. Each one has the status `not-started`.
 - Every example ran on PostgreSQL 16.15 and 18.6 with the example chat store. The part page holds the seed script, so my numbers can match the lessons.
-- New videos: M03 to M07. Their prompts are in `Claude outputs/postgres-indexes-manim-prompts.md`.
+- New videos: M03 to M07. The [media queue](/notes/databases/postgres/00-progress/media-queue) gives the status.
 
 ### Findings to remember
 

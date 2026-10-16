@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" width="1280" height="760" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ar100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ar1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ar6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ar2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ar8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="0" y="0" width="1280" height="760" fill="#FFFFFF"/>
+<text x="640.0" y="46.0" font-size="28" text-anchor="middle" font-weight="bold" fill="#100D12">From text to the next token: the shape at each step</text>
+<rect x="30.0" y="95.0" width="280.0" height="210.0" rx="12" fill="#FFFFFF" stroke="#100D12" stroke-width="2.5"/>
+<text x="170.0" y="132.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">Text</text>
+<text x="170.0" y="173.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">&quot;the cat sat&quot;</text>
+<text x="170.0" y="205.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">characters,</text>
+<text x="170.0" y="237.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">not numbers</text>
+<rect x="343.0" y="95.0" width="280.0" height="210.0" rx="12" fill="#FFFFFF" stroke="#100D12" stroke-width="2.5"/>
+<circle cx="369" cy="123" r="17" fill="#100D12"/>
+<text x="369.0" y="130.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#FFFFFF">1</text>
+<text x="495.0" y="132.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">Tokenizer</text>
+<text x="483.0" y="173.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">IDs [0, 1, 2]</text>
+<text x="483.0" y="205.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">toy shape [3]</text>
+<text x="483.0" y="237.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">Llama shape [T]</text>
+<text x="483.0" y="269.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">int64</text>
+<rect x="656.0" y="95.0" width="280.0" height="210.0" rx="12" fill="#FFFFFF" stroke="#100D12" stroke-width="2.5"/>
+<circle cx="682" cy="123" r="17" fill="#100D12"/>
+<text x="682.0" y="130.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#FFFFFF">2</text>
+<text x="808.0" y="132.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">Embedding lookup</text>
+<text x="796.0" y="173.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">copy rows of E [V, d]</text>
+<text x="796.0" y="205.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">toy [3, 4]</text>
+<text x="796.0" y="237.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">Llama [T, 4096]</text>
+<text x="796.0" y="269.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">BF16, 8 KiB per token</text>
+<rect x="970.0" y="95.0" width="280.0" height="210.0" rx="12" fill="#E4EEF5" stroke="#1E6091" stroke-width="2.5"/>
+<circle cx="996" cy="123" r="17" fill="#100D12"/>
+<text x="996.0" y="130.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#FFFFFF">3</text>
+<text x="1122.0" y="132.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">32 layers</text>
+<text x="1110.0" y="173.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">in [T, 4096], out [T, 4096]</text>
+<text x="1110.0" y="205.0" font-size="20" text-anchor="middle"><tspan fill="#1E6091" font-weight="bold">Q [T, 32, 128]</tspan></text>
+<text x="1110.0" y="237.0" font-size="20" text-anchor="middle"><tspan fill="#B8860B" font-weight="bold">K</tspan><tspan fill="#100D12" font-weight="normal"> and </tspan><tspan fill="#6A4C93" font-weight="bold">V</tspan><tspan fill="#100D12" font-weight="normal"> [T, 8, 128]</tspan></text>
+<text x="1110.0" y="269.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">attention mixes tokens</text>
+<rect x="970.0" y="430.0" width="280.0" height="210.0" rx="12" fill="#FFFFFF" stroke="#100D12" stroke-width="2.5"/>
+<circle cx="996" cy="458" r="17" fill="#100D12"/>
+<text x="996.0" y="465.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#FFFFFF">4</text>
+<text x="1122.0" y="467.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">Norm + LM head</text>
+<text x="1110.0" y="508.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">last row [4096]</text>
+<text x="1110.0" y="540.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">times W_out [4096, V]</text>
+<text x="1110.0" y="572.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">logits: toy [6]</text>
+<text x="1110.0" y="604.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">Llama [128256]</text>
+<rect x="656.0" y="430.0" width="280.0" height="210.0" rx="12" fill="#FFFFFF" stroke="#100D12" stroke-width="2.5"/>
+<circle cx="682" cy="458" r="17" fill="#100D12"/>
+<text x="682.0" y="465.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#FFFFFF">5</text>
+<text x="808.0" y="467.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">Softmax</text>
+<text x="796.0" y="508.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">probabilities</text>
+<text x="796.0" y="540.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">positive, sum to 1</text>
+<text x="796.0" y="572.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">toy &quot;down&quot;: 0.3484</text>
+<text x="796.0" y="604.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">Llama [128256]</text>
+<rect x="343.0" y="430.0" width="280.0" height="210.0" rx="12" fill="#FFFFFF" stroke="#100D12" stroke-width="2.5"/>
+<circle cx="369" cy="458" r="17" fill="#100D12"/>
+<text x="369.0" y="465.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#FFFFFF">6</text>
+<text x="495.0" y="467.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">Choose next ID</text>
+<text x="483.0" y="508.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">greedy: highest logit</text>
+<text x="483.0" y="540.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">or sample with</text>
+<text x="483.0" y="572.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">a temperature</text>
+<text x="483.0" y="604.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">toy: &quot;down&quot; (ID 3)</text>
+<rect x="30.0" y="430.0" width="280.0" height="210.0" rx="12" fill="#DDEEE5" stroke="#2D6A4F" stroke-width="2.5"/>
+<circle cx="56" cy="458" r="17" fill="#100D12"/>
+<text x="56.0" y="465.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#FFFFFF">7</text>
+<text x="182.0" y="467.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#100D12">Append, repeat</text>
+<text x="170.0" y="508.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">IDs [0, 1, 2, 3]</text>
+<text x="170.0" y="540.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">run the model again</text>
+<text x="170.0" y="572.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">stop at a stop token</text>
+<text x="170.0" y="604.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">or a length limit</text>
+<line x1="312.0" y1="200.0" x2="339.0" y2="200.0" stroke="#100D12" stroke-width="3" marker-end="url(#ar100D12)"/>
+<line x1="625.0" y1="200.0" x2="652.0" y2="200.0" stroke="#100D12" stroke-width="3" marker-end="url(#ar100D12)"/>
+<line x1="938.0" y1="200.0" x2="966.0" y2="200.0" stroke="#100D12" stroke-width="3" marker-end="url(#ar100D12)"/>
+<line x1="1110.0" y1="307.0" x2="1110.0" y2="426.0" stroke="#100D12" stroke-width="3" marker-end="url(#ar100D12)"/>
+<line x1="968.0" y1="535.0" x2="940.0" y2="535.0" stroke="#100D12" stroke-width="3" marker-end="url(#ar100D12)"/>
+<line x1="654.0" y1="535.0" x2="627.0" y2="535.0" stroke="#100D12" stroke-width="3" marker-end="url(#ar100D12)"/>
+<line x1="341.0" y1="535.0" x2="314.0" y2="535.0" stroke="#100D12" stroke-width="3" marker-end="url(#ar100D12)"/>
+<path d="M 170.0 428 L 170.0 355 L 483.0 355 L 483.0 309" fill="none" stroke="#2D6A4F" stroke-width="3" marker-end="url(#ar2D6A4F)"/>
+<text x="326.5" y="345.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#2D6A4F">next run: one token longer</text>
+<text x="640.0" y="708.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#100D12">Toy: V = 6, d = 4.   Llama-3.1-8B: V = 128,256, d = 4,096, 32 layers.</text>
+<text x="640.0" y="742.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#8A8A8A">A batch of B sequences adds a first axis B to every shape.</text>
+</svg>

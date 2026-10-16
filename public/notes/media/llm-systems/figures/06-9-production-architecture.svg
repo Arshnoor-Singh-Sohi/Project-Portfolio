@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 900" width="1280" height="900">
+<rect x="0" y="0" width="1280" height="900" fill="#FFFFFF"/>
+<defs><marker id="ahink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ahblue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahgold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ahpurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ahgreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahred" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ahgray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Production RAG: write path, read path and control plane</text>
+<text x="40" y="92" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="start">WRITE PATH: keeps the index equal to the sources</text>
+<rect x="40" y="108" width="190" height="96" rx="10" fill="#6A4C93" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="135.0" y="138.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Sources + ACLs</text>
+<text x="135.0" y="162.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">wiki, file shares,</text>
+<text x="135.0" y="186.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">S3, Delta tables</text>
+<rect x="262" y="108" width="170" height="96" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="347.0" y="138.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Connectors</text>
+<text x="347.0" y="162.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">events, scans,</text>
+<text x="347.0" y="186.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">change feed</text>
+<rect x="464" y="108" width="160" height="96" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="544.0" y="138.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Parse</text>
+<text x="544.0" y="162.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">text, tables,</text>
+<text x="544.0" y="186.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">OCR</text>
+<rect x="656" y="108" width="220" height="96" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="766.0" y="138.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Chunk + metadata</text>
+<text x="766.0" y="162.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">+ doc ID, version,</text>
+<text x="766.0" y="186.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">tenant, allowed groups</text>
+<rect x="908" y="108" width="150" height="96" rx="10" fill="#B8860B" fill-opacity="1.0" stroke="#B8860B" stroke-width="2.5"/>
+<text x="983.0" y="150.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Embed</text>
+<text x="983.0" y="174.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">model v2</text>
+<line x1="230" y1="156.0" x2="258" y2="156.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<line x1="432" y1="156.0" x2="460" y2="156.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<line x1="624" y1="156.0" x2="652" y2="156.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<line x1="876" y1="156.0" x2="904" y2="156.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<rect x="262" y="222" width="170" height="56" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#C81D25" stroke-width="2.5"/>
+<text x="347.0" y="256.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="middle">Dead-letter queue</text>
+<rect x="656" y="222" width="220" height="56" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="2.5"/>
+<text x="766.0" y="256.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">Manifest: hash, chunks</text>
+<line x1="347" y1="204" x2="347" y2="218" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 6"/>
+<line x1="766" y1="204" x2="766" y2="218" stroke="#2D6A4F" stroke-width="2" stroke-dasharray="8 6"/>
+<path d="M1080,214 A85.0,14 0 0,1 1250,214 L1250,386 A85.0,14 0 0,1 1080,386 Z" fill="#2D6A4F" stroke="#2D6A4F" stroke-width="2"/>
+<ellipse cx="1165.0" cy="214" rx="85.0" ry="14" fill="#3F8A68" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1165.0" y="276.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Index v2</text>
+<text x="1165.0" y="300.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">vectors, BM25,</text>
+<text x="1165.0" y="324.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">ACL fields</text>
+<text x="1165.0" y="348.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">alias: current</text>
+<path d="M1058,156.0 L1165,156.0 L1165,196" stroke="#100D12" stroke-width="2.5" fill="none" marker-end="url(#ahink)"/>
+<text x="40" y="330" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="start">READ PATH: every query</text>
+<rect x="40" y="346" width="120" height="96" rx="10" fill="#1E6091" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="100.0" y="401.35" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#FFFFFF" font-weight="normal" text-anchor="middle">User</text>
+<rect x="190" y="346" width="200" height="96" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="290.0" y="376.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Gateway + auth</text>
+<text x="290.0" y="400.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">verify token,</text>
+<text x="290.0" y="424.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">resolve groups</text>
+<rect x="420" y="346" width="190" height="96" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="2.5"/>
+<text x="515.0" y="376.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Cache check</text>
+<text x="515.0" y="400.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">key: tenant, groups,</text>
+<text x="515.0" y="424.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">index version</text>
+<rect x="640" y="346" width="170" height="96" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="725.0" y="376.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Rewrite</text>
+<text x="725.0" y="400.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">condense,</text>
+<text x="725.0" y="424.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">route</text>
+<rect x="840" y="346" width="200" height="96" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#B8860B" stroke-width="2.5"/>
+<text x="940.0" y="376.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Embed query</text>
+<text x="940.0" y="400.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">same model v2</text>
+<text x="940.0" y="424.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">as the index</text>
+<line x1="160" y1="394.0" x2="186" y2="394.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<line x1="390" y1="394.0" x2="416" y2="394.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<line x1="610" y1="394.0" x2="636" y2="394.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<line x1="810" y1="394.0" x2="836" y2="394.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<line x1="1040" y1="394.0" x2="1076" y2="394.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<rect x="1040" y="490" width="200" height="96" rx="10" fill="#2D6A4F" fill-opacity="1.0" stroke="#2D6A4F" stroke-width="2.5"/>
+<text x="1140.0" y="520.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Hybrid search</text>
+<text x="1140.0" y="544.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">ANN || BM25,</text>
+<text x="1140.0" y="568.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">ACL pre-filter</text>
+<rect x="830" y="490" width="180" height="96" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#B8860B" stroke-width="2.5"/>
+<text x="920.0" y="520.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Rerank</text>
+<text x="920.0" y="544.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">50 -&gt; 8</text>
+<text x="920.0" y="568.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">candidates</text>
+<rect x="600" y="490" width="200" height="96" rx="10" fill="#6A4C93" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="700.0" y="520.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Assemble</text>
+<text x="700.0" y="544.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">labels, dates,</text>
+<text x="700.0" y="568.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">spotlighting</text>
+<rect x="420" y="490" width="150" height="96" rx="10" fill="#B8860B" fill-opacity="1.0" stroke="#B8860B" stroke-width="2.5"/>
+<text x="495.0" y="520.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#FFFFFF" font-weight="bold" text-anchor="middle">LLM</text>
+<text x="495.0" y="544.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">generate,</text>
+<text x="495.0" y="568.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">stream</text>
+<rect x="200" y="490" width="190" height="96" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="295.0" y="520.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Checks</text>
+<text x="295.0" y="544.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">IDs exist, numbers</text>
+<text x="295.0" y="568.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">match, link allowlist</text>
+<rect x="40" y="490" width="130" height="96" rx="10" fill="#1E6091" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="105.0" y="532.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">Answer</text>
+<text x="105.0" y="556.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#FFFFFF" font-weight="normal" text-anchor="middle">+ citations</text>
+<line x1="1165" y1="402" x2="1165" y2="486" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<line x1="1040" y1="538.0" x2="1014" y2="538.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<line x1="830" y1="538.0" x2="804" y2="538.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<line x1="600" y1="538.0" x2="574" y2="538.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<line x1="420" y1="538.0" x2="394" y2="538.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<line x1="200" y1="538.0" x2="174" y2="538.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ahink)"/>
+<path d="M515,442 L515,466 L105,466 L105,486" stroke="#8A8A8A" stroke-width="2.5" fill="none" stroke-dasharray="8 6" marker-end="url(#ahgray)"/>
+<text x="300" y="460" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">cache hit</text>
+<text x="40" y="640" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">CONTROL PLANE</text>
+<rect x="40" y="656" width="280" height="120" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="180.0" y="698.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Evaluation</text>
+<text x="180.0" y="722.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">golden set, judges,</text>
+<text x="180.0" y="746.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">release gates in CI</text>
+<rect x="345" y="656" width="280" height="120" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="485.0" y="686.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Tracing</text>
+<text x="485.0" y="710.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">one span per stage:</text>
+<text x="485.0" y="734.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">chunk IDs, scores,</text>
+<text x="485.0" y="758.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">model and index versions</text>
+<rect x="650" y="656" width="280" height="120" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="790.0" y="686.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Monitoring</text>
+<text x="790.0" y="710.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">freshness lag, empty</text>
+<text x="790.0" y="734.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">results, filter coverage,</text>
+<text x="790.0" y="758.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">faithfulness sample</text>
+<rect x="955" y="656" width="285" height="120" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="1097.5" y="686.65" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">Versions</text>
+<text x="1097.5" y="710.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">embedding model,</text>
+<text x="1097.5" y="734.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">index alias v2 -&gt; v3,</text>
+<text x="1097.5" y="758.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">prompt version</text>
+<text x="640" y="830" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">Blue: user and query. Purple: documents and context. Gold: models. Green: stored state. Red: failures.</text>
+<text x="640" y="860" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="middle">The permission filter is built from the session, never from the model's tool arguments.</text>
+</svg>

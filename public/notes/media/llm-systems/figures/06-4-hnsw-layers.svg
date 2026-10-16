@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="770" viewBox="0 0 1280 770">
+<rect x="0" y="0" width="1280" height="770" fill="#FFFFFF"/>
+<defs><marker id="arink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="arblue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="argold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="arpurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="argreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arred" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="argray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">HNSW search for the query q = (8.5, 7.5)</text>
+<rect x="20" y="75" width="440" height="300" rx="12" fill="none" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="35" y="105" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Layer 2 (top)</text>
+<circle cx="50" cy="338" r="15" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="50" y="345" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">A</text>
+<circle cx="102" cy="312" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="76" cy="234" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="154" cy="260" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="206" cy="338" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="258" cy="286" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="180" cy="182" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="258" cy="182" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="102" cy="156" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="232" cy="130" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="245.0" cy="169.0" r="7" fill="#1E6091" stroke="#1E6091" stroke-width="2.5"/>
+<text x="255.0" y="157.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="start">q</text>
+<text x="268" y="200" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">Entry point A.</text>
+<text x="268" y="223" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">No neighbors:</text>
+<text x="268" y="246" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">go down.</text>
+<rect x="20" y="395" width="440" height="300" rx="12" fill="none" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="35" y="425" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Layer 1</text>
+<line x1="50" y1="658" x2="154" y2="580" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="154" y1="580" x2="102" y2="476" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="50" y1="658" x2="102" y2="476" stroke="#8A8A8A" stroke-width="2"/>
+<circle cx="50" cy="658" r="15" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="50" y="665" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">A</text>
+<circle cx="102" cy="632" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="76" cy="554" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="154" cy="580" r="15" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="154" y="587" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">D</text>
+<circle cx="206" cy="658" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="258" cy="606" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="180" cy="502" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="258" cy="502" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="102" cy="476" r="15" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="102" y="483" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">I</text>
+<circle cx="232" cy="450" r="5" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<circle cx="245.0" cy="489.0" r="7" fill="#1E6091" stroke="#1E6091" stroke-width="2.5"/>
+<text x="255.0" y="477.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="start">q</text>
+<line x1="63.6" y1="647.8" x2="138.8" y2="591.4" stroke="#1E6091" stroke-width="4" marker-end="url(#arblue)"/>
+<text x="268" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start">Greedy, ef = 1:</text>
+<text x="268" y="523" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start">A (98.5) → D</text>
+<text x="268" y="546" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start">(24.5). I (30.5)</text>
+<text x="268" y="569" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start">is not closer:</text>
+<text x="268" y="592" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start">stop. Go down</text>
+<text x="268" y="615" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start">at D.</text>
+<rect x="480" y="75" width="780" height="620" rx="12" fill="none" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="495" y="105" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Layer 0 (all nodes), entry D</text>
+<line x1="510" y1="588" x2="622" y2="532" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="622" y1="532" x2="734" y2="420" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="622" y1="532" x2="846" y2="588" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="510" y1="588" x2="566" y2="364" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="566" y1="364" x2="734" y2="420" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="566" y1="364" x2="622" y2="196" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="734" y1="420" x2="790" y2="252" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="734" y1="420" x2="846" y2="588" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="846" y1="588" x2="958" y2="476" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="958" y1="476" x2="958" y2="252" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="790" y1="252" x2="622" y2="196" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="958" y1="252" x2="902" y2="140" stroke="#8A8A8A" stroke-width="2"/>
+<line x1="958" y1="476" x2="734" y2="420" stroke="#8A8A8A" stroke-width="2"/>
+<circle cx="510" cy="588" r="17" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="510" y="595" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">A</text>
+<circle cx="622" cy="532" r="17" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="622" y="539" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">B</text>
+<circle cx="566" cy="364" r="17" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="566" y="371" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">C</text>
+<circle cx="734" cy="420" r="17" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="734" y="427" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">D</text>
+<circle cx="846" cy="588" r="17" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="846" y="595" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">E</text>
+<circle cx="958" cy="476" r="17" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="958" y="483" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">F</text>
+<circle cx="790" cy="252" r="17" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="790" y="259" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">G</text>
+<circle cx="958" cy="252" r="17" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="958" y="259" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">H</text>
+<circle cx="622" cy="196" r="17" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="622" y="203" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">I</text>
+<circle cx="902" cy="140" r="17" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="902" y="147" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">J</text>
+<circle cx="930.0" cy="224.0" r="7" fill="#1E6091" stroke="#1E6091" stroke-width="2.5"/>
+<text x="940.0" y="212.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="start">q</text>
+<line x1="740.00832755432" y1="401.97501733704024" x2="783.3592169136464" y2="271.9223492590608" stroke="#C81D25" stroke-width="4" marker-end="url(#arred)"/>
+<line x1="752.4327075027613" y1="424.60817687569033" x2="937.6270074969481" y2="470.906751874237" stroke="#1E6091" stroke-width="4" marker-end="url(#arblue)"/>
+<line x1="958.0" y1="457.0" x2="958.0" y2="273.0" stroke="#1E6091" stroke-width="4" marker-end="url(#arblue)"/>
+<line x1="949.5029416855008" y1="235.0058833710016" x2="911.3914855054991" y2="158.78297101099824" stroke="#1E6091" stroke-width="4" stroke-dasharray="6 4" marker-end="url(#arblue)"/>
+<text x="1015" y="330" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start">ef = 1: D → G (6.5).</text>
+<text x="1015" y="353" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start">G has no closer</text>
+<text x="1015" y="376" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start">neighbor: a local</text>
+<text x="1015" y="399" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start">minimum. Wrong.</text>
+<text x="1015" y="450" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start">ef = 2: F (20.5)</text>
+<text x="1015" y="473" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start">stays in the list,</text>
+<text x="1015" y="496" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start">so the search goes</text>
+<text x="1015" y="519" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start">D → F → H (0.5).</text>
+<text x="20" y="735" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">Numbers are squared distances to q. Gold circles: nodes stored in that layer. Small gray circles: not in that layer.</text>
+</svg>

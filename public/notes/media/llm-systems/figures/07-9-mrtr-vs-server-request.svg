@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860">
+<defs><marker id="a100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="a2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="a6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="aC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker></defs>
+<rect x="0" y="0" width="1280" height="860" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Asking the user mid-call: old server request vs new MRTR</text>
+<rect x="20" y="75" width="610" height="765" rx="10" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="325" y="110" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#100D12" font-weight="bold" text-anchor="middle">2025-11-25: server-initiated request</text>
+<rect x="45" y="135" width="250" height="70" rx="10" fill="none" stroke="#1E6091" stroke-width="3"/>
+<text x="170" y="178" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1E6091" font-weight="bold" text-anchor="middle">Client</text>
+<rect x="355" y="135" width="250" height="70" rx="10" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="480" y="166" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="middle">Load balancer</text>
+<text x="480" y="192" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">sticky by Mcp-Session-Id</text>
+<rect x="355" y="290" width="250" height="140" rx="10" fill="none" stroke="#6A4C93" stroke-width="3"/>
+<text x="480" y="325" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#6A4C93" font-weight="bold" text-anchor="middle">Replica A</text>
+<rect x="372" y="345" width="216" height="70" rx="10" fill="none" stroke="#2D6A4F" stroke-width="2"/>
+<text x="480" y="375" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">suspended call</text>
+<text x="480" y="401" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">waits for id 1</text>
+<rect x="355" y="470" width="250" height="80" rx="10" fill="none" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="480" y="505" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#8A8A8A" font-weight="bold" text-anchor="middle">Replica B</text>
+<text x="480" y="532" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">knows nothing of id 1</text>
+<text x="45" y="610" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">1  tools/call (id 2) on the session</text>
+<text x="45" y="642" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="start">2  A sends elicitation/create (its id 1)</text>
+<text x="45" y="674" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="start">    on the open stream to the client</text>
+<text x="45" y="706" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="start">3  user answers, client sends</text>
+<text x="45" y="738" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="start">    response for id 1 in a new POST</text>
+<text x="45" y="770" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="start">4  must reach A, not B</text>
+<text x="45" y="802" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">5  A resumes, returns the tool result</text>
+<line x1="297" y1="170" x2="351" y2="170" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<line x1="480" y1="207" x2="480" y2="286" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<path d="M 355 330 C 250 330, 200 260, 170 209" fill="none" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#a6A4C93)"/>
+<line x1="480" y1="432" x2="480" y2="466" stroke="#C81D25" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#aC81D25)"/>
+<text x="498" y="455" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="bold" text-anchor="start">lost</text>
+<rect x="650" y="75" width="610" height="765" rx="10" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="955" y="110" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#100D12" font-weight="bold" text-anchor="middle">2026-07-28: Multi Round-Trip Request</text>
+<rect x="675" y="135" width="250" height="70" rx="10" fill="none" stroke="#1E6091" stroke-width="3"/>
+<text x="800" y="178" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1E6091" font-weight="bold" text-anchor="middle">Client</text>
+<rect x="985" y="135" width="250" height="70" rx="10" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="1110" y="166" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="middle">Load balancer</text>
+<text x="1110" y="192" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">plain round robin</text>
+<rect x="985" y="290" width="250" height="100" rx="10" fill="none" stroke="#6A4C93" stroke-width="3"/>
+<text x="1110" y="328" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#6A4C93" font-weight="bold" text-anchor="middle">Replica A</text>
+<text x="1110" y="360" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">returns, keeps nothing</text>
+<rect x="985" y="450" width="250" height="100" rx="10" fill="none" stroke="#6A4C93" stroke-width="3"/>
+<text x="1110" y="488" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#6A4C93" font-weight="bold" text-anchor="middle">Replica B</text>
+<text x="1110" y="520" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">opens state, finishes</text>
+<rect x="675" y="290" width="250" height="100" rx="10" fill="none" stroke="#2D6A4F" stroke-width="2"/>
+<text x="800" y="322" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="middle">requestState</text>
+<text x="800" y="350" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">sealed by the server,</text>
+<text x="800" y="376" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">carried by the client</text>
+<line x1="927" y1="170" x2="981" y2="170" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<line x1="1060" y1="207" x2="1060" y2="286" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)"/>
+<path d="M 1237 185 L 1252 185 L 1252 500 L 1241 500" fill="none" stroke="#100D12" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#a100D12)"/>
+<line x1="983" y1="340" x2="931" y2="340" stroke="#2D6A4F" stroke-width="2.5" marker-end="url(#a2D6A4F)"/>
+<path d="M 800 392 C 800 470, 900 500, 981 500" fill="none" stroke="#2D6A4F" stroke-width="2.5" marker-end="url(#a2D6A4F)"/>
+<text x="675" y="610" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">1  tools/call (id 1)  goes to A</text>
+<text x="675" y="642" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="start">2  A: resultType input_required,</text>
+<text x="675" y="674" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="start">    inputRequests + requestState</text>
+<text x="675" y="706" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="start">3  user answers in the client</text>
+<text x="675" y="738" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="start">4  new tools/call (id 2) with</text>
+<text x="675" y="770" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="start">    inputResponses + requestState</text>
+<text x="675" y="802" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">5  any replica (here B) finishes</text>
+<text x="1235" y="425" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end" font-style="italic">round 2</text>
+</svg>

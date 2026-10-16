@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+<rect x="0" y="0" width="1280" height="760" fill="#FFFFFF"/>
+<defs><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="agr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="agy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Prefix-aware routing: the Endpoint Picker scores every replica</text>
+<rect x="30" y="90" width="400" height="96" rx="10" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="48" y="125" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#1E6091" font-weight="normal" text-anchor="start">Request: 4,096-token prompt</text>
+<text x="48" y="152" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#1E6091" font-weight="normal" text-anchor="start">= 64 blocks of 64 tokens</text>
+<rect x="470" y="90" width="780" height="96" rx="10" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="488" y="125" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">score = 3 x (cached blocks / 64)</text>
+<text x="488" y="152" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">+ 2 x (1 - KV usage) + 2 x queue score</text>
+<text x="30" y="240" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Scenario 1: queues 2, 1, 3</text>
+<text x="560" y="240" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">KV usage</text>
+<text x="700" y="240" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">waiting</text>
+<text x="830" y="240" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">queue score</text>
+<text x="1010" y="240" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">total</text>
+<rect x="30" y="262" width="1220" height="48" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="4"/>
+<text x="50" y="294" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Replica A</text>
+<rect x="190" y="274" width="300" height="24" rx="3" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="5 4"/>
+<rect x="190" y="274" width="281.25" height="24" rx="3" fill="#2D6A4F" stroke="#2D6A4F" stroke-width="1.5"/>
+<text x="500" y="294" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">60/64</text>
+<text x="580" y="294" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">0.85</text>
+<text x="720" y="294" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">2</text>
+<text x="860" y="294" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">0.5</text>
+<text x="1010" y="294" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="start">4.1125</text>
+<text x="1130" y="294" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="start">picked</text>
+<rect x="30" y="320" width="1220" height="48" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="50" y="352" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Replica B</text>
+<rect x="190" y="332" width="300" height="24" rx="3" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="500" y="352" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">0/64</text>
+<text x="580" y="352" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">0.40</text>
+<text x="720" y="352" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">1</text>
+<text x="860" y="352" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">1.0</text>
+<text x="1010" y="352" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">3.2000</text>
+<rect x="30" y="378" width="1220" height="48" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="50" y="410" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Replica C</text>
+<rect x="190" y="390" width="300" height="24" rx="3" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="5 4"/>
+<rect x="190" y="390" width="75.0" height="24" rx="3" fill="#2D6A4F" stroke="#2D6A4F" stroke-width="1.5"/>
+<text x="500" y="410" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">16/64</text>
+<text x="580" y="410" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">0.55</text>
+<text x="720" y="410" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="start">3</text>
+<text x="860" y="410" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">0.0</text>
+<text x="1010" y="410" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">1.6500</text>
+<text x="30" y="480" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Scenario 2: the queue of A grows to 6</text>
+<text x="560" y="480" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">KV usage</text>
+<text x="700" y="480" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">waiting</text>
+<text x="830" y="480" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">queue score</text>
+<text x="1010" y="480" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">total</text>
+<rect x="30" y="502" width="1220" height="48" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="50" y="534" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Replica A</text>
+<rect x="190" y="514" width="300" height="24" rx="3" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="5 4"/>
+<rect x="190" y="514" width="281.25" height="24" rx="3" fill="#2D6A4F" stroke="#2D6A4F" stroke-width="1.5"/>
+<text x="500" y="534" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">60/64</text>
+<text x="580" y="534" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">0.85</text>
+<text x="720" y="534" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="start">6</text>
+<text x="860" y="534" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">0.0</text>
+<text x="1010" y="534" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">3.1125</text>
+<rect x="30" y="560" width="1220" height="48" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="4"/>
+<text x="50" y="592" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Replica B</text>
+<rect x="190" y="572" width="300" height="24" rx="3" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="500" y="592" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">0/64</text>
+<text x="580" y="592" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">0.40</text>
+<text x="720" y="592" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">1</text>
+<text x="860" y="592" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">1.0</text>
+<text x="1010" y="592" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="start">3.2000</text>
+<text x="1130" y="592" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="start">picked</text>
+<rect x="30" y="618" width="1220" height="48" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="50" y="650" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Replica C</text>
+<rect x="190" y="630" width="300" height="24" rx="3" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="5 4"/>
+<rect x="190" y="630" width="75.0" height="24" rx="3" fill="#2D6A4F" stroke="#2D6A4F" stroke-width="1.5"/>
+<text x="500" y="650" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">16/64</text>
+<text x="580" y="650" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">0.55</text>
+<text x="720" y="650" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">3</text>
+<text x="860" y="650" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">0.6</text>
+<text x="1010" y="650" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">2.8500</text>
+<rect x="190" y="700" width="40" height="22" rx="3" fill="#2D6A4F" stroke="#2D6A4F" stroke-width="1.5"/>
+<text x="240" y="718" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">cached prefix blocks</text>
+<rect x="470" y="700" width="40" height="22" rx="3" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="520" y="718" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">blocks that need prefill</text>
+<text x="800" y="718" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">weights 3, 2, 2 (llm-d example)</text>
+</svg>

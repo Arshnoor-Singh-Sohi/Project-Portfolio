@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 770" width="1280" height="770">
+<rect x="0" y="0" width="1280" height="770" fill="#FFFFFF"/>
+<defs><marker id="ahink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ahblue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahgold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ahpurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ahgreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahred" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ahgray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Latency budget of one query (example values)</text>
+<text x="344" y="127" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">Authenticate, groups</text>
+<rect x="360.0" y="106" width="6.461538461538453" height="30" fill="#100D12" fill-opacity="1.0" stroke="none" stroke-width="0"/>
+<text x="374.46153846153845" y="129" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">10 ms</text>
+<text x="344" y="177" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">Rewrite (small LLM)</text>
+<rect x="366.46153846153845" y="156" width="226.1538461538462" height="30" fill="#1E6091" fill-opacity="1.0" stroke="none" stroke-width="0"/>
+<text x="600.6153846153846" y="179" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">350 ms</text>
+<text x="344" y="227" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">Query embedding</text>
+<rect x="592.6153846153846" y="206" width="19.38461538461536" height="30" fill="#1E6091" fill-opacity="1.0" stroke="none" stroke-width="0"/>
+<text x="620.0" y="229" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">30 ms</text>
+<text x="344" y="277" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">Vector search (ANN)</text>
+<rect x="612.0" y="256" width="25.84615384615381" height="30" fill="#2D6A4F" fill-opacity="1.0" stroke="none" stroke-width="0"/>
+<text x="645.8461538461538" y="279" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">40 ms</text>
+<text x="344" y="327" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">BM25, in parallel</text>
+<rect x="612.0" y="306" width="25.84615384615381" height="30" fill="#2D6A4F" fill-opacity="1.0" stroke="none" stroke-width="0"/>
+<text x="645.8461538461538" y="329" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">40 ms</text>
+<text x="344" y="377" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">Fusion</text>
+<rect x="637.8461538461538" y="356" width="3" height="30" fill="#100D12" fill-opacity="1.0" stroke="none" stroke-width="0"/>
+<text x="647.1384615384616" y="379" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">2 ms</text>
+<text x="344" y="427" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">Rerank 50 candidates</text>
+<rect x="639.1384615384616" y="406" width="161.53846153846143" height="30" fill="#B8860B" fill-opacity="1.0" stroke="none" stroke-width="0"/>
+<text x="808.676923076923" y="429" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">250 ms</text>
+<text x="344" y="477" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">Assemble, guards</text>
+<rect x="800.676923076923" y="456" width="3.2307692307692832" height="30" fill="#100D12" fill-opacity="1.0" stroke="none" stroke-width="0"/>
+<text x="811.9076923076923" y="479" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">5 ms</text>
+<text x="344" y="527" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">LLM to first token</text>
+<rect x="803.9076923076923" y="506" width="387.6923076923076" height="30" fill="#B8860B" fill-opacity="1.0" stroke="none" stroke-width="0"/>
+<text x="1199.6" y="529" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">600 ms</text>
+<line x1="360" y1="560" x2="1200" y2="560" stroke="#100D12" stroke-width="2"/>
+<line x1="360.0" y1="560" x2="360.0" y2="568" stroke="#100D12" stroke-width="2"/>
+<text x="360.0" y="592" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0</text>
+<line x1="521.5384615384615" y1="560" x2="521.5384615384615" y2="568" stroke="#100D12" stroke-width="2"/>
+<text x="521.5384615384615" y="592" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">250</text>
+<line x1="683.0769230769231" y1="560" x2="683.0769230769231" y2="568" stroke="#100D12" stroke-width="2"/>
+<text x="683.0769230769231" y="592" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">500</text>
+<line x1="844.6153846153845" y1="560" x2="844.6153846153845" y2="568" stroke="#100D12" stroke-width="2"/>
+<text x="844.6153846153845" y="592" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">750</text>
+<line x1="1006.1538461538462" y1="560" x2="1006.1538461538462" y2="568" stroke="#100D12" stroke-width="2"/>
+<text x="1006.1538461538462" y="592" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">1,000</text>
+<line x1="1167.6923076923076" y1="560" x2="1167.6923076923076" y2="568" stroke="#100D12" stroke-width="2"/>
+<text x="1167.6923076923076" y="592" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">1,250</text>
+<text x="780.0" y="620" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">milliseconds since the request arrived</text>
+<line x1="1191.6" y1="90" x2="1191.6" y2="560" stroke="#C81D25" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="1183.6" y="88" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="bold" text-anchor="end">first token: 1,287 ms</text>
+<text x="717.8461538461538" y="300" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="start">in parallel: the slower one counts</text>
+<rect x="40" y="640" width="1160" height="70" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="60" y="672" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Then decode: 300 tokens at 20 ms each = 5,980 ms more (not to scale).</text>
+<text x="60" y="698" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">End to end = TTFT + TPOT x (n - 1) = 1,287 + 20 x 299 = 7,267 ms. Streaming shows text after 1.3 s.</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arrr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrgr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker></defs>
+<rect x="0" y="0" width="1280" height="800" fill="#FFFFFF"/>
+<text x="640" y="42" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#100D12" text-anchor="middle" font-weight="bold">One model on Kubernetes: the objects and where they run</text>
+<rect x="30" y="75" width="1220" height="95" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="50" y="105" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">Control plane</text>
+<rect x="300" y="92" width="260" height="60" rx="6" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="430" y="129" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">API server</text>
+<rect x="600" y="92" width="260" height="60" rx="6" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="730" y="129" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">scheduler</text>
+<rect x="900" y="92" width="260" height="60" rx="6" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="1030" y="129" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">Deployment controller</text>
+<rect x="30" y="200" width="330" height="140" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="195" y="230" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="middle" font-weight="bold">CPU node pool</text>
+<rect x="55" y="248" width="280" height="76" rx="8" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="195" y="280" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">Gateway Pod</text>
+<text x="195" y="306" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">identity, token limits</text>
+<rect x="30" y="360" width="330" height="310" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="170" y="390" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="middle" font-weight="bold">Cluster objects</text>
+<rect x="55" y="405" width="280" height="70" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="195" y="434" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">Service llama-8b</text>
+<text x="195" y="460" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">port 80 to ready Pods</text>
+<rect x="55" y="492" width="280" height="70" rx="8" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="195" y="521" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">PVC model-cache</text>
+<text x="195" y="547" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">weights, compile cache</text>
+<rect x="55" y="580" width="280" height="70" rx="8" fill="#D8EBE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="195" y="609" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">Secret hf-token</text>
+<text x="195" y="635" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">HF_TOKEN at run time</text>
+<rect x="390" y="200" width="860" height="470" rx="8" fill="#F5E9C8" stroke="#B8860B" stroke-width="3"/>
+<text x="820" y="232" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#7A5A06" text-anchor="middle" font-weight="bold">GPU node pool (g6e.xlarge), taint nvidia.com/gpu NoSchedule</text>
+<rect x="415" y="255" width="395" height="395" rx="8" fill="#FFFFFF" stroke="#B8860B" stroke-width="2"/>
+<text x="612" y="285" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">GPU node 1</text>
+<rect x="435" y="300" width="355" height="60" rx="6" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="612" y="325" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">device plugin (DaemonSet)</text>
+<text x="612" y="349" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">advertises nvidia.com/gpu: 1</text>
+<rect x="435" y="375" width="355" height="255" rx="8" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<text x="612" y="405" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="middle" font-weight="bold">Pod llama-8b (1 of 2)</text>
+<text x="455" y="437" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">vllm/vllm-openai:v0.31.0</text>
+<text x="455" y="464" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">toleration + nodeSelector</text>
+<text x="455" y="491" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">limits nvidia.com/gpu: 1</text>
+<text x="455" y="518" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">/dev/shm: emptyDir Memory</text>
+<text x="455" y="545" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">probes on /health</text>
+<rect x="660" y="560" width="110" height="55" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="715" y="594" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">L40S</text>
+<rect x="835" y="255" width="395" height="395" rx="8" fill="#FFFFFF" stroke="#B8860B" stroke-width="2"/>
+<text x="1032" y="285" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">GPU node 2</text>
+<rect x="855" y="300" width="355" height="60" rx="6" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="1032" y="325" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">device plugin (DaemonSet)</text>
+<text x="1032" y="349" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">advertises nvidia.com/gpu: 1</text>
+<rect x="855" y="375" width="355" height="255" rx="8" fill="#E7E0F0" stroke="#6A4C93" stroke-width="2"/>
+<text x="1032" y="405" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="middle" font-weight="bold">Pod llama-8b (2 of 2)</text>
+<text x="875" y="437" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">vllm/vllm-openai:v0.31.0</text>
+<text x="875" y="464" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">toleration + nodeSelector</text>
+<text x="875" y="491" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">limits nvidia.com/gpu: 1</text>
+<text x="875" y="518" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">/dev/shm: emptyDir Memory</text>
+<text x="875" y="545" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">probes on /health</text>
+<rect x="1080" y="560" width="110" height="55" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="1135" y="594" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">L40S</text>
+<line x1="305" y1="324" x2="305" y2="401" stroke="#100D12" stroke-width="2.5" marker-end="url(#arr)"/>
+<path d="M 335 440 L 431 440" stroke="#100D12" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+<path d="M 375 440 L 375 690 L 1060 690 L 1060 634" stroke="#100D12" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+<line x1="335" y1="527" x2="431" y2="560" stroke="#2D6A4F" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrgr)"/>
+<line x1="335" y1="615" x2="431" y2="600" stroke="#2D6A4F" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrgr)"/>
+<text x="640" y="725" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" font-style="italic">The Service sends traffic only to Pods whose readiness probe succeeds.</text>
+<text x="640" y="760" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" font-style="italic">The scheduler places a Pod only on a node with a free GPU, a matching label and a tolerated taint.</text>
+</svg>

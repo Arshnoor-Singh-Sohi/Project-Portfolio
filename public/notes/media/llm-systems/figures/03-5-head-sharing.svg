@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" width="1280" height="760"><defs><marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="arr2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs><rect x="0" y="0" width="1280" height="760" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Who shares keys and values: MHA, GQA, MQA and MLA</text>
+<text x="170.0" y="100" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="bold" text-anchor="middle">MHA</text>
+<rect x="36.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="51.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">1</text>
+<rect x="70.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="85.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">2</text>
+<rect x="104.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="119.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">3</text>
+<rect x="138.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="153.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">4</text>
+<rect x="172.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="187.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">5</text>
+<rect x="206.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="221.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">6</text>
+<rect x="240.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="255.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">7</text>
+<rect x="274.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="289.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">8</text>
+<text x="170.0" y="145" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">8 query heads</text>
+<rect x="38.1875" y="330" width="30" height="40" rx="4" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="53.1875" y="357" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="38.1875" y="376" width="30" height="40" rx="4" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="53.1875" y="403" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<rect x="71.5625" y="330" width="30" height="40" rx="4" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="86.5625" y="357" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="71.5625" y="376" width="30" height="40" rx="4" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="86.5625" y="403" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<rect x="104.9375" y="330" width="30" height="40" rx="4" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="119.9375" y="357" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="104.9375" y="376" width="30" height="40" rx="4" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="119.9375" y="403" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<rect x="138.3125" y="330" width="30" height="40" rx="4" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="153.3125" y="357" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="138.3125" y="376" width="30" height="40" rx="4" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="153.3125" y="403" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<rect x="171.6875" y="330" width="30" height="40" rx="4" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="186.6875" y="357" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="171.6875" y="376" width="30" height="40" rx="4" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="186.6875" y="403" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<rect x="205.0625" y="330" width="30" height="40" rx="4" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="220.0625" y="357" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="205.0625" y="376" width="30" height="40" rx="4" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="220.0625" y="403" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<rect x="238.4375" y="330" width="30" height="40" rx="4" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="253.4375" y="357" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="238.4375" y="376" width="30" height="40" rx="4" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="253.4375" y="403" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<rect x="271.8125" y="330" width="30" height="40" rx="4" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="286.8125" y="357" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="271.8125" y="376" width="30" height="40" rx="4" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="286.8125" y="403" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<line x1="51.0" y1="204" x2="53.1875" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="85.0" y1="204" x2="86.5625" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="119.0" y1="204" x2="119.9375" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="153.0" y1="204" x2="153.3125" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="187.0" y1="204" x2="186.6875" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="221.0" y1="204" x2="220.0625" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="255.0" y1="204" x2="253.4375" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="289.0" y1="204" x2="286.8125" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<rect x="28.5" y="318" width="283" height="110" rx="8" fill="none" stroke="#2D6A4F" stroke-width="3"/>
+<text x="170.0" y="460" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">cached: 8 K + 8 V heads</text>
+<text x="480.0" y="100" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="bold" text-anchor="middle">GQA (H_kv = 2)</text>
+<rect x="346.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="361.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">1</text>
+<rect x="380.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="395.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">2</text>
+<rect x="414.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="429.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">3</text>
+<rect x="448.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="463.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">4</text>
+<rect x="482.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="497.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">5</text>
+<rect x="516.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="531.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">6</text>
+<rect x="550.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="565.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">7</text>
+<rect x="584.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="599.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">8</text>
+<text x="480.0" y="145" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">8 query heads</text>
+<rect x="383.25" y="330" width="60" height="40" rx="4" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="413.25" y="357" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="383.25" y="376" width="60" height="40" rx="4" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="413.25" y="403" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<rect x="516.75" y="330" width="60" height="40" rx="4" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="546.75" y="357" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="516.75" y="376" width="60" height="40" rx="4" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="546.75" y="403" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<line x1="361.0" y1="204" x2="413.25" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="395.0" y1="204" x2="413.25" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="429.0" y1="204" x2="413.25" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="463.0" y1="204" x2="413.25" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="497.0" y1="204" x2="546.75" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="531.0" y1="204" x2="546.75" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="565.0" y1="204" x2="546.75" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="599.0" y1="204" x2="546.75" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<rect x="338.5" y="318" width="283" height="110" rx="8" fill="none" stroke="#2D6A4F" stroke-width="3"/>
+<text x="480.0" y="460" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">cached: 2 K + 2 V heads</text>
+<text x="790.0" y="100" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="bold" text-anchor="middle">MQA</text>
+<rect x="656.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="671.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">1</text>
+<rect x="690.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="705.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">2</text>
+<rect x="724.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="739.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">3</text>
+<rect x="758.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="773.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">4</text>
+<rect x="792.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="807.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">5</text>
+<rect x="826.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="841.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">6</text>
+<rect x="860.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="875.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">7</text>
+<rect x="894.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="909.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">8</text>
+<text x="790.0" y="145" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">8 query heads</text>
+<rect x="760.0" y="330" width="60" height="40" rx="4" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="790.0" y="357" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="760.0" y="376" width="60" height="40" rx="4" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="790.0" y="403" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<line x1="671.0" y1="204" x2="790.0" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="705.0" y1="204" x2="790.0" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="739.0" y1="204" x2="790.0" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="773.0" y1="204" x2="790.0" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="807.0" y1="204" x2="790.0" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="841.0" y1="204" x2="790.0" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="875.0" y1="204" x2="790.0" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<line x1="909.0" y1="204" x2="790.0" y2="328" stroke="#100D12" stroke-width="1.5"/>
+<rect x="648.5" y="318" width="283" height="110" rx="8" fill="none" stroke="#2D6A4F" stroke-width="3"/>
+<text x="790.0" y="460" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">cached: 1 K + 1 V heads</text>
+<text x="1100.0" y="100" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="bold" text-anchor="middle">MLA</text>
+<rect x="966.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="981.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">1</text>
+<rect x="1000.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="1015.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">2</text>
+<rect x="1034.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="1049.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">3</text>
+<rect x="1068.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="1083.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">4</text>
+<rect x="1102.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="1117.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">5</text>
+<rect x="1136.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="1151.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">6</text>
+<rect x="1170.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="1185.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">7</text>
+<rect x="1204.5" y="160" width="29" height="44" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="1219.0" y="189" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">8</text>
+<text x="1100.0" y="145" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">8 query heads</text>
+<line x1="981.0" y1="204" x2="1100.0" y2="330" stroke="#100D12" stroke-width="1.5"/>
+<line x1="1015.0" y1="204" x2="1100.0" y2="330" stroke="#100D12" stroke-width="1.5"/>
+<line x1="1049.0" y1="204" x2="1100.0" y2="330" stroke="#100D12" stroke-width="1.5"/>
+<line x1="1083.0" y1="204" x2="1100.0" y2="330" stroke="#100D12" stroke-width="1.5"/>
+<line x1="1117.0" y1="204" x2="1100.0" y2="330" stroke="#100D12" stroke-width="1.5"/>
+<line x1="1151.0" y1="204" x2="1100.0" y2="330" stroke="#100D12" stroke-width="1.5"/>
+<line x1="1185.0" y1="204" x2="1100.0" y2="330" stroke="#100D12" stroke-width="1.5"/>
+<line x1="1219.0" y1="204" x2="1100.0" y2="330" stroke="#100D12" stroke-width="1.5"/>
+<rect x="990.0" y="330" width="220" height="48" rx="6" fill="#D8EBE2" stroke="#2D6A4F" stroke-width="3"/>
+<text x="1100.0" y="361" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">latent c: d_c numbers</text>
+<rect x="990.0" y="384" width="220" height="40" rx="6" fill="#D8EBE2" stroke="#2D6A4F" stroke-width="3"/>
+<text x="1100.0" y="411" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="normal" text-anchor="middle">RoPE key k_R: d_R</text>
+<text x="1100.0" y="460" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="middle">cached: one latent + one key</text>
+<text x="25" y="530" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Numbers cached per token, per layer (d_h = 128):</text>
+<text x="170.0" y="575" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle">2 H d_h</text>
+<text x="170.0" y="608" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="middle">2 x 8 x 128 = 2,048</text>
+<text x="480.0" y="575" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle">2 H_kv d_h</text>
+<text x="480.0" y="608" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="middle">2 x 2 x 128 = 512</text>
+<text x="790.0" y="575" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle">2 d_h</text>
+<text x="790.0" y="608" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="middle">2 x 128 = 256</text>
+<text x="1100.0" y="575" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle">d_c + d_R</text>
+<text x="1100.0" y="608" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="middle">512 + 64 = 576</text>
+<text x="25" y="675" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">GQA with H_kv = 1 is MQA, and GQA with H_kv = H is MHA.</text>
+<text x="25" y="708" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">MLA values d_c = 512 and d_R = 64 are those of DeepSeek-V2 and V3, which have 128 query heads.</text></svg>

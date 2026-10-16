@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800"><defs><marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="arr2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs><rect x="0" y="0" width="1280" height="800" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">The KV cache: one K tensor and one V tensor per layer</text>
+<text x="40" y="212" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Layer 1</text>
+<rect x="202" y="142" width="368" height="70" rx="6" fill="none" stroke="#2D6A4F" stroke-width="3"/>
+<text x="184" y="186" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="214" y="150" width="80" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="254.0" y="185" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">the</text>
+<rect x="302" y="150" width="80" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="342.0" y="185" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">cat</text>
+<rect x="390" y="150" width="80" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="430.0" y="185" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">sat</text>
+<rect x="478" y="150" width="80" height="54" rx="6" fill="#F5E9C8" stroke="#1E6091" stroke-width="4"/>
+<text x="518.0" y="185" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">down</text>
+<rect x="202" y="224" width="368" height="70" rx="6" fill="none" stroke="#2D6A4F" stroke-width="3"/>
+<text x="184" y="268" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<rect x="214" y="232" width="80" height="54" rx="6" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="254.0" y="267" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">the</text>
+<rect x="302" y="232" width="80" height="54" rx="6" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="342.0" y="267" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">cat</text>
+<rect x="390" y="232" width="80" height="54" rx="6" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="430.0" y="267" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">sat</text>
+<rect x="478" y="232" width="80" height="54" rx="6" fill="#E6DEF0" stroke="#1E6091" stroke-width="4"/>
+<text x="518.0" y="267" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">down</text>
+<text x="40" y="382" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Layer 2</text>
+<rect x="202" y="312" width="368" height="70" rx="6" fill="none" stroke="#2D6A4F" stroke-width="3"/>
+<text x="184" y="356" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="214" y="320" width="80" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="254.0" y="355" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">the</text>
+<rect x="302" y="320" width="80" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="342.0" y="355" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">cat</text>
+<rect x="390" y="320" width="80" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="430.0" y="355" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">sat</text>
+<rect x="478" y="320" width="80" height="54" rx="6" fill="#F5E9C8" stroke="#1E6091" stroke-width="4"/>
+<text x="518.0" y="355" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">down</text>
+<rect x="202" y="394" width="368" height="70" rx="6" fill="none" stroke="#2D6A4F" stroke-width="3"/>
+<text x="184" y="438" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<rect x="214" y="402" width="80" height="54" rx="6" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="254.0" y="437" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">the</text>
+<rect x="302" y="402" width="80" height="54" rx="6" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="342.0" y="437" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">cat</text>
+<rect x="390" y="402" width="80" height="54" rx="6" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="430.0" y="437" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">sat</text>
+<rect x="478" y="402" width="80" height="54" rx="6" fill="#E6DEF0" stroke="#1E6091" stroke-width="4"/>
+<text x="518.0" y="437" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">down</text>
+<text x="40" y="607" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Layer L</text>
+<rect x="202" y="537" width="368" height="70" rx="6" fill="none" stroke="#2D6A4F" stroke-width="3"/>
+<text x="184" y="581" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#B8860B" font-weight="bold" text-anchor="middle">K</text>
+<rect x="214" y="545" width="80" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="254.0" y="580" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">the</text>
+<rect x="302" y="545" width="80" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="342.0" y="580" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">cat</text>
+<rect x="390" y="545" width="80" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="430.0" y="580" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">sat</text>
+<rect x="478" y="545" width="80" height="54" rx="6" fill="#F5E9C8" stroke="#1E6091" stroke-width="4"/>
+<text x="518.0" y="580" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">down</text>
+<rect x="202" y="619" width="368" height="70" rx="6" fill="none" stroke="#2D6A4F" stroke-width="3"/>
+<text x="184" y="663" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#6A4C93" font-weight="bold" text-anchor="middle">V</text>
+<rect x="214" y="627" width="80" height="54" rx="6" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="254.0" y="662" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">the</text>
+<rect x="302" y="627" width="80" height="54" rx="6" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="342.0" y="662" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">cat</text>
+<rect x="390" y="627" width="80" height="54" rx="6" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="430.0" y="662" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">sat</text>
+<rect x="478" y="627" width="80" height="54" rx="6" fill="#E6DEF0" stroke="#1E6091" stroke-width="4"/>
+<text x="518.0" y="662" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">down</text>
+<text x="386" y="505" font-family="Helvetica, Arial, sans-serif" font-size="36" fill="#100D12" font-weight="normal" text-anchor="middle">...</text>
+<text x="518.0" y="130" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="middle">new slot</text>
+<text x="342.0" y="130" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="middle">cached: never change</text>
+<line x1="680" y1="128" x2="560" y2="175" stroke="#1E6091" stroke-width="3" marker-end="url(#arr1E6091)"/>
+<line x1="680" y1="128" x2="560" y2="255" stroke="#1E6091" stroke-width="3" marker-end="url(#arr1E6091)"/>
+<text x="600" y="112" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="start">append k4, v4</text>
+<text x="40" y="735" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">Each layer computes its own k4 and v4 from its own input,</text>
+<text x="40" y="765" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">so a decode step writes one new slot in all L layers.</text>
+<rect x="720" y="150" width="520" height="470" rx="6" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="744" y="195" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Shape of each tensor</text>
+<text x="744" y="228" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#2D6A4F" font-weight="normal" text-anchor="start">[B, H_kv, T, d_h]</text>
+<text x="744" y="294" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="normal" text-anchor="start">Toy model: [1, 1, 4, 2]</text>
+<text x="744" y="327" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="normal" text-anchor="start">Llama-3.1-8B: [B, 8, T, 128], BF16</text>
+<text x="744" y="393" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">One token, one layer:</text>
+<text x="744" y="426" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="normal" text-anchor="start">2 x 8 x 128 x 2 bytes = 4,096 B</text>
+<text x="744" y="459" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="normal" text-anchor="start">One token, 32 layers: 128 KiB</text>
+<text x="744" y="525" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1E6091" font-weight="bold" text-anchor="start">Append = write along T (axis 2)</text>
+<text x="744" y="558" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#B8860B" font-weight="normal" text-anchor="start">Keys are stored after RoPE</text>
+<text x="744" y="591" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#6A4C93" font-weight="normal" text-anchor="start">Values have no RoPE</text></svg>

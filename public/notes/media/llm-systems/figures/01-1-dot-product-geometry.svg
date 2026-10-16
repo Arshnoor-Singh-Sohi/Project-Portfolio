@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<rect width="1280" height="720" fill="#FFFFFF"/>
+<text x="640" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">The dot product: angle, length and shadow</text>
+<text x="40" y="98" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">1. Geometry</text>
+<line x1="189.88074805258185" y1="264.35997537047103" x2="226.8642555805421" y2="474.1038692394867" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<line x1="80" y1="500" x2="226.8642555805421" y2="474.1038692394867" stroke="#100D12" stroke-width="9"/>
+<line x1="80" y1="500" x2="475.8927167109076" y2="430.193432577894" stroke="#1E6091" stroke-width="4"/>
+<polygon points="493.6,427.1 474.3,421.3 477.5,439.1" fill="#1E6091"/>
+<line x1="80" y1="500" x2="182.27361934124926" y2="280.67351553713075" stroke="#B8860B" stroke-width="4"/>
+<polygon points="189.9,264.4 174.1,276.9 190.4,284.5" fill="#B8860B"/>
+<path d="M 148.9 487.8 A 70 70 0 0 0 109.6 436.6" stroke="#100D12" stroke-width="2" fill="none"/>
+<text x="146.98850730679362" y="451.9939485311977" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" text-anchor="middle" font-weight="bold">θ</text>
+<text x="483.6192562651274" y="409.06776537988924" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1E6091" text-anchor="end" font-weight="bold">a  (query)</text>
+<text x="203.88074805258185" y="260.35997537047103" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#B8860B" text-anchor="start" font-weight="bold">b  (key)</text>
+<text x="246.8642555805421" y="518.1038692394867" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">shadow of b on a</text>
+<text x="246.8642555805421" y="542.1038692394867" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">length = ‖b‖ cos θ</text>
+<circle cx="80" cy="500" r="5" fill="#100D12" stroke="none" stroke-width="0"/>
+<text x="74" y="530" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">origin</text>
+<rect x="40" y="600" width="540" height="100" fill="#FFFFFF" stroke="#100D12" stroke-width="2" rx="8"/>
+<text x="60" y="638" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" text-anchor="start" font-weight="bold">a · b = ‖a‖ ‖b‖ cos θ</text>
+<text x="60" y="676" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="normal">= ‖a‖ × (signed length of the shadow)</text>
+<line x1="608" y1="80" x2="608" y2="700" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="632" y="98" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">2. The query of "down" against four keys</text>
+<line x1="790" y1="450" x2="958.0" y2="450" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="790" y1="345" x2="958.0" y2="345" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="790" y1="240" x2="958.0" y2="240" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="895" y1="450" x2="895" y2="198.0" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="790" y1="450" x2="958.0" y2="450" stroke="#100D12" stroke-width="2"/>
+<line x1="790" y1="450" x2="790" y2="198.0" stroke="#100D12" stroke-width="2"/>
+<text x="780" y="472" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" text-anchor="end" font-weight="normal">0</text>
+<text x="780" y="367" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" text-anchor="end" font-weight="normal">1</text>
+<text x="780" y="262" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" text-anchor="end" font-weight="normal">2</text>
+<text x="895" y="476" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" text-anchor="middle" font-weight="normal">1</text>
+<line x1="790" y1="450" x2="790.0" y2="258.0" stroke="#B8860B" stroke-width="6"/>
+<polygon points="790.0,240.0 781.0,258.0 799.0,258.0" fill="#B8860B"/>
+<line x1="790" y1="450" x2="790.0" y2="359.0" stroke="#B8860B" stroke-width="3"/>
+<polygon points="790.0,345.0 783.0,359.0 797.0,359.0" fill="#B8860B"/>
+<line x1="790" y1="450" x2="879.0" y2="450.0" stroke="#B8860B" stroke-width="4"/>
+<polygon points="895.0,450.0 879.0,442.0 879.0,458.0" fill="#B8860B"/>
+<line x1="790" y1="450" x2="883.6862915010153" y2="356.31370849898474" stroke="#B8860B" stroke-width="4"/>
+<polygon points="895.0,345.0 878.0,350.7 889.3,362.0" fill="#B8860B"/>
+<line x1="790" y1="450" x2="886.9501552810008" y2="256.0996894379985" stroke="#1E6091" stroke-width="5"/>
+<polygon points="895.0,240.0 878.9,252.1 895.0,260.1" fill="#1E6091"/>
+<text x="756" y="246" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" text-anchor="end" font-weight="bold">k_cat [0, 2]</text>
+<text x="756" y="351" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" text-anchor="end" font-weight="bold">k_sat [0, 1]</text>
+<text x="905" y="442" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" text-anchor="start" font-weight="bold">k_the [1, 0]</text>
+<text x="907" y="371" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" text-anchor="start" font-weight="bold">k_down [1, 1]</text>
+<text x="907" y="234" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="start" font-weight="bold">q = [1, 2]</text>
+<rect x="1022" y="136" width="248" height="210" fill="#FFFFFF" stroke="#100D12" stroke-width="2" rx="8"/>
+<text x="1036" y="170" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="bold">key</text>
+<text x="1118" y="170" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="bold">q · k</text>
+<text x="1186" y="170" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="bold">cos</text>
+<text x="1036" y="210" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="start" font-weight="bold">the</text>
+<text x="1134" y="210" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">1</text>
+<text x="1186" y="210" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">0.447</text>
+<text x="1036" y="248" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="start" font-weight="bold">cat</text>
+<text x="1134" y="248" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">4</text>
+<text x="1186" y="248" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">0.894</text>
+<text x="1036" y="286" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="start" font-weight="bold">sat</text>
+<text x="1134" y="286" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">2</text>
+<text x="1186" y="286" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">0.894</text>
+<text x="1036" y="324" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="start" font-weight="bold">down</text>
+<text x="1134" y="324" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">3</text>
+<text x="1186" y="324" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">0.949</text>
+<rect x="1120" y="222" width="44" height="34" fill="none" stroke="#C81D25" stroke-width="3" rx="6"/>
+<rect x="1180" y="298" width="68" height="34" fill="none" stroke="#C81D25" stroke-width="3" rx="6"/>
+<text x="632" y="540" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">Dot product ranks cat first: its key is longer.</text>
+<text x="632" y="570" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">Cosine ranks down first: smallest angle (18.4°).</text>
+<text x="632" y="620" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">The keys of cat and sat share one direction.</text>
+<text x="632" y="650" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">Same cosine (0.894), but the dot product of cat</text>
+<text x="632" y="678" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">is twice as large (4 against 2).</text>
+</svg>

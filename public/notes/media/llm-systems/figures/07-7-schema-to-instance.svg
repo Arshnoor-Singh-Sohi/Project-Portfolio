@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 840" width="1280" height="840">
+<defs></defs>
+<rect x="0" y="0" width="1280" height="840" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">One schema, one instance, keyword by keyword</text>
+<text x="640" y="92" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#1E6091" font-weight="bold" text-anchor="middle">arguments from the model:  {"customer_id": "CUS-0042", "status": "shipped", "limit": 20}</text>
+<rect x="30" y="115" width="520" height="455" rx="10" fill="none" stroke="#6A4C93" stroke-width="3"/>
+<rect x="30" y="115" width="520" height="46" rx="10" fill="#6A4C93" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="290" y="146" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#FFFFFF" font-weight="bold" text-anchor="middle">inputSchema rule (from the server)</text>
+<rect x="570" y="115" width="230" height="455" rx="10" fill="none" stroke="#100D12" stroke-width="2"/>
+<rect x="570" y="115" width="230" height="46" rx="10" fill="#100D12" stroke="#100D12" stroke-width="2.5"/>
+<text x="685" y="146" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#FFFFFF" font-weight="bold" text-anchor="middle">result</text>
+<rect x="820" y="115" width="430" height="455" rx="10" fill="none" stroke="#1E6091" stroke-width="3"/>
+<rect x="820" y="115" width="430" height="46" rx="10" fill="#1E6091" stroke="#1E6091" stroke-width="2.5"/>
+<text x="1035" y="146" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#FFFFFF" font-weight="bold" text-anchor="middle">value it checks</text>
+<text x="48" y="200" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">type: "object"</text>
+<text x="685" y="200" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">pass</text>
+<text x="838" y="200" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">the whole value is an object</text>
+<text x="48" y="244" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">required: ["customer_id"]</text>
+<text x="685" y="244" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">pass</text>
+<text x="838" y="244" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">key customer_id is present</text>
+<text x="48" y="288" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">customer_id: pattern</text>
+<text x="685" y="288" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">pass</text>
+<text x="838" y="288" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">"CUS-0042"</text>
+<text x="48" y="332" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">   ^CUS-[0-9]{4}$</text>
+<text x="48" y="376" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">status: enum [pending,</text>
+<text x="685" y="376" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">pass</text>
+<text x="838" y="376" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">"shipped"</text>
+<text x="48" y="420" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">   shipped, cancelled]</text>
+<text x="48" y="464" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">limit: integer, 1 to 50</text>
+<text x="685" y="464" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">pass</text>
+<text x="838" y="464" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">20</text>
+<text x="48" y="508" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">additionalProperties: false</text>
+<text x="685" y="508" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">pass</text>
+<text x="838" y="508" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">keys: customer_id, status, limit</text>
+<text x="48" y="552" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="start">title, description, default</text>
+<text x="685" y="552" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="bold" text-anchor="middle">not checked</text>
+<text x="838" y="552" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="start">annotations only</text>
+<rect x="30" y="600" width="1220" height="220" rx="10" fill="none" stroke="#C81D25" stroke-width="3"/>
+<text x="50" y="640" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" font-weight="bold" text-anchor="start">Invalid arguments:  {"customer_id": "42", "limit": 500, "limt": 5}</text>
+<text x="50" y="684" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="start">fail  pattern:  '42' does not match '^CUS-[0-9]{4}$'</text>
+<text x="50" y="724" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="start">fail  maximum:  500 is greater than the maximum of 50</text>
+<text x="50" y="764" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="start">fail  additionalProperties:  'limt' was unexpected</text>
+<text x="1230" y="724" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end" font-style="italic">Every error is reported, not only the first.</text>
+<text x="1230" y="764" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end" font-style="italic">Messages measured with jsonschema 4.26.</text>
+<text x="50" y="802" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start" font-style="italic">The missing status is not an error: status is optional.</text>
+</svg>

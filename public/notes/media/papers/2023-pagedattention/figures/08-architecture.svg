@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+<defs><marker id="ah100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ah1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ah6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ah2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ah8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="0" y="0" width="1280" height="800" fill="white"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">The vLLM system: Figure 4 of the paper and the v0.2.0 code</text>
+<rect x="40" y="90" width="230" height="80" rx="10" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="155" y="125" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#1E6091">Clients</text>
+<text x="155" y="153" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">HTTP + JSON</text>
+<line x1="272" y1="130" x2="368" y2="130" stroke="#1E6091" stroke-width="2.5" marker-end="url(#ah1E6091)"/>
+<rect x="370" y="85" width="870" height="90" rx="10" fill="white" stroke="#100D12" stroke-width="2"/>
+<text x="805" y="118" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">Frontend: FastAPI, extends the OpenAI API</text>
+<text x="805" y="150" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">/v1/completions, /v1/chat/completions, /v1/models; per-request n, best_of, use_beam_search</text>
+<line x1="805" y1="177" x2="805" y2="215" stroke="#100D12" stroke-width="2.5" marker-end="url(#ah100D12)"/>
+<rect x="40" y="220" width="1200" height="230" rx="12" fill="white" stroke="#1E6091" stroke-width="2.5"/>
+<text x="60" y="252" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#1E6091">LLM engine (Python)</text>
+<rect x="70" y="270" width="470" height="160" rx="8" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="305" y="302" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">Scheduler (FCFS)</text>
+<text x="305" y="334" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">queues: waiting, running, swapped</text>
+<text x="305" y="364" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">picks the batch of each step</text>
+<text x="305" y="394" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">decides preemption: swap or recompute</text>
+<rect x="580" y="270" width="630" height="160" rx="8" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="895" y="302" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">KV cache manager (block manager)</text>
+<text x="895" y="334" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">block tables: sequence → list of physical blocks</text>
+<rect x="605" y="352" width="280" height="60" rx="6" fill="white" stroke="#2D6A4F" stroke-width="2"/>
+<text x="745" y="389" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">GPU block allocator</text>
+<rect x="905" y="352" width="280" height="60" rx="6" fill="white" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1045" y="389" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">CPU block allocator</text>
+<line x1="470" y1="452" x2="470" y2="548" stroke="#1E6091" stroke-width="2.5" marker-end="url(#ah1E6091)"/>
+<text x="140" y="492" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#1E6091">per step: token IDs, positions,</text>
+<text x="140" y="516" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#1E6091">block tables, swap/copy lists</text>
+<line x1="810" y1="548" x2="810" y2="452" stroke="#100D12" stroke-width="2.5" marker-end="url(#ah100D12)"/>
+<text x="830" y="505" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">sampled tokens</text>
+<rect x="40" y="555" width="340" height="170" rx="10" fill="white" stroke="#B8860B" stroke-width="2.5"/>
+<text x="210" y="588" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#B8860B">Worker 0</text>
+<rect x="55" y="602" width="310" height="46" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="210" y="633" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Model shard 0 (PyTorch)</text>
+<rect x="55" y="660" width="310" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="210" y="692" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Cache engine: KV blocks</text>
+<rect x="450" y="555" width="340" height="170" rx="10" fill="white" stroke="#B8860B" stroke-width="2.5"/>
+<text x="620" y="588" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#B8860B">Worker 1</text>
+<rect x="465" y="602" width="310" height="46" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="620" y="633" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Model shard 1 (PyTorch)</text>
+<rect x="465" y="660" width="310" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="620" y="692" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Cache engine: KV blocks</text>
+<rect x="900" y="555" width="340" height="170" rx="10" fill="white" stroke="#B8860B" stroke-width="2.5"/>
+<text x="1070" y="588" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#B8860B">Worker N − 1</text>
+<rect x="915" y="602" width="310" height="46" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="1070" y="633" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Model shard N − 1 (PyTorch)</text>
+<rect x="915" y="660" width="310" height="50" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1070" y="692" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Cache engine: KV blocks</text>
+<text x="845" y="645" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#100D12">...</text>
+<path d="M 210 727 C 210 765, 1070 765, 1070 727" fill="none" stroke="#B8860B" stroke-width="3"/>
+<text x="640" y="790" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">NCCL all-reduce between workers. Custom CUDA kernels for PagedAttention. 8.5K lines of Python + 2K lines of C++/CUDA.</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800"><defs><marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="arr2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs><rect x="0" y="0" width="1280" height="800" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Two ways to grow a cache: concatenate or write at a slot</text>
+<text x="40" y="110" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="bold" text-anchor="start">Dynamic cache: torch.cat on every decode step</text>
+<rect x="40" y="150" width="88" height="56" rx="6" fill="#F0F0F0" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="84.0" y="186" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">the</text>
+<rect x="136" y="150" width="88" height="56" rx="6" fill="#F0F0F0" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="180.0" y="186" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">cat</text>
+<rect x="232" y="150" width="88" height="56" rx="6" fill="#F0F0F0" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="276.0" y="186" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">sat</text>
+<text x="40" y="240" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="start">old tensor: 3 slots, then freed</text>
+<line x1="338" y1="178.0" x2="438" y2="178.0" stroke="#C81D25" stroke-width="3" marker-end="url(#arrC81D25)"/>
+<text x="388" y="138" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="middle">copy 3 rows</text>
+<rect x="458" y="150" width="88" height="56" rx="6" fill="#F7D9DB" stroke="#C81D25" stroke-width="2"/>
+<text x="502.0" y="186" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">the</text>
+<rect x="554" y="150" width="88" height="56" rx="6" fill="#F7D9DB" stroke="#C81D25" stroke-width="2"/>
+<text x="598.0" y="186" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">cat</text>
+<rect x="650" y="150" width="88" height="56" rx="6" fill="#F7D9DB" stroke="#C81D25" stroke-width="2"/>
+<text x="694.0" y="186" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">sat</text>
+<rect x="746" y="150" width="88" height="56" rx="6" fill="#DCE8F2" stroke="#1E6091" stroke-width="4"/>
+<text x="790.0" y="186" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">down</text>
+<text x="458" y="240" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">new tensor: 4 slots (3 copied + 1 new)</text>
+<text x="900" y="160" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Every step: allocate T + 1 slots,</text>
+<text x="900" y="190" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">copy T slots, free the old tensor.</text>
+<text x="900" y="220" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">The shape changes every step.</text>
+<text x="900" y="250" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="start">Copy cost grows with T.</text>
+<line x1="40" y1="330" x2="1240" y2="330" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="8 6"/>
+<text x="40" y="385" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="bold" text-anchor="start">Static cache: allocate T_max slots once, write at slot n</text>
+<rect x="40" y="475" width="88" height="56" rx="6" fill="#D8EBE2" stroke="#2D6A4F" stroke-width="2"/>
+<text x="84.0" y="511" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">the</text>
+<text x="84.0" y="559" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">slot 0</text>
+<rect x="136" y="475" width="88" height="56" rx="6" fill="#D8EBE2" stroke="#2D6A4F" stroke-width="2"/>
+<text x="180.0" y="511" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">cat</text>
+<text x="180.0" y="559" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">slot 1</text>
+<rect x="232" y="475" width="88" height="56" rx="6" fill="#D8EBE2" stroke="#2D6A4F" stroke-width="2"/>
+<text x="276.0" y="511" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">sat</text>
+<text x="276.0" y="559" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">slot 2</text>
+<rect x="328" y="475" width="88" height="56" rx="6" fill="#DCE8F2" stroke="#1E6091" stroke-width="4"/>
+<text x="372.0" y="511" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">down</text>
+<text x="372.0" y="559" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">slot 3</text>
+<rect x="424" y="475" width="88" height="56" rx="6" fill="none" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="468.0" y="511" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">empty</text>
+<text x="468.0" y="559" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">slot 4</text>
+<rect x="520" y="475" width="88" height="56" rx="6" fill="none" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="564.0" y="511" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">empty</text>
+<text x="564.0" y="559" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">slot 5</text>
+<rect x="616" y="475" width="88" height="56" rx="6" fill="none" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="660.0" y="511" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">empty</text>
+<text x="660.0" y="559" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">slot 6</text>
+<rect x="712" y="475" width="88" height="56" rx="6" fill="none" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="756.0" y="511" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="middle">empty</text>
+<text x="756.0" y="559" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">slot 7</text>
+<line x1="372" y1="425" x2="372" y2="469" stroke="#1E6091" stroke-width="3" marker-end="url(#arr1E6091)"/>
+<text x="396" y="453" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="start">write at n = 3, then n = 4</text>
+<text x="40" y="620" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="start">Slots 4 to 7: reserved memory, hidden by the mask</text>
+<text x="40" y="680" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">Same shape every step: works with torch.compile and CUDA graphs.</text>
+<text x="40" y="712" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">The in-place write copies only the new slot.</text>
+<text x="40" y="744" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" font-weight="normal" text-anchor="start">Cost: memory for T_max is reserved even for a short answer.</text></svg>

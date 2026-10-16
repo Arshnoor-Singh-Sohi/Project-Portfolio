@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+<rect x="0" y="0" width="1280" height="800" fill="#FFFFFF"/>
+<defs><marker id="ahink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ahblue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahgold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ahpurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ahgreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahred" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ahgray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">nDCG@5 for one ranked list (linear gain)</text>
+<text x="40" y="100" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Retrieved ranking</text>
+<text x="40" y="136" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="bold" text-anchor="start">Rank</text>
+<text x="110" y="136" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="bold" text-anchor="start">Doc</text>
+<text x="180" y="136" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="bold" text-anchor="start">Grade</text>
+<text x="265" y="136" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="bold" text-anchor="start">log2(i+1)</text>
+<text x="385" y="136" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="bold" text-anchor="start">Grade / log2(i+1)</text>
+<text x="58" y="186" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">1</text>
+<text x="110" y="186" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">D7</text>
+<text x="200" y="186" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">0</text>
+<text x="275" y="186" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">1.0000</text>
+<rect x="385" y="162" width="14" height="36" fill="#FFFFFF" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="409" y="187" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="start">0</text>
+<text x="58" y="248" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">2</text>
+<text x="110" y="248" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">D3</text>
+<text x="200" y="248" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">2</text>
+<text x="275" y="248" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">1.5850</text>
+<rect x="385" y="224" width="60.98987617857423" height="36" fill="#6A4C93" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="453.9898761785742" y="249" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">1.2619</text>
+<text x="58" y="310" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">3</text>
+<text x="110" y="310" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">D1</text>
+<text x="200" y="310" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">3</text>
+<text x="275" y="310" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">2.0000</text>
+<rect x="385" y="286" width="72.5" height="36" fill="#6A4C93" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="465.5" y="311" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">1.5000</text>
+<text x="58" y="372" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">4</text>
+<text x="110" y="372" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">D9</text>
+<text x="200" y="372" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">0</text>
+<text x="275" y="372" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">2.3219</text>
+<rect x="385" y="348" width="14" height="36" fill="#FFFFFF" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="409" y="373" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="start">0</text>
+<text x="58" y="434" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">5</text>
+<text x="110" y="434" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">D4</text>
+<text x="200" y="434" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">1</text>
+<text x="275" y="434" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">2.5850</text>
+<rect x="385" y="410" width="18.697885683002845" height="36" fill="#6A4C93" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="411.6978856830028" y="435" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">0.3869</text>
+<text x="660" y="100" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Ideal ranking: all judged documents</text>
+<text x="660" y="136" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="bold" text-anchor="start">Rank</text>
+<text x="730" y="136" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="bold" text-anchor="start">Doc</text>
+<text x="800" y="136" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="bold" text-anchor="start">Grade</text>
+<text x="885" y="136" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="bold" text-anchor="start">log2(i+1)</text>
+<text x="1005" y="136" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="bold" text-anchor="start">Grade / log2(i+1)</text>
+<text x="678" y="186" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">1</text>
+<text x="730" y="186" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">D1</text>
+<text x="820" y="186" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">3</text>
+<text x="895" y="186" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">1.0000</text>
+<rect x="1005" y="162" width="145.0" height="36" fill="#6A4C93" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1158.0" y="187" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">3.0000</text>
+<text x="678" y="248" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">2</text>
+<text x="730" y="248" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" font-weight="bold" text-anchor="start">D2</text>
+<text x="820" y="248" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">2</text>
+<text x="895" y="248" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">1.5850</text>
+<rect x="1005" y="224" width="60.98987617857423" height="36" fill="#F3C9CB" fill-opacity="1.0" stroke="#C81D25" stroke-width="2.5"/>
+<text x="1073.9898761785741" y="249" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">1.2619</text>
+<text x="678" y="310" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">3</text>
+<text x="730" y="310" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">D3</text>
+<text x="820" y="310" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">2</text>
+<text x="895" y="310" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">2.0000</text>
+<rect x="1005" y="286" width="48.33333333333333" height="36" fill="#6A4C93" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1061.3333333333333" y="311" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">1.0000</text>
+<text x="678" y="372" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">4</text>
+<text x="730" y="372" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">D4</text>
+<text x="820" y="372" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">1</text>
+<text x="895" y="372" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">2.3219</text>
+<rect x="1005" y="348" width="20.816033640214" height="36" fill="#6A4C93" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1033.816033640214" y="373" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">0.4307</text>
+<text x="678" y="434" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">5</text>
+<text x="730" y="434" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">-</text>
+<text x="820" y="434" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">0</text>
+<text x="895" y="434" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">2.5850</text>
+<rect x="1005" y="410" width="14" height="36" fill="#FFFFFF" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="1029" y="435" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="start">0</text>
+<line x1="640" y1="90" x2="640" y2="470" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="980" y="490" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="middle">D2 was never retrieved, but it stays in the ideal list.</text>
+<rect x="40" y="520" width="1200" height="200" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="70" y="562" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="normal" text-anchor="start">DCG@5  = 1.2619 + 1.5000 + 0.3869 = 3.1487</text>
+<text x="70" y="602" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="normal" text-anchor="start">IDCG@5 = 3.0000 + 1.2619 + 1.0000 + 0.4307 = 5.6925</text>
+<text x="70" y="648" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#6A4C93" font-weight="bold" text-anchor="start">nDCG@5 = 3.1487 / 5.6925 = 0.5531</text>
+<text x="70" y="694" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start">Bug: ideal list from the retrieved documents only (3, 2, 1): IDCG = 4.7619, nDCG = 0.6612, and the missed D2 costs nothing.</text>
+<text x="640" y="770" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">Exponential gain 2^grade - 1 gives DCG 5.7796, IDCG 10.8235, nDCG 0.5340 for the same list.</text>
+</svg>

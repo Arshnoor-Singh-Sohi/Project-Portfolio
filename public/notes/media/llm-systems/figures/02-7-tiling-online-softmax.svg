@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 660" width="1280" height="660">
+<rect x="0" y="0" width="1280" height="660" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">FlashAttention tiles and the online softmax on the toy example (tiles of 2)</text>
+<defs><marker id="ah100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ah1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ah6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ah2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ah8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<text x="350" y="118" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="middle" font-weight="bold">keys / values</text>
+<text x="230.0" y="156" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="middle" font-weight="normal">the</text>
+<text x="310.0" y="156" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="middle" font-weight="normal">cat</text>
+<text x="390.0" y="156" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="middle" font-weight="normal">sat</text>
+<text x="470.0" y="156" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="middle" font-weight="normal">down</text>
+<text x="78" y="338" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#1E6091" text-anchor="middle" font-weight="bold">queries</text>
+<text x="178" y="217.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="end" font-weight="normal">the</text>
+<text x="178" y="297.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="end" font-weight="normal">cat</text>
+<text x="178" y="377.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="end" font-weight="normal">sat</text>
+<text x="178" y="457.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="end" font-weight="normal">down</text>
+<rect x="190" y="170" width="80" height="80" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="230.0" y="217.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">0.71</text>
+<rect x="270" y="170" width="80" height="80" rx="0" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="310.0" y="217.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" text-anchor="middle" font-weight="normal">−∞</text>
+<rect x="190" y="250" width="80" height="80" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="230.0" y="297.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">0</text>
+<rect x="270" y="250" width="80" height="80" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="310.0" y="297.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">1.41</text>
+<rect x="190" y="330" width="80" height="80" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="230.0" y="377.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">0</text>
+<rect x="270" y="330" width="80" height="80" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="310.0" y="377.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">1.41</text>
+<rect x="350" y="330" width="80" height="80" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="390.0" y="377.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">0.71</text>
+<rect x="430" y="330" width="80" height="80" rx="0" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="470.0" y="377.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" text-anchor="middle" font-weight="normal">−∞</text>
+<rect x="190" y="410" width="80" height="80" rx="0" fill="#D3E1EE" stroke="#100D12" stroke-width="1.5"/>
+<text x="230.0" y="457.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">0.71</text>
+<rect x="270" y="410" width="80" height="80" rx="0" fill="#D3E1EE" stroke="#100D12" stroke-width="1.5"/>
+<text x="310.0" y="457.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">2.83</text>
+<rect x="350" y="410" width="80" height="80" rx="0" fill="#D3E1EE" stroke="#100D12" stroke-width="1.5"/>
+<text x="390.0" y="457.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">1.41</text>
+<rect x="430" y="410" width="80" height="80" rx="0" fill="#D3E1EE" stroke="#100D12" stroke-width="1.5"/>
+<text x="470.0" y="457.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">2.12</text>
+<rect x="190" y="170" width="160" height="160" rx="0" fill="none" stroke="#100D12" stroke-width="4"/>
+<rect x="350" y="170" width="160" height="160" rx="0" fill="none" stroke="#8A8A8A" stroke-width="3" stroke-dasharray="10 6"/>
+<text x="430" y="257" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" text-anchor="middle" font-weight="bold">skipped</text>
+<rect x="190" y="330" width="160" height="160" rx="0" fill="none" stroke="#100D12" stroke-width="4"/>
+<rect x="350" y="330" width="160" height="160" rx="0" fill="none" stroke="#100D12" stroke-width="4"/>
+<text x="270" y="530" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="middle" font-weight="bold">key tile 1</text>
+<text x="430" y="530" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="middle" font-weight="bold">key tile 2</text>
+<path d="M 210 552 L 490 552" stroke="#100D12" stroke-width="2.5" fill="none" marker-end="url(#ah100D12)"/>
+<text x="350" y="582" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">query tile 2 sweeps left to right</text>
+<text x="350" y="610" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">scaled scores q·k / √2, shaded row: down</text>
+<text x="610" y="140" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">Row "down": state after each tile</text>
+<rect x="610" y="160" width="170" height="48" rx="0" fill="#EFEFEF" stroke="#100D12" stroke-width="1.5"/>
+<text x="695.0" y="191" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">state</text>
+<rect x="780" y="160" width="110" height="48" rx="0" fill="#EFEFEF" stroke="#100D12" stroke-width="1.5"/>
+<text x="835.0" y="191" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">m</text>
+<rect x="890" y="160" width="110" height="48" rx="0" fill="#EFEFEF" stroke="#100D12" stroke-width="1.5"/>
+<text x="945.0" y="191" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">ℓ</text>
+<rect x="1000" y="160" width="230" height="48" rx="0" fill="#EFEFEF" stroke="#100D12" stroke-width="1.5"/>
+<text x="1115.0" y="191" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">õ (unnormalized)</text>
+<rect x="610" y="208" width="170" height="48" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="695.0" y="239" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">start</text>
+<rect x="780" y="208" width="110" height="48" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="835.0" y="239" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">−∞</text>
+<rect x="890" y="208" width="110" height="48" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="945.0" y="239" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">0</text>
+<rect x="1000" y="208" width="230" height="48" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="1115.0" y="239" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">[0, 0]</text>
+<rect x="610" y="256" width="170" height="48" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="695.0" y="287" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">after tile 1</text>
+<rect x="780" y="256" width="110" height="48" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="835.0" y="287" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">2.8284</text>
+<rect x="890" y="256" width="110" height="48" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="945.0" y="287" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">1.1199</text>
+<rect x="1000" y="256" width="230" height="48" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="1115.0" y="287" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">[2.2397, 2.3596]</text>
+<rect x="610" y="304" width="170" height="48" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="695.0" y="335" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">after tile 2</text>
+<rect x="780" y="304" width="110" height="48" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="835.0" y="335" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">2.8284</text>
+<rect x="890" y="304" width="110" height="48" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="945.0" y="335" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">1.8561</text>
+<rect x="1000" y="304" width="230" height="48" rx="0" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="1115.0" y="335" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">[2.9759, 4.3251]</text>
+<text x="610" y="402" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">tile 1: p = [e^(0.7071 − 2.8284), 1] = [0.1199, 1]</text>
+<text x="610" y="434" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">tile 2: max stays 2.8284, so α = 1 and p = [0.2431, 0.4931]</text>
+<text x="610" y="478" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#6A4C93" text-anchor="start" font-weight="bold">o = õ / ℓ = [1.6034, 2.3302]</text>
+<text x="610" y="508" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="start" font-weight="normal">= the plain softmax result (exact)</text>
+<text x="610" y="552" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="start" font-weight="normal">Reverse order: the max grows from 2.1213 to 2.8284,</text>
+<text x="610" y="580" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="start" font-weight="normal">so the old state is multiplied by α = e^(−0.7071) = 0.4931.</text>
+<text x="610" y="608" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="start" font-weight="normal">The final o is the same.</text>
+</svg>

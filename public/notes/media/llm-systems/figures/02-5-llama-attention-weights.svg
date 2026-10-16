@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 620" width="1280" height="620">
+<rect x="0" y="0" width="1280" height="620" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">One attention layer of Llama-3.1-8B: four weight matrices drawn to scale</text>
+<defs><marker id="ah100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ah1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ah6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ah2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ah8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="70" y="150" width="220.0" height="220.0" rx="0" fill="#D3E1EE" stroke="#1E6091" stroke-width="3"/>
+<text x="180.0" y="104" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#1E6091" text-anchor="middle" font-weight="bold">W_Q</text>
+<text x="180.0" y="134" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">[4096, 4096]</text>
+<text x="180.0" y="404.0" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#1E6091" text-anchor="middle" font-weight="bold">16,777,216</text>
+<text x="180.0" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">parameters</text>
+<rect x="370.0" y="150" width="220.0" height="220.0" rx="0" fill="none" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="480.0" y="462.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" text-anchor="middle" font-weight="normal">gray dashed: size with MHA</text>
+<rect x="370.0" y="150" width="55.0" height="220.0" rx="0" fill="#F1E4C4" stroke="#B8860B" stroke-width="3"/>
+<text x="480.0" y="104" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#B8860B" text-anchor="middle" font-weight="bold">W_K</text>
+<text x="480.0" y="134" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">[4096, 1024]</text>
+<text x="480.0" y="404.0" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="middle" font-weight="bold">4,194,304</text>
+<text x="480.0" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">parameters</text>
+<rect x="670.0" y="150" width="220.0" height="220.0" rx="0" fill="none" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="780.0" y="462.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" text-anchor="middle" font-weight="normal">gray dashed: size with MHA</text>
+<rect x="670.0" y="150" width="55.0" height="220.0" rx="0" fill="#E2D9EE" stroke="#6A4C93" stroke-width="3"/>
+<text x="780.0" y="104" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#6A4C93" text-anchor="middle" font-weight="bold">W_V</text>
+<text x="780.0" y="134" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">[4096, 1024]</text>
+<text x="780.0" y="404.0" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="middle" font-weight="bold">4,194,304</text>
+<text x="780.0" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">parameters</text>
+<rect x="970.0" y="150" width="220.0" height="220.0" rx="0" fill="#EFEFEF" stroke="#100D12" stroke-width="3"/>
+<text x="1080.0" y="104" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" text-anchor="middle" font-weight="bold">W_O</text>
+<text x="1080.0" y="134" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">[4096, 4096]</text>
+<text x="1080.0" y="404.0" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">16,777,216</text>
+<text x="1080.0" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">parameters</text>
+<text x="640" y="530" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="middle" font-weight="bold">Total per layer: 41,943,040  (MHA would need 4 × 4096² = 67,108,864)</text>
+<text x="640" y="566" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="normal">× 32 layers = 1,342,177,280 ≈ 16.7% of the 8,030,261,248 parameters</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 580" width="1280" height="580" font-family="Helvetica, Arial, sans-serif">
+<defs>
+<marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A8A"/></marker>
+</defs>
+<rect x="0" y="0" width="1280" height="580" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">How MCP authorization changed, revision by revision</text>
+<rect x="40" y="90" width="280" height="460" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="180.0" y="130" font-size="24" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">2025-03-26</text>
+<circle cx="62" cy="177" r="5" fill="#100D12"/>
+<text x="76" y="184" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">OAuth 2.1 framework</text>
+<text x="76" y="210" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">added (optional)</text>
+<circle cx="62" cy="263" r="5" fill="#100D12"/>
+<text x="76" y="270" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">MCP server may also</text>
+<text x="76" y="296" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">be the auth server</text>
+<circle cx="62" cy="349" r="5" fill="#100D12"/>
+<text x="76" y="356" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">default /authorize,</text>
+<text x="76" y="382" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">/token, /register</text>
+<circle cx="62" cy="435" r="5" fill="#100D12"/>
+<text x="76" y="442" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">DCR: SHOULD</text>
+<circle cx="62" cy="495" r="5" fill="#100D12"/>
+<text x="76" y="502" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">PKCE required</text>
+<line x1="322" y1="320" x2="344" y2="320" stroke="#8A8A8A" stroke-width="2.5" marker-end="url(#arr8A8A8A)"/>
+<rect x="346" y="90" width="280" height="460" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="486.0" y="130" font-size="24" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">2025-06-18</text>
+<circle cx="368" cy="177" r="5" fill="#100D12"/>
+<text x="382" y="184" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">server = OAuth</text>
+<text x="382" y="210" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">resource server</text>
+<circle cx="368" cy="263" r="5" fill="#100D12"/>
+<text x="382" y="270" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">PRM (RFC 9728), 401</text>
+<text x="382" y="296" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">MUST name it</text>
+<circle cx="368" cy="349" r="5" fill="#100D12"/>
+<text x="382" y="356" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">resource parameter</text>
+<text x="382" y="382" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">(RFC 8707): MUST</text>
+<circle cx="368" cy="435" r="5" fill="#100D12"/>
+<text x="382" y="442" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">audience check,</text>
+<text x="382" y="468" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">no passthrough</text>
+<line x1="628" y1="320" x2="650" y2="320" stroke="#8A8A8A" stroke-width="2.5" marker-end="url(#arr8A8A8A)"/>
+<rect x="652" y="90" width="280" height="460" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="792.0" y="130" font-size="24" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">2025-11-25</text>
+<circle cx="674" cy="177" r="5" fill="#100D12"/>
+<text x="688" y="184" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">OpenID Connect</text>
+<text x="688" y="210" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">discovery added</text>
+<circle cx="674" cy="263" r="5" fill="#100D12"/>
+<text x="688" y="270" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">CIMD recommended</text>
+<text x="688" y="296" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">(SEP-991)</text>
+<circle cx="674" cy="349" r="5" fill="#100D12"/>
+<text x="688" y="356" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">scope in challenge,</text>
+<text x="688" y="382" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">step-up (SEP-835)</text>
+<circle cx="674" cy="435" r="5" fill="#100D12"/>
+<text x="688" y="442" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">PRM header optional,</text>
+<text x="688" y="468" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">well-known fallback</text>
+<line x1="934" y1="320" x2="956" y2="320" stroke="#8A8A8A" stroke-width="2.5" marker-end="url(#arr8A8A8A)"/>
+<rect x="958" y="90" width="280" height="460" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1098.0" y="130" font-size="24" fill="#6A4C93" font-weight="bold" text-anchor="middle" font-style="normal">2026-07-28</text>
+<circle cx="980" cy="177" r="5" fill="#6A4C93"/>
+<text x="994" y="184" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">iss validation</text>
+<text x="994" y="210" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">(RFC 9207)</text>
+<circle cx="980" cy="263" r="5" fill="#6A4C93"/>
+<text x="994" y="270" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">application_type</text>
+<text x="994" y="296" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">in DCR (SEP-837)</text>
+<circle cx="980" cy="349" r="5" fill="#6A4C93"/>
+<text x="994" y="356" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">credentials keyed</text>
+<text x="994" y="382" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">by issuer</text>
+<circle cx="980" cy="435" r="5" fill="#6A4C93"/>
+<text x="994" y="442" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">DCR deprecated,</text>
+<text x="994" y="468" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">CIMD preferred</text>
+</svg>

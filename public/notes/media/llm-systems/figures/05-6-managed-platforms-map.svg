@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+<rect x="0" y="0" width="1280" height="760" fill="#FFFFFF"/>
+<defs><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="agr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="agy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">One vocabulary, four clouds (names checked on 2026-10-15)</text>
+<text x="366.0" y="112" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle">AWS</text>
+<text x="588.0" y="112" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle">Microsoft</text>
+<text x="810.0" y="112" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle">Google Cloud</text>
+<text x="1032.0" y="112" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle">Databricks</text>
+<text x="1211" y="100" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">Idle cost</text>
+<text x="1211" y="122" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">paid by</text>
+<rect x="15" y="135" width="235" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="29" y="177" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Pay-per-token</text>
+<text x="29" y="207" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">shared capacity</text>
+<rect x="259" y="135" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="366.0" y="184.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Bedrock</text>
+<text x="366.0" y="208.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Standard tier</text>
+<rect x="481" y="135" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="588.0" y="184.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Foundry Global or</text>
+<text x="588.0" y="208.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Data Zone Standard</text>
+<rect x="703" y="135" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="810.0" y="172.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Agent Platform</text>
+<text x="810.0" y="196.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Standard PayGo,</text>
+<text x="810.0" y="220.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">MaaS</text>
+<rect x="925" y="135" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="1032.0" y="184.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Foundation Model</text>
+<text x="1032.0" y="208.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">APIs pay-per-token</text>
+<rect x="1151" y="135" width="120" height="108" rx="8" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="1211" y="196.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">provider</text>
+<rect x="15" y="253" width="235" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="29" y="295" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Priority tier</text>
+<text x="29" y="325" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">served first, costs more</text>
+<rect x="259" y="253" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="366.0" y="290.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Bedrock Priority</text>
+<text x="366.0" y="314.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">(+75% for several</text>
+<text x="366.0" y="338.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">providers)</text>
+<rect x="481" y="253" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="588.0" y="314.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">not covered here</text>
+<rect x="703" y="253" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="810.0" y="314.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Priority PayGo</text>
+<rect x="925" y="253" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="1032.0" y="302.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Priority</text>
+<text x="1032.0" y="326.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">pay-per-token</text>
+<rect x="1151" y="253" width="120" height="108" rx="8" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="1211" y="314.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">provider</text>
+<rect x="15" y="371" width="235" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="29" y="413" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Batch</text>
+<text x="29" y="443" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">results in hours</text>
+<rect x="259" y="371" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="366.0" y="420.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Bedrock batch</text>
+<text x="366.0" y="444.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">50% off</text>
+<rect x="481" y="371" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="588.0" y="420.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Global or Data Zone</text>
+<text x="588.0" y="444.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Batch, 50% off</text>
+<rect x="703" y="371" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="810.0" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Batch prediction</text>
+<rect x="925" y="371" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="1032.0" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">AI Functions</text>
+<rect x="1151" y="371" width="120" height="108" rx="8" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="1211" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">provider</text>
+<rect x="15" y="489" width="235" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="29" y="531" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Reserved capacity</text>
+<text x="29" y="561" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">one catalog model</text>
+<rect x="259" y="489" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="366.0" y="526.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Provisioned</text>
+<text x="366.0" y="550.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Throughput (MUs),</text>
+<text x="366.0" y="574.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Reserved tier</text>
+<rect x="481" y="489" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="588.0" y="538.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Provisioned</text>
+<text x="588.0" y="562.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">deployments (PTUs)</text>
+<rect x="703" y="489" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="810.0" y="538.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Provisioned</text>
+<text x="810.0" y="562.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Throughput (GSUs)</text>
+<rect x="925" y="489" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="1032.0" y="538.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Provisioned</text>
+<text x="1032.0" y="562.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">throughput</text>
+<rect x="1151" y="489" width="120" height="108" rx="8" fill="#FFFFFF" stroke="#C81D25" stroke-width="3"/>
+<text x="1211" y="550.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">you</text>
+<rect x="15" y="607" width="235" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="29" y="649" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Your weights</text>
+<text x="29" y="679" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">dedicated compute</text>
+<rect x="259" y="607" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="366.0" y="644.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Custom Model Import</text>
+<text x="366.0" y="668.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">(CMU-minutes),</text>
+<text x="366.0" y="692.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">SageMaker AI</text>
+<rect x="481" y="607" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="588.0" y="656.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Managed compute</text>
+<text x="588.0" y="680.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">(preview)</text>
+<rect x="703" y="607" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="810.0" y="644.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Self-deployed</text>
+<text x="810.0" y="668.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">endpoints</text>
+<text x="810.0" y="692.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">(node hours)</text>
+<rect x="925" y="607" width="214" height="108" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="1.5"/>
+<text x="1032.0" y="656.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Custom model</text>
+<text x="1032.0" y="680.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">serving (DBUs)</text>
+<rect x="1151" y="607" width="120" height="108" rx="8" fill="#FFFFFF" stroke="#C81D25" stroke-width="3"/>
+<text x="1211" y="668.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">you</text>
+</svg>

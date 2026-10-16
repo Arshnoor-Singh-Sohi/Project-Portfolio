@@ -3,7 +3,7 @@
 // note pages and /notes/review. Unlisted: nothing outside /notes links
 // here, and every page sets <meta name="robots" content="noindex">.
 // Content model and block syntax: NOTES_GUIDE.md.
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import {
   getNoteItem,
@@ -18,7 +18,7 @@ import { extractHeadings } from '../lib/markdown-utils';
 import NotesMarkdown from '../components/markdown/NotesMarkdown';
 import TableOfContents from '../components/markdown/TableOfContents';
 import CheckBlock from '../components/markdown/CheckBlock';
-import NotesSidebar from '../components/notes/NotesSidebar';
+import NotesSidebar, { IconPanel } from '../components/notes/NotesSidebar';
 import { StatusDot, StatusBadge, Confidence, ReviewDue, PrivateBadge } from '../components/notes/NoteMeta';
 import '../styles/comic.css';
 import '../styles/blog.css';
@@ -286,15 +286,75 @@ function MissingView({ path }) {
   );
 }
 
+// The page body. Memoized, so a sidebar change (collapse, resize,
+// drawer) does not render the markdown again.
+const NotesMain = memo(function NotesMain({ isReview, item, path }) {
+  if (isReview) return <ReviewView />;
+  if (!item) return <MissingView path={path} />;
+  if (item.type === 'folder') return <FolderView folder={item} />;
+  return <NoteView key={item.path} note={item} />;
+});
+
+// Sidebar settings that survive a reload. Storage can be blocked, so
+// every read and write has a fallback.
+const COLLAPSED_KEY = 'notes.sidebar.collapsed';
+const WIDTH_KEY = 'notes.sidebar.width';
+const MIN_WIDTH = 240;
+const MAX_WIDTH = 520;
+const DEFAULT_WIDTH = 300;
+const PHONE_QUERY = '(max-width: 900px)';
+
+function clampWidth(w) {
+  return Math.min(MAX_WIDTH, Math.max(MIN_WIDTH, Math.round(w)));
+}
+
+function readStored(key, fallback) {
+  try {
+    const raw = window.localStorage.getItem(key);
+    return raw === null ? fallback : JSON.parse(raw);
+  } catch {
+    return fallback;
+  }
+}
+
+function writeStored(key, value) {
+  try {
+    window.localStorage.setItem(key, JSON.stringify(value));
+  } catch {
+    // The setting is lost on reload. Nothing else breaks.
+  }
+}
+
+function isPhone() {
+  return typeof window !== 'undefined' && window.matchMedia(PHONE_QUERY).matches;
+}
+
+// Focus the search box now if it is visible, so no typed key is lost.
+// If the tree was collapsed, wait one frame until the panel shows.
+function focusSearch() {
+  const input = document.getElementById('notes-search');
+  if (input && input.offsetParent !== null) input.focus();
+  else window.requestAnimationFrame(() => document.getElementById('notes-search')?.focus());
+}
+
 export default function NotesPage() {
   const params = useParams();
   const location = useLocation();
   const path = (params['*'] || '').replace(/\/+$/, '');
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [collapsed, setCollapsed] = useState(() => readStored(COLLAPSED_KEY, false) === true);
+  const [width, setWidth] = useState(() => {
+    const w = Number(readStored(WIDTH_KEY, DEFAULT_WIDTH));
+    return Number.isFinite(w) ? clampWidth(w) : DEFAULT_WIDTH;
+  });
+  const layoutRef = useRef(null);
 
   const isReview = path === REVIEW_PATH;
   const item = isReview ? null : getNoteItem(path);
   useNotesHead(isReview ? 'Review' : item ? (item.path === '' ? '' : item.title) : 'Not found');
+
+  useEffect(() => writeStored(COLLAPSED_KEY, collapsed), [collapsed]);
+  useEffect(() => writeStored(WIDTH_KEY, width), [width]);
 
   // Close the phone drawer after navigation; jump to the top of a new page.
   useEffect(() => {
@@ -302,11 +362,87 @@ export default function NotesPage() {
     if (!location.hash) window.scrollTo(0, 0);
   }, [location.pathname, location.hash]);
 
-  let view;
-  if (isReview) view = <ReviewView />;
-  else if (!item) view = <MissingView path={path} />;
-  else if (item.type === 'folder') view = <FolderView folder={item} />;
-  else view = <NoteView key={item.path} note={item} />;
+  // While the phone drawer is open, the page behind it does not scroll.
+  useEffect(() => {
+    if (!drawerOpen) return undefined;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [drawerOpen]);
+
+  const expandTree = useCallback((options = {}) => {
+    if (isPhone()) setDrawerOpen(true);
+    else setCollapsed(false);
+    if (options.focusSearch) focusSearch();
+  }, []);
+
+  const toggleTree = useCallback(() => {
+    if (isPhone()) setDrawerOpen((v) => !v);
+    else setCollapsed((v) => !v);
+  }, []);
+
+  // Keys: "/" searches, "[" shows or hides the tree, Escape closes the drawer.
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
+      const t = e.target;
+      const typing = t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName));
+      if (e.key === 'Escape' && drawerOpen) {
+        setDrawerOpen(false);
+        return;
+      }
+      if (typing) return;
+      if (e.key === '/') {
+        e.preventDefault();
+        expandTree({ focusSearch: true });
+      } else if (e.key === '[') {
+        e.preventDefault();
+        toggleTree();
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [drawerOpen, expandTree, toggleTree]);
+
+  // Drag the right edge of the tree to change its width. During the drag
+  // only the CSS variable changes. React state changes once, at the end.
+  const startResize = (e) => {
+    if (e.button !== 0) return;
+    e.preventDefault();
+    const handle = e.currentTarget;
+    const left = handle.parentElement.getBoundingClientRect().left;
+    let next = width;
+    handle.setPointerCapture(e.pointerId);
+    document.body.classList.add('notes-resizing');
+    const onMove = (ev) => {
+      next = clampWidth(ev.clientX - left);
+      layoutRef.current?.style.setProperty('--notes-sidebar-w', `${next}px`);
+    };
+    const onUp = () => {
+      handle.removeEventListener('pointermove', onMove);
+      handle.removeEventListener('pointerup', onUp);
+      handle.removeEventListener('pointercancel', onUp);
+      document.body.classList.remove('notes-resizing');
+      setWidth(next);
+    };
+    handle.addEventListener('pointermove', onMove);
+    handle.addEventListener('pointerup', onUp);
+    handle.addEventListener('pointercancel', onUp);
+  };
+
+  const onResizeKey = (e) => {
+    const step = e.shiftKey ? 48 : 16;
+    if (e.key === 'ArrowLeft') setWidth((w) => clampWidth(w - step));
+    else if (e.key === 'ArrowRight') setWidth((w) => clampWidth(w + step));
+    else if (e.key === 'Home') setWidth(MIN_WIDTH);
+    else if (e.key === 'End') setWidth(MAX_WIDTH);
+    else return;
+    e.preventDefault();
+  };
+
+  const treeLabel = drawerOpen || !collapsed ? 'Hide the notes tree' : 'Show the notes tree';
 
   return (
     <div className="comic-root notes-root">
@@ -314,12 +450,15 @@ export default function NotesPage() {
       <div className="notes-topbar">
         <button
           type="button"
-          className="notes-button notes-drawer-button"
-          aria-expanded={drawerOpen}
+          className="notes-tree-toggle-button"
+          aria-expanded={drawerOpen || !collapsed}
           aria-controls="notes-sidebar"
-          onClick={() => setDrawerOpen((v) => !v)}
+          aria-label={treeLabel}
+          title={`${treeLabel}  [`}
+          onClick={toggleTree}
         >
-          {drawerOpen ? '✕ CLOSE' : '☰ NOTES TREE'}
+          <IconPanel />
+          <span className="notes-tree-toggle-text">{drawerOpen ? 'CLOSE' : 'NOTES TREE'}</span>
         </button>
         <Link to="/notes" className="c-heavy notes-brand">
           NOTES
@@ -330,12 +469,36 @@ export default function NotesPage() {
         </span>
       </div>
 
-      <div className="notes-layout">
+      <div
+        ref={layoutRef}
+        className={`notes-layout${collapsed ? ' is-collapsed' : ''}`}
+        style={{ '--notes-sidebar-w': `${width}px` }}
+      >
         {drawerOpen && <div className="notes-backdrop" aria-hidden onClick={() => setDrawerOpen(false)} />}
         <aside id="notes-sidebar" className={`notes-sidebar${drawerOpen ? ' is-open' : ''}`}>
-          <NotesSidebar currentPath={isReview ? REVIEW_PATH : item ? item.path : null} />
+          <NotesSidebar
+            currentPath={isReview ? REVIEW_PATH : item ? item.path : null}
+            onCollapse={() => setCollapsed(true)}
+            onExpand={expandTree}
+          />
+          <div
+            className="notes-resize"
+            role="separator"
+            aria-orientation="vertical"
+            aria-label="Resize the notes tree"
+            aria-valuemin={MIN_WIDTH}
+            aria-valuemax={MAX_WIDTH}
+            aria-valuenow={width}
+            tabIndex={0}
+            title="Drag to resize. Double-click to reset."
+            onPointerDown={startResize}
+            onDoubleClick={() => setWidth(DEFAULT_WIDTH)}
+            onKeyDown={onResizeKey}
+          />
         </aside>
-        <main className="notes-main">{view}</main>
+        <main className="notes-main">
+          <NotesMain isReview={isReview} item={item} path={path} />
+        </main>
       </div>
     </div>
   );

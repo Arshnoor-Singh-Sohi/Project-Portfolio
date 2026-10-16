@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 610" width="1280" height="610">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#100D12"/></marker></defs>
+<rect x="0" y="0" width="1280" height="610" fill="#FFFFFF"/>
+<text x="640" y="48" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">Arithmetic intensity on an H100: where each phase sits</text>
+<text x="640" y="82" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" text-anchor="middle" font-weight="normal">FLOPs per byte moved from HBM, logarithmic axis, Llama-3.1-8B in BF16</text>
+<rect x="90" y="120" width="763.3608435151958" height="330" rx="0" fill="#8A8A8A" fill-opacity="0.1" stroke="#8A8A8A" stroke-width="0"/>
+<rect x="853.3608435151958" y="120" width="336.6391564848042" height="330" rx="0" fill="#B8860B" fill-opacity="0.12" stroke="#B8860B" stroke-width="0"/>
+<text x="471.6804217575979" y="150" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">memory-bound: bandwidth is the limit</text>
+<text x="1021.680421757598" y="150" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="middle" font-weight="bold">compute-bound</text>
+<line x1="90" y1="330" x2="1190" y2="330" stroke="#100D12" stroke-width="3"/>
+<line x1="90.0" y1="320" x2="90.0" y2="340" stroke="#100D12" stroke-width="2"/>
+<text x="90.0" y="368" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">0.1</text>
+<line x1="310.0" y1="320" x2="310.0" y2="340" stroke="#100D12" stroke-width="2"/>
+<text x="310.0" y="368" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">1</text>
+<line x1="530.0" y1="320" x2="530.0" y2="340" stroke="#100D12" stroke-width="2"/>
+<text x="530.0" y="368" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">10</text>
+<line x1="750.0" y1="320" x2="750.0" y2="340" stroke="#100D12" stroke-width="2"/>
+<text x="750.0" y="368" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">100</text>
+<line x1="970.0" y1="320" x2="970.0" y2="340" stroke="#100D12" stroke-width="2"/>
+<text x="970.0" y="368" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">1,000</text>
+<line x1="1190.0" y1="320" x2="1190.0" y2="340" stroke="#100D12" stroke-width="2"/>
+<text x="1190.0" y="368" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">10,000</text>
+<line x1="853.3608435151958" y1="120" x2="853.3608435151958" y2="450" stroke="#100D12" stroke-width="3" stroke-dasharray="10 6"/>
+<text x="843.3608435151958" y="408" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="end" font-weight="normal">ridge point</text>
+<text x="843.3608435151958" y="434" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="end" font-weight="bold">989 / 3.35 ≈ 295</text>
+<circle cx="308.06973665234887" cy="330" r="10" fill="#C81D25" stroke="#C81D25" stroke-width="2"/>
+<line x1="308.06973665234887" y1="318" x2="308.06973665234887" y2="242" stroke="#C81D25" stroke-width="2"/>
+<text x="308.06973665234887" y="214" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="middle" font-weight="bold">decode step, batch 1</text>
+<text x="308.06973665234887" y="238" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="middle" font-weight="normal">≈ 0.98</text>
+<circle cx="442.45319809215175" cy="330" r="10" fill="#C81D25" stroke="#C81D25" stroke-width="2"/>
+<line x1="442.45319809215175" y1="318" x2="442.45319809215175" y2="292" stroke="#C81D25" stroke-width="2"/>
+<text x="442.45319809215175" y="264" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="middle" font-weight="bold">decode attention (GQA)</text>
+<text x="442.45319809215175" y="288" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="middle" font-weight="normal">= 32 / 8 = 4, any batch</text>
+<circle cx="707.3595942764551" cy="330" r="10" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<line x1="707.3595942764551" y1="318" x2="707.3595942764551" y2="242" stroke="#100D12" stroke-width="2"/>
+<text x="707.3595942764551" y="214" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">weight multiplications</text>
+<text x="707.3595942764551" y="238" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">at batch 64 ≈ 64</text>
+<circle cx="1024.8236386260448" cy="330" r="10" fill="#B8860B" stroke="#B8860B" stroke-width="2"/>
+<line x1="1024.8236386260448" y1="318" x2="1024.8236386260448" y2="242" stroke="#B8860B" stroke-width="2"/>
+<text x="1024.8236386260448" y="214" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="middle" font-weight="bold">prefill, 2,000 tokens</text>
+<text x="1024.8236386260448" y="238" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="middle" font-weight="normal">≈ 1,775</text>
+<text x="640" y="492" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="normal">Batching raises the intensity of the weight multiplications (about b FLOPs per byte).</text>
+<text x="640" y="526" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="normal">Decode attention stays at H / H_kv FLOPs per byte, because each sequence reads its own cache.</text>
+<text x="640" y="570" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" text-anchor="middle" font-weight="normal">Axis: FLOPs per byte (log scale)</text>
+</svg>

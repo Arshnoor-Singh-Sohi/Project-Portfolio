@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" width="1280" height="820"><defs><marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="arr2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs><rect x="0" y="0" width="1280" height="820" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">MLA at decode: cache a latent, absorb the up-projections</text>
+<text x="40" y="105" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#100D12" font-weight="bold" text-anchor="start">Write path: once per token j</text>
+<rect x="40" y="155" width="150" height="60" rx="6" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="115.0" y="192.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">hidden h_j</text>
+<line x1="190" y1="172" x2="330" y2="172" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<text x="260" y="162" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">x W_DKV</text>
+<rect x="335" y="140" width="210" height="66" rx="6" fill="#D8EBE2" stroke="#2D6A4F" stroke-width="3"/>
+<text x="440.0" y="169.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">latent c_j</text>
+<text x="440.0" y="195.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">512 numbers</text>
+<line x1="190" y1="204" x2="330" y2="252" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<text x="120" y="270" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">x W_KR, then RoPE</text>
+<rect x="335" y="220" width="210" height="66" rx="6" fill="#D8EBE2" stroke="#2D6A4F" stroke-width="3"/>
+<text x="440.0" y="249.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" font-weight="normal" text-anchor="middle">RoPE key k_R,j</text>
+<text x="440.0" y="275.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">64, all heads</text>
+<rect x="320" y="128" width="240" height="172" rx="10" fill="none" stroke="#2D6A4F" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="575" y="220" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="start">the cache:</text>
+<text x="575" y="246" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="start">576 numbers</text>
+<text x="575" y="272" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="start">per token, per layer</text>
+<text x="40" y="345" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#100D12" font-weight="bold" text-anchor="start">Read path: each decode step, for each query head i</text>
+<rect x="40" y="380" width="150" height="60" rx="6" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="115.0" y="417.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">query q_i</text>
+<line x1="190" y1="410" x2="330" y2="410" stroke="#1E6091" stroke-width="2" marker-end="url(#arr1E6091)"/>
+<text x="260" y="398" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">x W_UK_i^T</text>
+<rect x="335" y="380" width="210" height="60" rx="6" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="440.0" y="417.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">q~_i: 512 numbers</text>
+<line x1="545" y1="410" x2="640" y2="410" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="645" y="372" width="330" height="76" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="810.0" y="406.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">score_j = q~_i . c_j</text>
+<text x="810.0" y="432.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="middle">+ q_R,i . k_R,j</text>
+<line x1="975" y1="410" x2="1040" y2="410" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="1045" y="380" width="190" height="60" rx="6" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="1140.0" y="417.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">softmax: p_j</text>
+<line x1="1140" y1="440" x2="1140" y2="500" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="820" y="505" width="400" height="60" rx="6" fill="#D8EBE2" stroke="#2D6A4F" stroke-width="3"/>
+<text x="1020.0" y="542.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">sum over j of p_j c_j: 512 numbers</text>
+<line x1="820" y1="535" x2="700" y2="535" stroke="#6A4C93" stroke-width="2" marker-end="url(#arr6A4C93)"/>
+<rect x="330" y="505" width="365" height="60" rx="6" fill="#E6DEF0" stroke="#6A4C93" stroke-width="2"/>
+<text x="512.5" y="542.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">x (W_UV_i W_O_i): output of head i</text>
+<text x="40" y="545" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="normal" text-anchor="start">W_UV_i and W_O_i merge</text>
+<text x="40" y="570" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="normal" text-anchor="start">into one matrix in advance.</text>
+<rect x="40" y="630" width="1200" height="150" rx="10" fill="none" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="64" y="670" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#8A8A8A" font-weight="normal" text-anchor="start">Never built at decode: per-head keys c_j W_UK_i and values c_j W_UV_i.</text>
+<text x="64" y="705" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="normal" text-anchor="start">DeepSeek-V3, full K and V: 128 heads x (192 + 128) = 40,960 numbers per token per layer.</text>
+<text x="64" y="740" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#2D6A4F" font-weight="normal" text-anchor="start">DeepSeek-V3, MLA cache: 512 + 64 = 576 numbers. About 71 times fewer.</text></svg>

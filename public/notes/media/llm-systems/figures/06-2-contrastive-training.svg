@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="730" viewBox="0 0 1280 730">
+<rect x="0" y="0" width="1280" height="730" fill="#FFFFFF"/>
+<defs><marker id="arink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="arblue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="argold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="arpurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="argreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arred" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="argray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Contrastive training with in-batch negatives</text>
+<text x="40" y="105" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">A batch of B = 3 pairs (query i, passage i)</text>
+<rect x="40" y="125" width="400" height="52" rx="10" fill="#FFFFFF" stroke="#1E6091" stroke-width="2.5"/>
+<text x="240.0" y="157.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">q1: refund for an opened laptop?</text>
+<rect x="40" y="195" width="400" height="52" rx="10" fill="#FFFFFF" stroke="#1E6091" stroke-width="2.5"/>
+<text x="240.0" y="227.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">q2: how do I reset my password?</text>
+<rect x="40" y="265" width="400" height="52" rx="10" fill="#FFFFFF" stroke="#1E6091" stroke-width="2.5"/>
+<text x="240.0" y="297.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="middle">q3: reset MFA on a new phone</text>
+<rect x="40" y="360" width="400" height="52" rx="10" fill="#FFFFFF" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="240.0" y="392.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="normal" text-anchor="middle">p1: opened laptops: refund in 30 days</text>
+<rect x="40" y="430" width="400" height="52" rx="10" fill="#FFFFFF" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="240.0" y="462.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="normal" text-anchor="middle">p2: reset a password in the portal</text>
+<rect x="40" y="500" width="400" height="52" rx="10" fill="#FFFFFF" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="240.0" y="532.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="normal" text-anchor="middle">p3: MFA: enroll the new phone</text>
+<rect x="480" y="165" width="150" height="110" rx="10" fill="#FFFFFF" stroke="#B8860B" stroke-width="2.5"/>
+<text x="555.0" y="214.5" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" font-weight="normal" text-anchor="middle">query</text>
+<text x="555.0" y="239.5" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" font-weight="normal" text-anchor="middle">encoder</text>
+<rect x="480" y="400" width="150" height="110" rx="10" fill="#FFFFFF" stroke="#B8860B" stroke-width="2.5"/>
+<text x="555.0" y="449.5" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" font-weight="normal" text-anchor="middle">passage</text>
+<text x="555.0" y="474.5" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" font-weight="normal" text-anchor="middle">encoder</text>
+<line x1="442" y1="151" x2="478" y2="220" stroke="#1E6091" stroke-width="1.8"/>
+<line x1="442" y1="386" x2="478" y2="455" stroke="#6A4C93" stroke-width="1.8"/>
+<line x1="442" y1="221" x2="478" y2="220" stroke="#1E6091" stroke-width="1.8"/>
+<line x1="442" y1="456" x2="478" y2="455" stroke="#6A4C93" stroke-width="1.8"/>
+<line x1="442" y1="291" x2="478" y2="220" stroke="#1E6091" stroke-width="1.8"/>
+<line x1="442" y1="526" x2="478" y2="455" stroke="#6A4C93" stroke-width="1.8"/>
+<text x="555" y="300" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="normal" text-anchor="middle">same or</text>
+<text x="555" y="324" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="normal" text-anchor="middle">shared weights</text>
+<text x="925.0" y="130" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="middle">cosine similarity S[i][j]</text>
+<text x="815.0" y="160" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">p1</text>
+<text x="925.0" y="160" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">p2</text>
+<text x="1035.0" y="160" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">p3</text>
+<text x="735" y="232.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="middle">q1</text>
+<rect x="760" y="170" width="110" height="110" rx="0" fill="#E8F2EC" stroke="#2D6A4F" stroke-width="3"/>
+<text x="815.0" y="233.0" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#2D6A4F" font-weight="normal" text-anchor="middle">0.80</text>
+<rect x="870" y="170" width="110" height="110" rx="0" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="925.0" y="233.0" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="normal" text-anchor="middle">0.30</text>
+<rect x="980" y="170" width="110" height="110" rx="0" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="1035.0" y="233.0" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="normal" text-anchor="middle">0.20</text>
+<text x="735" y="342.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="middle">q2</text>
+<rect x="760" y="280" width="110" height="110" rx="0" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="815.0" y="343.0" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="normal" text-anchor="middle">0.25</text>
+<rect x="870" y="280" width="110" height="110" rx="0" fill="#E8F2EC" stroke="#2D6A4F" stroke-width="3"/>
+<text x="925.0" y="343.0" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#2D6A4F" font-weight="normal" text-anchor="middle">0.70</text>
+<rect x="980" y="280" width="110" height="110" rx="0" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="1035.0" y="343.0" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="normal" text-anchor="middle">0.40</text>
+<text x="735" y="452.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="middle">q3</text>
+<rect x="760" y="390" width="110" height="110" rx="0" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="815.0" y="453.0" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" font-weight="normal" text-anchor="middle">0.10</text>
+<rect x="870" y="390" width="110" height="110" rx="0" fill="#FBE9EA" stroke="#C81D25" stroke-width="3"/>
+<text x="925.0" y="453.0" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#C81D25" font-weight="normal" text-anchor="middle">0.55</text>
+<rect x="980" y="390" width="110" height="110" rx="0" fill="#E8F2EC" stroke="#2D6A4F" stroke-width="3"/>
+<text x="1035.0" y="453.0" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#2D6A4F" font-weight="normal" text-anchor="middle">0.60</text>
+<line x1="632" y1="220" x2="710" y2="220" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arblue)"/>
+<text x="650" y="210" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#1E6091" font-weight="normal" text-anchor="start">rows</text>
+<path d="M 632 455 L 700 455 L 700 530 L 925.0 530 L 925.0 506" fill="none" stroke="#6A4C93" stroke-width="2.5" marker-end="url(#arpurple)"/>
+<text x="939.0" y="528" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="normal" text-anchor="start">columns</text>
+<rect x="1110" y="180" width="26" height="26" rx="0" fill="#E8F2EC" stroke="#2D6A4F" stroke-width="3"/>
+<text x="1146" y="200" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="start">positive:</text>
+<text x="1146" y="224" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="start">pull up</text>
+<rect x="1110" y="260" width="26" height="26" rx="0" fill="#FBE9EA" stroke="#C81D25" stroke-width="3"/>
+<text x="1146" y="280" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start">hard</text>
+<text x="1146" y="304" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start">negative</text>
+<rect x="1110" y="340" width="26" height="26" rx="0" fill="none" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="1146" y="360" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">negative:</text>
+<text x="1146" y="384" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">push down</text>
+<text x="690" y="560" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Softmax of each row of S / τ, τ = 0.05. Loss = −log p(positive):</text>
+<text x="690" y="592" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="start">q1: p = 0.9999, loss 0.0001</text>
+<text x="690" y="622" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="start">q2: p = 0.9974, loss 0.0026</text>
+<text x="690" y="652" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="start">q3: p = 0.731,  loss 0.3133  (hard negative 0.55)</text>
+<text x="690" y="690" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Mean InfoNCE loss = 0.1053</text>
+<text x="40" y="600" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Each query gets B − 1 = 2 negatives for free:</text>
+<text x="40" y="628" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">the other passages in the same batch.</text>
+<text x="40" y="670" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">L_i = −log( exp(S_ii / τ) / Σ_j exp(S_ij / τ) )</text>
+</svg>

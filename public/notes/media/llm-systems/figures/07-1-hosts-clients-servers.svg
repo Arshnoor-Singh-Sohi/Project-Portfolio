@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" width="1280" height="760"><defs><marker id="a1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="s1E6091" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="aB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="sB8860B" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="a6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="s6A4C93" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="a2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="s2D6A4F" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="aC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="sC81D25" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="a8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="s8A8A8A" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="a100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="s100D12" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs><rect x="0" y="0" width="1280" height="760" fill="#FFFFFF"/>
+<text x="640.0" y="44.0" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#100D12" text-anchor="middle">MCP roles: one host, one client for each server</text>
+<rect x="40" y="85" width="420" height="95" rx="12" fill="#B8860B" fill-opacity="0.08" stroke="#B8860B" stroke-width="2.5"/>
+<text x="250" y="125.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#B8860B" text-anchor="middle">Model provider API (the LLM)</text>
+<text x="250" y="158.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" fill="#B8860B" text-anchor="middle">never talks to an MCP server</text>
+<rect x="40" y="240" width="600" height="480" rx="12" fill="none" fill-opacity="1.0" stroke="#100D12" stroke-width="3"/>
+<text x="60" y="275.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#100D12" text-anchor="start">Host: chat app, IDE or your own agent</text>
+<line x1="250" y1="182" x2="250" y2="236" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)" marker-start="url(#s100D12)"/>
+<text x="270" y="210.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#100D12" text-anchor="start">messages, tool definitions, tool calls, results</text>
+<rect x="65" y="300" width="250" height="390" rx="12" fill="#F4F4F4" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="190" y="345.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" fill="#100D12" text-anchor="middle">Agent loop</text>
+<text x="190" y="385.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" fill="#100D12" text-anchor="middle">user consent</text>
+<text x="190" y="420.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" fill="#100D12" text-anchor="middle">conversation</text>
+<text x="190" y="448.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" fill="#100D12" text-anchor="middle">history</text>
+<text x="190" y="488.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" fill="#100D12" text-anchor="middle">translates MCP</text>
+<text x="190" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" fill="#100D12" text-anchor="middle">tools into the</text>
+<text x="190" y="544.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" fill="#100D12" text-anchor="middle">model API format</text>
+<rect x="380" y="330" width="235" height="80" rx="12" fill="#1E6091" fill-opacity="0.08" stroke="#1E6091" stroke-width="2.5"/>
+<text x="497" y="378.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" fill="#1E6091" text-anchor="middle">MCP client 1</text>
+<line x1="315" y1="370" x2="378" y2="370" stroke="#100D12" stroke-width="2"/>
+<rect x="380" y="465" width="235" height="80" rx="12" fill="#1E6091" fill-opacity="0.08" stroke="#1E6091" stroke-width="2.5"/>
+<text x="497" y="513.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" fill="#1E6091" text-anchor="middle">MCP client 2</text>
+<line x1="315" y1="505" x2="378" y2="505" stroke="#100D12" stroke-width="2"/>
+<rect x="380" y="600" width="235" height="80" rx="12" fill="#1E6091" fill-opacity="0.08" stroke="#1E6091" stroke-width="2.5"/>
+<text x="497" y="648.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" fill="#1E6091" text-anchor="middle">MCP client 3</text>
+<line x1="315" y1="640" x2="378" y2="640" stroke="#100D12" stroke-width="2"/>
+<rect x="760" y="240" width="490" height="320" rx="12" fill="none" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="9 6"/>
+<text x="780" y="272.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" fill="#8A8A8A" text-anchor="start">Local machine</text>
+<rect x="760" y="585" width="490" height="135" rx="12" fill="none" fill-opacity="1.0" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="9 6"/>
+<text x="780" y="615.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" fill="#8A8A8A" text-anchor="start">Network</text>
+<rect x="830" y="290" width="390" height="85" rx="12" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1025" y="327.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" fill="#6A4C93" text-anchor="middle">Server 1: files</text>
+<text x="1025" y="356.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="middle">a local process</text>
+<rect x="830" y="430" width="390" height="85" rx="12" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1025" y="467.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" fill="#6A4C93" text-anchor="middle">Server 2: orders database</text>
+<text x="1025" y="496.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="middle">a local process</text>
+<rect x="830" y="628" width="390" height="85" rx="12" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1025" y="665.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" fill="#6A4C93" text-anchor="middle">Server 3: Jira</text>
+<text x="1025" y="694.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" fill="#6A4C93" text-anchor="middle">a remote service</text>
+<line x1="617" y1="370" x2="828" y2="332" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)" marker-start="url(#s100D12)"/>
+<text x="722" y="339.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#100D12" text-anchor="middle">stdio</text>
+<line x1="617" y1="505" x2="828" y2="472" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)" marker-start="url(#s100D12)"/>
+<text x="722" y="476.5" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#100D12" text-anchor="middle">stdio</text>
+<line x1="617" y1="640" x2="828" y2="670" stroke="#100D12" stroke-width="2.5" marker-end="url(#a100D12)" marker-start="url(#s100D12)"/>
+<text x="700" y="690.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#100D12" text-anchor="middle">Streamable</text>
+<text x="700" y="715.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#100D12" text-anchor="middle">HTTP</text>
+<text x="640" y="748.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" fill="#100D12" text-anchor="middle">Each client talks to exactly one server. The host, not the model, holds every connection.</text></svg>

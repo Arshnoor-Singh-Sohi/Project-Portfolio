@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
+<defs>
+<marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1E6091"/></marker>
+</defs>
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">PKCE with S256: the RFC 7636 test vector</text>
+<rect x="40" y="90" width="380" height="120" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="230.0" y="122" font-size="22" fill="#1E6091" font-weight="bold" text-anchor="middle" font-style="normal">1. 32 random bytes</text>
+<text x="230.0" y="149" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">116, 24, 223, 180, ...</text>
+<text x="230.0" y="176" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">kept secret by the client</text>
+<line x1="420" y1="150" x2="470" y2="150" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<rect x="470" y="90" width="770" height="120" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="855.0" y="122" font-size="22" fill="#1E6091" font-weight="bold" text-anchor="middle" font-style="normal">2. code_verifier = BASE64URL(bytes)</text>
+<text x="855.0" y="149" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk</text>
+<text x="855.0" y="176" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">43 characters, never sent until step 5</text>
+<line x1="855" y1="210" x2="855" y2="250" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<rect x="470" y="250" width="770" height="120" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="855.0" y="282" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle" font-style="normal">3. SHA-256(ASCII(code_verifier))</text>
+<text x="855.0" y="309" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">13d31e961a1ad8ec2f16b10c4c982e08</text>
+<text x="855.0" y="336" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">76a878ad6df144566ee1894acb70f9c3  (32 bytes)</text>
+<line x1="855" y1="370" x2="855" y2="410" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<rect x="470" y="410" width="770" height="120" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#1E6091" stroke-width="2.5"/>
+<text x="855.0" y="442" font-size="22" fill="#1E6091" font-weight="bold" text-anchor="middle" font-style="normal">4. code_challenge = BASE64URL, no padding</text>
+<text x="855.0" y="469" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM</text>
+<text x="855.0" y="496" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">43 characters, sent in the authorization request</text>
+<rect x="40" y="250" width="380" height="280" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#B8860B" stroke-width="2.5"/>
+<text x="230.0" y="282" font-size="22" fill="#B8860B" font-weight="bold" text-anchor="middle" font-style="normal">Authorization server</text>
+<text x="230.0" y="309" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">stores the challenge</text>
+<text x="230.0" y="336" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">with the code.</text>
+<text x="230.0" y="363" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">At the token request it</text>
+<text x="230.0" y="390" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">hashes the verifier again</text>
+<text x="230.0" y="417" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle" font-style="normal">and compares: equal?</text>
+<line x1="470" y1="470" x2="424" y2="470" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arr1E6091)"/>
+<rect x="40" y="570" width="590" height="120" rx="10" fill="#FFFFFF" fill-opacity="1.0" stroke="#100D12" stroke-width="2.5"/>
+<text x="58" y="606" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">5. Token request: code + code_verifier.</text>
+<text x="58" y="632" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">SHA-256 of the verifier matches the</text>
+<text x="58" y="658" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start" font-style="normal">stored challenge, so the token is issued.</text>
+<rect x="650" y="570" width="590" height="120" rx="10" fill="#FBEEEF" fill-opacity="1.0" stroke="#C81D25" stroke-width="2.5"/>
+<text x="668" y="606" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="start" font-style="normal">An attacker who steals the code</text>
+<text x="668" y="632" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="start" font-style="normal">has no verifier. A hash cannot be</text>
+<text x="668" y="658" font-size="20" fill="#C81D25" font-weight="normal" text-anchor="start" font-style="normal">reversed, so the token request fails.</text>
+</svg>

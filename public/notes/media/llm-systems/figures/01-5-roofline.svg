@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<rect width="1280" height="720" fill="#FFFFFF"/>
+<text x="640" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">Roofline (log-log), dense BF16: H100 SXM and A100 80 GB SXM</text>
+<line x1="120.0" y1="96" x2="120.0" y2="600" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="120.0" y="628" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">0.1</text>
+<line x1="272.0" y1="96" x2="272.0" y2="600" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="272.0" y="628" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">1</text>
+<line x1="424.0" y1="96" x2="424.0" y2="600" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="424.0" y="628" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">10</text>
+<line x1="576.0" y1="96" x2="576.0" y2="600" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="576.0" y="628" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">100</text>
+<line x1="728.0" y1="96" x2="728.0" y2="600" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="728.0" y="628" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">1,000</text>
+<line x1="880.0" y1="96" x2="880.0" y2="600" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="886.0" y="628" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">10,000</text>
+<line x1="120" y1="600.0" x2="880" y2="600.0" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="110" y="607.0" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">0.1</text>
+<line x1="120" y1="487.42766359774225" x2="880" y2="487.42766359774225" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="110" y="494.42766359774225" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">1</text>
+<line x1="120" y1="374.85532719548456" x2="880" y2="374.85532719548456" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="110" y="381.85532719548456" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">10</text>
+<line x1="120" y1="262.2829907932269" x2="880" y2="262.2829907932269" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="110" y="269.2829907932269" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">100</text>
+<line x1="120" y1="149.71065439096913" x2="880" y2="149.71065439096913" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="110" y="156.71065439096913" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">1,000</text>
+<line x1="120" y1="600" x2="880" y2="600" stroke="#100D12" stroke-width="2"/>
+<line x1="120" y1="96" x2="120" y2="600" stroke="#100D12" stroke-width="2"/>
+<text x="500.0" y="660" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">arithmetic intensity I (FLOPs per byte)</text>
+<text x="40" y="348.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" fill="#100D12" text-anchor="middle" transform="rotate(-90 40 348.0)">attainable TFLOPS</text>
+<line x1="120.0" y1="540.8944793559898" x2="647.4963907088467" y2="150.2267086595881" stroke="#B8860B" stroke-width="4"/>
+<line x1="647.4963907088467" y1="150.2267086595881" x2="880.0" y2="150.2267086595881" stroke="#B8860B" stroke-width="4"/>
+<line x1="120.0" y1="565.1681799710499" x2="604.080079972526" y2="206.65485360066162" stroke="#100D12" stroke-width="3" stroke-dasharray="10 6"/>
+<line x1="604.080079972526" y1="206.65485360066162" x2="880.0" y2="206.65485360066162" stroke="#100D12" stroke-width="3" stroke-dasharray="10 6"/>
+<line x1="647.4963907088467" y1="150.2267086595881" x2="647.4963907088467" y2="600" stroke="#B8860B" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="655.4963907088467" y="588" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" text-anchor="start" font-weight="bold">ridge ≈ 295</text>
+<line x1="604.080079972526" y1="206.65485360066162" x2="604.080079972526" y2="600" stroke="#100D12" stroke-width="1.5" stroke-dasharray="3 5"/>
+<text x="596.080079972526" y="560" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">ridge ≈ 153</text>
+<text x="876" y="136.2267086595881" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="end" font-weight="bold">H100: 989.5</text>
+<text x="876" y="236.65485360066162" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="end" font-weight="bold">A100: 312</text>
+<circle cx="180.48688131814973" cy="496.0974428318438" r="9" fill="#C81D25" stroke="#FFFFFF" stroke-width="2"/>
+<text x="180.48688131814973" y="480.0974428318438" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="middle" font-weight="bold">A</text>
+<circle cx="272.0" cy="428.32214295373205" r="9" fill="#C81D25" stroke="#FFFFFF" stroke-width="2"/>
+<text x="272.0" y="412.32214295373205" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="middle" font-weight="bold">B</text>
+<circle cx="363.5131186818503" cy="360.54684307562036" r="9" fill="#C81D25" stroke="#FFFFFF" stroke-width="2"/>
+<text x="363.5131186818503" y="344.54684307562036" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="middle" font-weight="bold">C</text>
+<circle cx="544.4435368037346" cy="226.54842271892358" r="9" fill="#C81D25" stroke="#FFFFFF" stroke-width="2"/>
+<text x="544.4435368037346" y="210.54842271892358" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="middle" font-weight="bold">D</text>
+<circle cx="669.1431462213998" cy="150.2267086595881" r="9" fill="#100D12" stroke="#FFFFFF" stroke-width="2"/>
+<text x="669.1431462213998" y="184.2267086595881" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">E</text>
+<circle cx="775.8678485108479" cy="150.2267086595881" r="9" fill="#100D12" stroke="#FFFFFF" stroke-width="2"/>
+<text x="775.8678485108479" y="184.2267086595881" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="bold">F</text>
+<text x="284.035549399239" y="546.2893456090309" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#C81D25" text-anchor="start" font-weight="bold">memory-bound</text>
+<text x="284.035549399239" y="572.2893456090309" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">slope = bandwidth</text>
+<text x="704.4549020821671" y="340.9676772564287" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">compute-bound</text>
+<text x="704.4549020821671" y="366.9676772564287" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">flat roof = peak</text>
+<text x="905" y="120" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="bold">Points on the H100 roof</text>
+<text x="905" y="156" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="start" font-weight="bold">A</text>
+<text x="933" y="156" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">ReLU, I = 0.25</text>
+<text x="933" y="180" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" text-anchor="start" font-weight="bold">→ 0.84 TFLOPS</text>
+<text x="905" y="216" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="start" font-weight="bold">B</text>
+<text x="933" y="216" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">decode, batch 1, I ≈ 1</text>
+<text x="933" y="240" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" text-anchor="start" font-weight="bold">→ 3.35 TFLOPS</text>
+<text x="905" y="276" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="start" font-weight="bold">C</text>
+<text x="933" y="276" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">decode attention, Llama-3.1-8B,</text>
+<text x="933" y="302" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">I = H / H_kv = 4</text>
+<text x="933" y="326" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" text-anchor="start" font-weight="bold">→ 13.4 TFLOPS</text>
+<text x="905" y="362" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#C81D25" text-anchor="start" font-weight="bold">D</text>
+<text x="933" y="362" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">linear, 64 tokens, I ≈ 62</text>
+<text x="933" y="386" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" text-anchor="start" font-weight="bold">→ 208 TFLOPS</text>
+<text x="905" y="422" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="bold">E</text>
+<text x="933" y="422" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">linear, 512 tokens, I ≈ 410</text>
+<text x="933" y="446" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="bold">→ 989.5 TFLOPS</text>
+<text x="905" y="482" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="bold">F</text>
+<text x="933" y="482" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">prefill, 2,000 tokens, I ≈ 2,065</text>
+<text x="933" y="506" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="bold">→ 989.5 TFLOPS</text>
+<text x="905" y="552" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" text-anchor="start" font-weight="bold">Red: memory-bound.</text>
+<text x="905" y="578" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="bold">Ink: compute-bound.</text>
+<text x="905" y="604" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">Dashed ink line: A100.</text>
+</svg>

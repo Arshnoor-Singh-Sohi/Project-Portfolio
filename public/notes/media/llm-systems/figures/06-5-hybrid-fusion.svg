@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+<rect x="0" y="0" width="1280" height="640" fill="#FFFFFF"/>
+<defs><marker id="arink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="arblue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="argold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="arpurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="argreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arred" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="argray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Hybrid retrieval: fuse two ranked lists, then rerank</text>
+<rect x="30" y="72" width="560" height="46" rx="10" fill="#FFFFFF" stroke="#1E6091" stroke-width="2.5"/>
+<text x="310.0" y="102.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="middle">query: "refund rules for ORD-55871"</text>
+<text x="140" y="172" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="middle">Dense (cosine)</text>
+<rect x="30" y="190" width="220" height="44" rx="4" fill="none" stroke="#1E6091" stroke-width="1.5"/>
+<text x="52" y="219" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">1</text>
+<text x="110" y="219" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C7</text>
+<text x="200" y="219" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0.83</text>
+<rect x="30" y="238" width="220" height="44" rx="4" fill="none" stroke="#1E6091" stroke-width="1.5"/>
+<text x="52" y="267" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">2</text>
+<text x="110" y="267" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C2</text>
+<text x="200" y="267" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0.81</text>
+<rect x="30" y="286" width="220" height="44" rx="4" fill="none" stroke="#1E6091" stroke-width="1.5"/>
+<text x="52" y="315" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">3</text>
+<text x="110" y="315" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C9</text>
+<text x="200" y="315" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0.80</text>
+<rect x="30" y="334" width="220" height="44" rx="4" fill="none" stroke="#1E6091" stroke-width="1.5"/>
+<text x="52" y="363" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">4</text>
+<text x="110" y="363" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C1</text>
+<text x="200" y="363" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0.78</text>
+<rect x="30" y="382" width="220" height="44" rx="4" fill="none" stroke="#1E6091" stroke-width="1.5"/>
+<text x="52" y="411" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">5</text>
+<text x="110" y="411" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C4</text>
+<text x="200" y="411" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0.74</text>
+<rect x="30" y="430" width="220" height="44" rx="4" fill="none" stroke="#1E6091" stroke-width="1.5"/>
+<text x="52" y="459" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">6</text>
+<text x="110" y="459" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C5</text>
+<text x="200" y="459" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0.73</text>
+<text x="480" y="172" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">BM25 (score)</text>
+<rect x="370" y="190" width="220" height="44" rx="4" fill="none" stroke="#100D12" stroke-width="1.5"/>
+<text x="392" y="219" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">1</text>
+<text x="450" y="219" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C4</text>
+<text x="540" y="219" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">18.2</text>
+<rect x="370" y="238" width="220" height="44" rx="4" fill="none" stroke="#100D12" stroke-width="1.5"/>
+<text x="392" y="267" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">2</text>
+<text x="450" y="267" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C3</text>
+<text x="540" y="267" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">9.1</text>
+<rect x="370" y="286" width="220" height="44" rx="4" fill="none" stroke="#100D12" stroke-width="1.5"/>
+<text x="392" y="315" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">3</text>
+<text x="450" y="315" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C11</text>
+<text x="540" y="315" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">8.7</text>
+<rect x="370" y="334" width="220" height="44" rx="4" fill="none" stroke="#100D12" stroke-width="1.5"/>
+<text x="392" y="363" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">4</text>
+<text x="450" y="363" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C7</text>
+<text x="540" y="363" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">6.0</text>
+<rect x="370" y="382" width="220" height="44" rx="4" fill="none" stroke="#100D12" stroke-width="1.5"/>
+<text x="392" y="411" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">5</text>
+<text x="450" y="411" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C8</text>
+<text x="540" y="411" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">5.5</text>
+<rect x="370" y="430" width="220" height="44" rx="4" fill="none" stroke="#100D12" stroke-width="1.5"/>
+<text x="392" y="459" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">6</text>
+<text x="450" y="459" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C2</text>
+<text x="540" y="459" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">2.1</text>
+<line x1="200" y1="120" x2="160" y2="146" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arblue)"/>
+<line x1="420" y1="120" x2="460" y2="146" stroke="#1E6091" stroke-width="2.5" marker-end="url(#arblue)"/>
+<line x1="250" y1="212" x2="370" y2="356" stroke="#6A4C93" stroke-width="2.5"/>
+<line x1="250" y1="404" x2="370" y2="212" stroke="#6A4C93" stroke-width="2.5"/>
+<line x1="250" y1="260" x2="370" y2="452" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="30" y="520" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start">Raw scores are on different scales:</text>
+<text x="30" y="543" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start">adding them gives the BM25 order.</text>
+<text x="30" y="580" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="normal" text-anchor="start">Lines join the documents that</text>
+<text x="30" y="603" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#6A4C93" font-weight="normal" text-anchor="start">both retrievers found.</text>
+<text x="780" y="172" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">RRF, k = 60</text>
+<rect x="640" y="190" width="300" height="44" rx="4" fill="none" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="670" y="219" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C7</text>
+<text x="780" y="219" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">1/61 + 1/64</text>
+<text x="890" y="219" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0.032018</text>
+<rect x="640" y="238" width="300" height="44" rx="4" fill="none" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="670" y="267" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C4</text>
+<text x="780" y="267" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">1/65 + 1/61</text>
+<text x="890" y="267" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0.031778</text>
+<rect x="640" y="286" width="300" height="44" rx="4" fill="none" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="670" y="315" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C2</text>
+<text x="780" y="315" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">1/62 + 1/66</text>
+<text x="890" y="315" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0.031281</text>
+<rect x="640" y="334" width="300" height="44" rx="4" fill="none" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="670" y="363" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C3</text>
+<text x="780" y="363" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">1/62</text>
+<text x="890" y="363" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0.016129</text>
+<rect x="640" y="382" width="300" height="44" rx="4" fill="none" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="670" y="411" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C11</text>
+<text x="780" y="411" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">1/63</text>
+<text x="890" y="411" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0.015873</text>
+<rect x="640" y="430" width="300" height="44" rx="4" fill="none" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="670" y="459" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="bold" text-anchor="middle">C9</text>
+<text x="780" y="459" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">1/63</text>
+<text x="890" y="459" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0.015873</text>
+<line x1="595" y1="330" x2="635" y2="330" stroke="#100D12" stroke-width="2.5" marker-end="url(#arink)"/>
+<text x="640" y="520" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">Score = Σ 1 / (60 + rank).</text>
+<text x="640" y="543" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">Agreement beats one first place.</text>
+<text x="640" y="566" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">C11 and C9 tie: break ties by rule.</text>
+<rect x="990" y="190" width="260" height="70" rx="10" fill="#FFFFFF" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1120.0" y="219.5" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="middle">top 50 fused</text>
+<text x="1120.0" y="244.5" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="middle">candidates</text>
+<line x1="1120" y1="262" x2="1120" y2="298" stroke="#100D12" stroke-width="2.5" marker-end="url(#arink)"/>
+<rect x="990" y="300" width="260" height="90" rx="10" fill="#FFFFFF" stroke="#B8860B" stroke-width="2.5"/>
+<text x="1120.0" y="328.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="normal" text-anchor="middle">cross-encoder</text>
+<text x="1120.0" y="351.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="normal" text-anchor="middle">reranker: 50 passes,</text>
+<text x="1120.0" y="374.65" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#B8860B" font-weight="normal" text-anchor="middle">about 28 ms (V100)</text>
+<line x1="1120" y1="392" x2="1120" y2="428" stroke="#100D12" stroke-width="2.5" marker-end="url(#arink)"/>
+<rect x="990" y="430" width="260" height="60" rx="10" fill="#FFFFFF" stroke="#6A4C93" stroke-width="2.5"/>
+<text x="1120.0" y="467.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="middle">top 5 into the prompt</text>
+<line x1="945" y1="300" x2="985" y2="225" stroke="#100D12" stroke-width="2.5" marker-end="url(#arink)"/>
+<text x="990" y="540" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start">Ceiling: the reranker</text>
+<text x="990" y="563" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start">only reorders what</text>
+<text x="990" y="586" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="start">the first stage found.</text>
+</svg>

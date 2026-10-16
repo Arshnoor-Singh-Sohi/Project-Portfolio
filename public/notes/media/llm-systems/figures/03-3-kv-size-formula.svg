@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 700" width="1280" height="700">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#100D12"/></marker></defs>
+<rect x="0" y="0" width="1280" height="700" fill="#FFFFFF"/>
+<text x="640" y="50" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">The KV cache size formula, factor by factor</text>
+<text x="70" y="110" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#100D12" text-anchor="start" font-weight="bold">KV bytes =</text>
+<rect x="70" y="140" width="140" height="80" rx="6" fill="#2D6A4F" fill-opacity="0.14" stroke="#2D6A4F" stroke-width="3"/>
+<text x="140.0" y="192" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#100D12" text-anchor="middle" font-weight="bold">2</text>
+<text x="221.0" y="190" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">×</text>
+<text x="140.0" y="255" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">key and</text>
+<text x="140.0" y="280" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">value</text>
+<text x="140.0" y="320" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">2</text>
+<rect x="232" y="140" width="140" height="80" rx="6" fill="#2D6A4F" fill-opacity="0.14" stroke="#2D6A4F" stroke-width="3"/>
+<text x="302.0" y="192" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#100D12" text-anchor="middle" font-weight="bold">L</text>
+<text x="383.0" y="190" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">×</text>
+<text x="302.0" y="255" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">layers</text>
+<text x="302.0" y="320" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">32</text>
+<rect x="394" y="140" width="140" height="80" rx="6" fill="#2D6A4F" fill-opacity="0.14" stroke="#2D6A4F" stroke-width="3"/>
+<text x="464.0" y="192" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#B8860B" text-anchor="middle" font-weight="bold">H_kv</text>
+<text x="545.0" y="190" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">×</text>
+<text x="464.0" y="255" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">KV heads</text>
+<text x="464.0" y="280" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">per layer</text>
+<text x="464.0" y="320" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="middle" font-weight="bold">8</text>
+<rect x="556" y="140" width="140" height="80" rx="6" fill="#2D6A4F" fill-opacity="0.14" stroke="#2D6A4F" stroke-width="3"/>
+<text x="626.0" y="192" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#6A4C93" text-anchor="middle" font-weight="bold">d_h</text>
+<text x="707.0" y="190" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">×</text>
+<text x="626.0" y="255" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">numbers per</text>
+<text x="626.0" y="280" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">head vector</text>
+<text x="626.0" y="320" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="middle" font-weight="bold">128</text>
+<rect x="718" y="140" width="140" height="80" rx="6" fill="#2D6A4F" fill-opacity="0.14" stroke="#2D6A4F" stroke-width="3"/>
+<text x="788.0" y="192" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#100D12" text-anchor="middle" font-weight="bold">s</text>
+<text x="869.0" y="190" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">×</text>
+<text x="788.0" y="255" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">bytes per</text>
+<text x="788.0" y="280" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">number</text>
+<text x="788.0" y="320" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">2 (BF16)</text>
+<rect x="880" y="140" width="140" height="80" rx="6" fill="#1E6091" fill-opacity="0.14" stroke="#1E6091" stroke-width="3"/>
+<text x="950.0" y="192" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#1E6091" text-anchor="middle" font-weight="bold">T</text>
+<text x="1031.0" y="190" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">×</text>
+<text x="950.0" y="255" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">tokens per</text>
+<text x="950.0" y="280" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">sequence</text>
+<text x="950.0" y="320" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#1E6091" text-anchor="middle" font-weight="bold">e.g. 8,192</text>
+<rect x="1042" y="140" width="140" height="80" rx="6" fill="#1E6091" fill-opacity="0.14" stroke="#1E6091" stroke-width="3"/>
+<text x="1112.0" y="192" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#1E6091" text-anchor="middle" font-weight="bold">B</text>
+<text x="1112.0" y="255" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">sequences</text>
+<text x="1112.0" y="280" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">in the batch</text>
+<text x="1112.0" y="320" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#1E6091" text-anchor="middle" font-weight="bold">e.g. 4</text>
+<text x="464.0" y="362" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal"></text>
+<line x1="70" y1="360" x2="858" y2="360" stroke="#2D6A4F" stroke-width="3"/>
+<line x1="70" y1="350" x2="70" y2="370" stroke="#2D6A4F" stroke-width="3"/>
+<line x1="858" y1="350" x2="858" y2="370" stroke="#2D6A4F" stroke-width="3"/>
+<text x="464.0" y="395" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#2D6A4F" text-anchor="middle" font-weight="bold">bytes per token: 2 × 32 × 8 × 128 × 2 = 131,072 bytes = 128 KiB</text>
+<line x1="880" y1="360" x2="1182" y2="360" stroke="#1E6091" stroke-width="3"/>
+<line x1="880" y1="350" x2="880" y2="370" stroke="#1E6091" stroke-width="3"/>
+<line x1="1182" y1="350" x2="1182" y2="370" stroke="#1E6091" stroke-width="3"/>
+<text x="1031.0" y="395" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1E6091" text-anchor="middle" font-weight="bold">cached tokens</text>
+<rect x="70" y="430" width="1140" height="230" rx="6" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="100" y="470" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">Llama-3.1-8B in BF16:</text>
+<text x="100" y="506" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="normal">one request of 8,192 tokens: 128 KiB × 8,192 = 1 GiB</text>
+<text x="100" y="540" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="normal">one request of 131,072 tokens: 16 GiB (the weights are 14.96 GiB)</text>
+<text x="100" y="574" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="normal">4 requests of 8,192 tokens: 4 GiB</text>
+<text x="100" y="616" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#1E6091" text-anchor="start" font-weight="normal">The number of query heads H does not appear: queries are not cached.</text>
+<text x="100" y="646" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="normal">Without GQA (H_kv = 32) the same model would need 512 KiB per token.</text>
+</svg>

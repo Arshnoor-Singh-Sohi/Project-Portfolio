@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1010" viewBox="0 0 1280 1010" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1280" height="1010" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-size="30" fill="#100D12" font-weight="bold" text-anchor="middle">The formula sheet on one page</text>
+<text x="640.0" y="80" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">Default example: Llama-3.1-8B in BF16 on one H100 SXM (about 989 TFLOP/s, 3.35 TB/s)</text>
+<rect x="24" y="106" width="400" height="340" rx="10" fill="#FFFFFF" stroke="#100D12" stroke-width="3"/>
+<rect x="24" y="106" width="400" height="46" rx="10" fill="#100D12"/>
+<rect x="24" y="136" width="400" height="16" fill="#100D12"/>
+<text x="42" y="138" font-size="23" fill="#FFFFFF" font-weight="bold" text-anchor="start">1. Attention</text>
+<text x="42" y="192" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">softmax(QKᵀ / √d_k) · V</text>
+<text x="42" y="228" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">Var(q · k) = d_k</text>
+<text x="42" y="264" font-size="20" fill="#4A4A4A" font-weight="normal" text-anchor="start">d_k = 128: SD ≈ 11.31</text>
+<text x="42" y="300" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">online: α = e^(m − m_new)</text>
+<text x="42" y="336" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">ℓ ← α·ℓ + Σ e^(s − m_new)</text>
+<text x="42" y="372" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">slot = table[⌊t/B⌋]·B + t mod B</text>
+<text x="42" y="408" font-size="20" fill="#4A4A4A" font-weight="normal" text-anchor="start">empty slots ≤ B − 1 = 15</text>
+<rect x="440" y="106" width="400" height="340" rx="10" fill="#FFFFFF" stroke="#2D6A4F" stroke-width="3"/>
+<rect x="440" y="106" width="400" height="46" rx="10" fill="#2D6A4F"/>
+<rect x="440" y="136" width="400" height="16" fill="#2D6A4F"/>
+<text x="458" y="138" font-size="23" fill="#FFFFFF" font-weight="bold" text-anchor="start">2. KV memory</text>
+<text x="458" y="192" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">bytes/token = 2·L·H_kv·d_h·s</text>
+<text x="458" y="228" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="start">8B: 2·32·8·128·2 = 131,072 B</text>
+<text x="458" y="264" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="start">70B: 327,680 B  OPT-13B: 819,200 B</text>
+<text x="458" y="300" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">M_KV = M_GPU·u − W − other</text>
+<text x="458" y="336" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="start">80·0.92 − 14.96 − 3 = 55.64 GiB</text>
+<text x="458" y="372" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="start">= 455,823 tokens</text>
+<text x="458" y="408" font-size="20" fill="#2D6A4F" font-weight="normal" text-anchor="start">cache = weights at 122,532 tokens</text>
+<rect x="856" y="106" width="400" height="340" rx="10" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<rect x="856" y="106" width="400" height="46" rx="10" fill="#B8860B"/>
+<rect x="856" y="136" width="400" height="16" fill="#B8860B"/>
+<text x="874" y="138" font-size="23" fill="#FFFFFF" font-weight="bold" text-anchor="start">3. Time (roofline)</text>
+<text x="874" y="192" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">t ≥ max(FLOPs / π, bytes / β)</text>
+<text x="874" y="228" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">ridge I* = π / β ≈ 295 FLOP/byte</text>
+<text x="874" y="264" font-size="20" fill="#B8860B" font-weight="normal" text-anchor="start">decode intensity ≈ batch B</text>
+<text x="874" y="300" font-size="20" fill="#B8860B" font-weight="normal" text-anchor="start">decode attention: H / H_kv = 4</text>
+<text x="874" y="336" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">B = 1: 16.06 GB ÷ 3.35 TB/s</text>
+<text x="874" y="372" font-size="20" fill="#B8860B" font-weight="normal" text-anchor="start">= 4.79 ms, at most 208.6 tok/s</text>
+<text x="874" y="408" font-size="20" fill="#B8860B" font-weight="normal" text-anchor="start">prefill, 2,000 tokens ≈ 29.3 ms</text>
+<rect x="24" y="466" width="400" height="340" rx="10" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<rect x="24" y="466" width="400" height="46" rx="10" fill="#1E6091"/>
+<rect x="24" y="496" width="400" height="16" fill="#1E6091"/>
+<text x="42" y="498" font-size="23" fill="#FFFFFF" font-weight="bold" text-anchor="start">4. Serving and speed</text>
+<text x="42" y="552" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">E2E = TTFT + TPOT · (n − 1)</text>
+<text x="42" y="588" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">L = λW = 5 · 8 = 40 requests</text>
+<text x="42" y="624" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="start">HPA: ⌈2 · 13/5⌉ = 6 replicas</text>
+<text x="42" y="660" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">E = (1 − α^(γ+1)) / (1 − α)</text>
+<text x="42" y="696" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="start">α 0.8, γ 4: 3.36, speedup 2.80</text>
+<text x="42" y="732" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">INT8: s = max|x| / 127</text>
+<text x="42" y="768" font-size="20" fill="#1E6091" font-weight="normal" text-anchor="start">INT4, group 128: 4.125 bits</text>
+<rect x="440" y="466" width="400" height="340" rx="10" fill="#FFFFFF" stroke="#100D12" stroke-width="3"/>
+<rect x="440" y="466" width="400" height="46" rx="10" fill="#100D12"/>
+<rect x="440" y="496" width="400" height="16" fill="#100D12"/>
+<text x="458" y="498" font-size="23" fill="#FFFFFF" font-weight="bold" text-anchor="start">5. Cost</text>
+<text x="458" y="552" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">USD/MTok = USD/h ÷ (r·3600) · 10⁶</text>
+<text x="458" y="588" font-size="20" fill="#4A4A4A" font-weight="normal" text-anchor="start">98.32 USD/h, 10,000 tok/s: 2.73</text>
+<text x="458" y="624" font-size="20" fill="#4A4A4A" font-weight="normal" text-anchor="start">H100 at 12.29, batch 64: 0.529</text>
+<text x="458" y="660" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">prefill r ≈ MFU · peak / 2N</text>
+<text x="458" y="696" font-size="20" fill="#4A4A4A" font-weight="normal" text-anchor="start">MFU 0.5: 30,791 tok/s, 0.111</text>
+<text x="458" y="732" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">break-even r = USD/h ÷ (p·3600)·10⁶</text>
+<text x="458" y="768" font-size="20" fill="#4A4A4A" font-weight="normal" text-anchor="start">p = 0.71: about 38,466 tok/s</text>
+<rect x="856" y="466" width="400" height="340" rx="10" fill="#FFFFFF" stroke="#6A4C93" stroke-width="3"/>
+<rect x="856" y="466" width="400" height="46" rx="10" fill="#6A4C93"/>
+<rect x="856" y="496" width="400" height="16" fill="#6A4C93"/>
+<text x="874" y="498" font-size="23" fill="#FFFFFF" font-weight="bold" text-anchor="start">6. Retrieval</text>
+<text x="874" y="552" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">RRF(d) = Σ 1 / (60 + r(d))</text>
+<text x="874" y="588" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="start">C7: 1/61 + 1/64 = 0.032018</text>
+<text x="874" y="624" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">nDCG@k = DCG@k / IDCG@k</text>
+<text x="874" y="660" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="start">linear gain example: 0.5531</text>
+<text x="874" y="696" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">SE = √(p(1 − p)/n) = 0.0283</text>
+<text x="874" y="732" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">HNSW: P(level ≥ j) = M^(−j)</text>
+<text x="874" y="768" font-size="20" fill="#6A4C93" font-weight="normal" text-anchor="start">PQ, m 64: 4,096 B → 64 B</text>
+<rect x="24" y="830" width="1232" height="160" rx="10" fill="#FFFFFF" stroke="#6A4C93" stroke-width="3" stroke-dasharray="0"/>
+<rect x="24" y="830" width="1232" height="46" rx="10" fill="#6A4C93"/>
+<rect x="24" y="860" width="1232" height="16" fill="#6A4C93"/>
+<text x="42" y="862" font-size="23" fill="#FFFFFF" font-weight="bold" text-anchor="start">7. MCP numbers</text>
+<text x="42" y="912" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">Revisions: 2024-11-05, 2025-03-26, 2025-06-18, 2025-11-25, 2026-07-28 (stateless core, no initialize)</text>
+<text x="42" y="946" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Errors: −32700, −32600, −32601, −32602, −32603 (JSON-RPC). New in 2026-07-28: −32020, −32021, −32022</text>
+<text x="42" y="980" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">tools/call params: name and _meta required, arguments is an object. Retry: inputResponses and requestState</text>
+</svg>

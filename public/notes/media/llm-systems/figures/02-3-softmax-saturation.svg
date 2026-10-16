@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ar100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ar1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ar6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ar2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ar8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+<text x="640.0" y="46.0" font-size="28" text-anchor="middle" font-weight="bold" fill="#100D12">The same match quality, with and without the 1/sqrt(d_k) scale</text>
+<text x="310.0" y="100.0" font-size="23" text-anchor="middle" font-weight="bold" fill="#1E6091">Scaled: spread about 1</text>
+<text x="310.0" y="130.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#100D12">scores divided by sqrt(d_k)</text>
+<line x1="80.0" y1="520.0" x2="560.0" y2="520.0" stroke="#100D12" stroke-width="2"/>
+<line x1="80.0" y1="520.0" x2="80.0" y2="210.0" stroke="#100D12" stroke-width="2"/>
+<line x1="74.0" y1="520.0" x2="80.0" y2="520.0" stroke="#100D12" stroke-width="2"/>
+<text x="68.0" y="527.0" font-size="19" text-anchor="end" font-weight="normal" fill="#100D12">0</text>
+<line x1="74.0" y1="370.0" x2="80.0" y2="370.0" stroke="#100D12" stroke-width="2"/>
+<text x="68.0" y="377.0" font-size="19" text-anchor="end" font-weight="normal" fill="#100D12">0.5</text>
+<line x1="80.0" y1="370.0" x2="560.0" y2="370.0" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<line x1="74.0" y1="220.0" x2="80.0" y2="220.0" stroke="#100D12" stroke-width="2"/>
+<text x="68.0" y="227.0" font-size="19" text-anchor="end" font-weight="normal" fill="#100D12">1</text>
+<line x1="80.0" y1="220.0" x2="560.0" y2="220.0" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="60.0" y="190.0" font-size="19" text-anchor="start" font-weight="normal" fill="#8A8A8A">weight</text>
+<rect x="110.0" y="343.5" width="86.0" height="176.5" rx="2" fill="#E4EEF5" stroke="#1E6091" stroke-width="2"/>
+<text x="153.0" y="333.5" font-size="20" text-anchor="middle" font-weight="bold" fill="#1E6091">0.588</text>
+<text x="153.0" y="550.0" font-size="19" text-anchor="middle" font-weight="normal" fill="#8A8A8A">key 1</text>
+<text x="153.0" y="578.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">1.2</text>
+<rect x="230.0" y="448.2" width="86.0" height="71.8" rx="2" fill="#E4EEF5" stroke="#1E6091" stroke-width="2"/>
+<text x="273.0" y="438.2" font-size="20" text-anchor="middle" font-weight="bold" fill="#1E6091">0.239</text>
+<text x="273.0" y="550.0" font-size="19" text-anchor="middle" font-weight="normal" fill="#8A8A8A">key 2</text>
+<text x="273.0" y="578.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">0.3</text>
+<rect x="350.0" y="487.8" width="86.0" height="32.2" rx="2" fill="#E4EEF5" stroke="#1E6091" stroke-width="2"/>
+<text x="393.0" y="477.8" font-size="20" text-anchor="middle" font-weight="bold" fill="#1E6091">0.108</text>
+<text x="393.0" y="550.0" font-size="19" text-anchor="middle" font-weight="normal" fill="#8A8A8A">key 3</text>
+<text x="393.0" y="578.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">-0.5</text>
+<rect x="470.0" y="500.4" width="86.0" height="19.6" rx="2" fill="#E4EEF5" stroke="#1E6091" stroke-width="2"/>
+<text x="513.0" y="490.4" font-size="20" text-anchor="middle" font-weight="bold" fill="#1E6091">0.065</text>
+<text x="513.0" y="550.0" font-size="19" text-anchor="middle" font-weight="normal" fill="#8A8A8A">key 4</text>
+<text x="513.0" y="578.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">-1.0</text>
+<text x="60.0" y="578.0" font-size="19" text-anchor="end" font-weight="normal" fill="#8A8A8A">score</text>
+<rect x="100.0" y="610.0" width="440.0" height="70.0" rx="10" fill="#FFFFFF" stroke="#1E6091" stroke-width="2"/>
+<text x="320.0" y="640.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">largest Jacobian entry</text>
+<text x="320.0" y="668.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#1E6091">0.2422: useful gradient</text>
+<text x="950.0" y="100.0" font-size="23" text-anchor="middle" font-weight="bold" fill="#C81D25">Unscaled at d_k = 128</text>
+<text x="950.0" y="130.0" font-size="21" text-anchor="middle" font-weight="normal" fill="#100D12">the same scores times sqrt(128) = 11.31</text>
+<line x1="720.0" y1="520.0" x2="1200.0" y2="520.0" stroke="#100D12" stroke-width="2"/>
+<line x1="720.0" y1="520.0" x2="720.0" y2="210.0" stroke="#100D12" stroke-width="2"/>
+<line x1="714.0" y1="520.0" x2="720.0" y2="520.0" stroke="#100D12" stroke-width="2"/>
+<text x="708.0" y="527.0" font-size="19" text-anchor="end" font-weight="normal" fill="#100D12">0</text>
+<line x1="714.0" y1="370.0" x2="720.0" y2="370.0" stroke="#100D12" stroke-width="2"/>
+<text x="708.0" y="377.0" font-size="19" text-anchor="end" font-weight="normal" fill="#100D12">0.5</text>
+<line x1="720.0" y1="370.0" x2="1200.0" y2="370.0" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<line x1="714.0" y1="220.0" x2="720.0" y2="220.0" stroke="#100D12" stroke-width="2"/>
+<text x="708.0" y="227.0" font-size="19" text-anchor="end" font-weight="normal" fill="#100D12">1</text>
+<line x1="720.0" y1="220.0" x2="1200.0" y2="220.0" stroke="#8A8A8A" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="700.0" y="190.0" font-size="19" text-anchor="start" font-weight="normal" fill="#8A8A8A">weight</text>
+<rect x="750.0" y="220.0" width="86.0" height="300.0" rx="2" fill="#F9E0E1" stroke="#C81D25" stroke-width="2"/>
+<text x="793.0" y="210.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#C81D25">1.000</text>
+<text x="793.0" y="550.0" font-size="19" text-anchor="middle" font-weight="normal" fill="#8A8A8A">key 1</text>
+<text x="793.0" y="578.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">13.58</text>
+<rect x="870.0" y="518.0" width="86.0" height="2.0" rx="2" fill="#F9E0E1" stroke="#C81D25" stroke-width="2"/>
+<text x="913.0" y="508.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#C81D25">0.00004</text>
+<text x="913.0" y="550.0" font-size="19" text-anchor="middle" font-weight="normal" fill="#8A8A8A">key 2</text>
+<text x="913.0" y="578.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">3.39</text>
+<rect x="990.0" y="518.0" width="86.0" height="2.0" rx="2" fill="#F9E0E1" stroke="#C81D25" stroke-width="2"/>
+<text x="1033.0" y="508.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#C81D25">0.000</text>
+<text x="1033.0" y="550.0" font-size="19" text-anchor="middle" font-weight="normal" fill="#8A8A8A">key 3</text>
+<text x="1033.0" y="578.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">-5.66</text>
+<rect x="1110.0" y="518.0" width="86.0" height="2.0" rx="2" fill="#F9E0E1" stroke="#C81D25" stroke-width="2"/>
+<text x="1153.0" y="508.0" font-size="20" text-anchor="middle" font-weight="bold" fill="#C81D25">0.000</text>
+<text x="1153.0" y="550.0" font-size="19" text-anchor="middle" font-weight="normal" fill="#8A8A8A">key 4</text>
+<text x="1153.0" y="578.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">-11.31</text>
+<text x="700.0" y="578.0" font-size="19" text-anchor="end" font-weight="normal" fill="#8A8A8A">score</text>
+<rect x="740.0" y="610.0" width="440.0" height="70.0" rx="10" fill="#FFFFFF" stroke="#C81D25" stroke-width="2"/>
+<text x="960.0" y="640.0" font-size="20" text-anchor="middle" font-weight="normal" fill="#100D12">largest Jacobian entry</text>
+<text x="960.0" y="668.0" font-size="22" text-anchor="middle" font-weight="bold" fill="#C81D25">0.0000378: about 6,400 times smaller</text>
+<line x1="640.0" y1="90.0" x2="640.0" y2="690.0" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="6 6"/>
+</svg>

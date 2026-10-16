@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" width="1280" height="760">
+<defs><marker id="ah100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ah1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ah6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ah2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ah8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="0" y="0" width="1280" height="760" fill="white"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">Two ways to recover a preempted sequence (§4.5)</text>
+<text x="640" y="82" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Numbers: OPT-13B, a sequence with n = 1,000 stored tokens (800 KiB of KV each). Peak rates, so real times are longer.</text>
+<rect x="20" y="120" width="1240" height="270" rx="10" fill="white" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="40" y="158" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="start" fill="#100D12">Swapping</text>
+<text x="40" y="186" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">copy the blocks to CPU RAM, copy them back later</text>
+<rect x="40" y="215" width="330" height="130" rx="8" fill="white" stroke="#B8860B" stroke-width="2"/>
+<text x="205" y="242" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#B8860B">GPU memory</text>
+<rect x="60" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="106" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="152" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="198" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="244" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="290" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="195.0" y="328" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">blocks of the victim</text>
+<line x1="380" y1="280" x2="560" y2="280" stroke="#C81D25" stroke-width="3" marker-end="url(#ahC81D25)"/>
+<text x="470" y="265" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#C81D25">swap out</text>
+<text x="470" y="310" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">PCIe</text>
+<rect x="570" y="215" width="330" height="130" rx="8" fill="white" stroke="#100D12" stroke-width="2"/>
+<text x="735" y="242" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">CPU RAM swap space</text>
+<rect x="590" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="636" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="682" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="728" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="774" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="820" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="725.0" y="328" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">CPU block allocator</text>
+<line x1="910" y1="280" x2="1080" y2="280" stroke="#C81D25" stroke-width="3" marker-end="url(#ahC81D25)"/>
+<text x="995" y="265" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#C81D25">swap in</text>
+<text x="995" y="310" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">when blocks free</text>
+<rect x="1090" y="215" width="150" height="130" rx="8" fill="white" stroke="#B8860B" stroke-width="2"/>
+<text x="1165" y="242" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#B8860B">GPU</text>
+<rect x="1102" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="1148" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="1194" y="260" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1165" y="328" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">new block IDs</text>
+<text x="40" y="375" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Cost: 819.2 MB each way. At 31.5 GB/s (PCIe 4.0 x16, one direction): about 26 ms out + 26 ms in.</text>
+<rect x="20" y="410" width="1240" height="270" rx="10" fill="white" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="40" y="448" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="start" fill="#100D12">Recomputation</text>
+<text x="40" y="476" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">drop the blocks, rebuild them with one prefill later</text>
+<rect x="40" y="505" width="330" height="130" rx="8" fill="white" stroke="#B8860B" stroke-width="2"/>
+<text x="205" y="532" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#B8860B">GPU memory</text>
+<rect x="60" y="550" width="40" height="40" rx="4" fill="white" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="106" y="550" width="40" height="40" rx="4" fill="white" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="152" y="550" width="40" height="40" rx="4" fill="white" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="198" y="550" width="40" height="40" rx="4" fill="white" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="244" y="550" width="40" height="40" rx="4" fill="white" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="290" y="550" width="40" height="40" rx="4" fill="white" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="195.0" y="618" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">blocks freed, KV lost</text>
+<line x1="380" y1="570" x2="560" y2="570" stroke="#100D12" stroke-width="3" marker-end="url(#ah100D12)"/>
+<text x="470" y="555" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">later</text>
+<rect x="570" y="505" width="330" height="130" rx="8" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="735" y="538" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1E6091">new prompt =</text>
+<text x="735" y="568" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">user prompt + tokens</text>
+<text x="735" y="596" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">generated so far</text>
+<line x1="910" y1="570" x2="1080" y2="570" stroke="#C81D25" stroke-width="3" marker-end="url(#ahC81D25)"/>
+<text x="995" y="555" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#C81D25">one prefill</text>
+<text x="995" y="600" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">GPU compute</text>
+<rect x="1090" y="505" width="150" height="130" rx="8" fill="white" stroke="#B8860B" stroke-width="2"/>
+<text x="1165" y="532" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#B8860B">GPU</text>
+<rect x="1102" y="550" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="1148" y="550" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="1194" y="550" width="40" height="40" rx="4" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1165" y="618" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">KV rebuilt</text>
+<text x="40" y="665" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Cost: about 2 × 13e9 × 1,000 = 2.6e13 FLOPs. At 312 TFLOPS (A100 FP16 dense): about 83 ms, more in practice.</text>
+<text x="640" y="715" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">Measured (§7.3): recomputation wins with small blocks, swapping wins with large blocks,</text>
+<text x="640" y="743" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">and the two are comparable for block sizes 16 to 64.</text>
+</svg>

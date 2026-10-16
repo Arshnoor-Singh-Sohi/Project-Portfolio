@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<rect width="1280" height="720" fill="#FFFFFF"/>
+<text x="640" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">The memory hierarchy of an H100 SXM</text>
+<rect x="30" y="74" width="780" height="430" fill="#FFFFFF" stroke="#B8860B" stroke-width="3" rx="12"/>
+<text x="50" y="104" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#B8860B" text-anchor="start" font-weight="bold">GPU chip: 132 streaming multiprocessors (SMs)</text>
+<rect x="50" y="122" width="150" height="246" fill="#FFFFFF" stroke="#100D12" stroke-width="2" rx="8"/>
+<text x="125.0" y="148" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">SM 1</text>
+<rect x="60" y="160" width="130" height="52" fill="#B8860B" stroke="#100D12" stroke-width="1.5" rx="4" fill-opacity="0.18"/>
+<text x="125.0" y="183" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">registers</text>
+<text x="125.0" y="205" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">256 KB</text>
+<rect x="60" y="220" width="130" height="72" fill="#B8860B" stroke="#100D12" stroke-width="1.5" rx="4" fill-opacity="0.18"/>
+<text x="125.0" y="243" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">L1 + shared</text>
+<text x="125.0" y="265" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">256 KB</text>
+<text x="125.0" y="286" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">(SRAM)</text>
+<text x="125.0" y="320" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">4 Tensor Cores</text>
+<text x="125.0" y="346" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">128 FP32 cores</text>
+<rect x="240" y="122" width="150" height="246" fill="#FFFFFF" stroke="#100D12" stroke-width="2" rx="8"/>
+<text x="315.0" y="148" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">SM 2</text>
+<rect x="250" y="160" width="130" height="52" fill="#B8860B" stroke="#100D12" stroke-width="1.5" rx="4" fill-opacity="0.18"/>
+<text x="315.0" y="183" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">registers</text>
+<text x="315.0" y="205" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">256 KB</text>
+<rect x="250" y="220" width="130" height="72" fill="#B8860B" stroke="#100D12" stroke-width="1.5" rx="4" fill-opacity="0.18"/>
+<text x="315.0" y="243" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">L1 + shared</text>
+<text x="315.0" y="265" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">256 KB</text>
+<text x="315.0" y="286" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">(SRAM)</text>
+<text x="315.0" y="320" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">4 Tensor Cores</text>
+<text x="315.0" y="346" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">128 FP32 cores</text>
+<text x="540" y="250" font-family="Helvetica, Arial, sans-serif" font-size="36" fill="#100D12" text-anchor="middle" font-weight="bold">· · ·</text>
+<rect x="640" y="122" width="150" height="246" fill="#FFFFFF" stroke="#100D12" stroke-width="2" rx="8"/>
+<text x="715.0" y="148" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">SM 132</text>
+<rect x="650" y="160" width="130" height="52" fill="#B8860B" stroke="#100D12" stroke-width="1.5" rx="4" fill-opacity="0.18"/>
+<text x="715.0" y="183" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">registers</text>
+<text x="715.0" y="205" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">256 KB</text>
+<rect x="650" y="220" width="130" height="72" fill="#B8860B" stroke="#100D12" stroke-width="1.5" rx="4" fill-opacity="0.18"/>
+<text x="715.0" y="243" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">L1 + shared</text>
+<text x="715.0" y="265" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">256 KB</text>
+<text x="715.0" y="286" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">(SRAM)</text>
+<text x="715.0" y="320" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">4 Tensor Cores</text>
+<text x="715.0" y="346" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">128 FP32 cores</text>
+<rect x="50" y="392" width="740" height="52" fill="#B8860B" stroke="#100D12" stroke-width="2" rx="6" fill-opacity="0.32"/>
+<text x="420" y="425" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="middle" font-weight="bold">L2 cache: 50 MB, shared by all SMs</text>
+<text x="50" y="474" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">On-chip SRAM ≈ 33 MB, registers ≈ 33 MB:</text>
+<text x="50" y="496" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">far too small for 16 GB of weights</text>
+<line x1="600" y1="446" x2="600.0" y2="538.0" stroke="#100D12" stroke-width="8"/>
+<polygon points="600.0,560.0 611.0,538.0 589.0,538.0" fill="#100D12"/>
+<line x1="600" y1="560" x2="600.0" y2="468.0" stroke="#100D12" stroke-width="8"/>
+<polygon points="600.0,446.0 589.0,468.0 611.0,468.0" fill="#100D12"/>
+<text x="620" y="542" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">3.35 TB/s</text>
+<rect x="30" y="566" width="780" height="120" fill="#FFFFFF" stroke="#100D12" stroke-width="3" rx="10"/>
+<text x="50" y="596" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">HBM3: 80 GB, off the chip</text>
+<text x="790" y="596" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal">example: Llama-3.1-8B, 64 × 4,096 tokens</text>
+<rect x="50" y="612" width="148.55499999999998" height="52" fill="#100D12" stroke="#100D12" stroke-width="1.5" rx="0" fill-opacity="0.18"/>
+<text x="124.27749999999999" y="645" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">weights 16 GB</text>
+<rect x="198.55499999999998" y="612" width="317.83" height="52" fill="#2D6A4F" stroke="#100D12" stroke-width="1.5" rx="0" fill-opacity="0.3"/>
+<text x="357.46999999999997" y="645" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="bold">KV cache 34.4 GB</text>
+<rect x="516.385" y="612" width="273.615" height="52" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2" rx="0" stroke-dasharray="8 6"/>
+<text x="653.1925000000001" y="645" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8A8A8A" text-anchor="middle" font-weight="normal">free ≈ 29.6 GB</text>
+<rect x="850" y="74" width="400" height="160" fill="#FFFFFF" stroke="#100D12" stroke-width="2" rx="10"/>
+<text x="870" y="104" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">Other GPUs</text>
+<text x="870" y="136" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">NVLink (4th gen):</text>
+<text x="870" y="164" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="bold">900 GB/s total per GPU</text>
+<text x="870" y="200" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">for tensor parallelism</text>
+<rect x="850" y="262" width="400" height="170" fill="#FFFFFF" stroke="#100D12" stroke-width="2" rx="10"/>
+<text x="870" y="292" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">CPU and its DRAM</text>
+<text x="870" y="324" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">PCIe Gen5 x16:</text>
+<text x="870" y="352" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="bold">128 GB/s total,</text>
+<text x="870" y="380" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="bold">64 GB/s each direction</text>
+<text x="870" y="414" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">for swapping and loading</text>
+<line x1="812" y1="154" x2="834.0" y2="154.0" stroke="#100D12" stroke-width="4"/>
+<polygon points="846.0,154.0 834.0,148.0 834.0,160.0" fill="#100D12"/>
+<line x1="846" y1="154" x2="824.0" y2="154.0" stroke="#100D12" stroke-width="4"/>
+<polygon points="812.0,154.0 824.0,160.0 824.0,148.0" fill="#100D12"/>
+<line x1="812" y1="346" x2="834.0" y2="346.0" stroke="#100D12" stroke-width="4"/>
+<polygon points="846.0,346.0 834.0,340.0 834.0,352.0" fill="#100D12"/>
+<line x1="846" y1="346" x2="824.0" y2="346.0" stroke="#100D12" stroke-width="4"/>
+<polygon points="812.0,346.0 824.0,352.0 824.0,340.0" fill="#100D12"/>
+<rect x="850" y="460" width="400" height="226" fill="#FFFFFF" stroke="#100D12" stroke-width="2" rx="10"/>
+<text x="870" y="490" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">Speed, fast to slow</text>
+<text x="870" y="522" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">registers, then shared memory</text>
+<text x="870" y="552" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">SRAM ≈ 19 TB/s (A100 estimate,</text>
+<text x="870" y="580" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">FlashAttention paper)</text>
+<text x="870" y="612" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">HBM: 3.35 TB/s</text>
+<text x="870" y="644" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">NVLink 900 GB/s, PCIe 128 GB/s</text>
+<text x="870" y="672" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="bold">each step down: larger and slower</text>
+</svg>

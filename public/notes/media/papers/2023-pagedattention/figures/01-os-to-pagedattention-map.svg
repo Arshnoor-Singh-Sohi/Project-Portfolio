@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 740" width="1280" height="740" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1280" height="740" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker></defs>
+<text x="640.0" y="44" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Operating system ideas and their PagedAttention counterparts</text>
+<text x="60" y="100" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Operating system</text>
+<text x="640" y="100" font-size="22" fill="#2D6A4F" font-weight="bold" text-anchor="start">PagedAttention and vLLM</text>
+<rect x="60" y="120" width="440" height="44" rx="6" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="76" y="149" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">byte</text>
+<rect x="640" y="120" width="580" height="44" rx="6" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="656" y="149" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">the K and V vectors of one token</text>
+<line x1="506" y1="142" x2="632" y2="142" stroke="#100D12" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="176" width="440" height="44" rx="6" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="76" y="205" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">page</text>
+<rect x="640" y="176" width="580" height="44" rx="6" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="656" y="205" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">logical KV block (B tokens, default B = 16)</text>
+<line x1="506" y1="198" x2="632" y2="198" stroke="#100D12" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="232" width="440" height="44" rx="6" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="76" y="261" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">frame</text>
+<rect x="640" y="232" width="580" height="44" rx="6" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="656" y="261" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">physical KV block in GPU memory</text>
+<line x1="506" y1="254" x2="632" y2="254" stroke="#100D12" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="288" width="440" height="44" rx="6" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="76" y="317" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">process</text>
+<rect x="640" y="288" width="580" height="44" rx="6" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="656" y="317" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">request</text>
+<line x1="506" y1="310" x2="632" y2="310" stroke="#100D12" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="344" width="440" height="44" rx="6" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="76" y="373" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">page table</text>
+<rect x="640" y="344" width="580" height="44" rx="6" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="656" y="373" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">block table (block number, filled slots)</text>
+<line x1="506" y1="366" x2="632" y2="366" stroke="#100D12" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="400" width="440" height="44" rx="6" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="76" y="429" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">allocation on demand</text>
+<rect x="640" y="400" width="580" height="44" rx="6" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="656" y="429" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">a new block only when the last one is full</text>
+<line x1="506" y1="422" x2="632" y2="422" stroke="#100D12" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="456" width="440" height="44" rx="6" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="76" y="485" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">shared library</text>
+<rect x="640" y="456" width="580" height="44" rx="6" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="656" y="485" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">shared prompt prefix</text>
+<line x1="506" y1="478" x2="632" y2="478" stroke="#100D12" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="512" width="440" height="44" rx="6" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="76" y="541" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">copy-on-write after fork</text>
+<rect x="640" y="512" width="580" height="44" rx="6" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="656" y="541" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">copy-on-write of a block, with reference counts</text>
+<line x1="506" y1="534" x2="632" y2="534" stroke="#100D12" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="568" width="440" height="44" rx="6" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="76" y="597" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">swap to disk</text>
+<rect x="640" y="568" width="580" height="44" rx="6" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="656" y="597" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">swap a sequence's blocks to CPU memory</text>
+<line x1="506" y1="590" x2="632" y2="590" stroke="#100D12" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="624" width="440" height="44" rx="6" fill="#ffffff" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="76" y="653" font-size="20" fill="#8A8A8A" font-weight="normal" text-anchor="start">no counterpart</text>
+<rect x="640" y="624" width="580" height="44" rx="6" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="656" y="653" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">recompute the KV cache from the tokens</text>
+<line x1="506" y1="646" x2="632" y2="646" stroke="#100D12" stroke-width="2" marker-end="url(#ah)"/>
+<text x="60" y="710" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">The paper: “one can think of blocks as pages, tokens as bytes, and requests as processes” (§1).</text>
+</svg>

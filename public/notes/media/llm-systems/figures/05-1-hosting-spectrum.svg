@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" width="1280" height="780">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arrr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrgr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker></defs>
+<rect x="0" y="0" width="1280" height="780" fill="#FFFFFF"/>
+<text x="640" y="46" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#100D12" text-anchor="middle" font-weight="bold">Who manages each layer: six ways to host a model</text>
+<text x="418.5" y="88" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" text-anchor="middle" font-weight="bold">A</text>
+<text x="418.5" y="112" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">Closed</text>
+<text x="418.5" y="134" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">model API</text>
+<text x="571.5" y="88" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" text-anchor="middle" font-weight="bold">B</text>
+<text x="571.5" y="112" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">Model API in</text>
+<text x="571.5" y="134" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">your cloud</text>
+<text x="724.5" y="88" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" text-anchor="middle" font-weight="bold">C</text>
+<text x="724.5" y="112" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">Serverless</text>
+<text x="724.5" y="134" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">open models</text>
+<text x="877.5" y="88" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" text-anchor="middle" font-weight="bold">D</text>
+<text x="877.5" y="112" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">Dedicated or</text>
+<text x="877.5" y="134" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">managed</text>
+<text x="1030.5" y="88" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" text-anchor="middle" font-weight="bold">E</text>
+<text x="1030.5" y="112" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">Self-host on</text>
+<text x="1030.5" y="134" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">GPU VMs</text>
+<text x="1183.5" y="88" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#100D12" text-anchor="middle" font-weight="bold">F</text>
+<text x="1183.5" y="112" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">Kubernetes</text>
+<text x="1183.5" y="134" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">platform</text>
+<text x="328" y="188.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="end" font-weight="normal">Application, prompts, evals</text>
+<rect x="346" y="154" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="418.5" y="188.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="499" y="154" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="571.5" y="188.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="652" y="154" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="724.5" y="188.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="805" y="154" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="877.5" y="188.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="958" y="154" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1030.5" y="188.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="1111" y="154" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1183.5" y="188.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<text x="328" y="250.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="end" font-weight="normal">Caller identity and limits</text>
+<rect x="346" y="216" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="418.5" y="250.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="499" y="216" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="571.5" y="250.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="652" y="216" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="724.5" y="250.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="805" y="216" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="877.5" y="250.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="958" y="216" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1030.5" y="250.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="1111" y="216" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1183.5" y="250.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<text x="328" y="312.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="end" font-weight="normal">Autoscaling and routing</text>
+<rect x="346" y="278" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="418.5" y="312.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="499" y="278" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="571.5" y="312.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="652" y="278" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="724.5" y="312.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<polygon points="805,278 950,278 805,332" fill="#F5E9C8" stroke="none" stroke-width="0"/>
+<polygon points="950,278 950,332 805,332" fill="#DCE9F3" stroke="none" stroke-width="0"/>
+<rect x="805" y="278" width="145" height="54" rx="6" fill="none" stroke="#6A4C93" stroke-width="2"/>
+<text x="877.5" y="312.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="middle" font-weight="bold">Shared</text>
+<rect x="958" y="278" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1030.5" y="312.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="1111" y="278" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1183.5" y="312.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<text x="328" y="374.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="end" font-weight="normal">Engine, batching, KV cache</text>
+<rect x="346" y="340" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="418.5" y="374.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="499" y="340" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="571.5" y="374.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="652" y="340" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="724.5" y="374.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="805" y="340" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="877.5" y="374.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="958" y="340" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1030.5" y="374.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="1111" y="340" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1183.5" y="374.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<text x="328" y="436.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="end" font-weight="normal">Which model weights</text>
+<rect x="346" y="402" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="418.5" y="436.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="499" y="402" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="571.5" y="436.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<polygon points="652,402 797,402 652,456" fill="#F5E9C8" stroke="none" stroke-width="0"/>
+<polygon points="797,402 797,456 652,456" fill="#DCE9F3" stroke="none" stroke-width="0"/>
+<rect x="652" y="402" width="145" height="54" rx="6" fill="none" stroke="#6A4C93" stroke-width="2"/>
+<text x="724.5" y="436.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="middle" font-weight="bold">Shared</text>
+<polygon points="805,402 950,402 805,456" fill="#F5E9C8" stroke="none" stroke-width="0"/>
+<polygon points="950,402 950,456 805,456" fill="#DCE9F3" stroke="none" stroke-width="0"/>
+<rect x="805" y="402" width="145" height="54" rx="6" fill="none" stroke="#6A4C93" stroke-width="2"/>
+<text x="877.5" y="436.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="middle" font-weight="bold">Shared</text>
+<rect x="958" y="402" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1030.5" y="436.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="1111" y="402" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1183.5" y="436.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<text x="328" y="498.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="end" font-weight="normal">Driver, CUDA, container</text>
+<rect x="346" y="464" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="418.5" y="498.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="499" y="464" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="571.5" y="498.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="652" y="464" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="724.5" y="498.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="805" y="464" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="877.5" y="498.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="958" y="464" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1030.5" y="498.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<rect x="1111" y="464" width="145" height="54" rx="6" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="1183.5" y="498.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="middle" font-weight="bold">You</text>
+<text x="328" y="560.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="end" font-weight="normal">GPU capacity, hardware faults</text>
+<rect x="346" y="526" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="418.5" y="560.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="499" y="526" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="571.5" y="560.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="652" y="526" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="724.5" y="560.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<rect x="805" y="526" width="145" height="54" rx="6" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="877.5" y="560.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7A5A06" text-anchor="middle" font-weight="bold">Provider</text>
+<polygon points="958,526 1103,526 958,580" fill="#F5E9C8" stroke="none" stroke-width="0"/>
+<polygon points="1103,526 1103,580 958,580" fill="#DCE9F3" stroke="none" stroke-width="0"/>
+<rect x="958" y="526" width="145" height="54" rx="6" fill="none" stroke="#6A4C93" stroke-width="2"/>
+<text x="1030.5" y="560.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="middle" font-weight="bold">Shared</text>
+<polygon points="1111,526 1256,526 1111,580" fill="#F5E9C8" stroke="none" stroke-width="0"/>
+<polygon points="1256,526 1256,580 1111,580" fill="#DCE9F3" stroke="none" stroke-width="0"/>
+<rect x="1111" y="526" width="145" height="54" rx="6" fill="none" stroke="#6A4C93" stroke-width="2"/>
+<text x="1183.5" y="560.0" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="middle" font-weight="bold">Shared</text>
+<text x="328" y="624" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="end" font-weight="bold">Billing basis</text>
+<text x="418.5" y="620" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">tokens</text>
+<text x="571.5" y="620" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">tokens or</text>
+<text x="571.5" y="642" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">reserved units</text>
+<text x="724.5" y="620" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">tokens</text>
+<text x="877.5" y="620" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">reserved</text>
+<text x="877.5" y="642" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">hours or units</text>
+<text x="1030.5" y="620" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">VM hours</text>
+<text x="1183.5" y="620" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="middle" font-weight="normal">node hours</text>
+<line x1="352" y1="686" x2="1250" y2="686" stroke="#100D12" stroke-width="3" marker-end="url(#arr)"/>
+<text x="801" y="718" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" font-style="italic">more control, more data isolation, more work for your team</text>
+<rect x="330" y="728" width="34" height="26" rx="4" fill="#F5E9C8" stroke="#B8860B" stroke-width="2"/>
+<text x="374" y="748" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">provider manages</text>
+<rect x="590" y="728" width="34" height="26" rx="4" fill="#DCE9F3" stroke="#1E6091" stroke-width="2"/>
+<text x="634" y="748" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">you manage</text>
+<polygon points="810,728 844,728 810,754" fill="#F5E9C8" stroke="none" stroke-width="0"/>
+<polygon points="844,728 844,754 810,754" fill="#DCE9F3" stroke="none" stroke-width="0"/>
+<rect x="810" y="728" width="34" height="26" rx="4" fill="none" stroke="#6A4C93" stroke-width="2"/>
+<text x="854" y="748" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">shared</text>
+</svg>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 680" width="1280" height="680">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#100D12"/></marker></defs>
+<rect x="0" y="0" width="1280" height="680" fill="#FFFFFF"/>
+<text x="640" y="50" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">What one token adds to the KV cache of Llama-3.1-8B</text>
+<text x="60" y="100" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="start" font-weight="bold">32 layers, 8 KV heads each</text>
+<text x="60" y="158" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">layer 1</text>
+<rect x="170" y="131" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="197" y="158" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h1</text>
+<rect x="232" y="131" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="259" y="158" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h2</text>
+<rect x="294" y="131" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="321" y="158" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h3</text>
+<rect x="356" y="131" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="383" y="158" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h4</text>
+<rect x="418" y="131" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="445" y="158" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h5</text>
+<rect x="480" y="131" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="507" y="158" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h6</text>
+<rect x="542" y="131" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="569" y="158" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h7</text>
+<rect x="604" y="131" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.45" stroke="#2D6A4F" stroke-width="4"/>
+<text x="631" y="158" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#100D12" text-anchor="middle" font-weight="bold">h8</text>
+<text x="60" y="216" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">layer 2</text>
+<rect x="170" y="189" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="197" y="216" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h1</text>
+<rect x="232" y="189" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="259" y="216" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h2</text>
+<rect x="294" y="189" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="321" y="216" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h3</text>
+<rect x="356" y="189" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="383" y="216" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h4</text>
+<rect x="418" y="189" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="445" y="216" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h5</text>
+<rect x="480" y="189" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="507" y="216" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h6</text>
+<rect x="542" y="189" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="569" y="216" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h7</text>
+<rect x="604" y="189" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="631" y="216" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h8</text>
+<text x="60" y="274" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">layer 3</text>
+<rect x="170" y="247" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="197" y="274" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h1</text>
+<rect x="232" y="247" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="259" y="274" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h2</text>
+<rect x="294" y="247" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="321" y="274" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h3</text>
+<rect x="356" y="247" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="383" y="274" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h4</text>
+<rect x="418" y="247" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="445" y="274" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h5</text>
+<rect x="480" y="247" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="507" y="274" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h6</text>
+<rect x="542" y="247" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="569" y="274" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h7</text>
+<rect x="604" y="247" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="631" y="274" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h8</text>
+<text x="420" y="329" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8A8A8A" text-anchor="middle" font-weight="normal">...  (26 more layers)  ...</text>
+<text x="60" y="382" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">layer 31</text>
+<rect x="170" y="355" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="197" y="382" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h1</text>
+<rect x="232" y="355" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="259" y="382" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h2</text>
+<rect x="294" y="355" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="321" y="382" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h3</text>
+<rect x="356" y="355" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="383" y="382" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h4</text>
+<rect x="418" y="355" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="445" y="382" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h5</text>
+<rect x="480" y="355" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="507" y="382" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h6</text>
+<rect x="542" y="355" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="569" y="382" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h7</text>
+<rect x="604" y="355" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="631" y="382" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h8</text>
+<text x="60" y="440" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">layer 32</text>
+<rect x="170" y="413" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="197" y="440" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h1</text>
+<rect x="232" y="413" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="259" y="440" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h2</text>
+<rect x="294" y="413" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="321" y="440" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h3</text>
+<rect x="356" y="413" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="383" y="440" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h4</text>
+<rect x="418" y="413" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="445" y="440" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h5</text>
+<rect x="480" y="413" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="507" y="440" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h6</text>
+<rect x="542" y="413" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="569" y="440" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h7</text>
+<rect x="604" y="413" width="54" height="40" rx="4" fill="#2D6A4F" fill-opacity="0.18" stroke="#2D6A4F" stroke-width="2"/>
+<text x="631" y="440" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#2D6A4F" text-anchor="middle" font-weight="normal">h8</text>
+<line x1="658" y1="135" x2="730" y2="125" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="658" y1="167" x2="730" y2="445" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="730" y="120" width="510" height="330" rx="6" fill="#FFFFFF" stroke="#2D6A4F" stroke-width="3"/>
+<text x="985" y="157" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#2D6A4F" text-anchor="middle" font-weight="bold">One KV head (h8) in layer 1</text>
+<rect x="752" y="180" width="466" height="72" rx="6" fill="#B8860B" fill-opacity="0.15" stroke="#B8860B" stroke-width="2"/>
+<text x="772" y="210" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="start" font-weight="bold">key vector (after RoPE)</text>
+<text x="772" y="239" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">128 numbers x 2 bytes = 256 bytes</text>
+<rect x="752" y="272" width="466" height="72" rx="6" fill="#6A4C93" fill-opacity="0.15" stroke="#6A4C93" stroke-width="2"/>
+<text x="772" y="302" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="start" font-weight="bold">value vector</text>
+<text x="772" y="331" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">128 numbers x 2 bytes = 256 bytes</text>
+<text x="772" y="392" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="start" font-weight="normal">No query is stored: only the newest</text>
+<text x="772" y="420" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="start" font-weight="normal">query is ever used again.</text>
+<rect x="60" y="480" width="1180" height="180" rx="6" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="650" y="520" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="middle" font-weight="normal">Per token: 32 layers x 8 KV heads x 2 vectors x 128 numbers = 65,536 numbers</text>
+<text x="650" y="560" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#2D6A4F" text-anchor="middle" font-weight="bold">In BF16 (2 bytes each): 131,072 bytes = 128 KiB per token</text>
+<text x="650" y="600" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="middle" font-weight="normal">8,192 tokens = 1 GiB, and 131,072 tokens = 16 GiB</text>
+<text x="650" y="638" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal">Tensors per layer: keys [B, 8, T, 128] and values [B, 8, T, 128]</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker></defs>
+<text x="640.0" y="44" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Where GPU memory goes: a 13B model on an A100 40 GB</text>
+<text x="165.0" y="100" font-size="22" fill="#100D12" font-weight="bold" text-anchor="middle">A100 40 GB</text>
+<rect x="90" y="120" width="150" height="312.0" rx="0" fill="#D9D9D9" stroke="#100D12" stroke-width="2"/>
+<rect x="90" y="432.0" width="150" height="144.0" rx="0" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="90" y="576.0" width="150" height="24.0" rx="0" fill="#ffffff" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="254" y="276.0" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">weights 26 GB (65%)</text>
+<text x="254" y="302.0" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">fixed during serving</text>
+<text x="254" y="504.0" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="start">KV cache 12 GB (30%)</text>
+<text x="254" y="530.0" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="start">about 15.7K token slots</text>
+<text x="254" y="594.0" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">other 2 GB (5%)</text>
+<text x="90" y="640" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">Table 1 of the paper.</text>
+<text x="90" y="666" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">Other = 40 - 26 - 12 (computed).</text>
+<text x="560" y="100" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Share of KV cache memory (Figure 2)</text>
+<text x="698" y="176" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">Orca (Max)</text>
+<rect x="710" y="140" width="106.08" height="52" rx="0" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="763.04" y="174" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">20.4</text>
+<rect x="816.08" y="140" width="69.16" height="52" rx="0" fill="#ffffff" stroke="#C81D25" stroke-width="2"/>
+<text x="850.6600000000001" y="174" font-size="19" fill="#C81D25" font-weight="bold" text-anchor="middle">13.3</text>
+<rect x="885.24" y="140" width="297.96" height="52" rx="0" fill="#C81D25" stroke="#C81D25" stroke-width="2"/>
+<text x="1034.22" y="174" font-size="19" fill="#ffffff" font-weight="bold" text-anchor="middle">57.3</text>
+<rect x="1183.2" y="140" width="46.28" height="52" rx="0" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="1206.3400000000001" y="132" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">8.9</text>
+<text x="698" y="268" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">Orca (Pow2)</text>
+<rect x="710" y="232" width="139.36" height="52" rx="0" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="779.6800000000001" y="266" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">26.8</text>
+<rect x="849.36" y="232" width="93.08" height="52" rx="0" fill="#ffffff" stroke="#C81D25" stroke-width="2"/>
+<text x="895.9" y="266" font-size="19" fill="#C81D25" font-weight="bold" text-anchor="middle">17.9</text>
+<rect x="942.44" y="232" width="70.72" height="52" rx="0" fill="#C81D25" stroke="#C81D25" stroke-width="2"/>
+<text x="977.8000000000001" y="266" font-size="19" fill="#ffffff" font-weight="bold" text-anchor="middle">13.6</text>
+<rect x="1013.1600000000001" y="232" width="216.32" height="52" rx="0" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="1121.3200000000002" y="266" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">41.6</text>
+<text x="698" y="360" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">Orca (Oracle)</text>
+<rect x="710" y="324" width="198.64" height="52" rx="0" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="809.3199999999999" y="358" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">38.2</text>
+<rect x="908.64" y="324" width="131.04" height="52" rx="0" fill="#ffffff" stroke="#C81D25" stroke-width="2"/>
+<text x="974.16" y="358" font-size="19" fill="#C81D25" font-weight="bold" text-anchor="middle">25.2</text>
+<rect x="1039.68" y="324" width="190.32" height="52" rx="0" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="1134.8400000000001" y="358" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">36.6</text>
+<text x="698" y="452" font-size="20" fill="#100D12" font-weight="normal" text-anchor="end">vLLM</text>
+<rect x="710" y="416" width="500.76" height="52" rx="0" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="960.38" y="450" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">96.3</text>
+<rect x="1210.76" y="416" width="19.24000000000001" height="52" rx="0" fill="#ffffff" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="1230" y="408" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="end">3.7 (no split printed)</text>
+<line x1="710" y1="508" x2="1230" y2="508" stroke="#100D12" stroke-width="2"/>
+<line x1="710.0" y1="508" x2="710.0" y2="516" stroke="#100D12" stroke-width="2"/>
+<text x="710.0" y="540" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">0%</text>
+<line x1="814.0" y1="508" x2="814.0" y2="516" stroke="#100D12" stroke-width="2"/>
+<text x="814.0" y="540" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">20%</text>
+<line x1="918.0" y1="508" x2="918.0" y2="516" stroke="#100D12" stroke-width="2"/>
+<text x="918.0" y="540" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">40%</text>
+<line x1="1022.0" y1="508" x2="1022.0" y2="516" stroke="#100D12" stroke-width="2"/>
+<text x="1022.0" y="540" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">60%</text>
+<line x1="1126.0" y1="508" x2="1126.0" y2="516" stroke="#100D12" stroke-width="2"/>
+<text x="1126.0" y="540" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">80%</text>
+<line x1="1230.0" y1="508" x2="1230.0" y2="516" stroke="#100D12" stroke-width="2"/>
+<text x="1230.0" y="540" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">100%</text>
+<rect x="560" y="574" width="30" height="24" rx="0" fill="#D8EAE1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="602" y="594" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">token states</text>
+<rect x="890" y="574" width="30" height="24" rx="0" fill="#ffffff" stroke="#C81D25" stroke-width="2"/>
+<text x="932" y="594" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">reservation</text>
+<rect x="560" y="610" width="30" height="24" rx="0" fill="#C81D25" stroke="#C81D25" stroke-width="2"/>
+<text x="602" y="630" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">internal frag.</text>
+<rect x="890" y="610" width="30" height="24" rx="0" fill="#EFEFEF" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="932" y="630" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">external frag. &amp; others</text>
+</svg>
