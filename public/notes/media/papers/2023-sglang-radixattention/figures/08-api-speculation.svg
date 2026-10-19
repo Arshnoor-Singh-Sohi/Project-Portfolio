@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" width="1280" height="780" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1280" height="780" fill="#ffffff"/>
+<defs><marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker></defs>
+<text x="640.0" y="44" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">API speculative execution: one call instead of three</text>
+<text x="40" y="95" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">Without speculation: one API call per gen, each resends the context</text>
+<text x="40" y="157" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">call 1</text>
+<rect x="130" y="125" width="620.0" height="48" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="440.0" y="156" font-size="20" fill="#B8860B" font-weight="bold" text-anchor="middle">context 1,000</text>
+<rect x="750.0" y="125" width="7.4399999999999995" height="48" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="769.44" y="156" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">input 1,002</text>
+<rect x="990" y="125" width="68" height="48" rx="4" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="1024.0" y="156" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">name</text>
+<text x="1070" y="156" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">output 4</text>
+<text x="40" y="237" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">call 2</text>
+<rect x="130" y="205" width="620.0" height="48" rx="4" fill="#F8DEDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="440.0" y="236" font-size="20" fill="#C81D25" font-weight="bold" text-anchor="middle">context 1,000, billed again</text>
+<rect x="750.0" y="205" width="33.480000000000004" height="48" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="795.48" y="236" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">input 1,009</text>
+<rect x="990" y="205" width="112" height="48" rx="4" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="1046.0" y="236" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">birthday</text>
+<text x="1114" y="236" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">output 5</text>
+<text x="40" y="317" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">call 3</text>
+<rect x="130" y="285" width="620.0" height="48" rx="4" fill="#F8DEDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="440.0" y="316" font-size="20" fill="#C81D25" font-weight="bold" text-anchor="middle">context 1,000, billed again</text>
+<rect x="750.0" y="285" width="63.239999999999995" height="48" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="825.24" y="316" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">input 1,017</text>
+<rect x="990" y="285" width="57" height="48" rx="4" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="1018.5" y="316" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">job</text>
+<text x="1059" y="316" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">output 3</text>
+<text x="40" y="385" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Total: 3 calls, input 1,002 + 1,009 + 1,017 = 3,028 tokens, output 12 tokens.</text>
+<text x="40" y="455" font-size="22" fill="#100D12" font-weight="bold" text-anchor="start">With speculation: one call, the model writes past the first stop string</text>
+<text x="40" y="517" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">call 1</text>
+<rect x="130" y="485" width="620.0" height="48" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="440" y="516" font-size="20" fill="#B8860B" font-weight="bold" text-anchor="middle">context 1,000</text>
+<rect x="750" y="485" width="7.4399999999999995" height="48" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="770" y="516" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">input 1,002</text>
+<text x="40" y="587" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">output</text>
+<rect x="130" y="555" width="105" height="48" rx="4" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="182.5" y="586" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">name: 4</text>
+<rect x="239" y="555" width="160" height="48" rx="4" fill="#ECE6F3" stroke="#6A4C93" stroke-width="2"/>
+<text x="319.0" y="586" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">\nBirthday: 3</text>
+<rect x="403" y="555" width="135" height="48" rx="4" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="470.5" y="586" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">birthday: 5</text>
+<rect x="542" y="555" width="110" height="48" rx="4" fill="#ECE6F3" stroke="#6A4C93" stroke-width="2"/>
+<text x="597.0" y="586" font-size="19" fill="#6A4C93" font-weight="bold" text-anchor="middle">\nJob: 3</text>
+<rect x="656" y="555" width="95" height="48" rx="4" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="703.5" y="586" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">job: 3</text>
+<rect x="755" y="555" width="300" height="48" rx="4" fill="#F1F1F1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="905.0" y="586" font-size="19" fill="#8A8A8A" font-weight="bold" text-anchor="middle">extra, up to 64 in all</text>
+<text x="130" y="635" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Purple: the template's constant text, which the interpreter checks. Ink: the values it keeps.</text>
+<text x="40" y="695" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Total: 1 call, input 1,002 tokens (3,028 / 1,002: about 3.02 times fewer), output at most 64 tokens.</text>
+<text x="40" y="727" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Break-even: saved 2,026 input tokens against at most 52 extra output tokens, so an output price below about 38.96 x input.</text>
+<text x="40" y="759" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">Token counts are choices of these notes. Bars are not to scale.</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 900" width="1280" height="900" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1280" height="900" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<text x="640.0" y="46" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Prefill tokens without and with reuse, per sharing pattern</text>
+<text x="250" y="96" font-size="19" fill="#100D12" font-weight="bold" text-anchor="start">without reuse</text>
+<text x="1060" y="96" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">prefill tokens</text>
+<text x="1205" y="96" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">redundant</text>
+<text x="1205" y="118" font-size="19" fill="#100D12" font-weight="bold" text-anchor="middle">at peak</text>
+<text x="230" y="172" font-size="21" fill="#100D12" font-weight="bold" text-anchor="end">Few-shot</text>
+<rect x="250" y="130" width="21.853658536585368" height="30" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<rect x="271.8536585365854" y="130" width="618.1463414634146" height="30" rx="2" fill="#F8DADC" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="580.9268292682927" y="152" font-size="19" fill="#C81D25" font-weight="bold" text-anchor="middle">redundant 198,000</text>
+<rect x="250" y="170" width="21.853658536585368" height="30" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="281.8536585365854" y="192" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="start">with reuse: 7,000</text>
+<text x="1060" y="152" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">205,000</text>
+<text x="1060" y="192" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">7,000  (29.3x fewer)</text>
+<text x="1205" y="172" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">3.2 s</text>
+<text x="230" y="282" font-size="21" fill="#100D12" font-weight="bold" text-anchor="end">Self-consistency</text>
+<rect x="250" y="240" width="80.0" height="30" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<rect x="330.0" y="240" width="560.0" height="30" rx="2" fill="#F8DADC" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="610.0" y="262" font-size="19" fill="#C81D25" font-weight="bold" text-anchor="middle">redundant 3,500</text>
+<rect x="250" y="280" width="80.0" height="30" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="340.0" y="302" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="start">with reuse: 500</text>
+<text x="1060" y="262" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">4,000</text>
+<text x="1060" y="302" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">500  (8.0x fewer)</text>
+<text x="1205" y="282" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">0.06 s</text>
+<text x="230" y="392" font-size="21" fill="#100D12" font-weight="bold" text-anchor="end">Multi-turn chat</text>
+<rect x="250" y="350" width="40.0" height="30" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<rect x="290.0" y="350" width="600.0" height="30" rx="2" fill="#F8DADC" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="590.0" y="372" font-size="19" fill="#C81D25" font-weight="bold" text-anchor="middle">redundant 22,500</text>
+<rect x="250" y="390" width="40.0" height="30" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="300.0" y="412" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="start">with reuse: 1,500</text>
+<text x="1060" y="372" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">24,000</text>
+<text x="1060" y="412" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">1,500  (16.0x fewer)</text>
+<text x="1205" y="392" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">0.37 s</text>
+<text x="230" y="502" font-size="21" fill="#100D12" font-weight="bold" text-anchor="end">Tree of thought</text>
+<rect x="250" y="460" width="13.653333333333334" height="30" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<rect x="263.6533333333333" y="460" width="626.3466666666667" height="30" rx="2" fill="#F8DADC" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="576.8266666666666" y="482" font-size="19" fill="#C81D25" font-weight="bold" text-anchor="middle">redundant 36,700</text>
+<rect x="250" y="500" width="13.653333333333334" height="30" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="273.6533333333333" y="522" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="start">with reuse: 800</text>
+<text x="1060" y="482" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">37,500</text>
+<text x="1060" y="522" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">800  (46.9x fewer)</text>
+<text x="1205" y="502" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">0.60 s</text>
+<text x="230" y="612" font-size="21" fill="#100D12" font-weight="bold" text-anchor="end">ReAct agent</text>
+<rect x="250" y="570" width="101.76678445229682" height="30" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<rect x="351.7667844522968" y="570" width="538.2332155477031" height="30" rx="2" fill="#F8DADC" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="620.8833922261483" y="592" font-size="19" fill="#C81D25" font-weight="bold" text-anchor="middle">redundant 19,040</text>
+<rect x="250" y="610" width="101.76678445229682" height="30" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="361.7667844522968" y="632" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="start">with reuse: 3,600</text>
+<text x="1060" y="592" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">22,640</text>
+<text x="1060" y="632" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">3,600  (6.3x fewer)</text>
+<text x="1205" y="612" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">0.31 s</text>
+<text x="230" y="722" font-size="21" fill="#100D12" font-weight="bold" text-anchor="end">HellaSwag</text>
+<rect x="250" y="680" width="15.69620253164557" height="30" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<rect x="265.69620253164555" y="680" width="624.3037974683544" height="30" rx="2" fill="#F8DADC" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="577.8481012658228" y="702" font-size="19" fill="#C81D25" font-weight="bold" text-anchor="middle">redundant 616,500</text>
+<rect x="250" y="720" width="15.69620253164557" height="30" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="275.69620253164555" y="742" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="start">with reuse: 15,500</text>
+<text x="1060" y="702" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">632,000</text>
+<text x="1060" y="742" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">15,500  (40.8x fewer)</text>
+<text x="1205" y="722" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">10.0 s</text>
+<rect x="250" y="796" width="40" height="26" rx="2" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="300" y="816" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">tokens that need prefill (with reuse)</text>
+<rect x="700" y="796" width="40" height="26" rx="2" fill="#F8DADC" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,6"/>
+<text x="750" y="816" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">redundant prefill without reuse</text>
+<text x="640" y="856" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Each row is scaled to its own total. Llama-3.1-8B, 2 × 8.03 × 10⁹ FLOPs per token, H100 at 989 TFLOPS.</text>
+</svg>

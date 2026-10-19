@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 830" width="1280" height="830" role="img" aria-label="Ten limits of RadixAttention in red dashed boxes on the left, each with an arrow to the later work or SGLang 0.5.22 feature on the right">
+<title>Limits of RadixAttention and what answers them</title>
+<defs><marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="a-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="a-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="0" y="0" width="1280" height="830" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">RadixAttention: ten limits and what answers them</text>
+<text x="40" y="96" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="bold">Limit (where it is stated)</text>
+<text x="700" y="96" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="bold">Later work or SGLang 0.5.22 feature</text>
+<rect x="30" y="118" width="580" height="50" rx="8" fill="#FFF5F5" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="151" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="bold">Starvation under greedy LPM</text>
+<text x="596" y="151" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal" font-style="italic">paper §3</text>
+<line x1="614" y1="143.0" x2="682" y2="143.0" stroke="#100D12" stroke-width="2" marker-end="url(#a-ink)"/>
+<rect x="688" y="118" width="562" height="50" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="704" y="151" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="start" font-weight="normal">fcfs default, lpm only up to 128 waiting</text>
+<rect x="30" y="180" width="580" height="50" rx="8" fill="#FFF5F5" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="213" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="bold">One memory tier</text>
+<text x="596" y="213" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal" font-style="italic">paper §8</text>
+<line x1="614" y1="205.0" x2="682" y2="205.0" stroke="#100D12" stroke-width="2" marker-end="url(#a-ink)"/>
+<rect x="688" y="180" width="562" height="50" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="704" y="213" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="start" font-weight="normal">HiCache, CachedAttention, Mooncake, LMCache</text>
+<rect x="30" y="242" width="580" height="50" rx="8" fill="#FFF5F5" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="275" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="bold">Exact prefixes only</text>
+<text x="596" y="275" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal" font-style="italic">paper §8</text>
+<line x1="614" y1="267.0" x2="682" y2="267.0" stroke="#100D12" stroke-width="2" marker-end="url(#a-ink)"/>
+<rect x="688" y="242" width="562" height="50" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="704" y="275" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="start" font-weight="normal">stable prompt order, CacheBlend (not exact)</text>
+<rect x="30" y="304" width="580" height="50" rx="8" fill="#FFF5F5" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="337" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="bold">One cache per server</text>
+<text x="596" y="337" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal" font-style="italic">paper App. A.4</text>
+<line x1="614" y1="329.0" x2="682" y2="329.0" stroke="#100D12" stroke-width="2" marker-end="url(#a-ink)"/>
+<rect x="688" y="304" width="562" height="50" rx="8" fill="#FFFFFF" stroke="#6A4C93" stroke-width="3"/>
+<text x="704" y="337" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#6A4C93" text-anchor="start" font-weight="normal">SGLang router, Preble, shared storage tier</text>
+<rect x="30" y="366" width="580" height="50" rx="8" fill="#FFF5F5" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="399" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="bold">CPU cost of the tree</text>
+<text x="596" y="399" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal" font-style="italic">these notes</text>
+<line x1="614" y1="391.0" x2="682" y2="391.0" stroke="#100D12" stroke-width="2" marker-end="url(#a-ink)"/>
+<rect x="688" y="366" width="562" height="50" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="704" y="399" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="start" font-weight="normal">queue limit 128, galloping match, Rust core</text>
+<rect x="30" y="428" width="580" height="50" rx="8" fill="#FFF5F5" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="461" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="bold">Page size 1 vs kernel speed</text>
+<text x="596" y="461" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal" font-style="italic">these notes</text>
+<line x1="614" y1="453.0" x2="682" y2="453.0" stroke="#100D12" stroke-width="2" marker-end="url(#a-ink)"/>
+<rect x="688" y="428" width="562" height="50" rx="8" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="704" y="461" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="start" font-weight="normal">larger pages lose about (P - 1)/2 tokens</text>
+<rect x="30" y="490" width="580" height="50" rx="8" fill="#FFF5F5" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="523" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="bold">Decode re-reads the prefix</text>
+<text x="596" y="523" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal" font-style="italic">these notes</text>
+<line x1="614" y1="515.0" x2="682" y2="515.0" stroke="#100D12" stroke-width="2" marker-end="url(#a-ink)"/>
+<rect x="688" y="490" width="562" height="50" rx="8" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="704" y="523" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#B8860B" text-anchor="start" font-weight="normal">cascade inference, Hydragen</text>
+<rect x="30" y="552" width="580" height="50" rx="8" fill="#FFF5F5" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="585" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="bold">Hybrid and window models</text>
+<text x="596" y="585" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal" font-style="italic">Marconi</text>
+<line x1="614" y1="577.0" x2="682" y2="577.0" stroke="#100D12" stroke-width="2" marker-end="url(#a-ink)"/>
+<rect x="688" y="552" width="562" height="50" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="704" y="585" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="start" font-weight="normal">Marconi, Unified Radix Cache</text>
+<rect x="30" y="614" width="580" height="50" rx="8" fill="#FFF5F5" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="647" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="bold">Timing side channel</text>
+<text x="596" y="647" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal" font-style="italic">Early Bird</text>
+<line x1="614" y1="639.0" x2="682" y2="639.0" stroke="#100D12" stroke-width="2" marker-end="url(#a-ink)"/>
+<rect x="688" y="614" width="562" height="50" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="3"/>
+<text x="704" y="647" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">cache_salt, one salt per tenant</text>
+<rect x="30" y="676" width="580" height="50" rx="8" fill="#FFF5F5" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="46" y="709" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="bold">LRU ignores tail latency</text>
+<text x="596" y="709" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="end" font-weight="normal" font-style="italic">T-LRU</text>
+<line x1="614" y1="701.0" x2="682" y2="701.0" stroke="#100D12" stroke-width="2" marker-end="url(#a-ink)"/>
+<rect x="688" y="676" width="562" height="50" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="704" y="709" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#1E6091" text-anchor="start" font-weight="normal">tlru eviction policy</text>
+<text x="30" y="778" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="bold">Right side:</text>
+<rect x="150" y="760" width="26" height="22" rx="4" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="186" y="778" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">memory, reuse and policies</text>
+<rect x="499.0" y="760" width="26" height="22" rx="4" fill="#FFFFFF" stroke="#6A4C93" stroke-width="3"/>
+<text x="535.0" y="778" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">routing across replicas</text>
+<rect x="816.5" y="760" width="26" height="22" rx="4" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="852.5" y="778" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">attention kernels</text>
+<rect x="1071.0" y="760" width="26" height="22" rx="4" fill="#FFFFFF" stroke="#100D12" stroke-width="3"/>
+<text x="1107.0" y="778" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal">isolation</text>
+</svg>

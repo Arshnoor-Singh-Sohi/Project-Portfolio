@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 900" width="1280" height="900">
+<defs><marker id="arr2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<rect x="0" y="0" width="1280" height="900" fill="#FFFFFF"/>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">SGLang evaluation setup (paper §6.1, Appendix C)</text>
+<text x="40" y="98" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#6A4C93">Workloads, in figure order</text>
+<rect x="40" y="116" width="430" height="48" rx="8" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2"/>
+<text x="56" y="148" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12"> 1. MMLU (5-shot, 1 output token)</text>
+<rect x="40" y="172" width="430" height="48" rx="8" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2"/>
+<text x="56" y="204" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12"> 2. ReAct agents</text>
+<rect x="40" y="228" width="430" height="48" rx="8" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2"/>
+<text x="56" y="260" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12"> 3. Generative agents (replayed)</text>
+<rect x="40" y="284" width="430" height="48" rx="8" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2"/>
+<text x="56" y="316" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12"> 4. Tree of thought (GSM-8K)</text>
+<rect x="40" y="340" width="430" height="48" rx="8" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2"/>
+<text x="56" y="372" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12"> 5. Skeleton of thought</text>
+<rect x="40" y="396" width="430" height="48" rx="8" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2"/>
+<text x="56" y="428" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12"> 6. LLM judge (branch-solve-merge)</text>
+<rect x="40" y="452" width="430" height="48" rx="8" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2"/>
+<text x="56" y="484" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12"> 7. HellaSwag (20-shot, select)</text>
+<rect x="40" y="508" width="430" height="48" rx="8" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2"/>
+<text x="56" y="540" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12"> 8. JSON decoding (regex)</text>
+<rect x="40" y="564" width="430" height="48" rx="8" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2"/>
+<text x="56" y="596" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12"> 9. Chat short (4 turns, out 4-8)</text>
+<rect x="40" y="620" width="430" height="48" rx="8" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2"/>
+<text x="56" y="652" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12">10. Chat long (4 turns, out 256-512)</text>
+<rect x="40" y="676" width="430" height="48" rx="8" fill="#6A4C93" fill-opacity="0.08" stroke="#6A4C93" stroke-width="2"/>
+<text x="56" y="708" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12">11. DSPy RAG pipeline</text>
+<text x="520" y="98" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">Models and GPUs (float16)</text>
+<rect x="520" y="116" width="380" height="84" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<text x="536" y="150" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">Figures 5 and 6: Llama-7B</text>
+<text x="536" y="180" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">1 x A10G 24 GB (AWS EC2 G5)</text>
+<rect x="520" y="212" width="380" height="84" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<text x="536" y="246" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">Figure 7: Mixtral-8x7B</text>
+<text x="536" y="276" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">8 x A10G, tensor parallelism</text>
+<rect x="520" y="308" width="380" height="84" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<text x="536" y="342" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">Figure 12: Llama-2-70B</text>
+<text x="536" y="372" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">4 x A100 80 GB, tensor parallelism</text>
+<rect x="520" y="404" width="380" height="84" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<text x="536" y="438" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">Table 2: LLaVA-v1.5-7B (image)</text>
+<text x="536" y="468" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">1 x A10G</text>
+<rect x="520" y="500" width="380" height="84" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<text x="536" y="534" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">Table 2: LLaVA-NeXT-34B (video)</text>
+<text x="536" y="564" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">1 x A100 80 GB</text>
+<rect x="520" y="596" width="380" height="84" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<text x="536" y="630" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">API: GPT-3.5</text>
+<text x="536" y="660" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">speculative execution test</text>
+<text x="940" y="98" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">Baselines</text>
+<rect x="940" y="116" width="300" height="84" rx="8" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="956" y="150" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">vLLM v0.2.5</text>
+<text x="956" y="180" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">no automatic prefix cache</text>
+<rect x="940" y="212" width="300" height="84" rx="8" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="956" y="246" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">Guidance v0.1.8</text>
+<text x="956" y="276" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">llama.cpp backend</text>
+<rect x="940" y="308" width="300" height="84" rx="8" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="956" y="342" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">LMQL v0.7.3</text>
+<text x="956" y="372" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">HF Transformers backend</text>
+<rect x="940" y="404" width="300" height="84" rx="8" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="956" y="438" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">Multimodal baseline</text>
+<text x="956" y="468" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">authors' HF code</text>
+<text x="940" y="526" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Guidance and LMQL are omitted</text>
+<text x="940" y="552" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">from some benchmarks and from</text>
+<text x="940" y="578" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">all tensor-parallel runs.</text>
+<line x1="472" y1="400" x2="516" y2="400" stroke="#6A4C93" stroke-width="3" marker-end="url(#arr6A4C93)"/>
+<line x1="902" y1="400" x2="936" y2="400" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<text x="918" y="386" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">vs</text>
+<rect x="40" y="742" width="1200" height="136" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<text x="60" y="778" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12">Throughput: programs per second, with a large batch of programs.</text>
+<text x="60" y="812" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12">Latency: one program at a time, no batching, average (Figure 6).</text>
+<text x="60" y="846" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#100D12">Hit rate: cached prompt tokens / prompt tokens. Values in the bars are not printed.</text>
+</svg>

@@ -14,6 +14,10 @@
 //   { path: 'fft-signal-processing/course-plan.md', data, content }
 // with frontmatter already parsed. src/lib/notes.js turns that into
 // the tree. See NOTES_GUIDE.md for the content rules.
+//
+// It also serves `virtual:notes-index`: titles and summaries only, no
+// note text, so /labs can offer "start a lab from a note" without
+// loading every note. Private notes follow the same rule.
 // ============================================================
 
 import fs from 'node:fs';
@@ -22,6 +26,8 @@ import { parseFrontmatter } from '../src/lib/frontmatter.js';
 
 const VIRTUAL_ID = 'virtual:notes';
 const RESOLVED_ID = '\0' + VIRTUAL_ID;
+const INDEX_ID = 'virtual:notes-index';
+const RESOLVED_INDEX_ID = '\0' + INDEX_ID;
 
 function walk(dir, base = dir) {
   if (!fs.existsSync(dir)) return [];
@@ -51,11 +57,12 @@ export default function notesPlugin() {
 
     resolveId(id) {
       if (id === VIRTUAL_ID) return RESOLVED_ID;
+      if (id === INDEX_ID) return RESOLVED_INDEX_ID;
       return null;
     },
 
     load(id) {
-      if (id !== RESOLVED_ID) return null;
+      if (id !== RESOLVED_ID && id !== RESOLVED_INDEX_ID) return null;
       const files = walk(notesDir)
         .sort()
         .map((rel) => {
@@ -65,7 +72,26 @@ export default function notesPlugin() {
           return { path: rel, data, content };
         })
         .filter((file) => includePrivate || file.data.private !== true);
-      return `export default ${JSON.stringify(files)};`;
+      if (id === RESOLVED_ID) return `export default ${JSON.stringify(files)};`;
+
+      // Index: folder titles (from _folder.md) and note titles.
+      const folders = {};
+      const notes = [];
+      for (const file of files) {
+        const name = file.path.split('/').pop();
+        const title = typeof file.data.title === 'string' ? file.data.title : '';
+        if (name === '_index.md') continue;
+        if (name === '_folder.md') {
+          folders[file.path.replace(/\/?_folder\.md$/, '')] = title;
+          continue;
+        }
+        notes.push({
+          path: file.path.replace(/\.md$/, ''),
+          title: title || name.replace(/\.md$/, ''),
+          summary: typeof file.data.summary === 'string' ? file.data.summary : '',
+        });
+      }
+      return `export default ${JSON.stringify({ folders, notes })};`;
     },
 
     // Dev only: any add/change/delete under src/content/notes rebuilds
@@ -76,8 +102,10 @@ export default function notesPlugin() {
       const onChange = (file) => {
         // Lower-cased because Windows paths can differ in drive-letter case.
         if (!path.resolve(file).toLowerCase().startsWith(notesDir.toLowerCase())) return;
-        const mod = server.moduleGraph.getModuleById(RESOLVED_ID);
-        if (mod) server.moduleGraph.invalidateModule(mod);
+        for (const resolved of [RESOLVED_ID, RESOLVED_INDEX_ID]) {
+          const mod = server.moduleGraph.getModuleById(resolved);
+          if (mod) server.moduleGraph.invalidateModule(mod);
+        }
         server.ws.send({ type: 'full-reload' });
       };
       server.watcher.on('add', onChange);

@@ -248,6 +248,8 @@ SGLang (arXiv 2312.07104, first version 2023-12-12, NeurIPS 2024) uses "a radix 
 | Eviction | LRU over free blocks | "evicts the least recently used leaf first" |
 | Scheduling | FCFS by default | "longest-shared-prefix-first order" |
 
+The paper notes [SGLang and RadixAttention (2023)](/notes/papers/llm-serving/2023-sglang-radixattention) explain RadixAttention in depth.
+
 > [!note] Interpretation of these notes
 > Both designs are paging plus an index. PagedAttention gave the non-contiguous layout that makes sharing cheap. The index decides which prefix is shared. A radix tree finds the longest prefix to the exact token. A hash chain finds it to the nearest block boundary and costs less to update.
 

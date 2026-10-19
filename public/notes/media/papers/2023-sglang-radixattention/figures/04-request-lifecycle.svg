@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+<defs><marker id="ah2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ah1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ahC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ah8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="ah6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ah100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<rect x="0.0" y="0.0" width="1280.0" height="800.0" rx="0" fill="white" stroke="none" stroke-width="2"/>
+<text x="640.0" y="44.0" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">The life of one request in RadixAttention</text>
+<text x="640.0" y="78.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">Step 3 of the running example: chat 1, turn 2. Prompt 20 tokens, output 25 tokens, pool of 80 slots.</text>
+<rect x="25.0" y="105.0" width="400.0" height="300.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="41.0" y="137.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">1. Match</text>
+<circle cx="175.0" cy="167.0" r="6" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="187.0" y="173.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="111.6" y="195.0" width="126.9" height="36.0" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="175.0" y="219.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SYS+C1.1 16</text>
+<line x1="175.0" y1="173.0" x2="175.0" y2="195.0" stroke="#100D12" stroke-width="2"/>
+<rect x="41.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="59.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="77.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="95.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="113.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="131.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="149.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="167.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="185.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="203.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="221.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="239.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="257.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="275.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="293.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="311.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="329.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="347.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="365.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="383.0" y="251.0" width="16.0" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="409.0" y="273.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12"></text>
+<text x="41.0" y="327.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Walk the tree with the 20 prompt tokens.</text>
+<text x="41.0" y="355.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">16 tokens match: matched prefix length 16.</text>
+<text x="41.0" y="383.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">4 tokens remain: the unmatched suffix.</text>
+<rect x="440.0" y="105.0" width="400.0" height="300.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="456.0" y="137.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">2. Lock</text>
+<circle cx="590.0" cy="167.0" r="6" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="602.0" y="173.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="526.6" y="195.0" width="126.9" height="36.0" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="4.5"/>
+<text x="590.0" y="219.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SYS+C1.1 16</text>
+<line x1="590.0" y1="173.0" x2="590.0" y2="195.0" stroke="#100D12" stroke-width="2"/>
+<text x="663.4" y="219.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="start" fill="#100D12">ref=1</text>
+<text x="456.0" y="327.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Reference count +1 on every node of</text>
+<text x="456.0" y="355.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">the matched path, up to the root.</text>
+<text x="456.0" y="383.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">A node with ref &gt; 0 cannot be evicted.</text>
+<rect x="855.0" y="105.0" width="400.0" height="300.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="871.0" y="137.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">3. Allocate slots</text>
+<rect x="871.0" y="175.0" width="73.6" height="40.0" rx="0" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="907.8" y="202.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">16</text>
+<rect x="944.6" y="175.0" width="133.4" height="40.0" rx="0" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="1011.3" y="202.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">29</text>
+<rect x="1078.0" y="175.0" width="161.0" height="40.0" rx="0" fill="#F4F4F4" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1158.5" y="202.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#8A8A8A">35</text>
+<text x="871.0" y="245.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">pool: 16 cached (hit), 29 new, 35 free</text>
+<text x="871.0" y="295.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">New slots: 4 prompt + 25 output = 29.</text>
+<text x="871.0" y="323.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">If fewer slots are free, evict</text>
+<text x="871.0" y="351.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">least recently used leaves first (page 05).</text>
+<rect x="25.0" y="465.0" width="400.0" height="300.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="41.0" y="497.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">4. Prefill the suffix, then decode</text>
+<rect x="41.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="59.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="77.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="95.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="113.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="131.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="149.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="167.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="185.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="203.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="221.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="239.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="257.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="275.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="293.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="311.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="329.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="347.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="365.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="383.0" y="523.0" width="16.0" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="41.0" y="577.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">prefill: 16 reused KV entries + 4 new</text>
+<rect x="41.0" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="55.4" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="69.8" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="84.2" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="98.6" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="113.0" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="127.4" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="141.8" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="156.2" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="170.6" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="185.0" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="199.4" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="213.8" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="228.2" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="242.6" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="257.0" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="271.4" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="285.8" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="300.2" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="314.6" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="329.0" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="343.4" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="357.8" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="372.2" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="386.6" y="593.0" width="12.4" height="30.0" rx="2" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="41.0" y="647.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">decode: 25 new tokens, one per step</text>
+<text x="41.0" y="687.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Prefill computes only the 4 new tokens.</text>
+<text x="41.0" y="715.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Their queries also read the 16 cached</text>
+<text x="41.0" y="743.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">keys and values (causal mask).</text>
+<rect x="440.0" y="465.0" width="400.0" height="300.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="456.0" y="497.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">5. Insert prompt + output</text>
+<circle cx="590.0" cy="527.0" r="6" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="602.0" y="533.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="526.6" y="555.0" width="126.9" height="36.0" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="4.5"/>
+<text x="590.0" y="579.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SYS+C1.1 16</text>
+<line x1="590.0" y1="533.0" x2="590.0" y2="555.0" stroke="#100D12" stroke-width="2"/>
+<text x="663.4" y="579.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="start" fill="#100D12">ref=1</text>
+<rect x="547.1" y="617.0" width="85.8" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="590.0" y="641.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.2 29</text>
+<line x1="590.0" y1="591.0" x2="590.0" y2="617.0" stroke="#100D12" stroke-width="2"/>
+<text x="456.0" y="687.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Insert all 45 tokens with their slots.</text>
+<text x="456.0" y="715.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">16 are in the tree already: one new</text>
+<text x="456.0" y="743.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">leaf C1.2 with 29 tokens and 29 slots.</text>
+<rect x="855.0" y="465.0" width="400.0" height="300.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="871.0" y="497.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">6. Unlock</text>
+<circle cx="1005.0" cy="527.0" r="6" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="1017.0" y="533.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="941.6" y="555.0" width="126.9" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1005.0" y="579.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SYS+C1.1 16</text>
+<line x1="1005.0" y1="533.0" x2="1005.0" y2="555.0" stroke="#100D12" stroke-width="2"/>
+<text x="1078.4" y="579.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="start" fill="#100D12">ref=0</text>
+<rect x="962.1" y="617.0" width="85.8" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1005.0" y="641.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.2 29</text>
+<line x1="1005.0" y1="591.0" x2="1005.0" y2="617.0" stroke="#100D12" stroke-width="2"/>
+<text x="871.0" y="687.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Reference count −1 on the path.</text>
+<text x="871.0" y="715.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Both nodes are cached and evictable.</text>
+<text x="871.0" y="743.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">A next turn can match all 45 tokens.</text>
+<line x1="427.0" y1="255.0" x2="436.0" y2="255.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ah100D12)"/>
+<line x1="842.0" y1="255.0" x2="851.0" y2="255.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ah100D12)"/>
+<line x1="427.0" y1="615.0" x2="436.0" y2="615.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ah100D12)"/>
+<line x1="842.0" y1="615.0" x2="851.0" y2="615.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ah100D12)"/>
+<path d="M1055.0,407 L1055.0,433 L225.0,433 L225.0,461" fill="none" stroke="#100D12" stroke-width="2.5" marker-end="url(#ah100D12)"/>
+</svg>

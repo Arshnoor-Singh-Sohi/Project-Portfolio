@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 830" width="1280" height="830" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1280" height="830" fill="#ffffff"/>
+<defs><marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker></defs>
+<text x="640.0" y="44" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Tensor parallelism: the same tree on every rank, the same slots on every GPU</text>
+<rect x="440" y="70" width="400" height="60" rx="8" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="640" y="98" font-size="20" fill="#100D12" font-weight="bold" text-anchor="middle">rank 0 receives each request</text>
+<text x="640" y="122" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">and broadcasts it to all TP ranks</text>
+<line x1="560" y1="132" x2="330" y2="180" stroke="#100D12" stroke-width="2" marker-end="url(#ak)"/>
+<line x1="720" y1="132" x2="950" y2="180" stroke="#100D12" stroke-width="2" marker-end="url(#ak)"/>
+<rect x="50" y="185" width="560" height="255" rx="8" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="70" y="217" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">TP rank 0: scheduler and radix tree (CPU)</text>
+<rect x="270" y="235" width="120" height="40" rx="20" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="330" y="262" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">root</text>
+<line x1="330" y1="275" x2="330" y2="300" stroke="#100D12" stroke-width="2"/>
+<rect x="180" y="300" width="300" height="50" rx="6" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="330" y="332" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="middle">8 tokens: slots 17 to 24</text>
+<line x1="330" y1="350" x2="330" y2="370" stroke="#100D12" stroke-width="2"/>
+<rect x="180" y="370" width="300" height="50" rx="6" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="330" y="402" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="middle">4 tokens: slots 25 to 28</text>
+<rect x="50" y="470" width="560" height="235" rx="8" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="70" y="502" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">GPU of TP rank 0: KV pool, heads 0 to 3</text>
+<rect x="74" y="530" width="30" height="52" rx="3" fill="#F1F1F1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="89" y="608" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">15</text>
+<rect x="106" y="530" width="30" height="52" rx="3" fill="#F1F1F1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,5"/>
+<rect x="138" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="153" y="608" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">17</text>
+<rect x="170" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="202" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="234" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="266" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="298" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="330" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="362" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="377" y="608" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">24</text>
+<rect x="394" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="426" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="458" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="490" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="505" y="608" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">28</text>
+<rect x="522" y="530" width="30" height="52" rx="3" fill="#F1F1F1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,5"/>
+<rect x="554" y="530" width="30" height="52" rx="3" fill="#F1F1F1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="569" y="608" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">30</text>
+<path d="M138,618 L138,626 L392,626 L392,618" fill="none" stroke="#2D6A4F" stroke-width="2"/>
+<text x="265.0" y="650" font-size="19" fill="#2D6A4F" font-weight="bold" text-anchor="middle">node of 8 tokens</text>
+<path d="M394,618 L394,626 L520,626 L520,618" fill="none" stroke="#2D6A4F" stroke-width="2"/>
+<text x="457.0" y="650" font-size="19" fill="#2D6A4F" font-weight="bold" text-anchor="middle">node of 4</text>
+<text x="70" y="688" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">64 KiB per slot (Llama-3.1-8B, TP = 2)</text>
+<rect x="670" y="185" width="560" height="255" rx="8" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="690" y="217" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">TP rank 1: scheduler and radix tree (CPU)</text>
+<rect x="890" y="235" width="120" height="40" rx="20" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="950" y="262" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">root</text>
+<line x1="950" y1="275" x2="950" y2="300" stroke="#100D12" stroke-width="2"/>
+<rect x="800" y="300" width="300" height="50" rx="6" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="950" y="332" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="middle">8 tokens: slots 17 to 24</text>
+<line x1="950" y1="350" x2="950" y2="370" stroke="#100D12" stroke-width="2"/>
+<rect x="800" y="370" width="300" height="50" rx="6" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="950" y="402" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="middle">4 tokens: slots 25 to 28</text>
+<rect x="670" y="470" width="560" height="235" rx="8" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="690" y="502" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">GPU of TP rank 1: KV pool, heads 4 to 7</text>
+<rect x="694" y="530" width="30" height="52" rx="3" fill="#F1F1F1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="709" y="608" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">15</text>
+<rect x="726" y="530" width="30" height="52" rx="3" fill="#F1F1F1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,5"/>
+<rect x="758" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="773" y="608" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">17</text>
+<rect x="790" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="822" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="854" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="886" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="918" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="950" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="982" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="997" y="608" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">24</text>
+<rect x="1014" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="1046" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="1078" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="1110" y="530" width="30" height="52" rx="3" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1125" y="608" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">28</text>
+<rect x="1142" y="530" width="30" height="52" rx="3" fill="#F1F1F1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,5"/>
+<rect x="1174" y="530" width="30" height="52" rx="3" fill="#F1F1F1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="1189" y="608" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">30</text>
+<path d="M758,618 L758,626 L1012,626 L1012,618" fill="none" stroke="#2D6A4F" stroke-width="2"/>
+<text x="885.0" y="650" font-size="19" fill="#2D6A4F" font-weight="bold" text-anchor="middle">node of 8 tokens</text>
+<path d="M1014,618 L1014,626 L1140,626 L1140,618" fill="none" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1077.0" y="650" font-size="19" fill="#2D6A4F" font-weight="bold" text-anchor="middle">node of 4</text>
+<text x="690" y="688" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">64 KiB per slot (Llama-3.1-8B, TP = 2)</text>
+<text x="640" y="768" font-size="21" fill="#100D12" font-weight="bold" text-anchor="middle">No tree messages between ranks: same requests + deterministic tree code = same slot numbers.</text>
+<text x="640" y="800" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">Slot 17 on both GPUs holds two halves of one token's KV. Only activations are all-reduced.</text>
+</svg>

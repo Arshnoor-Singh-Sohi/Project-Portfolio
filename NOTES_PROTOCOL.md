@@ -28,6 +28,7 @@ The notes have two jobs:
 | Paper media | `public/notes/media/papers/<year>-<short-name>/`, with the sub-folders `figures/` and `manim/` |
 | File format | `NOTES_GUIDE.md` (repository root) |
 | Site URL | `/notes` (unlisted: no links from other pages, noindex) |
+| Labs (learner code) | `/labs` on the site (private, saves online). Templates: `src/labs/templates/`. Rules: section 11 and `LABS_GUIDE.md`. |
 
 ## 3. Tools and limits
 
@@ -83,7 +84,7 @@ Write every explanation and every note in ASD-STE100 style.
 5. **Animation.** Only for a gap that existing videos do not cover.
 6. **Math.** Define every symbol. Substitute real numbers. Show every step.
 7. **Learner calculation.** A small result by hand.
-8. **Learner code.** The learner writes it. Hints come in three levels: idea, pseudocode, partial code.
+8. **Learner code.** The learner writes it in a lab (section 11). Hints come in three levels: idea, pseudocode, partial code.
 9. **Check and explain back.** Check questions, then the learner teaches the idea back.
 10. **Close.** Session report in chat, then a notes update.
 
@@ -144,7 +145,7 @@ Use these sections in this order:
 4. Method and math, with worked examples
 5. Graphs (`plot` blocks. Show a sample list as dots: one `polyline` entry and one `scatter` entry, in the same color.)
 6. Video and animation (`video` blocks with exact ranges)
-7. Code (a link to the learner's file, or a short excerpt that the learner wrote)
+7. Code (a link to the learner's lab, or a short excerpt that the learner wrote)
 8. Common mistakes
 9. Questions and answers (every question that the learner asked about this lesson, each with a full answer)
 10. One-minute explanation (for teaching another person)
@@ -287,3 +288,16 @@ Chat makes every figure. Do not use AI image generators (for example PaperBanana
 6. Give each paper at least two figures: an overview for its `_folder.md`, and a method figure for its experiment-design page.
 
 A note can link to a Manim video before the video exists. Tell the learner which videos are missing until the prompt runs.
+
+## 11. Labs
+
+Learner code lives in Labs at `/labs`, not in folders on the computer. A lab is a page of text cells and Python cells. Python runs in the browser, and the lab saves online. The old lab folders (`C:\Users\ASohi\Downloads\AI\*-lab`) are not used for new work.
+
+1. **Give the learner a lab for a lesson.** Use one of these:
+   - A template that fits: give the link `/labs/new?template=<id>`. The templates are in `src/labs/templates/`.
+   - No template fits: give the link `/labs/new?note=<notes path>`, for example `/labs/new?note=maths/fft-signal-processing/02-signals-and-frequency/l2-period-and-frequency`. The lab links back to the note and starts with its goal. Every note page also has an **OPEN A LAB** link.
+2. **Exercises in a lesson page** (section 7, "Code"): say what to build and how to test it. Do not give a folder path. After the learner builds it, link to the lab: `[Lab: <title>](/labs/<id>)`.
+3. **A new template** is useful when the same kind of experiment will repeat, or when a subject needs a demo with controls. Write it with the rules in `LABS_GUIDE.md` section 2: explore first, then stubs with `raise NotImplementedError`, then `lab.check` tests, hints in `check` blocks, and an Observations cell. Never put the solution in the template.
+4. **Check a new template** in the sandbox: `node --test "tests/labs/*.test.mjs"` (it parses every template). Then solve it once in a lab, to prove that the tests can pass. Do not save the solution.
+5. **Learner tools in a lab:** `# @param` controls, `lab.check`, `lab.inspect`, pinned results, versions and reset. Explain them to the learner the first time they are useful.
+6. **Mistakes** that the learner makes in a lab go to `00-progress/mistakes.md`, as for any other mistake. Quote the learner's code exactly.

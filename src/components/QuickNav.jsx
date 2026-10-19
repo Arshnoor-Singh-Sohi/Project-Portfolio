@@ -38,6 +38,9 @@ export default function QuickNav() {
   const location = useLocation();
   const isHome = location.pathname === '/';
   const isBlog = location.pathname.startsWith('/blog');
+  // Labs has its own top bar with these links; the floating badge
+  // would cover the cell controls.
+  if (location.pathname.startsWith('/labs')) return null;
 
   return (
     <div

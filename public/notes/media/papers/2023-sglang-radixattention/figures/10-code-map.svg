@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 960" width="1280" height="960">
+<defs><marker id="arr2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<rect x="0" y="0" width="1280" height="960" fill="#FFFFFF"/>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">From the paper to the code of SGLang 0.5.22</text>
+<text x="40" y="96" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">Paper (§3, Appendix A)</text>
+<text x="560" y="96" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">SGLang 0.5.22 source (srt/mem_cache, srt/managers)</text>
+<rect x="40" y="114" width="440" height="70" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<rect x="40" y="114" width="12" height="70" rx="2" fill="#100D12" stroke="#100D12" stroke-width="1"/>
+<text x="66" y="157" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Radix tree, kept on the CPU</text>
+<line x1="484" y1="149" x2="554" y2="149" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="560" y="114" width="680" height="70" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="576" y="144" font-family="Menlo, Consolas, monospace" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">RadixCache(BasePrefixCache)</text>
+<text x="576" y="172" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">radix_cache.py (default class: UnifiedRadixCache)</text>
+<rect x="40" y="194" width="440" height="70" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<rect x="40" y="194" width="12" height="70" rx="2" fill="#2D6A4F" stroke="#2D6A4F" stroke-width="1"/>
+<text x="66" y="237" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Node and edge (a token run)</text>
+<line x1="484" y1="229" x2="554" y2="229" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="560" y="194" width="680" height="70" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="576" y="224" font-family="Menlo, Consolas, monospace" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">TreeNode, TreeNode.key: RadixKey</text>
+<text x="576" y="252" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">radix_cache.py</text>
+<rect x="40" y="274" width="440" height="70" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<rect x="40" y="274" width="12" height="70" rx="2" fill="#2D6A4F" stroke="#2D6A4F" stroke-width="1"/>
+<text x="66" y="317" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">KV of a node: one slot per token</text>
+<line x1="484" y1="309" x2="554" y2="309" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="560" y="274" width="680" height="70" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="576" y="304" font-family="Menlo, Consolas, monospace" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">TreeNode.value: KV pool indices</text>
+<text x="576" y="332" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">the tensors live in token_to_kv_pool_allocator</text>
+<rect x="40" y="354" width="440" height="70" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<rect x="40" y="354" width="12" height="70" rx="2" fill="#1E6091" stroke="#1E6091" stroke-width="1"/>
+<text x="66" y="397" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Match the longest prefix</text>
+<line x1="484" y1="389" x2="554" y2="389" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="560" y="354" width="680" height="70" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="576" y="384" font-family="Menlo, Consolas, monospace" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">match_prefix, _match_prefix_helper</text>
+<text x="576" y="412" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">splits the edge once with _split_node</text>
+<rect x="40" y="434" width="440" height="70" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<rect x="40" y="434" width="12" height="70" rx="2" fill="#B8860B" stroke="#B8860B" stroke-width="1"/>
+<text x="66" y="477" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Insert prompt and output</text>
+<line x1="484" y1="469" x2="554" y2="469" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="560" y="434" width="680" height="70" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="576" y="464" font-family="Menlo, Consolas, monospace" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">insert, _insert_helper, _insert_cache</text>
+<text x="576" y="492" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">called from checkpoint()</text>
+<rect x="40" y="514" width="440" height="70" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="4"/>
+<rect x="40" y="514" width="12" height="70" rx="2" fill="#100D12" stroke="#100D12" stroke-width="1"/>
+<text x="66" y="557" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Reference counter</text>
+<line x1="484" y1="549" x2="554" y2="549" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="560" y="514" width="680" height="70" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="576" y="544" font-family="Menlo, Consolas, monospace" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">lock_ref, inc_lock_ref, dec_lock_ref</text>
+<text x="576" y="572" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">lock() and unlock() in base_prefix_cache.py</text>
+<rect x="40" y="594" width="440" height="70" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<rect x="40" y="594" width="12" height="70" rx="2" fill="#100D12" stroke="#100D12" stroke-width="1"/>
+<text x="66" y="637" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Evictable vs in use</text>
+<line x1="484" y1="629" x2="554" y2="629" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="560" y="594" width="680" height="70" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="576" y="624" font-family="Menlo, Consolas, monospace" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">evictable_size_, protected_size_</text>
+<text x="576" y="652" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">updated when lock_ref goes 0 to 1 or 1 to 0</text>
+<rect x="40" y="674" width="440" height="70" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<rect x="40" y="674" width="12" height="70" rx="2" fill="#C81D25" stroke="#C81D25" stroke-width="1"/>
+<text x="66" y="717" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">LRU eviction, leaves first</text>
+<line x1="484" y1="709" x2="554" y2="709" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="560" y="674" width="680" height="70" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="576" y="704" font-family="Menlo, Consolas, monospace" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">evict + LRUStrategy</text>
+<text x="576" y="732" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">evict_policy.py, a heap of evictable_leaves</text>
+<rect x="40" y="754" width="440" height="70" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<rect x="40" y="754" width="12" height="70" rx="2" fill="#100D12" stroke="#100D12" stroke-width="1"/>
+<text x="66" y="797" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Sort the waiting queue</text>
+<line x1="484" y1="789" x2="554" y2="789" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="560" y="754" width="680" height="70" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="576" y="784" font-family="Menlo, Consolas, monospace" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">SchedulePolicy.calc_priority</text>
+<text x="576" y="812" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">schedule_policy.py, default policy fcfs</text>
+<rect x="40" y="834" width="440" height="70" rx="8" fill="#F4F4F4" stroke="#100D12" stroke-width="2"/>
+<rect x="40" y="834" width="12" height="70" rx="2" fill="#100D12" stroke="#100D12" stroke-width="1"/>
+<text x="66" y="877" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Free + evictable memory</text>
+<line x1="484" y1="869" x2="554" y2="869" stroke="#100D12" stroke-width="2" marker-end="url(#arr100D12)"/>
+<rect x="560" y="834" width="680" height="70" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="576" y="864" font-family="Menlo, Consolas, monospace" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">PrefillBudget</text>
+<text x="576" y="892" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">prefill_budget.py: available + evictable</text>
+<text x="40" y="944" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Stripes: blue = match (hit), gold = insert (new KV), red = evict, green = stored KV.</text>
+</svg>

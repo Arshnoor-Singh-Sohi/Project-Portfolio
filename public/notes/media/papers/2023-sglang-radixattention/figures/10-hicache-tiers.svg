@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 930" width="1280" height="930">
+<defs><marker id="arr2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<rect x="0" y="0" width="1280" height="930" fill="#FFFFFF"/>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">HiCache: three tiers of KV memory under one HiRadixTree</text>
+<rect x="40" y="76" width="580" height="500" rx="8" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="60" y="108" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">Instance A (one SGLang server)</text>
+<rect x="70" y="130" width="300" height="92" rx="8" fill="#2D6A4F" fill-opacity="0.12" stroke="#2D6A4F" stroke-width="3"/>
+<text x="86" y="166" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">L1: GPU KV pool</text>
+<text x="86" y="198" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">private to this instance</text>
+<rect x="70" y="340" width="300" height="92" rx="8" fill="#2D6A4F" fill-opacity="0.12" stroke="#2D6A4F" stroke-width="3"/>
+<text x="86" y="376" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">L2: host memory</text>
+<text x="86" y="408" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">private, 2.0 x L1 by default</text>
+<line x1="120" y1="224" x2="120" y2="336" stroke="#B8860B" stroke-width="4" marker-end="url(#arrB8860B)"/>
+<line x1="320" y1="336" x2="320" y2="226" stroke="#1E6091" stroke-width="4" marker-end="url(#arr1E6091)"/>
+<text x="132" y="286" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="start" fill="#B8860B">write</text>
+<text x="308" y="286" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="end" fill="#1E6091">load back</text>
+<text x="500" y="160" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">HiRadixTree</text>
+<text x="500" y="184" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">each node knows</text>
+<text x="500" y="206" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">where its KV lives</text>
+<line x1="500" y1="248" x2="440" y2="318" stroke="#100D12" stroke-width="2"/>
+<line x1="500" y1="248" x2="560" y2="318" stroke="#100D12" stroke-width="2"/>
+<line x1="440" y1="340" x2="440" y2="406" stroke="#100D12" stroke-width="2"/>
+<rect x="456" y="222" width="88" height="32" rx="14" fill="#FFFFFF" stroke="#2D6A4F" stroke-width="2"/>
+<text x="500" y="245" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">root</text>
+<rect x="396" y="314" width="88" height="32" rx="14" fill="#FFFFFF" stroke="#2D6A4F" stroke-width="2"/>
+<text x="440" y="337" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">L1 + L2</text>
+<rect x="516" y="314" width="88" height="32" rx="14" fill="#FFFFFF" stroke="#2D6A4F" stroke-width="2"/>
+<text x="560" y="337" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">L2</text>
+<rect x="396" y="402" width="88" height="32" rx="14" fill="#FFFFFF" stroke="#2D6A4F" stroke-width="2"/>
+<text x="440" y="425" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">L1</text>
+<line x1="120" y1="434" x2="120" y2="640" stroke="#B8860B" stroke-width="4" marker-end="url(#arrB8860B)"/>
+<line x1="320" y1="640" x2="320" y2="436" stroke="#1E6091" stroke-width="4" marker-end="url(#arr1E6091)"/>
+<text x="132" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="start" fill="#B8860B">store a copy</text>
+<text x="332" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="start" fill="#1E6091">prefetch if the</text>
+<text x="332" y="524" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="start" fill="#1E6091">L3 hit is at least</text>
+<text x="332" y="548" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="start" fill="#1E6091">256 tokens</text>
+<rect x="660" y="76" width="580" height="500" rx="8" fill="none" stroke="#100D12" stroke-width="2"/>
+<text x="680" y="108" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">Instance B</text>
+<rect x="690" y="130" width="300" height="92" rx="8" fill="#2D6A4F" fill-opacity="0.12" stroke="#2D6A4F" stroke-width="3"/>
+<text x="706" y="166" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">L1: GPU KV pool</text>
+<text x="706" y="198" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">private to this instance</text>
+<rect x="690" y="340" width="300" height="92" rx="8" fill="#2D6A4F" fill-opacity="0.12" stroke="#2D6A4F" stroke-width="3"/>
+<text x="706" y="376" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">L2: host memory</text>
+<text x="706" y="408" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">private, 2.0 x L1 by default</text>
+<line x1="740" y1="224" x2="740" y2="336" stroke="#B8860B" stroke-width="4" marker-end="url(#arrB8860B)"/>
+<line x1="940" y1="336" x2="940" y2="226" stroke="#1E6091" stroke-width="4" marker-end="url(#arr1E6091)"/>
+<text x="1120" y="160" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">HiRadixTree</text>
+<text x="1120" y="184" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">each node knows</text>
+<text x="1120" y="206" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">where its KV lives</text>
+<line x1="1120" y1="248" x2="1060" y2="318" stroke="#100D12" stroke-width="2"/>
+<line x1="1120" y1="248" x2="1180" y2="318" stroke="#100D12" stroke-width="2"/>
+<line x1="1060" y1="340" x2="1060" y2="406" stroke="#100D12" stroke-width="2"/>
+<rect x="1076" y="222" width="88" height="32" rx="14" fill="#FFFFFF" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1120" y="245" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">root</text>
+<rect x="1016" y="314" width="88" height="32" rx="14" fill="#FFFFFF" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1060" y="337" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">L1 + L2</text>
+<rect x="1136" y="314" width="88" height="32" rx="14" fill="#FFFFFF" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1180" y="337" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">L2</text>
+<rect x="1016" y="402" width="88" height="32" rx="14" fill="#FFFFFF" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1060" y="425" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">L1</text>
+<line x1="740" y1="434" x2="740" y2="640" stroke="#B8860B" stroke-width="4" marker-end="url(#arrB8860B)"/>
+<line x1="940" y1="640" x2="940" y2="436" stroke="#1E6091" stroke-width="4" marker-end="url(#arr1E6091)"/>
+<rect x="40" y="644" width="1200" height="130" rx="8" fill="#2D6A4F" fill-opacity="0.12" stroke="#2D6A4F" stroke-width="3"/>
+<text x="60" y="684" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">L3: distributed storage, the only tier shared across instances</text>
+<text x="60" y="716" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Backends named in the docs: Mooncake, DeepSeek 3FS, NIXL, AIBrix KVCache, HiCacheFile.</text>
+<text x="60" y="748" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">LMCache is an alternative integration.</text>
+<text x="40" y="820" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Write policy (--hicache-write-policy): write_through (default), write_through_selective, write_back.</text>
+<text x="40" y="852" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Prefetch stop policy (--hicache-storage-prefetch-policy): timeout (default), best_effort, wait_complete.</text>
+<text x="40" y="884" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Host size: --hicache-ratio (2.0 in cache mode) or --hicache-size in GB. Enable: --enable-hierarchical-cache.</text>
+</svg>

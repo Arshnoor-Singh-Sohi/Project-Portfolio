@@ -14,6 +14,8 @@ import QuickNav from './components/QuickNav';
 // /notes is unlisted and loaded on demand, so its code and note text
 // stay out of the main bundle.
 const NotesPage = lazy(() => import('./pages/NotesPage'));
+// /labs is private (sign-in) and also loaded on demand.
+const LabsPage = lazy(() => import('./pages/LabsPage'));
 
 function App() {
   return (
@@ -32,6 +34,14 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <NotesPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/labs/*"
+            element={
+              <Suspense fallback={null}>
+                <LabsPage />
               </Suspense>
             }
           />

@@ -30,4 +30,12 @@ export default [
       ],
     },
   },
+  // Server and build code runs in Node (Vercel Functions, Vite plugins,
+  // scripts, tests), so Node globals such as process and Buffer exist.
+  {
+    files: ['api/**/*.js', 'plugins/**/*.js', 'scripts/**/*.{js,mjs}', 'tests/**/*.{js,mjs}', 'vite.config.js'],
+    languageOptions: {
+      globals: { ...globals.node },
+    },
+  },
 ]

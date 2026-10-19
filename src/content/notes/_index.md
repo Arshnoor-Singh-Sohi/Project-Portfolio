@@ -18,6 +18,7 @@ These notes follow the order of study.
 | Area | Subject |
 |---|---|
 | [Maths](/notes/maths) | [FFT and Signal Processing](/notes/maths/fft-signal-processing) |
+| [AI](/notes/ai) | [AI Engineering Roadmap 2026](/notes/ai/ai-engineering) |
 | [AI](/notes/ai) | [LLM Context Engineering](/notes/ai/context-engineering) |
 | [AI](/notes/ai) | [LLM APIs and Message Formats](/notes/ai/llm-apis) |
 | [AI](/notes/ai) | [Claude Agent SDK](/notes/ai/claude-agent-sdk) |
@@ -25,6 +26,7 @@ These notes follow the order of study.
 | [AI](/notes/ai) | [Conversation State and Chat History](/notes/ai/conversation-state) |
 | [AI](/notes/ai) | [Evaluating AI Systems](/notes/ai/evaluation) |
 | [AI](/notes/ai) | [LLM Systems Deep Dive](/notes/ai/llm-systems) |
+| [AI](/notes/ai) | [Recursive Self-Improvement in AI Agents](/notes/ai/recursive-self-improvement) |
 | [Papers](/notes/papers) | [Lost in the Middle (2023)](/notes/papers/long-context/2023-lost-in-the-middle) |
 | [Databases](/notes/databases) | [PostgreSQL](/notes/databases/postgres) |
 | [Platforms](/notes/platforms) | [Databricks Platform](/notes/platforms/databricks) |
@@ -32,6 +34,8 @@ These notes follow the order of study.
 | [Software Engineering](/notes/software-engineering) | [Security and Operations](/notes/software-engineering/security-and-operations) |
 
 ## Current study path
+
+The [AI Engineering Roadmap 2026](/notes/ai/ai-engineering) follows the 16 levels of the roadmap. Level 0, software engineering fundamentals, is written. Start with its [learning roadmap](/notes/ai/ai-engineering/01-software-engineering-fundamentals/roadmap).
 
 The agent harness subjects share one ordered path of 16 lessons across four subjects. It starts with the raw message format and ends with the design of a chat history store. The list is on the [AI area page](/notes/ai).
 

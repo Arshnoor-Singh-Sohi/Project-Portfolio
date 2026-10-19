@@ -913,3 +913,16 @@ body.notes-resizing { cursor: col-resize; user-select: none; }
   .notes-layout { display: block; }
   .notes-main { max-width: none; padding: 0; }
 }
+
+/* ---------- link from a note to Labs ---------- */
+.notes-lab-link {
+  font-size: 0.6rem;
+  color: var(--ink);
+  background: var(--gold);
+  border: 1.5px solid var(--ink);
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.notes-lab-link:hover,
+.notes-lab-link:focus-visible { background: var(--ink); color: var(--gold); }

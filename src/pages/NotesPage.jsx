@@ -165,6 +165,9 @@ function NoteView({ note }) {
           {note.learned && <span className="c-mono notes-muted-strong">LEARNED {note.learned}</span>}
           <ReviewDue date={note.reviewDue} today={today} />
           <PrivateBadge show={note.private} />
+          <Link to={`/labs/new?note=${encodeURIComponent(note.path)}`} className="c-mono notes-lab-link" title="Start a hands-on lab for this note">
+            ▶ OPEN A LAB
+          </Link>
         </div>
         {note.tags.length > 0 && (
           <div className="notes-tags">
@@ -464,6 +467,7 @@ export default function NotesPage() {
           NOTES
         </Link>
         <span className="notes-topbar-links">
+          <Link to="/labs" className="c-mono">LABS</Link>
           <Link to="/" className="c-mono">HOME</Link>
           <Link to="/blog" className="c-mono">BLOG</Link>
         </span>

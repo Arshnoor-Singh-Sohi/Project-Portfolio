@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 860" width="1280" height="860" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1280" height="860" fill="#ffffff"/>
+<defs><marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker></defs>
+<text x="640.0" y="44" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Data parallelism: the router's meta-tree (paper, Appendix A.4)</text>
+<rect x="40" y="80" width="330" height="84" rx="8" fill="#ECE6F3" stroke="#6A4C93" stroke-width="2"/>
+<text x="205" y="112" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="middle">new request</text>
+<text x="205" y="142" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">SYS + chat 1 + new turn</text>
+<line x1="372" y1="122" x2="438" y2="122" stroke="#6A4C93" stroke-width="2" marker-end="url(#ap)"/>
+<rect x="440" y="75" width="800" height="360" rx="8" fill="#FBF9FD" stroke="#6A4C93" stroke-width="2"/>
+<text x="460" y="107" font-size="21" fill="#6A4C93" font-weight="bold" text-anchor="start">Router: meta-tree, each node lists the workers that hold it</text>
+<rect x="780" y="125" width="120" height="40" rx="20" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="840" y="152" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">root</text>
+<rect x="545.0" y="201" width="230" height="48" rx="6" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="660" y="232" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="middle">SYS {W0, W1}</text>
+<rect x="920.0" y="201" width="220" height="48" rx="6" fill="#F8DEDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="1030" y="232" font-size="20" fill="#C81D25" font-weight="bold" text-anchor="middle">FS {W1}</text>
+<rect x="460.0" y="301" width="200" height="48" rx="6" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="560" y="332" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="middle">chat 1 {W0}</text>
+<rect x="690.0" y="301" width="200" height="48" rx="6" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="790" y="332" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="middle">chat 2 {W1}</text>
+<line x1="810" y1="165" x2="690" y2="200" stroke="#1E6091" stroke-width="3"/>
+<line x1="870" y1="165" x2="1000" y2="200" stroke="#100D12" stroke-width="2"/>
+<line x1="640" y1="249" x2="580" y2="300" stroke="#1E6091" stroke-width="3"/>
+<line x1="690" y1="249" x2="770" y2="300" stroke="#100D12" stroke-width="2"/>
+<text x="1030" y="280" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="middle">stale: W1 evicted FS,</text>
+<text x="1030" y="304" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="middle">the router has not</text>
+<text x="1030" y="328" font-size="19" fill="#C81D25" font-weight="normal" text-anchor="middle">applied it yet</text>
+<text x="460" y="410" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="start">Match: SYS and chat 1 found on W0, so the request goes to W0 (affinity).</text>
+<rect x="40" y="520" width="540" height="250" rx="8" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="60" y="552" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Worker W0: own KV pool and tree</text>
+<rect x="230.0" y="586" width="160" height="48" rx="6" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="310" y="617" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="middle">SYS</text>
+<rect x="210.0" y="676" width="200" height="48" rx="6" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="310" y="707" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="middle">chat 1</text>
+<line x1="310" y1="634" x2="310" y2="676" stroke="#1E6091" stroke-width="3"/>
+<rect x="700" y="520" width="540" height="250" rx="8" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="720" y="552" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Worker W1: own KV pool and tree</text>
+<rect x="770.0" y="586" width="160" height="48" rx="6" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="850" y="617" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="middle">SYS</text>
+<rect x="770.0" y="676" width="160" height="48" rx="6" fill="#E3EEE8" stroke="#2D6A4F" stroke-width="2"/>
+<text x="850" y="707" font-size="20" fill="#2D6A4F" font-weight="bold" text-anchor="middle">chat 2</text>
+<rect x="1000.0" y="631" width="200" height="48" rx="6" fill="#F8DEDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="1100" y="662" font-size="20" fill="#C81D25" font-weight="bold" text-anchor="middle">FS (evicted)</text>
+<line x1="850" y1="634" x2="850" y2="676" stroke="#100D12" stroke-width="2"/>
+<line x1="840" y1="437" x2="310" y2="518" stroke="#1E6091" stroke-width="3" marker-end="url(#ab)"/>
+<text x="520" y="470" font-size="20" fill="#1E6091" font-weight="bold" text-anchor="start">dispatch</text>
+<rect x="1040" y="455" width="200" height="52" rx="6" fill="#F1F1F1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="1140" y="487" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">queue: FS from W1</text>
+<line x1="1180" y1="629" x2="1180" y2="510" stroke="#8A8A8A" stroke-width="2" marker-end="url(#ay)" stroke-dasharray="8,5"/>
+<text x="1172" y="600" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="end">evict</text>
+<line x1="1140" y1="453" x2="1140" y2="437" stroke="#8A8A8A" stroke-width="2" marker-end="url(#ay)" stroke-dasharray="8,5"/>
+<text x="640" y="812" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">Lazy updates: the router applies worker evictions during low activity. The paper calls this "weakly consistent".</text>
+<text x="640" y="842" font-size="20" fill="#100D12" font-weight="normal" text-anchor="middle">A stale entry costs a recompute on the worker. The worker's own tree decides every hit, so the KV is never wrong.</text>
+</svg>

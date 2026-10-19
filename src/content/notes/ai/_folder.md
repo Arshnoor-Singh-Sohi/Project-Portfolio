@@ -8,6 +8,7 @@ Each subject in this area has its own folder.
 
 | Subject | Goal |
 |---|---|
+| [AI Engineering Roadmap 2026](/notes/ai/ai-engineering) | Follow the 16 levels of the AI Engineer Roadmap 2026. Level 0: build, test, debug and deploy a no-AI Python service, and explain every line of an async-to-sync agent bridge. |
 | [LLM Context Engineering](/notes/ai/context-engineering) | Design, build, measure and defend the context layer of a production LLM application or agent. |
 | [LLM APIs and Message Formats](/notes/ai/llm-apis) | Read and write raw model requests and responses: content blocks, tool calls, streaming, thinking, two formats. |
 | [Claude Agent SDK](/notes/ai/claude-agent-sdk) | Explain and control everything between query() and the final ResultMessage. |
@@ -15,6 +16,11 @@ Each subject in this area has its own folder.
 | [Conversation State and Chat History](/notes/ai/conversation-state) | Decide where conversation state lives, and store chat history so that nothing is lost. |
 | [Evaluating AI Systems](/notes/ai/evaluation) | Design tests that prove a claim about an AI system and cannot pass by accident. |
 | [LLM Systems Deep Dive](/notes/ai/llm-systems) | Explain, derive and defend attention, the KV cache, PagedAttention, inference, cloud hosting, RAG and MCP at whiteboard depth. |
+| [Recursive Self-Improvement in AI Agents](/notes/ai/recursive-self-improvement) | Explain, analyze, build and critique self-improving AI agents, from first principles to papers, code and safety. |
+
+## AI Engineering Roadmap 2026
+
+The [AI Engineering Roadmap 2026](/notes/ai/ai-engineering) has one part for each level of the roadmap. Level 0 is written: 49 lessons in 10 modules. Its [learning roadmap](/notes/ai/ai-engineering/01-software-engineering-fundamentals/roadmap) gives the order of study. Its concurrency path has 8 steps, from callbacks to MCP event channels, and ends with the [case study of the `_run` bridge](/notes/ai/ai-engineering/01-software-engineering-fundamentals/m05-streaming-and-agent-events/l5-case-study-the-run-bridge).
 
 ## Priority path: agent harness foundations
 

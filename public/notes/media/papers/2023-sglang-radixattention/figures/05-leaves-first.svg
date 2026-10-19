@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" width="1280" height="760">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<rect x="0" y="0" width="1280" height="760" rx="8" fill="#FFFFFF" fill-opacity="1" stroke="none" stroke-width="2"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">Evict leaves first: ancestors of a cached node stay cached</text>
+<rect x="20" y="80" width="615" height="560" rx="8" fill="none" fill-opacity="1" stroke="#BBBBBB" stroke-width="1.5"/>
+<rect x="645" y="80" width="615" height="560" rx="8" fill="none" fill-opacity="1" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="327" y="115" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">Leaf first (LRU), as in step 8</text>
+<text x="952" y="115" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">Parent first (wrong): evict SYS</text>
+<circle cx="325" cy="150" r="26" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="325" y="157" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">root</text>
+<line x1="325" y1="176" x2="190" y2="218" stroke="#100D12" stroke-width="2"/>
+<line x1="325" y1="176" x2="495" y2="229" stroke="#100D12" stroke-width="2"/>
+<line x1="190" y1="302" x2="105" y2="348" stroke="#100D12" stroke-width="2"/>
+<line x1="190" y1="302" x2="260" y2="359" stroke="#100D12" stroke-width="2"/>
+<line x1="260" y1="421" x2="260" y2="474" stroke="#100D12" stroke-width="2"/>
+<line x1="495" y1="291" x2="410" y2="359" stroke="#100D12" stroke-width="2"/>
+<line x1="495" y1="291" x2="495" y2="359" stroke="#100D12" stroke-width="2"/>
+<line x1="495" y1="291" x2="580" y2="359" stroke="#100D12" stroke-width="2"/>
+<rect x="130.0" y="218.0" width="120" height="84" rx="8" fill="#1E6091" fill-opacity="1" stroke="#100D12" stroke-width="5"/>
+<text x="190" y="243.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">SYS</text>
+<text x="190" y="268.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#FFFFFF">8 tokens</text>
+<text x="190" y="291.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="middle" fill="#FFFFFF">ref=1</text>
+<rect x="45.0" y="348.0" width="120" height="84" rx="8" fill="#1E6091" fill-opacity="1" stroke="#100D12" stroke-width="5"/>
+<text x="105" y="373.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">C1.1</text>
+<text x="105" y="398.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#FFFFFF">8 tokens</text>
+<text x="105" y="421.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="middle" fill="#FFFFFF">ref=1</text>
+<rect x="190.0" y="359.0" width="140" height="62" rx="8" fill="#FBE9EA" fill-opacity="1" stroke="#C81D25" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="260" y="384.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">C2.1 (8)</text>
+<text x="260" y="409.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">evicted 2nd</text>
+<rect x="190.0" y="474.0" width="140" height="62" rx="8" fill="#FBE9EA" fill-opacity="1" stroke="#C81D25" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="260" y="499.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">C2.2 (28)</text>
+<text x="260" y="524.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">evicted 1st</text>
+<rect x="435.0" y="229.0" width="120" height="62" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="495" y="254.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">FS</text>
+<text x="495" y="279.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#FFFFFF">12 tokens</text>
+<rect x="373.0" y="359.0" width="74" height="62" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="410" y="384.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QA</text>
+<text x="410" y="409.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#FFFFFF">5</text>
+<rect x="458.0" y="359.0" width="74" height="62" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="495" y="384.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QB</text>
+<text x="495" y="409.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#FFFFFF">5</text>
+<rect x="543.0" y="359.0" width="74" height="62" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="580" y="384.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QC</text>
+<text x="580" y="409.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#FFFFFF">5</text>
+<circle cx="950" cy="150" r="26" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="950" y="157" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">root</text>
+<line x1="950" y1="176" x2="815" y2="229" stroke="#100D12" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="950" y1="176" x2="1120" y2="229" stroke="#100D12" stroke-width="2"/>
+<line x1="815" y1="291" x2="730" y2="359" stroke="#100D12" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="815" y1="291" x2="885" y2="359" stroke="#100D12" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="885" y1="421" x2="885" y2="474" stroke="#100D12" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="1120" y1="291" x2="1035" y2="359" stroke="#100D12" stroke-width="2"/>
+<line x1="1120" y1="291" x2="1120" y2="359" stroke="#100D12" stroke-width="2"/>
+<line x1="1120" y1="291" x2="1205" y2="359" stroke="#100D12" stroke-width="2"/>
+<rect x="755.0" y="229.0" width="120" height="62" rx="8" fill="#FBE9EA" fill-opacity="1" stroke="#C81D25" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="815" y="254.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">SYS (8)</text>
+<text x="815" y="279.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">evicted</text>
+<rect x="670.0" y="359.0" width="120" height="62" rx="8" fill="#F2F2F2" fill-opacity="1" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="730" y="384.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">C1.1 (8)</text>
+<text x="730" y="409.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">orphan</text>
+<rect x="815.0" y="359.0" width="140" height="62" rx="8" fill="#F2F2F2" fill-opacity="1" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="885" y="384.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">C2.1 (8)</text>
+<text x="885" y="409.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">orphan</text>
+<rect x="815.0" y="474.0" width="140" height="62" rx="8" fill="#F2F2F2" fill-opacity="1" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="885" y="499.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">C2.2 (28)</text>
+<text x="885" y="524.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">orphan</text>
+<rect x="1060.0" y="229.0" width="120" height="62" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1120" y="254.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">FS</text>
+<text x="1120" y="279.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#FFFFFF">12 tokens</text>
+<rect x="998.0" y="359.0" width="74" height="62" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1035" y="384.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QA</text>
+<text x="1035" y="409.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#FFFFFF">5</text>
+<rect x="1083.0" y="359.0" width="74" height="62" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1120" y="384.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QB</text>
+<text x="1120" y="409.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#FFFFFF">5</text>
+<rect x="1168.0" y="359.0" width="74" height="62" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1205" y="384.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QC</text>
+<text x="1205" y="409.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#FFFFFF">5</text>
+<text x="327" y="580" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">36 slots freed. Every cached node</text>
+<text x="327" y="607" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">still has its whole prefix above it.</text>
+<text x="952" y="580" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">8 slots freed. A match starts at the root,</text>
+<text x="952" y="607" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">so 44 orphan tokens can never be hit again.</text>
+<text x="640" y="690" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">Invariant: if a node is cached, all its ancestors are cached.</text>
+<text x="640" y="724" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Blue, ref=1: matched and locked by the step-8 request. Green: cached. Red dashed: evicted. Gray dashed: unreachable.</text>
+</svg>

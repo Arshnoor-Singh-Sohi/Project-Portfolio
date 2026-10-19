@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 850" width="1280" height="850">
+<defs><marker id="arr2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="arr1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="arrB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="arrC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="arr8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="arr6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="arr100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<rect x="0" y="0" width="1280" height="850" fill="#FFFFFF"/>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">Page size 16: which tokens of a 50-token prompt can match</text>
+<text x="40" y="110" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Request A (50 tokens) finishes: the tree keeps 3 whole pages</text>
+<rect x="140" y="124" width="960" height="44" rx="2" fill="#2D6A4F" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="1100" y="124" width="40" height="44" rx="2" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="460" y1="126" x2="460" y2="166" stroke="#FFFFFF" stroke-width="3"/>
+<line x1="460" y1="114" x2="460" y2="123" stroke="#100D12" stroke-width="2"/>
+<line x1="460" y1="169" x2="460" y2="178" stroke="#100D12" stroke-width="2"/>
+<line x1="780" y1="126" x2="780" y2="166" stroke="#FFFFFF" stroke-width="3"/>
+<line x1="780" y1="114" x2="780" y2="123" stroke="#100D12" stroke-width="2"/>
+<line x1="780" y1="169" x2="780" y2="178" stroke="#100D12" stroke-width="2"/>
+<line x1="1100" y1="114" x2="1100" y2="123" stroke="#100D12" stroke-width="2"/>
+<line x1="1100" y1="169" x2="1100" y2="178" stroke="#100D12" stroke-width="2"/>
+<text x="620.0" y="153" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="middle" fill="#FFFFFF">3 pages = 48 tokens in the tree</text>
+<text x="40" y="238" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Same 50 tokens again: limit 50 - 1 = 49, page-aligned to 48</text>
+<rect x="140" y="252" width="960" height="44" rx="2" fill="#1E6091" stroke="#1E6091" stroke-width="2"/>
+<rect x="1100" y="252" width="40" height="44" rx="2" fill="#B8860B" stroke="#B8860B" stroke-width="2"/>
+<line x1="460" y1="254" x2="460" y2="294" stroke="#FFFFFF" stroke-width="3"/>
+<line x1="460" y1="242" x2="460" y2="251" stroke="#100D12" stroke-width="2"/>
+<line x1="460" y1="297" x2="460" y2="306" stroke="#100D12" stroke-width="2"/>
+<line x1="780" y1="254" x2="780" y2="294" stroke="#FFFFFF" stroke-width="3"/>
+<line x1="780" y1="242" x2="780" y2="251" stroke="#100D12" stroke-width="2"/>
+<line x1="780" y1="297" x2="780" y2="306" stroke="#100D12" stroke-width="2"/>
+<line x1="1100" y1="254" x2="1100" y2="294" stroke="#FFFFFF" stroke-width="3"/>
+<line x1="1100" y1="242" x2="1100" y2="251" stroke="#100D12" stroke-width="2"/>
+<line x1="1100" y1="297" x2="1100" y2="306" stroke="#100D12" stroke-width="2"/>
+<text x="620.0" y="281" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="middle" fill="#FFFFFF">reuse 48</text>
+<text x="1120.0" y="281" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="middle" fill="#FFFFFF">2</text>
+<text x="40" y="366" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Exactly the 48 cached tokens: limit 47, page-aligned to 32</text>
+<rect x="140" y="380" width="640" height="44" rx="2" fill="#1E6091" stroke="#1E6091" stroke-width="2"/>
+<rect x="780" y="380" width="320" height="44" rx="2" fill="#B8860B" stroke="#B8860B" stroke-width="2"/>
+<line x1="460" y1="382" x2="460" y2="422" stroke="#FFFFFF" stroke-width="3"/>
+<line x1="460" y1="370" x2="460" y2="379" stroke="#100D12" stroke-width="2"/>
+<line x1="460" y1="425" x2="460" y2="434" stroke="#100D12" stroke-width="2"/>
+<line x1="780" y1="382" x2="780" y2="422" stroke="#FFFFFF" stroke-width="3"/>
+<line x1="780" y1="370" x2="780" y2="379" stroke="#100D12" stroke-width="2"/>
+<line x1="780" y1="425" x2="780" y2="434" stroke="#100D12" stroke-width="2"/>
+<line x1="1100" y1="370" x2="1100" y2="379" stroke="#100D12" stroke-width="2"/>
+<line x1="1100" y1="425" x2="1100" y2="434" stroke="#100D12" stroke-width="2"/>
+<text x="620" y="409" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="middle" fill="#FFFFFF">reuse 32</text>
+<text x="940.0" y="409" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="middle" fill="#FFFFFF">compute 16</text>
+<text x="40" y="494" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">First 40 tokens + 10 new ones: match 40, rounded down to 32</text>
+<rect x="140" y="508" width="640" height="44" rx="2" fill="#1E6091" stroke="#1E6091" stroke-width="2"/>
+<rect x="780" y="508" width="360" height="44" rx="2" fill="#B8860B" stroke="#B8860B" stroke-width="2"/>
+<line x1="460" y1="510" x2="460" y2="550" stroke="#FFFFFF" stroke-width="3"/>
+<line x1="460" y1="498" x2="460" y2="507" stroke="#100D12" stroke-width="2"/>
+<line x1="460" y1="553" x2="460" y2="562" stroke="#100D12" stroke-width="2"/>
+<line x1="780" y1="510" x2="780" y2="550" stroke="#FFFFFF" stroke-width="3"/>
+<line x1="780" y1="498" x2="780" y2="507" stroke="#100D12" stroke-width="2"/>
+<line x1="780" y1="553" x2="780" y2="562" stroke="#100D12" stroke-width="2"/>
+<line x1="1100" y1="510" x2="1100" y2="550" stroke="#FFFFFF" stroke-width="3"/>
+<line x1="1100" y1="498" x2="1100" y2="507" stroke="#100D12" stroke-width="2"/>
+<line x1="1100" y1="553" x2="1100" y2="562" stroke="#100D12" stroke-width="2"/>
+<text x="620" y="537" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="middle" fill="#FFFFFF">reuse 32</text>
+<text x="960.0" y="537" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="middle" fill="#FFFFFF">compute 18</text>
+<text x="40" y="622" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Page size 1, same 50 tokens again: limit 49, no rounding</text>
+<rect x="140" y="636" width="980" height="44" rx="2" fill="#1E6091" stroke="#1E6091" stroke-width="2"/>
+<rect x="1120" y="636" width="20" height="44" rx="2" fill="#B8860B" stroke="#B8860B" stroke-width="2"/>
+<text x="630.0" y="665" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" text-anchor="middle" fill="#FFFFFF">reuse 49</text>
+<line x1="140" y1="728" x2="1140" y2="728" stroke="#100D12" stroke-width="2"/>
+<line x1="140" y1="728" x2="140" y2="736" stroke="#100D12" stroke-width="2"/>
+<text x="140" y="758" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">0</text>
+<line x1="460" y1="728" x2="460" y2="736" stroke="#100D12" stroke-width="2"/>
+<text x="460" y="758" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">16</text>
+<line x1="780" y1="728" x2="780" y2="736" stroke="#100D12" stroke-width="2"/>
+<text x="780" y="758" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">32</text>
+<line x1="1100" y1="728" x2="1100" y2="736" stroke="#100D12" stroke-width="2"/>
+<text x="1100" y="758" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">48</text>
+<line x1="1140" y1="728" x2="1140" y2="736" stroke="#100D12" stroke-width="2"/>
+<text x="1140" y="758" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">50</text>
+<text x="640" y="788" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">token position (ticks and white lines: page boundaries of 16 tokens)</text>
+<text x="40" y="828" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">Gray dashed: the 2-token tail stays in the request's row and is freed, never inserted.</text>
+</svg>

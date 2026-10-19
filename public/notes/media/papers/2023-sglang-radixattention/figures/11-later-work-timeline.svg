@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 950" width="1280" height="950" role="img" aria-label="Timeline from December 2023 to October 2026 in six lanes: SGLang itself, shared-prefix kernels, reuse beyond one GPU or one prefix, routing across replicas, new models and eviction policies, and security">
+<title>Later work after RadixAttention, 2023 to 2026</title>
+<defs><marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="a-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="a-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="0" y="0" width="1280" height="950" fill="#FFFFFF"/>
+<text x="640.0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">After RadixAttention: a timeline of later work (first public dates)</text>
+<rect x="20" y="80" width="1240" height="114" rx="0" fill="#F6F6F4" stroke="#F6F6F4" stroke-width="0"/>
+<rect x="20" y="330" width="1240" height="194" rx="0" fill="#F6F6F4" stroke="#F6F6F4" stroke-width="0"/>
+<rect x="20" y="650" width="1240" height="114" rx="0" fill="#F6F6F4" stroke="#F6F6F4" stroke-width="0"/>
+<line x1="119.74452554744525" y1="80" x2="119.74452554744525" y2="886" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="8 5"/>
+<line x1="507.1167883211679" y1="80" x2="507.1167883211679" y2="886" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="8 5"/>
+<line x1="893.4306569343065" y1="80" x2="893.4306569343065" y2="886" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="8 5"/>
+<text x="32" y="108" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#100D12" text-anchor="start" font-weight="bold" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">SGLang itself</text>
+<line x1="70" y1="154" x2="1230" y2="154" stroke="#8A8A8A" stroke-width="2"/>
+<text x="98.57664233576642" y="136" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">arXiv v1</text>
+<circle cx="98.57664233576642" cy="154" r="8" fill="#100D12"/>
+<text x="285.9124087591241" y="136" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">v2, NeurIPS 2024</text>
+<circle cx="285.9124087591241" cy="154" r="8" fill="#100D12"/>
+<text x="1198.2481751824816" y="136" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">0.5.22</text>
+<circle cx="1198.2481751824816" cy="154" r="8" fill="#100D12"/>
+<text x="32" y="228" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#B8860B" text-anchor="start" font-weight="bold" stroke="#FFFFFF" stroke-width="6" paint-order="stroke" stroke-linejoin="round">Shared-prefix kernels</text>
+<line x1="70" y1="276" x2="1230" y2="276" stroke="#8A8A8A" stroke-width="2"/>
+<text x="153.61313868613138" y="258" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#FFFFFF" stroke-width="6" paint-order="stroke" stroke-linejoin="round">Cascade inference</text>
+<circle cx="153.61313868613138" cy="276" r="8" fill="#B8860B"/>
+<text x="158.90510948905109" y="310" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#FFFFFF" stroke-width="6" paint-order="stroke" stroke-linejoin="round">Hydragen</text>
+<circle cx="158.90510948905109" cy="276" r="8" fill="#B8860B"/>
+<text x="32" y="358" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#1E6091" text-anchor="start" font-weight="bold" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">Reuse beyond one GPU or one prefix</text>
+<line x1="70" y1="438" x2="1230" y2="438" stroke="#8A8A8A" stroke-width="2"/>
+<text x="200.53284671532847" y="420" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="end" font-weight="normal" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">CachedAttention</text>
+<circle cx="206.53284671532847" cy="438" r="8" fill="#1E6091"/>
+<line x1="215.0" y1="447" x2="215.0" y2="454" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="75.0" y="472" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">vLLM 0.4.0 prefix caching</text>
+<circle cx="215.0" cy="438" r="8" fill="#1E6091"/>
+<line x1="274.27007299270076" y1="429" x2="274.27007299270076" y2="396" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="264.27007299270076" y="390" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">CacheBlend</text>
+<circle cx="274.27007299270076" cy="438" r="8" fill="#1E6091"/>
+<line x1="304.9635036496351" y1="447" x2="304.9635036496351" y2="485" stroke="#8A8A8A" stroke-width="1.5"/>
+<text x="294.9635036496351" y="502" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="start" font-weight="normal" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">Mooncake</text>
+<circle cx="304.9635036496351" cy="438" r="8" fill="#1E6091"/>
+<text x="534.6350364963504" y="420" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">vLLM V1: on by default</text>
+<circle cx="534.6350364963504" cy="438" r="8" fill="#1E6091"/>
+<text x="773.8321167883212" y="420" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">SGLang HiCache</text>
+<circle cx="773.8321167883212" cy="438" r="8" fill="#1E6091"/>
+<text x="803.4671532846716" y="472" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">LMCache</text>
+<circle cx="803.4671532846716" cy="438" r="8" fill="#1E6091"/>
+<text x="32" y="558" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#6A4C93" text-anchor="start" font-weight="bold" stroke="#FFFFFF" stroke-width="6" paint-order="stroke" stroke-linejoin="round">Routing across replicas</text>
+<line x1="70" y1="604" x2="1230" y2="604" stroke="#8A8A8A" stroke-width="2"/>
+<text x="255.2189781021898" y="586" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#FFFFFF" stroke-width="6" paint-order="stroke" stroke-linejoin="round">Preble</text>
+<circle cx="255.2189781021898" cy="604" r="8" fill="#6A4C93"/>
+<text x="477.48175182481754" y="586" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#FFFFFF" stroke-width="6" paint-order="stroke" stroke-linejoin="round">SGLang v0.4 router</text>
+<circle cx="477.48175182481754" cy="604" r="8" fill="#6A4C93"/>
+<text x="32" y="678" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#2D6A4F" text-anchor="start" font-weight="bold" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">New models and eviction policies</text>
+<line x1="70" y1="724" x2="1230" y2="724" stroke="#8A8A8A" stroke-width="2"/>
+<text x="471.13138686131384" y="706" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">Marconi (hybrid models)</text>
+<circle cx="471.13138686131384" cy="724" r="8" fill="#2D6A4F"/>
+<text x="811.934306569343" y="706" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#F6F6F4" stroke-width="6" paint-order="stroke" stroke-linejoin="round">Tail-Optimized LRU</text>
+<circle cx="811.934306569343" cy="724" r="8" fill="#2D6A4F"/>
+<text x="32" y="798" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#C81D25" text-anchor="start" font-weight="bold" stroke="#FFFFFF" stroke-width="6" paint-order="stroke" stroke-linejoin="round">Security</text>
+<line x1="70" y1="844" x2="1230" y2="844" stroke="#8A8A8A" stroke-width="2"/>
+<text x="408.6861313868613" y="826" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#100D12" text-anchor="middle" font-weight="normal" stroke="#FFFFFF" stroke-width="6" paint-order="stroke" stroke-linejoin="round">Early Bird timing attack</text>
+<circle cx="408.6861313868613" cy="844" r="8" fill="#C81D25"/>
+<line x1="70" y1="892" x2="1230" y2="892" stroke="#100D12" stroke-width="2"/>
+<text x="119.74452554744525" y="924" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="middle" font-weight="bold">2024</text>
+<text x="507.1167883211679" y="924" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="middle" font-weight="bold">2025</text>
+<text x="893.4306569343065" y="924" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#100D12" text-anchor="middle" font-weight="bold">2026</text>
+</svg>

@@ -367,6 +367,8 @@ The SGLang paper (Zheng et al., NeurIPS 2024, arXiv 2312.07104) stores the prefi
 - **Eviction:** an LRU policy that evicts the least recently used leaf first, so shared ancestors survive until they become leaves. Each node has a reference counter for the running requests that use it, and only nodes with count zero can be evicted.
 - **Cache-aware scheduling:** the paper sorts waiting requests in "longest-shared-prefix-first order". Theorem 3.1 shows that visiting the tree in depth-first order gives the optimal hit rate when the cache is large enough.
 
+The paper notes [SGLang and RadixAttention (2023)](/notes/papers/llm-serving/2023-sglang-radixattention) explain the tree, its eviction, its scheduling theorem and the SGLang 0.5.22 code in depth.
+
 A minimal radix tree, written for these notes:
 
 ```python

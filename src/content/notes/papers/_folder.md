@@ -49,10 +49,11 @@ flowchart TD
 | [Lost in the Middle](/notes/papers/long-context/2023-lost-in-the-middle) | 2023 | Long context | Models use information at the start and at the end of the context best. Accuracy falls when the information is in the middle. | not started |
 | [Why Reasoning Models Loop](/notes/papers/reasoning-models/2025-why-reasoning-models-loop) | 2025 | Reasoning models | Reasoning models repeat the same text at low temperature, because of errors in learning. Temperature reduces the loops but does not fix the errors. | not started |
 | [PagedAttention](/notes/papers/llm-serving/2023-pagedattention) | 2023 | LLM serving | Earlier systems used only 20.4% to 38.2% of their KV cache memory for token states. KV blocks with a block table per request cut the waste to under 4%. vLLM serves 2 to 4 times the throughput at the same latency. | not started |
+| [SGLang and RadixAttention](/notes/papers/llm-serving/2023-sglang-radixattention) | 2023 | LLM serving | A radix tree of token runs keeps the KV cache of finished requests and reuses it for every later request with the same first tokens, with LRU leaf eviction and a cache-aware request order. Up to 6.4 times the throughput on LM programs. | not started |
 
 ## Reading queue
 
-These papers continue the ideas of the papers in the catalog. The "Limits and later work" page of each paper explains them: [Lost in the Middle](/notes/papers/long-context/2023-lost-in-the-middle/10-limits-and-later-work), [Why Reasoning Models Loop](/notes/papers/reasoning-models/2025-why-reasoning-models-loop/13-limits-and-later-work) and [PagedAttention](/notes/papers/llm-serving/2023-pagedattention/10-limits-and-later-work). For PagedAttention, [page 02](/notes/papers/llm-serving/2023-pagedattention/02-background-llm-serving-before-vllm) also explains the earlier work.
+These papers continue the ideas of the papers in the catalog. The "Limits and later work" page of each paper explains them: [Lost in the Middle](/notes/papers/long-context/2023-lost-in-the-middle/10-limits-and-later-work), [Why Reasoning Models Loop](/notes/papers/reasoning-models/2025-why-reasoning-models-loop/13-limits-and-later-work), [PagedAttention](/notes/papers/llm-serving/2023-pagedattention/10-limits-and-later-work). For PagedAttention, [page 02](/notes/papers/llm-serving/2023-pagedattention/02-background-llm-serving-before-vllm) also explains the earlier work.
 
 | Paper | Year | Topic | Why read it |
 |---|---|---|---|
@@ -67,7 +68,6 @@ These papers continue the ideas of the papers in the catalog. The "Limits and la
 | Quantized Reasoning Models Think They Need to Think Longer, but They Do Not | 2026 | Reasoning models, model serving | Quantized models write longer chains with more "wait" and "but". A penalty on such words shortens them. |
 | Token Budget Saturation and Mechanistic Early Detection of Reasoning Non-Convergence | 2026 | Reasoning models, evaluation | Greedy runs that do not converge reach the budget and are almost always wrong. Probes predict them early, but weakly. |
 | Orca: A Distributed Serving System for Transformer-Based Generative Models | 2022 | LLM serving | Iteration-level scheduling: requests join and leave the batch after every iteration. vLLM keeps this scheduling and changes the memory management. |
-| SGLang: Efficient Execution of Structured Language Model Programs | 2023 | LLM serving | RadixAttention: a radix tree of token prefixes reuses the KV cache across requests. |
 | Splitwise: Efficient generative LLM inference using phase splitting | 2023 | LLM serving | The prompt phase and the token phase run on separate machines. |
 | DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving | 2024 | LLM serving | Prefill and decode run on separate GPUs, to serve the most requests within latency targets. |
 | Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve | 2024 | LLM serving | Chunked prefills and stall-free scheduling: a long prompt no longer stalls the running decodes. |
@@ -75,3 +75,9 @@ These papers continue the ideas of the papers in the catalog. The "Limits and la
 | Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving | 2024 | LLM serving | Separate prefill and decode clusters, with a KV cache in the CPU memory and SSDs of the GPU servers. |
 | FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving | 2025 | LLM serving | Attention kernels with a block-sparse format for paged KV caches, used in SGLang, vLLM and MLC-Engine. |
 | LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference | 2025 | LLM serving | A KV cache layer outside the engine that stores and reuses the KV caches of vLLM and SGLang. |
+| Hydragen: High-Throughput LLM Inference with Shared Prefixes | 2024 | LLM serving | Decode attention over a shared prefix runs as one matrix-matrix product for the whole batch, merged exactly with the suffix by log-sum-exp. |
+| Preble: Efficient Distributed Prompt Scheduling for LLM Serving | 2024 | LLM serving | A distributed scheduler that balances KV reuse against load over many GPUs. |
+| CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion | 2024 | LLM serving, RAG | Reuse of the KV caches of retrieved chunks that are not a prefix, with a partial recomputation. |
+| The Early Bird Catches the Leak: Unveiling Timing Side Channels in LLM Serving Systems | 2024 | LLM serving, security | Shared KV caches and semantic caches leak system prompts and other users' prompts through response times. |
+| Marconi: Prefix Caching for the Era of Hybrid LLMs | 2024 | LLM serving | Prefix caching for models that mix attention and SSM layers, where only exact SSM states can be reused. |
+| Tail-Optimized Caching for LLM Inference | 2025 | LLM serving | An eviction policy for the prefix cache that targets the tail of the time to the first token. |

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 730" width="1280" height="730" role="img" aria-label="Seven labs as boxes: Lab 1 leads to Lab 2, Lab 2 leads to Labs 3, 4 and 5, Lab 6 stands alone, and Lab 7 is dashed because it needs a GPU">
+<title>The seven labs of page 12</title>
+<defs><marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="a-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="a-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker></defs>
+<rect x="0" y="0" width="1280" height="730" fill="#FFFFFF"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#100D12" text-anchor="middle" font-weight="bold">Seven labs: what each one builds and reproduces</text>
+<rect x="30" y="90" width="360" height="150" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="46" y="124" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1E6091" text-anchor="start" font-weight="bold">Lab 1: radix cache</text>
+<text x="46" y="156" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">slot values and a KV pool</text>
+<text x="46" y="184" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">steps 2 to 7, no eviction</text>
+<text x="46" y="212" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">step 5: need 28, free 27</text>
+<rect x="30" y="300" width="360" height="150" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="46" y="334" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1E6091" text-anchor="start" font-weight="bold">Lab 2: eviction</text>
+<text x="46" y="366" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">reference counts, LRU leaves</text>
+<text x="46" y="394" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">steps 2 to 9 exactly</text>
+<text x="46" y="422" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">152 of 236 tokens matched</text>
+<rect x="470" y="90" width="380" height="150" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="486" y="124" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1E6091" text-anchor="start" font-weight="bold">Lab 3: FCFS, LPM, DFS</text>
+<text x="486" y="156" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">hit rate vs cache size</text>
+<text x="486" y="184" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">DFS = ceiling 0.784</text>
+<text x="486" y="212" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">from 300 tokens on</text>
+<rect x="470" y="300" width="380" height="150" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="486" y="334" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1E6091" text-anchor="start" font-weight="bold">Lab 4: Theorem 3.1</text>
+<text x="486" y="366" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">all 120 orders, 300 batches</text>
+<text x="486" y="394" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">DFS and LPM reach the bound</text>
+<text x="486" y="422" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">cache 6 &lt; request 7 breaks it</text>
+<rect x="470" y="510" width="380" height="150" rx="8" fill="#FFFFFF" stroke="#1E6091" stroke-width="3"/>
+<text x="486" y="544" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1E6091" text-anchor="start" font-weight="bold">Lab 5: hash chain</text>
+<text x="486" y="576" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">16-token blocks vs radix tree</text>
+<text x="486" y="604" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">loss = template length mod 16</text>
+<text x="486" y="632" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">8.06 tokens per repeat</text>
+<rect x="900" y="90" width="350" height="150" rx="8" fill="#FFFFFF" stroke="#B8860B" stroke-width="3"/>
+<text x="916" y="124" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#B8860B" text-anchor="start" font-weight="bold">Lab 6: LSE merge</text>
+<text x="916" y="156" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">NumPy only</text>
+<text x="916" y="184" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">extend = causal + prefix part</text>
+<text x="916" y="212" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">error below 1e-12</text>
+<rect x="900" y="380" width="350" height="190" rx="8" fill="#FAFAFA" stroke="#8A8A8A" stroke-width="3" stroke-dasharray="8 5"/>
+<text x="916" y="414" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#8A8A8A" text-anchor="start" font-weight="bold">Lab 7: real server</text>
+<text x="916" y="446" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">optional, needs a GPU</text>
+<text x="916" y="474" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">sglang serve --enable-metrics</text>
+<text x="916" y="502" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">expected: 999 of 1,000 cached</text>
+<text x="916" y="530" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal">fcfs vs lpm, flush_cache</text>
+<line x1="210" y1="240" x2="210" y2="296" stroke="#100D12" stroke-width="2.5" marker-end="url(#a-ink)"/>
+<line x1="390" y1="340" x2="466" y2="190" stroke="#100D12" stroke-width="2.5" marker-end="url(#a-ink)"/>
+<line x1="390" y1="375" x2="466" y2="375" stroke="#100D12" stroke-width="2.5" marker-end="url(#a-ink)"/>
+<line x1="390" y1="410" x2="466" y2="560" stroke="#100D12" stroke-width="2.5" marker-end="url(#a-ink)"/>
+<line x1="1075" y1="240" x2="1075" y2="376" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#a-gray)"/>
+<path d="M 210 450 L 210 700 L 1075 700 L 1075 574" fill="none" stroke="#8A8A8A" stroke-width="2.5" stroke-dasharray="8 5" marker-end="url(#a-gray)"/>
+<text x="230" y="690" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal" font-style="italic">the real cache of Lab 2, measured on a GPU</text>
+<text x="1090" y="315" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal" font-style="italic">the merge of</text>
+<text x="1090" y="340" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#100D12" text-anchor="start" font-weight="normal" font-style="italic">extend attention</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 900" width="1280" height="900">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<rect x="0" y="0" width="1280" height="900" rx="8" fill="#FFFFFF" fill-opacity="1" stroke="none" stroke-width="2"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">Algorithm 1: cache-aware scheduling with continuous batching</text>
+<rect x="140.0" y="85.0" width="560" height="70" rx="8" fill="#1E6091" fill-opacity="1" stroke="#1E6091" stroke-width="2"/>
+<text x="420" y="114" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">1-2. Match every waiting request</text>
+<text x="420" y="140" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#FFFFFF">req.prefix_node, req.prefix_len = T.match_prefix(...)</text>
+<rect x="140.0" y="190.0" width="560" height="50" rx="8" fill="#1E6091" fill-opacity="1" stroke="#1E6091" stroke-width="2"/>
+<text x="420" y="222" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">3. Sort: longest prefix_len first</text>
+<rect x="140.0" y="265.0" width="560" height="70" rx="8" fill="#FFFFFF" fill-opacity="1" stroke="#100D12" stroke-width="2"/>
+<text x="420" y="294" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">4. available = T.evictable_size() + P.available_size()</text>
+<text x="420" y="320" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">current_size = 0, new_batch = []</text>
+<rect x="140.0" y="372.0" width="560" height="76" rx="8" fill="#FFFFFF" fill-opacity="1" stroke="#100D12" stroke-width="2"/>
+<text x="420" y="404" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">5. For each req in order:</text>
+<text x="420" y="430" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">req.size() + current_size &lt; available_size ?</text>
+<rect x="115.0" y="490.0" width="350" height="110" rx="8" fill="#FFFFFF" fill-opacity="1" stroke="#100D12" stroke-width="5"/>
+<text x="290" y="513" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">yes: admit</text>
+<text x="290" y="539" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">append to new_batch</text>
+<text x="290" y="565" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">delta = T.increase_ref_counter()</text>
+<text x="290" y="591" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">available += delta (delta &lt;= 0)</text>
+<rect x="530.0" y="490.0" width="200" height="80" rx="8" fill="#FFFFFF" fill-opacity="1" stroke="#100D12" stroke-width="2"/>
+<text x="630" y="524" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">no: skip</text>
+<text x="630" y="550" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">req stays waiting</text>
+<rect x="140.0" y="635.0" width="560" height="70" rx="8" fill="#FFFFFF" fill-opacity="1" stroke="#100D12" stroke-width="2"/>
+<text x="420" y="664" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">6-8. Merge into the running batch B</text>
+<text x="420" y="690" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">alloc(needed); if it fails: T.evict(needed), alloc again</text>
+<rect x="140.0" y="735.0" width="560" height="50" rx="8" fill="#B8860B" fill-opacity="1" stroke="#B8860B" stroke-width="2"/>
+<text x="420" y="767" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">9. B.run(buffer): one step of the running batch</text>
+<rect x="140.0" y="815.0" width="560" height="60" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="420" y="839" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#FFFFFF">10. Finished requests: decrease reference</text>
+<text x="420" y="865" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#FFFFFF">counts, insert them into T</text>
+<line x1="420" y1="155" x2="420" y2="190" stroke="#100D12" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="420" y1="240" x2="420" y2="265" stroke="#100D12" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="420" y1="335" x2="420" y2="372" stroke="#100D12" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="360" y1="448" x2="290" y2="488" stroke="#100D12" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="480" y1="448" x2="630" y2="488" stroke="#100D12" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="290" y1="602" x2="360" y2="635" stroke="#100D12" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="630" y1="572" x2="480" y2="635" stroke="#100D12" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="420" y1="705" x2="420" y2="735" stroke="#100D12" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="420" y1="785" x2="420" y2="815" stroke="#100D12" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M 700 845 L 750 845 L 750 120 L 705 120" fill="none" stroke="#100D12" stroke-width="2" marker-end="url(#arr)"/>
+<text x="760" y="480" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">next round</text>
+<rect x="770" y="230" width="480" height="150" rx="8" fill="#FBE9EA" fill-opacity="1" stroke="#C81D25" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="1010" y="262" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">Printed gap 1</text>
+<text x="1010" y="290" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">the loop never adds req.size()</text>
+<text x="1010" y="316" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">to current_size.</text>
+<text x="1010" y="350" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">Fix of these notes: current += size</text>
+<rect x="770" y="600" width="480" height="120" rx="8" fill="#FBE9EA" fill-opacity="1" stroke="#C81D25" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="1010" y="632" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">Printed gap 2</text>
+<text x="1010" y="660" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">no branch if the second</text>
+<text x="1010" y="686" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">allocation also fails.</text>
+<line x1="770" y1="305" x2="702" y2="405" stroke="#C81D25" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="770" y1="660" x2="702" y2="670" stroke="#C81D25" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="1010" y="765" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Blue: tree lookups. Thick border: locks</text>
+<text x="1010" y="790" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">(reference counts). Gold: prefill and decode</text>
+<text x="1010" y="815" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">work. Green: tokens enter the cache.</text>
+</svg>

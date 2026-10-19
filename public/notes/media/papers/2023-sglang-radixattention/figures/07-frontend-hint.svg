@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" width="1280" height="760" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1280" height="760" fill="#ffffff"/>
+<defs><marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker></defs>
+<text x="640.0" y="44" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">The frontend hint: compute the shared prefix once</text>
+<rect x="30" y="75" width="600" height="600" rx="8" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<rect x="650" y="75" width="600" height="600" rx="8" fill="#ffffff" stroke="#100D12" stroke-width="2"/>
+<text x="50" y="112" font-size="24" fill="#100D12" font-weight="bold" text-anchor="start">Without the hint</text>
+<text x="50" y="140" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">Three branches arrive in the same step.</text>
+<text x="670" y="112" font-size="24" fill="#100D12" font-weight="bold" text-anchor="start">With the hint</text>
+<text x="670" y="140" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">The frontend sends the prefix alone first.</text>
+<text x="50" y="185" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">One prefill batch:</text>
+<rect x="60" y="225" width="380" height="50" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="250.0" y="257" font-size="20" fill="#B8860B" font-weight="bold" text-anchor="middle">prefix 500, new</text>
+<rect x="440" y="225" width="60" height="50" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="470.0" y="257" font-size="20" fill="#B8860B" font-weight="bold" text-anchor="middle">20</text>
+<text x="60" y="215" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">branch 1: matches 0, prefills 520</text>
+<rect x="60" y="315" width="380" height="50" rx="4" fill="#F8DEDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="250.0" y="347" font-size="20" fill="#C81D25" font-weight="bold" text-anchor="middle">prefix 500, duplicate</text>
+<rect x="440" y="315" width="60" height="50" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="470.0" y="347" font-size="20" fill="#B8860B" font-weight="bold" text-anchor="middle">20</text>
+<text x="60" y="305" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">branch 2: matches 0, prefills 520</text>
+<rect x="60" y="405" width="380" height="50" rx="4" fill="#F8DEDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="250.0" y="437" font-size="20" fill="#C81D25" font-weight="bold" text-anchor="middle">prefix 500, duplicate</text>
+<rect x="440" y="405" width="60" height="50" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="470.0" y="437" font-size="20" fill="#B8860B" font-weight="bold" text-anchor="middle">20</text>
+<text x="60" y="395" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">branch 3: matches 0, prefills 520</text>
+<text x="50" y="505" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Prefill: 3 x 520 = 1,560 tokens</text>
+<text x="50" y="537" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">The pool holds 3 copies of the prefix</text>
+<text x="50" y="563" font-size="20" fill="#100D12" font-weight="normal" text-anchor="start">during the batch.</text>
+<text x="50" y="600" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Hit rate: 0 / 1,560 = 0%</text>
+<text x="50" y="640" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">The insert later frees the 2 duplicate copies.</text>
+<text x="670" y="185" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">Step 1: the hint (0 new tokens)</text>
+<rect x="680" y="225" width="380" height="50" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="870.0" y="257" font-size="20" fill="#B8860B" font-weight="bold" text-anchor="middle">prefix 500, new</text>
+<text x="680" y="215" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">hint: matches 0, prefills 500</text>
+<line x1="1070" y1="250" x2="1140" y2="250" stroke="#2D6A4F" stroke-width="2" marker-end="url(#ag)"/>
+<text x="1150" y="244" font-size="19" fill="#2D6A4F" font-weight="bold" text-anchor="start">insert</text>
+<text x="1150" y="268" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="start">into</text>
+<text x="1150" y="292" font-size="19" fill="#2D6A4F" font-weight="normal" text-anchor="start">the tree</text>
+<text x="670" y="335" font-size="20" fill="#100D12" font-weight="bold" text-anchor="start">Step 2: the branches</text>
+<rect x="680" y="375" width="380" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="870.0" y="402" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">prefix 500, matched</text>
+<rect x="1060" y="375" width="60" height="40" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="1090.0" y="402" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">20</text>
+<text x="1132" y="402" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">branch 1</text>
+<rect x="680" y="445" width="380" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="870.0" y="472" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">prefix 500, matched</text>
+<rect x="1060" y="445" width="60" height="40" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="1090.0" y="472" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">20</text>
+<text x="1132" y="472" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">branch 2</text>
+<rect x="680" y="515" width="380" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="870.0" y="542" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">prefix 500, matched</text>
+<rect x="1060" y="515" width="60" height="40" rx="4" fill="#F6EBD0" stroke="#B8860B" stroke-width="2"/>
+<text x="1090.0" y="542" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">20</text>
+<text x="1132" y="542" font-size="19" fill="#100D12" font-weight="normal" text-anchor="start">branch 3</text>
+<text x="670" y="600" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Prefill: 500 + 3 x 20 = 560 tokens</text>
+<text x="670" y="632" font-size="21" fill="#100D12" font-weight="bold" text-anchor="start">Hit rate: 1,500 / 2,060, about 72.8%</text>
+<text x="670" y="660" font-size="19" fill="#8A8A8A" font-weight="normal" text-anchor="start">(the hint counts as a request with 0 matched)</text>
+<text x="640" y="712" font-size="21" fill="#100D12" font-weight="bold" text-anchor="middle">Saved: (3 - 1) x 500 = 1,000 prefill tokens, 125 MiB of duplicate KV for Llama-3.1-8B.</text>
+<text x="640" y="742" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Bars are not to scale. Gold: computed now. Blue: matched in the tree. Red dashed: duplicate work.</text>
+</svg>

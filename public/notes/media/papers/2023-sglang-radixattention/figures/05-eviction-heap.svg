@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 775" width="1280" height="775">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<rect x="0" y="0" width="1280" height="775" rx="8" fill="#FFFFFF" fill-opacity="1" stroke="none" stroke-width="2"/>
+<text x="640.0" y="46" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">Step 8: the eviction heap frees 36 slots for a request that needs 37</text>
+<rect x="40" y="80" width="380" height="470" rx="8" fill="none" fill-opacity="1" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="230" y="115" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">1. Build the heap</text>
+<text x="230" y="150" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">heap: smallest last_access_time first</text>
+<rect x="80" y="175" width="300" height="50" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="230" y="208" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">C2.2: 28 tokens, t=5</text>
+<rect x="80" y="237" width="300" height="50" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="230" y="270" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QA: 5 tokens, t=6</text>
+<rect x="80" y="299" width="300" height="50" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="230" y="332" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QB: 5 tokens, t=7</text>
+<rect x="80" y="361" width="300" height="50" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="230" y="394" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QC: 5 tokens, t=7</text>
+<text x="230" y="465" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.1 (t=8, ref=1) and SYS are</text>
+<text x="230" y="490" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">locked: never in the heap</text>
+<rect x="450" y="80" width="380" height="470" rx="8" fill="none" fill-opacity="1" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="640" y="115" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">2. Pop C2.2, push C2.1</text>
+<text x="640" y="150" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">heap: smallest last_access_time first</text>
+<rect x="490" y="175" width="300" height="50" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="640" y="208" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">C2.1: 8 tokens, t=5</text>
+<rect x="490" y="237" width="300" height="50" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="640" y="270" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QA: 5 tokens, t=6</text>
+<rect x="490" y="299" width="300" height="50" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="640" y="332" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QB: 5 tokens, t=7</text>
+<rect x="490" y="361" width="300" height="50" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="640" y="394" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QC: 5 tokens, t=7</text>
+<rect x="490" y="440" width="300" height="50" rx="8" fill="#FBE9EA" fill-opacity="1" stroke="#C81D25" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="640" y="473" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">evicted C2.2: 28 slots freed</text>
+<text x="640" y="525" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C2.1 has no child now: it is a leaf</text>
+<rect x="860" y="80" width="380" height="470" rx="8" fill="none" fill-opacity="1" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="1050" y="115" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#100D12">3. Pop C2.1, stop</text>
+<text x="1050" y="150" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">heap: smallest last_access_time first</text>
+<rect x="900" y="175" width="300" height="50" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1050" y="208" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QA: 5 tokens, t=6</text>
+<rect x="900" y="237" width="300" height="50" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1050" y="270" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QB: 5 tokens, t=7</text>
+<rect x="900" y="299" width="300" height="50" rx="8" fill="#2D6A4F" fill-opacity="1" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1050" y="332" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">QC: 5 tokens, t=7</text>
+<rect x="900" y="440" width="300" height="50" rx="8" fill="#FBE9EA" fill-opacity="1" stroke="#C81D25" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="1050" y="473" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#100D12">evicted C2.1: 8 slots freed</text>
+<text x="1050" y="525" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">evicted 36 = 37 needed - 1 free</text>
+<text x="40" y="615" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">before eviction</text>
+<rect x="330" y="585" width="10.5" height="44" rx="4" fill="#F2F2F2" fill-opacity="1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="350.5" y="615" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">free 1</text>
+<line x1="718.5" y1="579" x2="718.5" y2="635" stroke="#B8860B" stroke-width="4"/>
+<text x="40" y="670" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">after popping C2.2</text>
+<rect x="330" y="640" width="304.5" height="44" rx="4" fill="#F2F2F2" fill-opacity="1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="644.5" y="670" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">free 29</text>
+<line x1="718.5" y1="634" x2="718.5" y2="690" stroke="#B8860B" stroke-width="4"/>
+<text x="40" y="725" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">after popping C2.1</text>
+<rect x="330" y="695" width="388.5" height="44" rx="4" fill="#F2F2F2" fill-opacity="1" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="728.5" y="725" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="start" fill="#100D12">free 37</text>
+<line x1="718.5" y1="689" x2="718.5" y2="745" stroke="#B8860B" stroke-width="4"/>
+<text x="728.5" y="752" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#B8860B">gold line: 37 slots needed</text>
+</svg>

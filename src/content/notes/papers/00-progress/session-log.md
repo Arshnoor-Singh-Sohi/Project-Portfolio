@@ -5,6 +5,46 @@ summary: "What happened in each paper session, newest first."
 status: in-progress
 ---
 
+## Session 4: 2026-10-19
+
+**Paper:** [SGLang and RadixAttention (2023)](/notes/papers/llm-serving/2023-sglang-radixattention)
+
+**Topic:** the notes of the fourth paper, in the topic LLM serving. RadixAttention is the KV cache reuse system of the SGLang paper.
+
+### My request
+
+> "Please add a section for Radix attention in my notes."
+
+### Decisions
+
+| Question | My choice |
+|---|---|
+| What form should the RadixAttention section take? | "Full paper folder (Recommended)" |
+
+- The paper folder is `2023-sglang-radixattention/`. The year is the year of the first arXiv version (December 2023). The paper was published at NeurIPS 2024. These notes read version 2 (June 2024).
+- The folder focuses on RadixAttention: pages 04 to 07 and 10 explain it in depth. Page 08 covers the rest of SGLang (the language, compressed finite state machines, API speculation).
+- Two background pages: 01 on tries and radix trees, 02 on prefix sharing in LM programs. The pages do not repeat the KV cache part of the LLM Systems Deep Dive, the PagedAttention pages and [L9: Prefix caching and KV reuse](/notes/ai/llm-systems/04-inference/l9-prefix-caching-and-kv-reuse). They link to them.
+- One running example of nine steps follows the order of the paper's Figure 3, with token counts and an 80-slot pool chosen by these notes. A simulator checked every number.
+- Page 10 reads the source of SGLang 0.5.22 (PyPI, 2026-10-16). Page 12 gives seven labs.
+- 32 figures, including `figures/overview.svg` for the paper card. Six videos, `r01` to `r06`, one each on pages 01, 04, 05, 06, 07 and 08.
+- The glossary has 138 new terms. "SGL" is the short name of this paper in the "First seen" column.
+
+### Findings to check later
+
+- Algorithm 1 as printed never adds an admitted request to `current_size`, and it has no branch for a second failed allocation (page 06).
+- SGLang 0.5.22 caps every match at the prompt length minus 1, so the last prompt token always runs. The running example then matches 148 of 236 prompt tokens, not 152 (pages 04, 06 and 12).
+- The default cache class of SGLang 0.5.22 is `UnifiedRadixCache` with a Rust tree core. `RadixCache` in `radix_cache.py` is the single-component implementation that these notes read (page 10).
+- The default `--schedule-policy` was `lpm` up to SGLang 0.4.3 and is `fcfs` since 0.4.4. In-batch prefix caching runs only under cache-aware policies (pages 06 and 07).
+- SGLang 0.5.22 inserts a prompt into the tree right after its prefill, not only when the request finishes (pages 04 and 10).
+- In SGLang 0.5.22 the slot-number tensors of the tree nodes are on the GPU. The node objects and token ids are in CPU memory (pages 04 and 10).
+- No caller of the jump-forward code was found in SGLang 0.5.22. Constrained decoding uses XGrammar masks by default (page 08).
+- The SGLang Model Gateway docs list other cache-aware routing defaults than the older router docs (page 07).
+- arXiv dates the first version of Preble 2024-05-08, although its identifier is 2407.00023 (page 11).
+
+### Open
+
+- Diagnostic for the background pages 01 and 02: not started.
+
 ## Session 3: 2026-10-15
 
 **Paper:** [PagedAttention (2023)](/notes/papers/llm-serving/2023-pagedattention)

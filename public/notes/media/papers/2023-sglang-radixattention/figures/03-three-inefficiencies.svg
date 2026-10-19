@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" width="1280" height="760">
+<defs><marker id="ah2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ah1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ahC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ah8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="ah6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ah100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<rect x="0.0" y="0.0" width="1280.0" height="760.0" rx="0" fill="white" stroke="none" stroke-width="2"/>
+<text x="640.0" y="44.0" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">Three inefficiencies of LM programs and how SGLang answers each</text>
+<text x="640.0" y="78.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#100D12">Core idea of the paper: exploit the multi-call structure of LM programs</text>
+<text x="40.0" y="122.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">Inefficiency in earlier systems</text>
+<text x="650.0" y="122.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#100D12">Answer in SGLang</text>
+<text x="1240.0" y="122.0" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="end" fill="#100D12">Where</text>
+<rect x="40.0" y="145.0" width="540.0" height="118.0" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="58.0" y="179.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">1. Programs are hard to write</text>
+<text x="58.0" y="211.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">string building, prompt tuning, brittle</text>
+<text x="58.0" y="238.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">output parsing, images, parallel calls</text>
+<line x1="586.0" y1="204.0" x2="640.0" y2="204.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ah100D12)"/>
+<rect x="650.0" y="145.0" width="440.0" height="118.0" rx="8" fill="#ECE6F3" stroke="#6A4C93" stroke-width="2"/>
+<text x="668.0" y="179.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Frontend language in Python</text>
+<text x="668.0" y="211.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">gen, select, extend, fork, join,</text>
+<text x="668.0" y="238.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">image, video</text>
+<text x="1240.0" y="211.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="end" fill="#100D12">page 08</text>
+<rect x="40.0" y="289.0" width="540.0" height="118.0" rx="8" fill="#F8DDDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="58.0" y="323.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#C81D25">2. Redundant KV cache computation</text>
+<text x="58.0" y="355.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">the KV cache of a request is discarded</text>
+<text x="58.0" y="382.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">after the request finishes</text>
+<line x1="586.0" y1="348.0" x2="640.0" y2="348.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ah100D12)"/>
+<rect x="650.0" y="289.0" width="440.0" height="118.0" rx="8" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="668.0" y="323.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">RadixAttention (runtime)</text>
+<text x="668.0" y="355.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">keep the KV in a radix tree and</text>
+<text x="668.0" y="382.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">reuse it in later calls</text>
+<text x="1240.0" y="355.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="end" fill="#100D12">pages 04-07</text>
+<rect x="40.0" y="433.0" width="540.0" height="118.0" rx="8" fill="#F8DDDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="58.0" y="467.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#C81D25">3. Slow constrained decoding</text>
+<text x="58.0" y="499.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">one token per forward pass, even</text>
+<text x="58.0" y="526.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">when the next text is forced</text>
+<line x1="586.0" y1="492.0" x2="640.0" y2="492.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ah100D12)"/>
+<rect x="650.0" y="433.0" width="440.0" height="118.0" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="668.0" y="467.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Compressed FSM (runtime)</text>
+<text x="668.0" y="499.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">decode a forced run of several</text>
+<text x="668.0" y="526.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">tokens in one forward pass</text>
+<text x="1240.0" y="499.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="end" fill="#100D12">page 08</text>
+<rect x="40.0" y="577.0" width="540.0" height="118.0" rx="8" fill="#F4F4F4" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="58.0" y="611.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Also: API-only models</text>
+<text x="58.0" y="643.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">no KV cache access, each call</text>
+<text x="58.0" y="670.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">bills its input tokens again</text>
+<line x1="586.0" y1="636.0" x2="640.0" y2="636.0" stroke="#100D12" stroke-width="2.5" marker-end="url(#ah100D12)"/>
+<rect x="650.0" y="577.0" width="440.0" height="118.0" rx="8" fill="#FFFFFF" stroke="#100D12" stroke-width="2"/>
+<text x="668.0" y="611.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">API speculative execution</text>
+<text x="668.0" y="643.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">one call fills several gen calls</text>
+<text x="668.0" y="670.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">when the model follows the template</text>
+<text x="1240.0" y="643.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="end" fill="#100D12">page 08</text>
+<text x="640.0" y="735.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">The frontend and the runtime are designed together: a fork sends its shared prefix first as a hint (page 07).</text>
+</svg>

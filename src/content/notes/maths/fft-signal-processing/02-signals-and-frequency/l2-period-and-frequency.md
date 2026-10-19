@@ -57,9 +57,9 @@ The graphs below show the lists as dots. The lines only join the dots to help th
   "disableZoom": true,
   "data": [
     { "points": [[0, 0], [1, 1], [2, 0], [3, -1], [4, 0], [5, 1], [6, 0], [7, -1]], "fnType": "points", "graphType": "polyline", "color": "#C81D25", "skipTip": true },
-    { "points": [[0, 0], [1, 1], [2, 0], [3, -1], [4, 0], [5, 1], [6, 0], [7, -1]], "fnType": "points", "graphType": "scatter", "color": "#C81D25", "skipTip": true },
+    { "points": [[0, 0], [1, 1], [2, 0], [3, -1], [4, 0], [5, 1], [6, 0], [7, -1]], "fnType": "points", "graphType": "scatter", "attr": {"r": 3}, "color": "#C81D25", "skipTip": true },
     { "points": [[0, 0], [1, 0.71], [2, 1], [3, 0.71], [4, 0], [5, -0.71], [6, -1], [7, -0.71]], "fnType": "points", "graphType": "polyline", "color": "#1E6091", "skipTip": true },
-    { "points": [[0, 0], [1, 0.71], [2, 1], [3, 0.71], [4, 0], [5, -0.71], [6, -1], [7, -0.71]], "fnType": "points", "graphType": "scatter", "color": "#1E6091", "skipTip": true }
+    { "points": [[0, 0], [1, 0.71], [2, 1], [3, 0.71], [4, 0], [5, -0.71], [6, -1], [7, -0.71]], "fnType": "points", "graphType": "scatter", "attr": {"r": 3}, "color": "#1E6091", "skipTip": true }
   ]
 }
 ```
@@ -74,9 +74,9 @@ A and B reach the same height: 1 and −1. A repeats every 4 samples. B repeats 
   "disableZoom": true,
   "data": [
     { "points": [[0, 0], [1, 1], [2, 0], [3, -1], [4, 0], [5, 1], [6, 0], [7, -1]], "fnType": "points", "graphType": "polyline", "color": "#C81D25", "skipTip": true },
-    { "points": [[0, 0], [1, 1], [2, 0], [3, -1], [4, 0], [5, 1], [6, 0], [7, -1]], "fnType": "points", "graphType": "scatter", "color": "#C81D25", "skipTip": true },
+    { "points": [[0, 0], [1, 1], [2, 0], [3, -1], [4, 0], [5, 1], [6, 0], [7, -1]], "fnType": "points", "graphType": "scatter", "attr": {"r": 3}, "color": "#C81D25", "skipTip": true },
     { "points": [[0, 1], [1, 0.71], [2, 0], [3, -0.71], [4, -1], [5, -0.71], [6, 0], [7, 0.71]], "fnType": "points", "graphType": "polyline", "color": "#1E6091", "skipTip": true },
-    { "points": [[0, 1], [1, 0.71], [2, 0], [3, -0.71], [4, -1], [5, -0.71], [6, 0], [7, 0.71]], "fnType": "points", "graphType": "scatter", "color": "#1E6091", "skipTip": true }
+    { "points": [[0, 1], [1, 0.71], [2, 0], [3, -0.71], [4, -1], [5, -0.71], [6, 0], [7, 0.71]], "fnType": "points", "graphType": "scatter", "attr": {"r": 3}, "color": "#1E6091", "skipTip": true }
   ]
 }
 ```
@@ -148,7 +148,7 @@ Use Method 2 to check Method 1.
   "disableZoom": true,
   "data": [
     { "points": [[0, 0], [0.25, 1], [0.5, 0], [0.75, -1], [1, 0], [1.25, 1], [1.5, 0], [1.75, -1]], "fnType": "points", "graphType": "polyline", "color": "#C81D25", "skipTip": true },
-    { "points": [[0, 0], [0.25, 1], [0.5, 0], [0.75, -1], [1, 0], [1.25, 1], [1.5, 0], [1.75, -1]], "fnType": "points", "graphType": "scatter", "color": "#C81D25", "skipTip": true }
+    { "points": [[0, 0], [0.25, 1], [0.5, 0], [0.75, -1], [1, 0], [1.25, 1], [1.5, 0], [1.75, -1]], "fnType": "points", "graphType": "scatter", "attr": {"r": 3}, "color": "#C81D25", "skipTip": true }
   ]
 }
 ```

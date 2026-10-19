@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 880" width="1280" height="880" font-family="Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1280" height="880" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<text x="640.0" y="46" font-size="28" fill="#100D12" font-weight="bold" text-anchor="middle">Four sharing patterns of LM programs (after the paper's Figure 9)</text>
+<rect x="30" y="80" width="600" height="360" rx="12" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="330.0" y="116" font-size="23" fill="#100D12" font-weight="bold" text-anchor="middle">(a) Few-shot learning</text>
+<text x="148" y="169" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">request 1</text>
+<rect x="158" y="142" width="300" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="308.0" y="169" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">EXAMPLES 2,000</text>
+<rect x="458" y="142" width="80" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="498.0" y="169" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">Q1 50</text>
+<text x="148" y="223" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">request 2</text>
+<rect x="158" y="196" width="300" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="308.0" y="223" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">EXAMPLES 2,000</text>
+<rect x="458" y="196" width="80" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="498.0" y="223" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">Q2 50</text>
+<text x="330" y="272" font-size="22" fill="#100D12" font-weight="normal" text-anchor="middle">...</text>
+<text x="148" y="311" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">request 100</text>
+<rect x="158" y="284" width="300" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="308.0" y="311" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">EXAMPLES 2,000</text>
+<rect x="458" y="284" width="100" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="508.0" y="311" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">Q100 50</text>
+<text x="330.0" y="394" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">shared: the 2,000 example tokens</text>
+<text x="330.0" y="420" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">unique: each 50-token question</text>
+<rect x="650" y="80" width="600" height="360" rx="12" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="950.0" y="116" font-size="23" fill="#100D12" font-weight="bold" text-anchor="middle">(b) Self-consistency</text>
+<text x="768" y="169" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">sample 1</text>
+<rect x="778" y="142" width="220" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="888.0" y="169" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">PROMPT 500</text>
+<text x="1012" y="169" font-size="22" fill="#100D12" font-weight="normal" text-anchor="middle">→</text>
+<rect x="1028" y="142" width="120" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="1088.0" y="169" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">S1 200</text>
+<text x="768" y="223" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">sample 2</text>
+<rect x="778" y="196" width="220" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="888.0" y="223" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">PROMPT 500</text>
+<text x="1012" y="223" font-size="22" fill="#100D12" font-weight="normal" text-anchor="middle">→</text>
+<rect x="1028" y="196" width="120" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="1088.0" y="223" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">S2 200</text>
+<text x="950" y="272" font-size="22" fill="#100D12" font-weight="normal" text-anchor="middle">...</text>
+<text x="768" y="311" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">sample 8</text>
+<rect x="778" y="284" width="220" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="888.0" y="311" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">PROMPT 500</text>
+<text x="1012" y="311" font-size="22" fill="#100D12" font-weight="normal" text-anchor="middle">→</text>
+<rect x="1028" y="284" width="120" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="1088.0" y="311" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">S8 200</text>
+<text x="950.0" y="394" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">shared: the whole 500-token prompt</text>
+<text x="950.0" y="420" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">unique: each sampled answer of 200 tokens</text>
+<rect x="30" y="460" width="600" height="360" rx="12" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="330.0" y="496" font-size="23" fill="#100D12" font-weight="bold" text-anchor="middle">(c) Multi-turn chat</text>
+<text x="148" y="549" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">turn 1</text>
+<rect x="158" y="522" width="110" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="213.0" y="549" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">SYS 500</text>
+<rect x="268" y="522" width="80" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="308.0" y="549" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">U1 100</text>
+<text x="362" y="549" font-size="22" fill="#100D12" font-weight="normal" text-anchor="middle">→</text>
+<rect x="378" y="522" width="90" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="423.0" y="549" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">R1 300</text>
+<text x="148" y="603" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">turn 2</text>
+<rect x="158" y="576" width="190" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="253.0" y="603" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">HISTORY 900</text>
+<rect x="348" y="576" width="80" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="388.0" y="603" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">U2 100</text>
+<text x="442" y="603" font-size="22" fill="#100D12" font-weight="normal" text-anchor="middle">→</text>
+<rect x="458" y="576" width="90" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="503.0" y="603" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">R2 300</text>
+<text x="148" y="657" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">turn 3</text>
+<rect x="158" y="630" width="230" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="273.0" y="657" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">HISTORY 1,300</text>
+<rect x="388" y="630" width="80" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="428.0" y="657" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">U3 100</text>
+<text x="482" y="657" font-size="22" fill="#100D12" font-weight="normal" text-anchor="middle">→</text>
+<rect x="498" y="630" width="90" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="543.0" y="657" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">R3 300</text>
+<text x="330.0" y="774" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">shared with the turn before: the whole history,</text>
+<text x="330.0" y="800" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">including the answers that the model generated</text>
+<rect x="650" y="460" width="600" height="360" rx="12" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="2"/>
+<text x="950.0" y="496" font-size="23" fill="#100D12" font-weight="bold" text-anchor="middle">(d) Tree of thought</text>
+<text x="768" y="549" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">depth 2</text>
+<rect x="778" y="522" width="160" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="858.0" y="549" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">ROOT 800</text>
+<rect x="938" y="522" width="80" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="978.0" y="549" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">T1 100</text>
+<text x="1032" y="549" font-size="22" fill="#100D12" font-weight="normal" text-anchor="middle">→</text>
+<rect x="1048" y="522" width="70" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="1083.0" y="549" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">T1.1</text>
+<text x="768" y="603" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">depth 2</text>
+<rect x="778" y="576" width="160" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="858.0" y="603" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">ROOT 800</text>
+<rect x="938" y="576" width="80" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="978.0" y="603" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">T1 100</text>
+<text x="1032" y="603" font-size="22" fill="#100D12" font-weight="normal" text-anchor="middle">→</text>
+<rect x="1048" y="576" width="70" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="1083.0" y="603" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">T1.2</text>
+<text x="768" y="657" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">depth 2</text>
+<rect x="778" y="630" width="160" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="858.0" y="657" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">ROOT 800</text>
+<rect x="938" y="630" width="80" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="978.0" y="657" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">T2 100</text>
+<text x="1032" y="657" font-size="22" fill="#100D12" font-weight="normal" text-anchor="middle">→</text>
+<rect x="1048" y="630" width="70" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="1083.0" y="657" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">T2.1</text>
+<text x="768" y="711" font-size="19" fill="#100D12" font-weight="normal" text-anchor="end">depth 3</text>
+<rect x="778" y="684" width="160" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="858.0" y="711" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">ROOT 800</text>
+<rect x="938" y="684" width="50" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="963.0" y="711" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">T1</text>
+<rect x="988" y="684" width="60" height="40" rx="4" fill="#DCE8F2" stroke="#1E6091" stroke-width="2"/>
+<text x="1018.0" y="711" font-size="19" fill="#1E6091" font-weight="bold" text-anchor="middle">T1.1</text>
+<text x="1062" y="711" font-size="22" fill="#100D12" font-weight="normal" text-anchor="middle">→</text>
+<rect x="1078" y="684" width="80" height="40" rx="4" fill="#F6EBCF" stroke="#B8860B" stroke-width="2"/>
+<text x="1118.0" y="711" font-size="19" fill="#B8860B" font-weight="bold" text-anchor="middle">T1.1.1</text>
+<text x="950.0" y="774" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">shared: the root with every call,</text>
+<text x="950.0" y="800" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">each thought with every call below it</text>
+<text x="640" y="862" font-size="19" fill="#100D12" font-weight="normal" text-anchor="middle">Blue = shared with an earlier call (reusable KV). Gold = unique (new prefill or new output). Widths are not to scale.</text>
+</svg>

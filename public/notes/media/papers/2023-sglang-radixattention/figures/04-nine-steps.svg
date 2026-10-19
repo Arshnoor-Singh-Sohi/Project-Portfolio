@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1250" width="1280" height="1250">
+<defs><marker id="ah2D6A4F" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2D6A4F"/></marker><marker id="ah1E6091" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1E6091"/></marker><marker id="ahB8860B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8860B"/></marker><marker id="ahC81D25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C81D25"/></marker><marker id="ah8A8A8A" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8A8A"/></marker><marker id="ah6A4C93" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6A4C93"/></marker><marker id="ah100D12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#100D12"/></marker></defs>
+<rect x="0.0" y="0.0" width="1280.0" height="1250.0" rx="0" fill="white" stroke="none" stroke-width="2"/>
+<text x="640.0" y="44.0" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#100D12">The nine steps of the running example: a radix tree over an 80-slot KV pool</text>
+<text x="640.0" y="78.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">Order of events from Figure 3 of the paper. Token counts and pool size are choices of these notes. Tree after each step.</text>
+<rect x="60.0" y="102.0" width="30.0" height="22.0" rx="3" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="100.0" y="119.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">cached, not used by this step</text>
+<rect x="412.5" y="102.0" width="30.0" height="22.0" rx="3" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="452.5" y="119.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">matched (hit)</text>
+<rect x="607.0" y="102.0" width="30.0" height="22.0" rx="3" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="647.0" y="119.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">computed and inserted now</text>
+<rect x="920.0" y="102.0" width="30.0" height="22.0" rx="3" fill="#F8DDDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="960.0" y="119.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">evicted</text>
+<rect x="13.0" y="145.0" width="412.0" height="355.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="27.0" y="175.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Step 1: start</text>
+<text x="27.0" y="201.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">no request yet</text>
+<circle cx="219.0" cy="233.0" r="7" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="233.0" y="240.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="29.0" y="441.0" width="380.0" height="20.0" rx="0" fill="#F4F4F4" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="29.0" y="485.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">cached 0 · free 80</text>
+<text x="219.0" y="335.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#8A8A8A" font-style="italic">empty tree</text>
+<rect x="435.0" y="145.0" width="412.0" height="355.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="449.0" y="175.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Step 2: chat 1, turn 1</text>
+<text x="449.0" y="201.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">matched 0 of 12, output 4</text>
+<circle cx="641.0" cy="233.0" r="7" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="655.0" y="240.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="577.6" y="267.0" width="126.9" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="641.0" y="291.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SYS+C1.1 16</text>
+<line x1="641.0" y1="240.0" x2="641.0" y2="267.0" stroke="#100D12" stroke-width="2"/>
+<rect x="451.0" y="441.0" width="76.0" height="20.0" rx="0" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="527.0" y="441.0" width="304.0" height="20.0" rx="0" fill="#F4F4F4" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="451.0" y="485.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">cached 16 · free 64</text>
+<rect x="857.0" y="145.0" width="412.0" height="355.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="871.0" y="175.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Step 3: chat 1, turn 2</text>
+<text x="871.0" y="201.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">matched 16 of 20, output 25</text>
+<circle cx="1063.0" cy="233.0" r="7" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="1077.0" y="240.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="999.6" y="267.0" width="126.9" height="36.0" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="1063.0" y="291.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SYS+C1.1 16</text>
+<line x1="1063.0" y1="240.0" x2="1063.0" y2="267.0" stroke="#100D12" stroke-width="2"/>
+<rect x="1020.1" y="327.0" width="85.8" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="1063.0" y="351.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.2 29</text>
+<line x1="1063.0" y1="303.0" x2="1063.0" y2="327.0" stroke="#100D12" stroke-width="2"/>
+<rect x="873.0" y="441.0" width="76.0" height="20.0" rx="0" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="949.0" y="441.0" width="137.8" height="20.0" rx="0" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="1086.8" y="441.0" width="166.2" height="20.0" rx="0" fill="#F4F4F4" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="873.0" y="485.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">cached 45 · free 35</text>
+<rect x="13.0" y="510.0" width="412.0" height="355.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="27.0" y="540.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Step 4: chat 2, turn 1</text>
+<text x="27.0" y="566.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">matched 8 of 12: SYS+C1.1 is split</text>
+<circle cx="219.0" cy="598.0" r="7" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="233.0" y="605.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="186.3" y="632.0" width="65.3" height="36.0" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="219.0" y="656.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SYS 8</text>
+<line x1="219.0" y1="605.0" x2="219.0" y2="632.0" stroke="#100D12" stroke-width="2"/>
+<rect x="90.2" y="692.0" width="75.6" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="128.0" y="716.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.1 8</text>
+<line x1="219.0" y1="668.0" x2="128.0" y2="692.0" stroke="#100D12" stroke-width="2"/>
+<rect x="85.1" y="754.0" width="85.8" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="128.0" y="778.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.2 29</text>
+<line x1="128.0" y1="728.0" x2="128.0" y2="754.0" stroke="#100D12" stroke-width="2"/>
+<rect x="275.2" y="692.0" width="75.6" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="313.0" y="716.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C2.1 8</text>
+<line x1="219.0" y1="668.0" x2="313.0" y2="692.0" stroke="#100D12" stroke-width="2"/>
+<rect x="29.0" y="806.0" width="38.0" height="20.0" rx="0" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="67.0" y="806.0" width="38.0" height="20.0" rx="0" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="105.0" y="806.0" width="175.8" height="20.0" rx="0" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="280.8" y="806.0" width="128.2" height="20.0" rx="0" fill="#F4F4F4" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="29.0" y="850.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">cached 53 · free 27</text>
+<rect x="435.0" y="510.0" width="412.0" height="355.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="449.0" y="540.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Step 5: chat 2, turn 2</text>
+<text x="449.0" y="566.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">matched 16 of 20, need 28 &gt; 27 free</text>
+<circle cx="641.0" cy="598.0" r="7" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="655.0" y="605.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="608.4" y="632.0" width="65.3" height="36.0" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="641.0" y="656.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SYS 8</text>
+<line x1="641.0" y1="605.0" x2="641.0" y2="632.0" stroke="#100D12" stroke-width="2"/>
+<rect x="492.2" y="692.0" width="75.6" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="530.0" y="716.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.1 8</text>
+<line x1="641.0" y1="668.0" x2="530.0" y2="692.0" stroke="#100D12" stroke-width="2"/>
+<rect x="487.1" y="754.0" width="85.8" height="36.0" rx="6" fill="#F8DDDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="530.0" y="778.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#C81D25">C1.2 29</text>
+<line x1="530.0" y1="728.0" x2="530.0" y2="754.0" stroke="#C81D25" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="712.2" y="692.0" width="75.6" height="36.0" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="750.0" y="716.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C2.1 8</text>
+<line x1="641.0" y1="668.0" x2="750.0" y2="692.0" stroke="#100D12" stroke-width="2"/>
+<rect x="707.1" y="754.0" width="85.8" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="750.0" y="778.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C2.2 28</text>
+<line x1="750.0" y1="728.0" x2="750.0" y2="754.0" stroke="#100D12" stroke-width="2"/>
+<rect x="451.0" y="806.0" width="76.0" height="20.0" rx="0" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="527.0" y="806.0" width="133.0" height="20.0" rx="0" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="660.0" y="806.0" width="38.0" height="20.0" rx="0" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="698.0" y="806.0" width="133.0" height="20.0" rx="0" fill="#F4F4F4" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="451.0" y="850.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">evict C1.2 (29) · cached 52 · free 28</text>
+<rect x="857.0" y="510.0" width="412.0" height="355.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="871.0" y="540.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Step 6: few-shot QA</text>
+<text x="871.0" y="566.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">matched 0 of 16, output 1</text>
+<circle cx="1063.0" cy="598.0" r="7" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="1077.0" y="605.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="934.4" y="632.0" width="65.3" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="967.0" y="656.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SYS 8</text>
+<line x1="1063.0" y1="605.0" x2="967.0" y2="632.0" stroke="#100D12" stroke-width="2"/>
+<rect x="874.2" y="692.0" width="75.6" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="912.0" y="716.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.1 8</text>
+<line x1="967.0" y1="668.0" x2="912.0" y2="692.0" stroke="#100D12" stroke-width="2"/>
+<rect x="984.2" y="692.0" width="75.6" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1022.0" y="716.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C2.1 8</text>
+<line x1="967.0" y1="668.0" x2="1022.0" y2="692.0" stroke="#100D12" stroke-width="2"/>
+<rect x="979.1" y="754.0" width="85.8" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="1022.0" y="778.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C2.2 28</text>
+<line x1="1022.0" y1="728.0" x2="1022.0" y2="754.0" stroke="#100D12" stroke-width="2"/>
+<rect x="1127.0" y="632.0" width="96.1" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="1175.0" y="656.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">FS+QA 17</text>
+<line x1="1063.0" y1="605.0" x2="1175.0" y2="632.0" stroke="#100D12" stroke-width="2"/>
+<rect x="873.0" y="806.0" width="80.8" height="20.0" rx="0" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="953.8" y="806.0" width="247.0" height="20.0" rx="0" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="1200.8" y="806.0" width="52.2" height="20.0" rx="0" fill="#F4F4F4" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="873.0" y="850.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">new branch at the root · free 11</text>
+<rect x="13.0" y="875.0" width="412.0" height="355.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="27.0" y="905.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Step 7: few-shot QB, QC</text>
+<text x="27.0" y="931.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">matched 12 + 12 of 32: FS+QA is split</text>
+<circle cx="219.0" cy="963.0" r="7" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="233.0" y="970.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="80.3" y="997.0" width="65.3" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="113.0" y="1021.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SYS 8</text>
+<line x1="219.0" y1="970.0" x2="113.0" y2="997.0" stroke="#100D12" stroke-width="2"/>
+<rect x="25.2" y="1057.0" width="75.6" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="63.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.1 8</text>
+<line x1="113.0" y1="1033.0" x2="63.0" y2="1057.0" stroke="#100D12" stroke-width="2"/>
+<rect x="120.2" y="1057.0" width="75.6" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="158.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C2.1 8</text>
+<line x1="113.0" y1="1033.0" x2="158.0" y2="1057.0" stroke="#100D12" stroke-width="2"/>
+<rect x="115.1" y="1119.0" width="85.8" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="158.0" y="1143.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C2.2 28</text>
+<line x1="158.0" y1="1093.0" x2="158.0" y2="1119.0" stroke="#100D12" stroke-width="2"/>
+<rect x="286.4" y="997.0" width="65.3" height="36.0" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="319.0" y="1021.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">FS 12</text>
+<line x1="219.0" y1="970.0" x2="319.0" y2="997.0" stroke="#100D12" stroke-width="2"/>
+<rect x="225.5" y="1057.0" width="55.0" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="253.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">QA 5</text>
+<line x1="319.0" y1="1033.0" x2="253.0" y2="1057.0" stroke="#100D12" stroke-width="2"/>
+<rect x="291.5" y="1057.0" width="55.0" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="319.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">QB 5</text>
+<line x1="319.0" y1="1033.0" x2="319.0" y2="1057.0" stroke="#100D12" stroke-width="2"/>
+<rect x="357.5" y="1057.0" width="55.0" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="385.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">QC 5</text>
+<line x1="319.0" y1="1033.0" x2="385.0" y2="1057.0" stroke="#100D12" stroke-width="2"/>
+<rect x="29.0" y="1171.0" width="57.0" height="20.0" rx="0" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="86.0" y="1171.0" width="47.5" height="20.0" rx="0" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="133.5" y="1171.0" width="270.8" height="20.0" rx="0" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<rect x="404.2" y="1171.0" width="4.8" height="20.0" rx="0" fill="#F4F4F4" stroke="#8A8A8A" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="29.0" y="1215.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">cached 79 · free 1</text>
+<rect x="435.0" y="875.0" width="412.0" height="355.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="449.0" y="905.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Step 8: chat 1, turn 3</text>
+<text x="449.0" y="931.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">matched 16 of 49, need 37 &gt; 1 free</text>
+<circle cx="641.0" cy="963.0" r="7" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="655.0" y="970.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="502.4" y="997.0" width="65.3" height="36.0" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="535.0" y="1021.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SYS 8</text>
+<line x1="641.0" y1="970.0" x2="535.0" y2="997.0" stroke="#100D12" stroke-width="2"/>
+<rect x="452.2" y="1057.0" width="75.6" height="36.0" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="490.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.1 8</text>
+<line x1="535.0" y1="1033.0" x2="490.0" y2="1057.0" stroke="#100D12" stroke-width="2"/>
+<rect x="449.8" y="1119.0" width="106.3" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="503.0" y="1143.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.2+3 37</text>
+<line x1="490.0" y1="1093.0" x2="503.0" y2="1119.0" stroke="#100D12" stroke-width="2"/>
+<rect x="557.2" y="1057.0" width="75.6" height="36.0" rx="6" fill="#F8DDDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="595.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#C81D25">C2.1 8</text>
+<line x1="535.0" y1="1033.0" x2="595.0" y2="1057.0" stroke="#C81D25" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="578.1" y="1119.0" width="85.8" height="36.0" rx="6" fill="#F8DDDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="621.0" y="1143.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#C81D25">C2.2 28</text>
+<line x1="595.0" y1="1093.0" x2="621.0" y2="1119.0" stroke="#C81D25" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="716.4" y="997.0" width="65.3" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="749.0" y="1021.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">FS 12</text>
+<line x1="641.0" y1="970.0" x2="749.0" y2="997.0" stroke="#100D12" stroke-width="2"/>
+<rect x="663.5" y="1057.0" width="55.0" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="691.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">QA 5</text>
+<line x1="749.0" y1="1033.0" x2="691.0" y2="1057.0" stroke="#100D12" stroke-width="2"/>
+<rect x="721.5" y="1057.0" width="55.0" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="749.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">QB 5</text>
+<line x1="749.0" y1="1033.0" x2="749.0" y2="1057.0" stroke="#100D12" stroke-width="2"/>
+<rect x="779.5" y="1057.0" width="55.0" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="807.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">QC 5</text>
+<line x1="749.0" y1="1033.0" x2="807.0" y2="1057.0" stroke="#100D12" stroke-width="2"/>
+<rect x="451.0" y="1171.0" width="76.0" height="20.0" rx="0" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="527.0" y="1171.0" width="175.8" height="20.0" rx="0" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="702.8" y="1171.0" width="128.2" height="20.0" rx="0" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="451.0" y="1215.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">evict C2.2, then C2.1 · free 0</text>
+<rect x="857.0" y="875.0" width="412.0" height="355.0" rx="8" fill="white" stroke="#BBBBBB" stroke-width="1.5"/>
+<text x="871.0" y="905.0" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" text-anchor="start" fill="#100D12">Step 9: self-consistency</text>
+<text x="871.0" y="931.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">hint FS+SCQ, then 4 samples</text>
+<circle cx="1063.0" cy="963.0" r="7" fill="#100D12" stroke="#100D12" stroke-width="2"/>
+<text x="1077.0" y="970.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">root</text>
+<rect x="890.4" y="997.0" width="65.3" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="923.0" y="1021.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SYS 8</text>
+<line x1="1063.0" y1="970.0" x2="923.0" y2="997.0" stroke="#100D12" stroke-width="2"/>
+<rect x="885.2" y="1057.0" width="75.6" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="923.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.1 8</text>
+<line x1="923.0" y1="1033.0" x2="923.0" y2="1057.0" stroke="#100D12" stroke-width="2"/>
+<rect x="869.8" y="1119.0" width="106.3" height="36.0" rx="6" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="923.0" y="1143.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">C1.2+3 37</text>
+<line x1="923.0" y1="1093.0" x2="923.0" y2="1119.0" stroke="#100D12" stroke-width="2"/>
+<rect x="1109.3" y="997.0" width="65.3" height="36.0" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="1142.0" y="1021.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">FS 12</text>
+<line x1="1063.0" y1="970.0" x2="1142.0" y2="997.0" stroke="#100D12" stroke-width="2"/>
+<rect x="995.0" y="1057.0" width="116.0" height="36.0" rx="6" fill="#F8DDDF" stroke="#C81D25" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1053.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#C81D25">QA QB QC</text>
+<line x1="1142.0" y1="1033.0" x2="1053.0" y2="1057.0" stroke="#C81D25" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="1169.3" y="1057.0" width="65.3" height="36.0" rx="6" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<text x="1202.0" y="1081.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">SCQ 3</text>
+<line x1="1142.0" y1="1033.0" x2="1202.0" y2="1057.0" stroke="#100D12" stroke-width="2"/>
+<rect x="1036.5" y="1119.0" width="55.0" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="1064.0" y="1143.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">S1 3</text>
+<line x1="1202.0" y1="1093.0" x2="1064.0" y2="1119.0" stroke="#100D12" stroke-width="2"/>
+<rect x="1091.5" y="1119.0" width="55.0" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="1119.0" y="1143.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">S2 3</text>
+<line x1="1202.0" y1="1093.0" x2="1119.0" y2="1119.0" stroke="#100D12" stroke-width="2"/>
+<rect x="1146.5" y="1119.0" width="55.0" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="1174.0" y="1143.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">S3 3</text>
+<line x1="1202.0" y1="1093.0" x2="1174.0" y2="1119.0" stroke="#100D12" stroke-width="2"/>
+<rect x="1201.5" y="1119.0" width="55.0" height="36.0" rx="6" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<text x="1229.0" y="1143.8" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#100D12">S4 3</text>
+<line x1="1202.0" y1="1093.0" x2="1229.0" y2="1119.0" stroke="#100D12" stroke-width="2"/>
+<rect x="873.0" y="1171.0" width="71.2" height="20.0" rx="0" fill="#E1ECF4" stroke="#1E6091" stroke-width="2"/>
+<rect x="944.2" y="1171.0" width="57.0" height="20.0" rx="0" fill="#F5EBD3" stroke="#B8860B" stroke-width="2"/>
+<rect x="1001.2" y="1171.0" width="251.8" height="20.0" rx="0" fill="#E3F0E9" stroke="#2D6A4F" stroke-width="2"/>
+<text x="873.0" y="1215.0" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="normal" text-anchor="start" fill="#100D12">evict QA, QB, QC · free 0</text>
+</svg>
